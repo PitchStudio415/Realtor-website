@@ -1,0 +1,504 @@
+Replit Agent Prompt: Build a real estate website for my Bay Area realtor brand
+Project name
+
+
+Bay Area Home Guide
+
+
+Goal
+
+
+Build a fast, trustworthy real estate website that positions me as a data-driven, negotiation-focused realtor.
+
+
+Educate first-time home buyers and sellers.
+
+
+Generate leads through clear calls to action, a contact form, and a consult booking flow.
+
+
+Audience
+
+
+First-time home buyers in Alameda County and Contra Costa County
+
+
+Sellers and move-up buyers in the same counties
+
+
+Brand and tone
+
+
+Clean, modern, calm
+
+
+Friendly and confident
+
+
+Straightforward education, no hype
+
+
+Tech and hosting
+
+
+Use Next.js (App Router) with TypeScript
+
+
+Use Tailwind CSS
+
+
+Use Replit hosting
+
+
+Use a simple content system for blog posts and guides (Markdown files stored in the repo, parsed at build time)
+
+
+Site structure and pages
+
+
+Home
+
+
+
+
+Hero section with headline, short subhead, and two primary CTAs:
+
+
+Book a buyer consult
+
+
+Book a seller consult
+
+
+
+
+Three proof blocks:
+
+
+Data-driven pricing and offer strategy
+
+
+Negotiation and clear communication
+
+
+Construction and residential experience (positioning for inspections, repairs, and scope conversations)
+
+
+
+
+Featured education cards linking to:
+
+
+First-time buyer guide
+
+
+Seller prep guide
+
+
+Financing basics
+
+
+
+
+Lead capture section:
+
+
+“Get the Bay Area First-Time Buyer Checklist” with email field
+
+
+
+
+Recent blog posts section
+
+
+
+
+Buy
+
+
+
+
+Short overview of how I help buyers
+
+
+Step-by-step timeline: discovery, financing, touring, offer, escrow, close
+
+
+CTA: book a buyer consult
+
+
+Links to buyer resources
+
+
+
+
+Sell
+
+
+
+
+Short overview of how I help sellers
+
+
+Step-by-step timeline: pricing, prep, marketing, offers, escrow, close
+
+
+“Prep to maximize value” section (repairs, staging, disclosures)
+
+
+CTA: book a seller consult
+
+
+Links to seller resources
+
+
+
+
+First-time buyer hub
+Create a hub page with modules and internal links. Each module is its own page built from Markdown:
+
+
+
+
+Home buying timeline in California
+
+
+Offer basics: price, credits, contingencies, appraisal gap, deposit
+
+
+How pre-approval works, what lenders look at
+
+
+Closing costs breakdown with example ranges
+
+
+Inspections and repair negotiations
+
+
+Common mistakes and how to avoid them
+
+
+Glossary
+
+
+
+
+Seller education hub
+Each module is its own page built from Markdown:
+
+
+
+
+Pricing strategy and comps explained
+
+
+Disclosures in California (high-level, non-legal)
+
+
+Inspection prep checklist
+
+
+Repairs vs credits decision guide
+
+
+How to evaluate offers beyond price
+
+
+Timeline from listing to close
+
+
+Glossary
+
+
+
+
+Neighborhoods
+
+
+
+
+Landing page for Alameda County and Contra Costa County
+
+
+Provide a simple directory of key cities with short blurbs and “Who it fits” notes
+
+
+Each city page includes:
+
+
+Overview
+
+
+Typical housing stock notes (keep general)
+
+
+Commute and lifestyle notes (general)
+
+
+Links to relevant buyer and seller content
+
+
+CTA to book a consult
+
+
+
+
+Add a disclaimer: details change, confirm specifics during consult
+
+
+
+
+Blog
+
+
+
+
+Blog index with search and category filters
+
+
+Post pages from Markdown
+
+
+Categories:
+
+
+First-time buyers
+
+
+Selling
+
+
+Financing
+
+
+Bay Area market basics
+
+
+Inspections and repairs
+
+
+
+
+
+
+About
+
+
+
+
+Short bio focused on:
+
+
+Local to El Cerrito
+
+
+Agent since 2025
+
+
+13+ years in sales
+
+
+Data-driven approach
+
+
+Negotiation and communication
+
+
+Languages: Urdu and Hindi
+
+
+
+
+Add professional headshot placeholder
+
+
+CTA to book a consult
+
+
+
+
+Contact and booking
+
+
+
+
+Contact page with:
+
+
+Contact form (name, email, phone, buyer or seller, timeline, city, message)
+
+
+Calendar embed placeholder or simple booking links (buyer consult, seller consult)
+
+
+
+
+Form should send email via an email API (Resend or SendGrid). Store keys in Replit Secrets.
+
+
+Save submissions to a lightweight database (SQLite) as backup.
+
+
+Lead capture and tracking
+
+
+Newsletter form in footer on all pages
+
+
+Store signups in SQLite
+
+
+Send a confirmation email
+
+
+Add basic analytics support (Plausible or GA4). Put the ID in environment variables.
+
+
+SEO and trust
+
+
+SEO titles and meta descriptions for every page
+
+
+Open Graph tags for social sharing
+
+
+Schema.org JSON-LD:
+
+
+RealEstateAgent for the site
+
+
+BlogPosting for posts
+
+
+
+
+Fast performance:
+
+
+Image optimization
+
+
+Lazy loading
+
+
+
+
+Accessibility:
+
+
+Proper headings
+
+
+Focus states
+
+
+Contrast-safe palette
+
+
+
+
+Design requirements
+
+
+Minimal layout with generous spacing
+
+
+Sticky top nav with:
+
+
+Buy
+
+
+Sell
+
+
+First-time buyer
+
+
+Sellers
+
+
+Neighborhoods
+
+
+Blog
+
+
+About
+
+
+Contact
+
+
+
+
+Footer with contact info placeholders, newsletter signup, and links to key guides
+
+
+Copy starter text (use as defaults, editable later)
+
+
+Home headline: “Clear guidance for buying and selling in the East Bay.”
+
+
+Subhead: “Data-led strategy, strong negotiation, and practical advice for first-time buyers and sellers in Alameda and Contra Costa.”
+
+
+Buyer CTA button: “Book a buyer consult”
+
+
+Seller CTA button: “Book a seller consult”
+
+
+Compliance and disclaimers
+
+
+Add a footer disclaimer: informational content only, not legal or tax advice
+
+
+Add privacy policy page and basic terms page
+
+
+Add form consent text for follow-up
+
+
+Deliverables
+
+
+Working site deployed on Replit
+
+
+Clean folder structure
+
+
+Blog and guide content in Markdown with at least:
+
+
+3 first-time buyer posts
+
+
+3 seller posts
+
+
+1 glossary page
+
+
+
+
+Simple admin note in README explaining:
+
+
+How to add a blog post
+
+
+How to edit city pages
+
+
+How to set email and analytics keys in Replit Secrets
+
+
+
+
+Start with placeholder data where needed. Focus on clean UX, speed, and clear education paths that drive consult bookings.
