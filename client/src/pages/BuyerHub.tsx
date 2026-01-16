@@ -45,12 +45,12 @@ function ModuleContent({ slug }: { slug: string }) {
           dangerouslySetInnerHTML={{ 
             __html: module.content
               .replace(/^# .+\n/m, '')
-              .replace(/\n/g, '<br/>')
-              .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
               .replace(/### (.+)/g, '</p><h3>$1</h3><p>')
+              .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
               .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-              .replace(/- \[ \]/g, '<span class="text-muted-foreground">-</span>')
-              .replace(/- \[x\]/g, '<span class="text-accent">-</span>')
+              .replace(/- \[ \]/g, '<span class="text-muted-foreground">&#x2022;</span>')
+              .replace(/- \[x\]/g, '<span class="text-accent">&#x2022;</span>')
+              .replace(/\n/g, '<br/>')
           }}
         />
         

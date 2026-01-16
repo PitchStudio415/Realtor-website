@@ -68,10 +68,10 @@ function BlogPostPage({ slug }: { slug: string }) {
           dangerouslySetInnerHTML={{ 
             __html: post.content
               .replace(/^# .+\n/m, '')
-              .replace(/\n/g, '<br/>')
-              .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
               .replace(/### (.+)/g, '</p><h3>$1</h3><p>')
+              .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
               .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+              .replace(/\n/g, '<br/>')
           }}
         />
         
