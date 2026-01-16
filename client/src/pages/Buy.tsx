@@ -13,7 +13,7 @@ import {
   Banknote,
   Building
 } from "lucide-react";
-import heroImage from "@assets/stock_images/california_suburban__76491f65.jpg";
+import heroImage from "@assets/stock_images/modern_home_exterior_d46ee0b9.jpg";
 
 const timeline = [
   {
@@ -62,18 +62,18 @@ export default function Buy() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-buy-headline">
               Buying Your First Home in the Bay Area
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8">
+            <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed">
               A data-driven approach to finding and winning the right home, with clear communication every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact?type=buyer">
-                <Button size="lg" className="w-full sm:w-auto shadow-lg" data-testid="button-buy-cta">
+                <Button size="lg" className="w-full sm:w-auto text-base px-8 py-6 shadow-lg" data-testid="button-buy-cta">
                   Book a buyer consult
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link href="/calculator">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white text-foreground border-white hover:bg-white/90 shadow-lg" data-testid="button-calculator-cta">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-foreground border-white hover:bg-white/90 shadow-lg" data-testid="button-calculator-cta">
                   Affordability Calculator
                 </Button>
               </Link>
