@@ -83,14 +83,14 @@ function ModuleContent({ slug }: { slug: string }) {
 function HubIndex() {
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-accent/5 to-background py-16 md:py-24">
+      <section className="bg-gradient-to-b from-accent/5 to-background py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-accent mb-4">
+            <div className="flex items-center gap-2 text-accent mb-3">
               <BookOpen className="w-5 h-5" />
               <span className="font-medium">Education Hub</span>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-seller-hub-headline">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3" data-testid="text-seller-hub-headline">
               Seller Education Guide
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
@@ -101,7 +101,7 @@ function HubIndex() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-4">
             {sellerModules.map((module, index) => (
@@ -126,7 +126,7 @@ function HubIndex() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-accent text-accent-foreground">
+      <section className="py-10 md:py-12 bg-accent text-accent-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Discuss Your Sale?</h2>
           <p className="text-accent-foreground/80 mb-8 max-w-2xl mx-auto">
