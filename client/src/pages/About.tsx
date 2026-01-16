@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 export default function About() {
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
+      <section className="bg-gradient-to-b from-muted/50 to-background py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -37,7 +37,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">My Approach</h2>
