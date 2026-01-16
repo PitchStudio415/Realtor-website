@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Layout } from "@/components/layout/Layout";
+import heroImage from "@assets/stock_images/san_francisco_bay_ar_042328d4.jpg";
 import { 
   BarChart3, 
   MessageSquare, 
@@ -54,14 +55,18 @@ export default function Home() {
 
   return (
     <Layout>
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-16 relative">
+      <section className="relative overflow-hidden min-h-[500px] md:min-h-[550px]">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 relative">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6" data-testid="text-hero-headline">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white" data-testid="text-hero-headline">
               Clear guidance for buying and selling in the East Bay.
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto" data-testid="text-hero-subhead">
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-testid="text-hero-subhead">
               Data-led strategy, strong negotiation, and practical advice for first-time buyers and sellers in Alameda and Contra Costa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -72,7 +77,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/contact?type=seller">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto" data-testid="button-seller-cta">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-seller-cta">
                   Book a seller consult
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
