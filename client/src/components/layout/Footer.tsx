@@ -39,20 +39,20 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-muted/50 border-t border-border">
+    <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-md bg-primary flex items-center justify-center">
-                <Home className="w-5 h-5 text-primary-foreground" />
+              <div className="w-9 h-9 rounded-md bg-white/20 flex items-center justify-center">
+                <Home className="w-5 h-5 text-white" />
               </div>
-              <span className="font-semibold text-lg">Easy Bay Living</span>
+              <span className="font-semibold text-lg text-white">Easy Bay Living</span>
             </Link>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-sm text-primary-foreground/80 mb-4">
               Data-driven real estate guidance for first-time buyers and sellers in Alameda and Contra Costa counties.
             </p>
-            <div className="space-y-2 text-sm text-muted-foreground">
+            <div className="space-y-2 text-sm text-primary-foreground/80">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
                 <span>El Cerrito, CA</span>
@@ -69,30 +69,30 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">For Buyers</h3>
+            <h3 className="font-semibold mb-4 text-white">For Buyers</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/buy" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-buy">How I Help Buyers</Link></li>
-              <li><Link href="/buyer-hub" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-buyer-hub">First-Time Buyer Hub</Link></li>
-              <li><Link href="/buyer-hub/timeline" className="text-muted-foreground hover:text-foreground transition-colors">Buying Timeline</Link></li>
-              <li><Link href="/buyer-hub/offer-basics" className="text-muted-foreground hover:text-foreground transition-colors">Offer Basics</Link></li>
-              <li><Link href="/buyer-hub/financing" className="text-muted-foreground hover:text-foreground transition-colors">Financing Guide</Link></li>
+              <li><Link href="/buy" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buy">How I Help Buyers</Link></li>
+              <li><Link href="/buyer-hub" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buyer-hub">First-Time Buyer Hub</Link></li>
+              <li><Link href="/buyer-hub/timeline" className="text-primary-foreground/80 hover:text-white transition-colors">Buying Timeline</Link></li>
+              <li><Link href="/buyer-hub/offer-basics" className="text-primary-foreground/80 hover:text-white transition-colors">Offer Basics</Link></li>
+              <li><Link href="/buyer-hub/financing" className="text-primary-foreground/80 hover:text-white transition-colors">Financing Guide</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">For Sellers</h3>
+            <h3 className="font-semibold mb-4 text-white">For Sellers</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/sell" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-sell">How I Help Sellers</Link></li>
-              <li><Link href="/seller-hub" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-seller-hub">Seller Education Hub</Link></li>
-              <li><Link href="/seller-hub/pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing Strategy</Link></li>
-              <li><Link href="/seller-hub/disclosures" className="text-muted-foreground hover:text-foreground transition-colors">Disclosures Guide</Link></li>
-              <li><Link href="/seller-hub/evaluating-offers" className="text-muted-foreground hover:text-foreground transition-colors">Evaluating Offers</Link></li>
+              <li><Link href="/sell" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-sell">How I Help Sellers</Link></li>
+              <li><Link href="/seller-hub" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-seller-hub">Seller Education Hub</Link></li>
+              <li><Link href="/seller-hub/pricing" className="text-primary-foreground/80 hover:text-white transition-colors">Pricing Strategy</Link></li>
+              <li><Link href="/seller-hub/disclosures" className="text-primary-foreground/80 hover:text-white transition-colors">Disclosures Guide</Link></li>
+              <li><Link href="/seller-hub/evaluating-offers" className="text-primary-foreground/80 hover:text-white transition-colors">Evaluating Offers</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">Stay Updated</h3>
-            <p className="text-sm text-muted-foreground mb-4">
+            <h3 className="font-semibold mb-4 text-white">Stay Updated</h3>
+            <p className="text-sm text-primary-foreground/80 mb-4">
               Get market insights and first-time buyer tips delivered to your inbox.
             </p>
             <form onSubmit={handleSubscribe} className="space-y-2">
@@ -102,10 +102,12 @@ export function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
                 data-testid="input-footer-email"
               />
               <Button 
                 type="submit" 
+                variant="secondary"
                 className="w-full" 
                 size="sm"
                 disabled={newsletterMutation.isPending}
@@ -117,15 +119,15 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-white/20">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
             <p>&copy; {new Date().getFullYear()} Easy Bay Living. All rights reserved.</p>
             <div className="flex items-center gap-4 flex-wrap justify-center">
-              <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
             </div>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground text-center">
+          <p className="mt-4 text-xs text-primary-foreground/60 text-center">
             This website provides general information only and does not constitute legal, tax, or financial advice. 
             Consult with appropriate professionals for specific guidance.
           </p>
