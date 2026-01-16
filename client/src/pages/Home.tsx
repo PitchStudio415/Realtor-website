@@ -195,7 +195,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Get the Bay Area First-Time Buyer Checklist
             </h2>
-            <p className="text-primary-foreground/80 mb-6">
+            <p className="text-primary-foreground mb-6">
               A printable guide covering everything from credit check to closing day.
             </p>
             <form onSubmit={handleChecklist} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -205,7 +205,7 @@ export default function Home() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                className="bg-white/20 border-white/40 text-white placeholder:text-white/80"
                 data-testid="input-checklist-email"
               />
               <Button 
@@ -217,7 +217,7 @@ export default function Home() {
                 {newsletterMutation.isPending ? "Sending..." : "Get the Checklist"}
               </Button>
             </form>
-            <p className="text-xs text-primary-foreground/60 mt-3">
+            <p className="text-xs text-primary-foreground/80 mt-3">
               By subscribing, you agree to receive occasional market updates. Unsubscribe anytime.
             </p>
           </div>
