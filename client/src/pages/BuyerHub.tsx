@@ -13,14 +13,14 @@ import {
 function formatContent(content: string) {
   return content
     .replace(/^# .+\n/m, '')
-    .replace(/### (.+)/g, '</p><h3>$1</h3><p>')
-    .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
+    .replace(/### (.+)/g, '<h3 class="mt-3 mb-1">$1</h3>')
+    .replace(/## (.+)/g, '<h2 class="mt-4 mb-2">$1</h2>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/- \[ \]/g, '&#x2022; ')
     .replace(/- \[x\]/g, '&#x2022; ')
     .replace(/^- /gm, '&#x2022; ')
     .replace(/\n- /g, '<br/>&#x2022; ')
-    .replace(/\n\n+/g, '</p><p>')
+    .replace(/\n\n+/g, '<br/><br/>')
     .replace(/\n/g, '<br/>');
 }
 
