@@ -981,33 +981,43 @@ Here's a typical timeline for selling a home in the Bay Area.
 
 Key terms you'll encounter when selling your home.
 
-## A-E
-
 **As-Is Sale**: Selling without making repairs, though disclosures still required.
 
 **Backup Offer**: Second-choice offer that becomes primary if first offer fails.
+
+**Buyer Contingency**: Conditions buyers include that let them cancel (inspection, financing, appraisal).
+
+**Closing Costs**: Fees paid at closing including escrow, title, transfer taxes (typically 1-2% for sellers).
 
 **Comparative Market Analysis (CMA)**: Agent's estimate of home value based on recent sales.
 
 **Contingency Removal**: Buyer formally waiving their right to cancel for that reason.
 
+**Counter Offer**: Your response to a buyer's offer with different terms.
+
 **Days on Market (DOM)**: How long a listing has been active.
+
+**Disclosure**: Required documents about property condition, history, and known issues.
 
 **Dual Agency**: When one agent represents both buyer and seller (requires disclosure).
 
-## F-L
+**Earnest Money Deposit (EMD)**: Buyer's good faith deposit (typically 3% in Bay Area).
 
 **Escalation Clause**: Buyer's offer to beat other offers by specified amount up to a cap.
+
+**Escrow**: Neutral third party holding funds and documents during the transaction.
 
 **Escrow Holdback**: Funds held after closing for specific repairs or issues.
 
 **Fiduciary Duty**: Agent's legal obligation to act in your best interest.
 
+**Home Warranty**: Service contract covering repairs to systems and appliances.
+
+**Inspection Contingency**: Buyer's right to inspect and request repairs or cancel.
+
 **Listing Agreement**: Contract with your agent specifying terms and commission.
 
 **Lockbox**: Secure key holder allowing agents to show your home.
-
-## M-R
 
 **Multiple Counter Offer**: Responding to several buyers simultaneously.
 
@@ -1015,13 +1025,17 @@ Key terms you'll encounter when selling your home.
 
 **Preliminary Title Report**: Document showing ownership and any claims on property.
 
-**Rent-Back**: Arrangement where you stay in home after closing, paying rent.
+**Pre-Listing Inspection**: Inspection done before listing to identify issues early.
 
-## S-Z
+**Rent-Back**: Arrangement where you stay in home after closing, paying rent.
 
 **Seller Concession**: Credits or contributions to buyer's closing costs.
 
 **Staging**: Furnishing and decorating to help buyers visualize living there.
+
+**Title Insurance**: Protection for buyer and lender against ownership claims.
+
+**Transfer Disclosure Statement (TDS)**: Required form disclosing property condition.
 
 **Transfer Tax**: Tax paid when property changes hands. Varies by city.
 
