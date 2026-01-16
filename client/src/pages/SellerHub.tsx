@@ -12,9 +12,9 @@ import {
 
 function formatContent(content: string) {
   return content
-    .replace(/^# .+\n/m, '')
-    .replace(/### (.+)/g, '<h3 class="mt-3 mb-1 font-semibold">$1</h3>')
-    .replace(/## (.+)/g, '<h2 class="mt-4 mb-1 font-semibold text-lg">$1</h2>')
+    .replace(/^# .+\n+/m, '')
+    .replace(/\n+### (.+)\n+/g, '<h3 class="mt-2 font-semibold">$1</h3>')
+    .replace(/\n+## (.+)\n+/g, '<h2 class="mt-3 font-semibold text-lg">$1</h2>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/- \[ \] /g, '<span class="inline-block w-4">&#x2713;</span> ')
     .replace(/- \[x\] /g, '<span class="inline-block w-4">&#x2713;</span> ')
