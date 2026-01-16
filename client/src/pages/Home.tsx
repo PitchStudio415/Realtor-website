@@ -87,52 +87,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 md:py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Why Work With Me</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              A strategic approach that puts your interests first.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            <Card className="border-0 shadow-md hover-elevate" data-testid="card-proof-data">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <BarChart3 className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Data-Driven Strategy</h3>
-                <p className="text-muted-foreground text-sm">
-                  Every pricing decision and offer strategy is backed by thorough market analysis, not guesswork.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-md hover-elevate" data-testid="card-proof-negotiation">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Strong Negotiation</h3>
-                <p className="text-muted-foreground text-sm">
-                  13+ years in sales means I know how to advocate for your interests and communicate clearly.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-md hover-elevate" data-testid="card-proof-construction">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Wrench className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Construction Experience</h3>
-                <p className="text-muted-foreground text-sm">
-                  Residential experience helps me guide you through inspections, repairs, and scope conversations.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       <section className="py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -188,6 +142,52 @@ export default function Home() {
                     Learn more <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
                 </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 md:py-12 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">Why Work With Me</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A strategic approach that puts your interests first.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <Card className="border-0 shadow-md hover-elevate" data-testid="card-proof-data">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Data-Driven Strategy</h3>
+                <p className="text-muted-foreground text-sm">
+                  Every pricing decision and offer strategy is backed by thorough market analysis, not guesswork.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-md hover-elevate" data-testid="card-proof-negotiation">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Strong Negotiation</h3>
+                <p className="text-muted-foreground text-sm">
+                  13+ years in sales means I know how to advocate for your interests and communicate clearly.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-md hover-elevate" data-testid="card-proof-construction">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Wrench className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Construction Experience</h3>
+                <p className="text-muted-foreground text-sm">
+                  Residential experience helps me guide you through inspections, repairs, and scope conversations.
+                </p>
               </CardContent>
             </Card>
           </div>
