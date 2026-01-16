@@ -59,12 +59,19 @@ export default function Buy() {
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               A data-driven approach to finding and winning the right home, with clear communication every step of the way.
             </p>
-            <Link href="/contact?type=buyer">
-              <Button size="lg" data-testid="button-buy-cta">
-                Book a buyer consult
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/contact?type=buyer">
+                <Button size="lg" className="w-full sm:w-auto" data-testid="button-buy-cta">
+                  Book a buyer consult
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+              <Link href="/calculator">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto" data-testid="button-calculator-cta">
+                  Affordability Calculator
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
