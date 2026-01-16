@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Buy", href: "/buy" },
@@ -85,6 +86,7 @@ export function Header() {
           </nav>
           
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Link href="/contact" className="hidden sm:block">
               <Button size="sm" data-testid="button-contact">
                 Contact

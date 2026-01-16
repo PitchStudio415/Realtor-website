@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, Search, Calendar } from "lucide-react";
-import { blogPosts, getBlogPostBySlug, type BlogPost } from "@/lib/content";
+import { blogPosts, getBlogPostBySlug } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 
 const categories = [
