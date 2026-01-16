@@ -234,20 +234,26 @@ export const buyerModules: EducationModule[] = [
 
 A clear timeline helps you plan cash, timing, and decisions. This reflects a typical California transaction. Your path shifts based on price point and market heat.
 
-## Phase 1: Preparation (1-3 months before you shop)
+## Phase 1: Preparation
+
+**1 to 3 months before you shop**
 
 - Pull your credit report. Fix errors. Lower balances.
 - Set a target budget. Include down payment, closing costs, and reserves.
 - Review neighborhoods with commute, schools, and lifestyle in mind.
 - Interview agents. Pick one who explains strategy and tradeoffs clearly.
 
-## Phase 2: Loan Pre-Approval (1-2 weeks)
+## Phase 2: Loan Pre-Approval
 
-- Gather documents. Pay stubs, W2s, tax returns, bank statements.
+**1 to 2 weeks**
+
+- Gather documents: pay stubs, W-2s, tax returns, bank statements.
 - Apply with 2 or 3 lenders. Compare rate, fees, and responsiveness.
 - Secure a written pre-approval sized to your comfort, not the max.
 
-## Phase 3: Home Search (timing varies)
+## Phase 3: Home Search
+
+**Timing varies**
 
 - Define non-negotiables versus preferences.
 - Tour homes in person. Photos hide flaws.
@@ -260,11 +266,13 @@ A clear timeline helps you plan cash, timing, and decisions. This reflects a typ
 - Submit the offer. Counter as needed.
 - Reach mutual acceptance. The clock starts.
 
-## Phase 5: Escrow (30-45 days)
+## Phase 5: Escrow
+
+**30 to 45 days**
 
 - Open escrow.
-- Deposit earnest money. Often around 3 percent of purchase price.
-- Complete inspections early. Usually within the first 7 to 17 days.
+- Deposit earnest money, often around 3 percent of purchase price.
+- Complete inspections early, usually within the first 7 to 17 days.
 - Lender orders the appraisal.
 - Finalize loan approval.
 - Title and escrow clear outstanding items.
