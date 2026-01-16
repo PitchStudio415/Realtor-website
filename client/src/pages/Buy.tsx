@@ -177,7 +177,15 @@ export default function Buy() {
             <p className="text-muted-foreground">Deep-dive guides to help you understand the process.</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <Link href="/calculator">
+              <Card className="h-full hover-elevate cursor-pointer border-primary/20 bg-primary/5">
+                <CardContent className="p-5">
+                  <h3 className="font-semibold mb-1 text-primary">Affordability Calculator</h3>
+                  <p className="text-sm text-muted-foreground">What can you afford?</p>
+                </CardContent>
+              </Card>
+            </Link>
             <Link href="/buyer-hub/timeline">
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
