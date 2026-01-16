@@ -272,24 +272,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-muted-foreground mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8">
               Whether you're buying your first home or selling your current one, let's talk about your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact?type=buyer">
-                <Button size="lg" className="w-full sm:w-auto" data-testid="button-cta-buyer-bottom">
-                  <CheckCircle2 className="w-4 h-4 mr-2" />
+                <Button size="lg" className="w-full sm:w-auto text-base px-8 py-6 shadow-lg" data-testid="button-cta-buyer-bottom">
                   Book a buyer consult
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link href="/contact?type=seller">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto" data-testid="button-cta-seller-bottom">
-                  <CheckCircle2 className="w-4 h-4 mr-2" />
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6" data-testid="button-cta-seller-bottom">
                   Book a seller consult
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
             </div>
