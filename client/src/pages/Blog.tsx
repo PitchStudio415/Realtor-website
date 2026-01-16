@@ -71,6 +71,8 @@ function BlogPostPage({ slug }: { slug: string }) {
               .replace(/### (.+)/g, '</p><h3>$1</h3><p>')
               .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
               .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+              .replace(/^- /gm, '&#x2022; ')
+              .replace(/\n- /g, '<br/>&#x2022; ')
               .replace(/\n\n+/g, '</p><p>')
               .replace(/\n/g, '<br/>')
           }}
