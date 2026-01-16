@@ -232,50 +232,50 @@ export const buyerModules: EducationModule[] = [
     content: `
 # Home Buying Timeline in California
 
-Understanding the timeline helps you plan better. Here's what to expect.
+A clear timeline helps you plan cash, timing, and decisions. This reflects a typical California transaction. Your path shifts based on price point and market heat.
 
-## Phase 1: Preparation (1-3 months before)
+## Phase 1: Preparation (1-3 months before you shop)
 
-- Check your credit score and address any issues
-- Start saving for down payment and closing costs
-- Research neighborhoods and commute options
-- Interview and select a real estate agent
+- Pull your credit report. Fix errors. Lower balances.
+- Set a target budget. Include down payment, closing costs, and reserves.
+- Review neighborhoods with commute, schools, and lifestyle in mind.
+- Interview agents. Pick one who explains strategy and tradeoffs clearly.
 
-## Phase 2: Pre-Approval (1-2 weeks)
+## Phase 2: Loan Pre-Approval (1-2 weeks)
 
-- Gather financial documents
-- Apply with 2-3 lenders to compare rates
-- Get your pre-approval letter
+- Gather documents. Pay stubs, W2s, tax returns, bank statements.
+- Apply with 2 or 3 lenders. Compare rate, fees, and responsiveness.
+- Secure a written pre-approval sized to your comfort, not the max.
 
-## Phase 3: House Hunting (Variable)
+## Phase 3: Home Search (timing varies)
 
-- Define your must-haves vs nice-to-haves
-- Tour homes in person
-- Learn the market through offers and feedback
-- Typical timeline: 1-6 months depending on market
+- Define non-negotiables versus preferences.
+- Tour homes in person. Photos hide flaws.
+- Track list price to sale price to learn leverage.
+- Typical range runs from a few weeks to several months.
 
-## Phase 4: Making an Offer
+## Phase 4: Offer and Negotiation
 
-- Work with your agent on offer strategy
-- Submit offer and negotiate
-- Reach mutual acceptance
+- Set price, terms, and contingencies based on comps and demand.
+- Submit the offer. Counter as needed.
+- Reach mutual acceptance. The clock starts.
 
-## Phase 5: In Escrow (30-45 days typically)
+## Phase 5: Escrow (30-45 days)
 
-- Open escrow
-- Deposit earnest money (typically 3% of purchase price)
-- Order inspections (first 7-17 days)
-- Appraisal ordered by lender
-- Final loan approval
-- Title and escrow work completed
+- Open escrow.
+- Deposit earnest money. Often around 3 percent of purchase price.
+- Complete inspections early. Usually within the first 7 to 17 days.
+- Lender orders the appraisal.
+- Finalize loan approval.
+- Title and escrow clear outstanding items.
 
 ## Phase 6: Closing
 
-- Final walkthrough
-- Sign documents
-- Wire funds
-- Record the deed
-- Get your keys!
+- Complete the final walkthrough.
+- Sign loan and escrow documents.
+- Wire remaining funds.
+- Deed records with the county.
+- Keys released after recordation.
     `,
   },
   {
