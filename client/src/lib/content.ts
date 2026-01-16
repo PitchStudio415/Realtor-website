@@ -558,53 +558,81 @@ First-time buyers often make similar mistakes. Here's how to avoid them.
     content: `
 # Real Estate Glossary
 
-Key terms you'll encounter when buying a home.
-
-## A-E
+Key terms every buyer should know.
 
 **Appraisal**: Professional estimate of a property's market value, required by lenders.
 
-**Closing Costs**: Fees and expenses paid at closing beyond the purchase price.
+**Assessed Value**: Value assigned by the county for property tax purposes.
 
-**Contingency**: A condition in the contract that must be met for the sale to proceed.
+**Buyer's Agent**: Real estate agent representing the buyer's interests.
 
-**Earnest Money Deposit (EMD)**: Deposit showing buyer's good faith, typically 3% in Bay Area.
+**Closing**: The final step where ownership transfers and funds are exchanged.
 
-**Escrow**: Neutral third party that holds funds and documents during the transaction.
+**Closing Costs**: Fees paid at closing beyond the purchase price (typically 2-3% of loan).
 
-## F-L
+**Comparable Sales (Comps)**: Recently sold similar properties used to estimate value.
+
+**Contingency**: A condition that must be met for the sale to proceed.
+
+**Conventional Loan**: Mortgage not backed by a government agency.
+
+**Counter Offer**: Seller's response to a buyer's offer with different terms.
+
+**Days on Market (DOM)**: How long a property has been listed for sale.
+
+**Deed**: Legal document transferring property ownership.
+
+**Down Payment**: Cash paid upfront toward the purchase price.
+
+**Earnest Money Deposit (EMD)**: Good faith deposit showing buyer commitment (typically 3% in Bay Area).
+
+**Escrow**: Neutral third party holding funds and documents during the transaction.
 
 **FHA Loan**: Government-backed loan with lower down payment requirements.
 
-**HOA**: Homeowners Association that manages common areas and enforces rules.
+**Fixed-Rate Mortgage**: Loan with an interest rate that stays the same.
+
+**HOA (Homeowners Association)**: Organization managing common areas and enforcing community rules.
+
+**Home Inspection**: Professional examination of a property's condition.
+
+**Interest Rate**: The cost of borrowing money, expressed as a percentage.
 
 **Jumbo Loan**: Loan exceeding conforming limits (currently ~$1.15M in Bay Area).
 
-**Lien**: Legal claim against a property, usually for unpaid debts.
+**Lien**: Legal claim against a property for unpaid debts.
+
+**Listing Agent**: Real estate agent representing the seller.
+
+**Loan Estimate**: Document showing loan terms, projected payments, and closing costs.
 
 **Loan-to-Value (LTV)**: Loan amount divided by property value.
 
-## M-R
+**MLS (Multiple Listing Service)**: Database where agents share property listings.
 
-**MLS**: Multiple Listing Service where agents share property listings.
+**Mortgage Insurance (PMI)**: Insurance required when down payment is less than 20%.
 
-**Mortgage Insurance (PMI/MIP)**: Insurance required when down payment is less than 20%.
+**Offer**: Formal proposal to purchase a property at a specific price and terms.
 
 **Pre-Approval**: Lender's verified commitment to lend you a specific amount.
 
-**Principal**: The amount borrowed, not including interest.
+**Principal**: The loan amount borrowed, not including interest.
 
-**Rent-Back**: Arrangement where seller stays in home after closing, paying rent to buyer.
+**Property Taxes**: Annual taxes based on assessed value, paid to the county.
 
-## S-Z
+**Rate Lock**: Agreement to hold an interest rate for a set period.
+
+**Rent-Back**: Arrangement where seller stays in home after closing, paying rent.
+
+**Title**: Legal ownership of a property.
 
 **Title Insurance**: Protection against ownership disputes or claims on the property.
 
-**Transfer Tax**: Tax paid when property ownership transfers. Varies by city.
+**Transfer Tax**: Tax paid when property ownership transfers (varies by city).
 
 **Underwriting**: Lender's process of verifying your loan application.
 
-**VA Loan**: Government-backed loan for veterans with no down payment requirement.
+**VA Loan**: Government-backed loan for veterans with no down payment required.
 
 **Walkthrough**: Final inspection before closing to verify property condition.
     `,
