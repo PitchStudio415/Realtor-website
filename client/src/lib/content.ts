@@ -621,43 +621,32 @@ export const sellerModules: EducationModule[] = [
     content: `
 # Pricing Strategy and Comps Explained
 
-Pricing correctly is the most important decision you'll make when selling.
+Pricing correctly is the most important decision you'll make when selling. Get it right, and you attract serious buyers quickly. Get it wrong, and your home sits on the market losing value.
 
 ## What Are Comps?
 
-Comparable sales ("comps") are recently sold homes similar to yours. They're the foundation of any pricing analysis.
+Comparable sales (called "comps") are recently sold homes similar to yours. They form the foundation of any pricing analysis.
 
-### Good Comps Match Your Home In:
-- Location (same neighborhood, ideally same block)
-- Size (within 10-15% of square footage)
-- Bedrooms and bathrooms
-- Lot size
-- Age and condition
-- Recent sale date (last 3-6 months ideal)
+**Good comps match your home in:**
+
+- Location: same neighborhood, ideally same block
+- Size: within 10-15% of square footage
+- Bedrooms and bathrooms: similar count
+- Lot size: comparable outdoor space
+- Age and condition: similar updates and maintenance
+- Sale date: within the last 3-6 months
 
 ## The Pricing Sweet Spot
 
-### Price Too High
-- Fewer showings
-- Stale listing perception
-- Eventually sell for less than market value
+**Price too high:** Fewer showings, stale listing perception, and eventually selling for less than market value.
 
-### Price Too Low
-- Multiple offers drive price up
-- Creates urgency and competition
-- May actually net more than pricing high
+**Price too low:** Multiple offers drive price up, creates urgency and competition, and may actually net more than pricing high.
 
-### Price Right
-- Strong initial interest
-- Quality offers quickly
-- Less time on market
+**Price right:** Strong initial interest, quality offers quickly, and less time on market.
 
 ## Bay Area Pricing Tactics
 
-In competitive markets, many sellers price 5-10% below expected value to encourage bidding wars. This works when:
-- Inventory is low
-- Buyer demand is high
-- Your home shows well
+In competitive markets, many sellers price 5-10% below expected value to encourage bidding wars. This strategy works when inventory is low, buyer demand is high, and your home shows well.
 
 ## My Approach
 
