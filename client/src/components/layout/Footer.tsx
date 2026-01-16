@@ -47,7 +47,7 @@ export function Footer() {
               <div className="w-9 h-9 rounded-md bg-primary flex items-center justify-center">
                 <Home className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="font-semibold text-lg">Bay Area Home Guide</span>
+              <span className="font-semibold text-lg">Easy Bay Living</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               Data-driven real estate guidance for first-time buyers and sellers in Alameda and Contra Costa counties.
@@ -63,7 +63,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>hello@bayareahomeguide.com</span>
+                <span>hello@easybayliving.com</span>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ export function Footer() {
         
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Bay Area Home Guide. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Easy Bay Living. All rights reserved.</p>
             <div className="flex items-center gap-4 flex-wrap justify-center">
               <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>

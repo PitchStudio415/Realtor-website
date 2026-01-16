@@ -322,7 +322,7 @@ export default function Contact() {
                       <Mail className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-medium">Email</p>
-                        <p className="text-sm text-muted-foreground">hello@bayareahomeguide.com</p>
+                        <p className="text-sm text-muted-foreground">hello@easybayliving.com</p>
                       </div>
                     </div>
                   </div>

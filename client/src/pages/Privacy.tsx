@@ -50,7 +50,7 @@ export default function Privacy() {
           <h2 className="text-xl font-semibold mt-8 mb-4">Contact Us</h2>
           <p className="text-muted-foreground">
             If you have questions about this privacy policy, please contact us at 
-            hello@bayareahomeguide.com.
+            hello@easybayliving.com.
           </p>
         </div>
       </div>
