@@ -102,10 +102,10 @@ export default function Contact() {
 
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
+      <section className="bg-gradient-to-b from-muted/50 to-background py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-contact-headline">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3" data-testid="text-contact-headline">
               Get in Touch
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
@@ -116,7 +116,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="lg:col-span-2">
