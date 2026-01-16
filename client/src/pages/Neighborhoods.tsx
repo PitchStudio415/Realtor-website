@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, MapPin, Home, Users, Car } from "lucide-react";
 import { neighborhoods, getNeighborhoodBySlug, getNeighborhoodsByCounty } from "@/lib/content";
+import heroImage from "@assets/stock_images/oakland_california_s_3adec2da.jpg";
 
 function NeighborhoodDetail({ slug }: { slug: string }) {
   const neighborhood = getNeighborhoodBySlug(slug);
@@ -163,17 +164,22 @@ function NeighborhoodIndex() {
 
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden min-h-[400px] md:min-h-[450px]">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-primary mb-4">
+            <div className="flex items-center gap-2 text-white/80 mb-4">
               <MapPin className="w-5 h-5" />
               <span className="font-medium">Explore</span>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-neighborhoods-headline">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-neighborhoods-headline">
               East Bay Neighborhoods
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-white/90">
               Get to know the cities and neighborhoods of Alameda and Contra Costa counties.
             </p>
           </div>

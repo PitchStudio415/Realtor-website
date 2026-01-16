@@ -13,6 +13,7 @@ import {
   Banknote,
   Building
 } from "lucide-react";
+import heroImage from "@assets/stock_images/california_suburban__76491f65.jpg";
 
 const timeline = [
   {
@@ -50,24 +51,29 @@ const timeline = [
 export default function Buy() {
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden min-h-[400px] md:min-h-[450px]">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-buy-headline">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-buy-headline">
               Buying Your First Home in the Bay Area
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-white/90 mb-8">
               A data-driven approach to finding and winning the right home, with clear communication every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact?type=buyer">
-                <Button size="lg" className="w-full sm:w-auto" data-testid="button-buy-cta">
+                <Button size="lg" className="w-full sm:w-auto shadow-lg" data-testid="button-buy-cta">
                   Book a buyer consult
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
               <Link href="/calculator">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto" data-testid="button-calculator-cta">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white text-foreground border-white hover:bg-white/90 shadow-lg" data-testid="button-calculator-cta">
                   Affordability Calculator
                 </Button>
               </Link>

@@ -7,6 +7,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, Search, Calendar } from "lucide-react";
 import { blogPosts, getBlogPostBySlug } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@assets/stock_images/san_francisco_bay_wa_d2352847.jpg";
 
 const categories = [
   { value: 'all', label: 'All' },
@@ -113,13 +114,18 @@ function BlogIndex() {
 
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden min-h-[350px] md:min-h-[400px]">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-blog-headline">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-blog-headline">
               Blog
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-white/90">
               Practical insights for Bay Area buyers and sellers.
             </p>
           </div>

@@ -12,6 +12,7 @@ import {
   HandshakeIcon,
   Key
 } from "lucide-react";
+import heroImage from "@assets/stock_images/berkeley_california__0a7c1f06.jpg";
 
 const timeline = [
   {
@@ -49,17 +50,22 @@ const timeline = [
 export default function Sell() {
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-accent/5 to-background py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden min-h-[400px] md:min-h-[450px]">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" data-testid="text-sell-headline">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-sell-headline">
               Selling Your Bay Area Home
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-white/90 mb-8">
               Strategic pricing, smart preparation, and skilled negotiation to maximize your sale.
             </p>
             <Link href="/contact?type=seller">
-              <Button size="lg" data-testid="button-sell-cta">
+              <Button size="lg" className="shadow-lg" data-testid="button-sell-cta">
                 Book a seller consult
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
