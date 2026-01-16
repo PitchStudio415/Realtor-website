@@ -41,7 +41,7 @@ function ModuleContent({ slug }: { slug: string }) {
         </div>
         
         <div 
-          className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-8 prose-h3:text-lg prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground"
+          className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-6 prose-h3:text-lg prose-h3:mt-4 prose-p:text-muted-foreground prose-p:my-2 prose-li:text-muted-foreground prose-strong:text-foreground"
           dangerouslySetInnerHTML={{ 
             __html: module.content
               .replace(/^# .+\n/m, '')
@@ -50,6 +50,7 @@ function ModuleContent({ slug }: { slug: string }) {
               .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
               .replace(/- \[ \]/g, '<span class="text-muted-foreground">&#x2022;</span>')
               .replace(/- \[x\]/g, '<span class="text-accent">&#x2022;</span>')
+              .replace(/\n\n+/g, '</p><p>')
               .replace(/\n/g, '<br/>')
           }}
         />

@@ -64,13 +64,14 @@ function BlogPostPage({ slug }: { slug: string }) {
         </div>
         
         <div 
-          className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-8 prose-h3:text-lg prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground"
+          className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-6 prose-h3:text-lg prose-h3:mt-4 prose-p:text-muted-foreground prose-p:my-2 prose-li:text-muted-foreground prose-strong:text-foreground"
           dangerouslySetInnerHTML={{ 
             __html: post.content
               .replace(/^# .+\n/m, '')
               .replace(/### (.+)/g, '</p><h3>$1</h3><p>')
               .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
               .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+              .replace(/\n\n+/g, '</p><p>')
               .replace(/\n/g, '<br/>')
           }}
         />
