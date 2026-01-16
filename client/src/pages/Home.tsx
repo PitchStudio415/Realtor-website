@@ -66,20 +66,20 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white" data-testid="text-hero-headline">
               Clear guidance for buying and selling in the East Bay.
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-testid="text-hero-subhead">
+            <p className="text-xl md:text-2xl text-white font-medium mb-10 max-w-2xl mx-auto leading-relaxed" data-testid="text-hero-subhead">
               Data-led strategy, strong negotiation, and practical advice for first-time buyers and sellers in Alameda and Contra Costa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact?type=buyer">
-                <Button size="lg" className="w-full sm:w-auto" data-testid="button-buyer-cta">
+                <Button size="lg" className="w-full sm:w-auto text-base px-8 py-6 shadow-lg" data-testid="button-buyer-cta">
                   Book a buyer consult
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link href="/contact?type=seller">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-seller-cta">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-foreground border-white hover:bg-white/90 shadow-lg" data-testid="button-seller-cta">
                   Book a seller consult
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
             </div>
