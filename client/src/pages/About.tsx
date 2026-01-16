@@ -25,17 +25,12 @@ export default function About() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <Avatar className="w-56 h-56 md:w-72 md:h-72">
-                    <AvatarFallback className="text-6xl md:text-7xl bg-primary/10 text-primary">
-                      BA
-                    </AvatarFallback>
-                  </Avatar>
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-background rounded-lg shadow-lg px-4 py-2 border">
-                  <span className="text-sm font-medium">Agent since 2025</span>
-                </div>
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <Avatar className="w-56 h-56 md:w-72 md:h-72">
+                  <AvatarFallback className="text-6xl md:text-7xl bg-primary/10 text-primary">
+                    BA
+                  </AvatarFallback>
+                </Avatar>
               </div>
             </div>
           </div>
