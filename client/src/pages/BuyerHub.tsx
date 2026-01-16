@@ -66,9 +66,9 @@ export default function BuyerHub() {
                     </div>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pb-6">
+                <AccordionContent className="pb-4">
                   <div 
-                    className="prose prose-sm max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-lg prose-h2:mt-4 prose-h3:text-base prose-h3:mt-3 prose-p:text-muted-foreground prose-p:my-2 prose-li:text-muted-foreground prose-strong:text-foreground ml-14"
+                    className="text-sm text-muted-foreground ml-14 [&_h2]:text-foreground [&_h3]:text-foreground [&_strong]:text-foreground leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: formatContent(module.content) }}
                   />
                 </AccordionContent>
