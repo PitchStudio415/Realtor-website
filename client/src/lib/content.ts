@@ -335,44 +335,51 @@ Promising to pay the difference if the appraisal comes in low, up to a certain a
     content: `
 # How Pre-Approval Works
 
-Pre-approval is essential before seriously shopping for homes.
+Pre-approval is essential before seriously shopping for homes. Sellers want to see you've been vetted by a lender before accepting your offer.
 
 ## What Lenders Evaluate
 
 ### Credit Score
+
 - 620+ for conventional loans
-- 580+ for FHA
+- 580+ for FHA loans
 - 740+ for best rates
 
 ### Debt-to-Income Ratio (DTI)
+
 Your monthly debt payments divided by gross monthly income.
+
 - Front-end DTI (housing only): Ideally under 28%
 - Back-end DTI (all debt): Ideally under 43%
 
 ### Down Payment
+
 - Conventional: 3-20%+
 - FHA: 3.5%
 - VA: 0%
 - Jumbo (Bay Area loans over ~$1.15M): 10-20%+
 
 ### Employment & Income
+
 - 2+ years of stable employment
 - Tax returns, W-2s, pay stubs
 - Self-employed: 2 years of tax returns showing stable income
 
 ### Assets
-- Bank statements showing down payment + reserves
+
+- Bank statements showing down payment plus reserves
 - Gift letters if using family funds
 
 ## Pre-Qualification vs Pre-Approval
 
-**Pre-qualification**: Quick estimate, not verified
-**Pre-approval**: Verified by lender, what sellers want to see
+**Pre-qualification** is a quick estimate based on self-reported information. It is not verified.
+
+**Pre-approval** means the lender has checked your credit, income, and assets. This is what sellers want to see.
 
 ## Tips
 
-- Shop rates within a 14-day window
-- Don't open new credit or make large purchases
+- Shop rates within a 14-day window to minimize credit impacts
+- Don't open new credit or make large purchases before closing
 - Have documents ready before applying
     `,
   },
