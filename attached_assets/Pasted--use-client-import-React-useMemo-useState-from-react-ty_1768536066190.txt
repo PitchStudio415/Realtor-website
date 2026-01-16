@@ -1,0 +1,268 @@
+"use client";
+
+import React, { useMemo, useState } from "react";
+
+type Mode = "afford" | "payment";
+
+function clamp(n: number, min: number, max: number) {
+  return Math.min(Math.max(n, min), max);
+}
+
+function toNumber(value: string): number {
+  const cleaned = value.replace(/[^0-9.]/g, "");
+  const n = Number(cleaned);
+  return Number.isFinite(n) ? n : 0;
+}
+
+function formatMoney(n: number) {
+  if (!Number.isFinite(n)) return "$0";
+  return n.toLocaleString(undefined, {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  });
+}
+
+function formatMoney2(n: number) {
+  if (!Number.isFinite(n)) return "$0";
+  return n.toLocaleString(undefined, {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 2,
+  });
+}
+
+function monthlyPI(loanAmount: number, annualRatePct: number, termYears: number) {
+  const r = annualRatePct / 100 / 12;
+  const n = termYears * 12;
+  if (loanAmount <= 0) return 0;
+  if (r === 0) return loanAmount / n;
+  return (loanAmount * r) / (1 - Math.pow(1 + r, -n));
+}
+
+function monthlyTax(homePrice: number, taxRatePct: number) {
+  return (homePrice * (taxRatePct / 100)) / 12;
+}
+
+function monthlyPMI(loanAmount: number, pmiRatePct: number, downPaymentPct: number) {
+  // Apply PMI only if down payment < 20%
+  if (downPaymentPct >= 20) return 0;
+  return (loanAmount * (pmiRatePct / 100)) / 12;
+}
+
+/**
+ * Given a target monthly total housing payment (PITI + HOA + PMI),
+ * solve for max home price using binary search.
+ */
+function solveHomePriceFromMonthlyTarget(opts: {
+  monthlyTarget: number;
+  downPaymentPct: number;
+  annualRatePct: number;
+  termYears: number;
+  taxRatePct: number;
+  insuranceMonthly: number;
+  hoaMonthly: number;
+  pmiRatePct: number;
+}) {
+  const {
+    monthlyTarget,
+    downPaymentPct,
+    annualRatePct,
+    termYears,
+    taxRatePct,
+    insuranceMonthly,
+    hoaMonthly,
+    pmiRatePct,
+  } = opts;
+
+  const dp = clamp(downPaymentPct, 0, 100) / 100;
+
+  // Edge cases
+  if (monthlyTarget <= 0) return 0;
+
+  // Search bounds: $0 to $10M
+  let lo = 0;
+  let hi = 10_000_000;
+
+  for (let i = 0; i < 60; i++) {
+    const mid = (lo + hi) / 2;
+    const loan = mid * (1 - dp);
+    const pi = monthlyPI(loan, annualRatePct, termYears);
+    const tax = monthlyTax(mid, taxRatePct);
+    const pmi = monthlyPMI(loan, pmiRatePct, downPaymentPct);
+    const total = pi + tax + insuranceMonthly + hoaMonthly + pmi;
+
+    if (total > monthlyTarget) {
+      hi = mid;
+    } else {
+      lo = mid;
+    }
+  }
+
+  return lo;
+}
+
+export default function AffordabilityCalculator() {
+  const [mode, setMode] = useState<Mode>("afford");
+
+  // Shared defaults
+  const [ratePct, setRatePct] = useState("6.75");
+  const [termYears, setTermYears] = useState<30 | 15>(30);
+  const [taxRatePct, setTaxRatePct] = useState("1.25");
+  const [insuranceMonthly, setInsuranceMonthly] = useState("150");
+  const [hoaMonthly, setHoaMonthly] = useState("0");
+  const [downPaymentPct, setDownPaymentPct] = useState("20");
+  const [pmiRatePct, setPmiRatePct] = useState("0.60");
+
+  // Mode A inputs
+  const [grossAnnualIncome, setGrossAnnualIncome] = useState("200000");
+  const [monthlyDebts, setMonthlyDebts] = useState("800");
+  const [dtiCapPct, setDtiCapPct] = useState("36"); // 36 default, 43 optional
+
+  // Mode B input
+  const [homePrice, setHomePrice] = useState("900000");
+
+  const numbers = useMemo(() => {
+    const rate = clamp(toNumber(ratePct), 0, 25);
+    const taxRate = clamp(toNumber(taxRatePct), 0, 5);
+    const ins = clamp(toNumber(insuranceMonthly), 0, 5000);
+    const hoa = clamp(toNumber(hoaMonthly), 0, 5000);
+    const dpPct = clamp(toNumber(downPaymentPct), 0, 100);
+    const pmiRate = clamp(toNumber(pmiRatePct), 0, 5);
+
+    const incomeAnnual = clamp(toNumber(grossAnnualIncome), 0, 10_000_000);
+    const debts = clamp(toNumber(monthlyDebts), 0, 100_000);
+    const dti = clamp(toNumber(dtiCapPct), 10, 60);
+
+    const price = clamp(toNumber(homePrice), 0, 10_000_000);
+
+    return {
+      rate,
+      termYears,
+      taxRate,
+      ins,
+      hoa,
+      dpPct,
+      pmiRate,
+      incomeAnnual,
+      debts,
+      dti,
+      price,
+    };
+  }, [
+    ratePct,
+    termYears,
+    taxRatePct,
+    insuranceMonthly,
+    hoaMonthly,
+    downPaymentPct,
+    pmiRatePct,
+    grossAnnualIncome,
+    monthlyDebts,
+    dtiCapPct,
+    homePrice,
+  ]);
+
+  const results = useMemo(() => {
+    const {
+      rate,
+      termYears: term,
+      taxRate,
+      ins,
+      hoa,
+      dpPct,
+      pmiRate,
+      incomeAnnual,
+      debts,
+      dti,
+      price,
+    } = numbers;
+
+    if (mode === "payment") {
+      const dp = (dpPct / 100) * price;
+      const loan = Math.max(price - dp, 0);
+      const pi = monthlyPI(loan, rate, term);
+      const tax = monthlyTax(price, taxRate);
+      const pmi = monthlyPMI(loan, pmiRate, dpPct);
+      const total = pi + tax + ins + hoa + pmi;
+
+      const n = term * 12;
+      const totalPaid = total > 0 ? total * n : 0;
+      const totalPIpaid = pi > 0 ? pi * n : 0;
+      const totalInterest = totalPIpaid - loan;
+
+      return {
+        homePrice: price,
+        downPayment: dp,
+        loanAmount: loan,
+        monthlyPI: pi,
+        monthlyTax: tax,
+        monthlyIns: ins,
+        monthlyHOA: hoa,
+        monthlyPMI: pmi,
+        monthlyTotal: total,
+        totalInterest: Math.max(totalInterest, 0),
+        totalPaid,
+      };
+    }
+
+    // mode === "afford"
+    const grossMonthly = incomeAnnual / 12;
+    const maxTotalDebt = grossMonthly * (dti / 100);
+    const maxHousing = Math.max(maxTotalDebt - debts, 0);
+
+    // Solve for max home price where total monthly housing ~= maxHousing
+    const maxPrice = solveHomePriceFromMonthlyTarget({
+      monthlyTarget: maxHousing,
+      downPaymentPct: dpPct,
+      annualRatePct: rate,
+      termYears: term,
+      taxRatePct: taxRate,
+      insuranceMonthly: ins,
+      hoaMonthly: hoa,
+      pmiRatePct: pmiRate,
+    });
+
+    const dp = (dpPct / 100) * maxPrice;
+    const loan = Math.max(maxPrice - dp, 0);
+    const pi = monthlyPI(loan, rate, term);
+    const tax = monthlyTax(maxPrice, taxRate);
+    const pmi = monthlyPMI(loan, pmiRate, dpPct);
+    const total = pi + tax + ins + hoa + pmi;
+
+    return {
+      grossMonthly,
+      maxTotalDebt,
+      maxHousing,
+      maxHomePrice: maxPrice,
+      downPayment: dp,
+      loanAmount: loan,
+      monthlyPI: pi,
+      monthlyTax: tax,
+      monthlyIns: ins,
+      monthlyHOA: hoa,
+      monthlyPMI: pmi,
+      monthlyTotal: total,
+    };
+  }, [numbers, mode]);
+
+  const Label = ({ children }: { children: React.ReactNode }) => (
+    <div style={{ fontSize: 13, opacity: 0.85, marginBottom: 6 }}>{children}</div>
+  );
+
+  const Input = (props: React.InputHTMLAttributes<HTMLInputElement>) => (
+    <input
+      {...props}
+      style={{
+        width: "100%",
+        padding: "10px 12px",
+        borderRadius: 10,
+        border: "1px solid rgba(255,255,255,0.18)",
+        background: "rgba(255,255,255,0.06)",
+        color: "inherit",
+        outline: "none",
+      }}
+    />
+  );
+
+  const Select = (props: React.SelectHTMLAttributes<HTMLSele

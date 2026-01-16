@@ -17,6 +17,7 @@ const navItems = [
     children: [
       { label: "First-Time Buyer Hub", href: "/buyer-hub" },
       { label: "Seller Education Hub", href: "/seller-hub" },
+      { label: "Affordability Calculator", href: "/calculator" },
     ]
   },
   { label: "Neighborhoods", href: "/neighborhoods" },

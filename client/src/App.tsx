@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Buy from "@/pages/Buy";
 import Sell from "@/pages/Sell";
+import Calculator from "@/pages/Calculator";
 import BuyerHub from "@/pages/BuyerHub";
 import SellerHub from "@/pages/SellerHub";
 import Neighborhoods from "@/pages/Neighborhoods";
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/buy" component={Buy} />
       <Route path="/sell" component={Sell} />
+      <Route path="/calculator" component={Calculator} />
       <Route path="/buyer-hub" component={BuyerHub} />
       <Route path="/buyer-hub/:slug" component={BuyerHub} />
       <Route path="/seller-hub" component={SellerHub} />
