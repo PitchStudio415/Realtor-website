@@ -8,7 +8,7 @@ import profilePhoto from "@assets/ProfilePhoto_1769661549653.jpeg";
 export default function About() {
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-muted/50 to-background py-8 md:py-10">
+      <section className="bg-gradient-to-b from-muted/50 to-background pt-8 md:pt-10 pb-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -38,15 +38,15 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-6 md:py-8">
+      <section className="py-4 md:py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">My Approach</h2>
-            <div className="space-y-3">
-              <p className="text-muted-foreground">
+            <div className="space-y-4">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Real estate is one of the most significant financial decisions people make, and I believe it should be approached with clear information and proper guidance at every step. With over 14 years of experience in sales across multiple industries, I have learned that the best outcomes and effective problem solving come from truly understanding my clients' needs and communicating honestly.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
                 I bring that same approach to real estate by providing clear data, explaining all available options, and advocating strongly for my clients' interests. I live in El Cerrito and know the East Bay deeply, from the hills of Berkeley and the neighborhoods of Oakland to Walnut Creek and Fremont, using that local knowledge to help buyers find the right fit and sellers understand who is buying in their area.
               </p>
             </div>
