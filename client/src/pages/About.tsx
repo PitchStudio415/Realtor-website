@@ -44,10 +44,10 @@ export default function About() {
             <h2 className="text-2xl md:text-3xl font-bold mb-6">My Approach</h2>
             <div className="prose prose-lg dark:prose-invert">
               <p className="text-muted-foreground mb-4">
-                Real estate is one of the most significant financial decisions people make, and it deserves clear information and steady guidance throughout the process. With over 14 years of experience in sales across multiple industries, Muzamil has learned that the best outcomes come from strong problem-solving grounded in honest communication and a deep understanding of client needs.
+                Real estate is one of the most significant financial decisions people make, and I believe it should be approached with clear information and proper guidance at every step. With over 14 years of experience in sales across multiple industries, I have learned that the best outcomes and effective problem solving come from truly understanding my clients' needs and communicating honestly.
               </p>
               <p className="text-muted-foreground mb-4">
-                He brings that same approach to real estate—providing clear data, explaining options without pressure, and advocating firmly for his clients' best interests. Based in El Cerrito, Muzamil knows the East Bay well, from the hills of Berkeley and neighborhoods of Oakland to Walnut Creek and Fremont, using local insight to help buyers find the right fit and sellers understand their market.
+                I bring that same approach to real estate by providing clear data, explaining all available options, and advocating strongly for my clients' interests. I live in El Cerrito and know the East Bay deeply, from the hills of Berkeley and the neighborhoods of Oakland to Walnut Creek and Fremont, using that local knowledge to help buyers find the right fit and sellers understand who is buying in their area.
               </p>
             </div>
           </div>
