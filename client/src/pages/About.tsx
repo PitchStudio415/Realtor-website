@@ -44,26 +44,10 @@ export default function About() {
             <h2 className="text-2xl md:text-3xl font-bold mb-6">My Approach</h2>
             <div className="prose prose-lg dark:prose-invert">
               <p className="text-muted-foreground mb-4">
-                Real estate is one of the biggest financial decisions most people make. 
-                I believe you deserve clear information, not sales pressure.
+                Real estate is one of the most significant financial decisions people make, and it deserves clear information and steady guidance throughout the process. With over 14 years of experience in sales across multiple industries, Muzamil has learned that the best outcomes come from strong problem-solving grounded in honest communication and a deep understanding of client needs.
               </p>
               <p className="text-muted-foreground mb-4">
-                My background includes 13+ years in sales across various industries, 
-                where I learned that the best outcomes come from truly understanding 
-                what clients need and communicating honestly—even when it's not what 
-                they want to hear.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                I bring that same approach to real estate. I'll give you the data, 
-                explain your options, and advocate hard for your interests—but I won't 
-                push you into a decision that doesn't make sense for you.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                I live in El Cerrito and know the East Bay deeply. From the hills of Berkeley 
-                to the neighborhoods of Oakland, from Walnut Creek to Fremont—I understand 
-                what makes each area unique. This local knowledge helps me guide buyers to 
-                neighborhoods that match their lifestyle and helps sellers understand who's 
-                buying in their area.
+                He brings that same approach to real estate—providing clear data, explaining options without pressure, and advocating firmly for his clients' best interests. Based in El Cerrito, Muzamil knows the East Bay well, from the hills of Berkeley and neighborhoods of Oakland to Walnut Creek and Fremont, using local insight to help buyers find the right fit and sellers understand their market.
               </p>
             </div>
           </div>
