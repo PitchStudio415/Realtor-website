@@ -82,10 +82,10 @@ export default function Buy() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">How I Help Buyers</h2>
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">How I Help Buyers</h2>
             <p className="text-muted-foreground">
               The Bay Area market moves fast. My job is to help you move confidently, 
               armed with the information you need to make smart decisions.
@@ -151,10 +151,10 @@ export default function Buy() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-10 md:py-12 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">The Buying Process</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">The Buying Process</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               From first conversation to getting your keys, here's what to expect.
             </p>
