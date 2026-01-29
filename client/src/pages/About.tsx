@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, MapPin, Award, MessageSquare, BarChart3, Languages } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import profilePhoto from "@assets/ProfilePhoto_1769661549653.jpeg";
 
 export default function About() {
   return (
@@ -25,12 +25,13 @@ export default function About() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <Avatar className="w-56 h-56 md:w-72 md:h-72">
-                  <AvatarFallback className="text-6xl md:text-7xl bg-primary/10 text-primary">
-                    BA
-                  </AvatarFallback>
-                </Avatar>
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={profilePhoto} 
+                  alt="Profile photo" 
+                  className="w-full h-full object-cover object-top"
+                  data-testid="img-profile-photo"
+                />
               </div>
             </div>
           </div>
