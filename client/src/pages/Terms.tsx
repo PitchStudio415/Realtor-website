@@ -55,7 +55,7 @@ export default function Terms() {
           
           <h2 className="text-xl font-semibold mt-8 mb-4">Contact</h2>
           <p className="text-muted-foreground">
-            For questions about these terms, please contact us at hello@easybayliving.com.
+            For questions about these terms, please contact us at hello@bayareahomelab.com.
           </p>
         </div>
       </div>
