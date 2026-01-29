@@ -77,7 +77,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/contact?type=seller">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-foreground border-white hover:bg-white/90 shadow-lg" data-testid="button-seller-cta">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-slate-900 border-white hover:bg-white/90 shadow-lg" data-testid="button-seller-cta">
                   Book a seller consult
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
