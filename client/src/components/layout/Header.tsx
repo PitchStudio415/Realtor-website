@@ -38,7 +38,7 @@ export function Header() {
             <div className="w-9 h-9 rounded-md bg-primary flex items-center justify-center" data-testid="logo-icon">
               <Home className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-semibold text-lg hidden sm:block" data-testid="logo-text">Bay Area Home Lab</span>
+            <span className="font-semibold text-lg hidden sm:block" data-testid="logo-text">Muzamil Khan Realtor</span>
           </Link>
           
           <nav className="hidden lg:flex items-center gap-1" data-testid="desktop-nav">

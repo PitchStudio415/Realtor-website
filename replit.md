@@ -1,4 +1,4 @@
-# Bay Area Home Lab - Real Estate Website
+# Muzamil Khan Realtor - Real Estate Website
 
 ## Overview
 A professional real estate website for a Bay Area realtor serving Alameda and Contra Costa counties. The site features educational content for first-time buyers and sellers, neighborhood guides, a blog, and contact/lead capture functionality.
