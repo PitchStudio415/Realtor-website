@@ -99,22 +99,22 @@ export default function About() {
               <div className="w-9 h-9 rounded-full bg-white/10 group-hover:bg-white/20 flex items-center justify-center flex-shrink-0 transition-colors">
                 <Phone className="w-4 h-4" />
               </div>
-              <span className="text-base">(510) 555-0123</span>
+              <span className="text-base">(510) 686-6338</span>
             </a>
             <a
-              href="mailto:hello@muzamilkhanrealtor.com"
+              href="mailto:Muzamil@risegroup.com"
               className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
               data-testid="link-email"
             >
               <div className="w-9 h-9 rounded-full bg-white/10 group-hover:bg-white/20 flex items-center justify-center flex-shrink-0 transition-colors">
                 <Mail className="w-4 h-4" />
               </div>
-              <span className="text-base">hello@muzamilkhanrealtor.com</span>
+              <span className="text-base">Muzamil@risegroup.com</span>
             </a>
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <a href="tel:+15105550123">
+            <a href="tel:+15106866338">
               <Button
                 size="lg"
                 className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold px-6"
@@ -124,7 +124,7 @@ export default function About() {
                 CALL ME
               </Button>
             </a>
-            <a href="mailto:hello@muzamilkhanrealtor.com">
+            <a href="mailto:Muzamil@risegroup.com">
               <Button
                 size="lg"
                 variant="outline"
@@ -233,13 +233,13 @@ export default function About() {
                 Whether you're buying, selling, or just exploring your options, I'm happy to answer questions and discuss your goals — no pressure, no obligation.
               </p>
               <div className="space-y-3">
-                <a href="tel:+15105550123" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                <a href="tel:+15106866338" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                   <Phone className="w-4 h-4 text-primary" />
-                  <span>(510) 555-0123</span>
+                  <span>(510) 686-6338</span>
                 </a>
-                <a href="mailto:hello@muzamilkhanrealtor.com" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:Muzamil@risegroup.com" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                   <Mail className="w-4 h-4 text-primary" />
-                  <span>hello@muzamilkhanrealtor.com</span>
+                  <span>Muzamil@risegroup.com</span>
                 </a>
               </div>
             </div>

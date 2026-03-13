@@ -315,14 +315,14 @@ export default function Contact() {
                       <Phone className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-medium">Phone</p>
-                        <p className="text-sm text-muted-foreground">(510) 555-0123</p>
+                        <p className="text-sm text-muted-foreground">(510) 686-6338</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Mail className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-medium">Email</p>
-                        <p className="text-sm text-muted-foreground">hello@muzamilkhanrealtor.com</p>
+                        <p className="text-sm text-muted-foreground">Muzamil@risegroup.com</p>
                       </div>
                     </div>
                   </div>

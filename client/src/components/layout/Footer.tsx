@@ -59,11 +59,11 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(510) 555-0123</span>
+                <span>(510) 686-6338</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>hello@muzamilkhanrealtor.com</span>
+                <span>Muzamil@risegroup.com</span>
               </div>
             </div>
           </div>

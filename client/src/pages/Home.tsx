@@ -49,20 +49,20 @@ export default function Home() {
 
             <div className="space-y-2 mb-7">
               <a
-                href="tel:+15105550123"
+                href="tel:+15106866338"
                 className="flex items-center gap-2.5 text-white/60 hover:text-white transition-colors text-sm"
                 data-testid="link-hero-phone"
               >
                 <Phone className="w-3.5 h-3.5" />
-                (510) 555-0123
+                (510) 686-6338
               </a>
               <a
-                href="mailto:hello@muzamilkhanrealtor.com"
+                href="mailto:Muzamil@risegroup.com"
                 className="flex items-center gap-2.5 text-white/60 hover:text-white transition-colors text-sm"
                 data-testid="link-hero-email"
               >
                 <Mail className="w-3.5 h-3.5" />
-                hello@muzamilkhanrealtor.com
+                Muzamil@risegroup.com
               </a>
             </div>
 
