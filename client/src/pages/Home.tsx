@@ -8,91 +8,87 @@ import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 export default function Home() {
   return (
     <Layout>
-      {/* Hero: photo + info */}
-      <section className="min-h-[88vh] grid lg:grid-cols-2">
-        {/* Photo */}
-        <div className="relative order-2 lg:order-1 min-h-[55vw] sm:min-h-[480px] lg:min-h-full">
-          <img
-            src={profilePhoto}
-            alt="Muzamil Khan — Realtor®"
-            className="w-full h-full object-cover object-top absolute inset-0"
-            data-testid="img-hero-photo"
-          />
-        </div>
-
-        {/* Info panel */}
-        <div className="order-1 lg:order-2 bg-[#0F172A] text-white flex flex-col justify-center px-8 md:px-14 py-14 lg:py-24">
-          <p className="text-xs tracking-widest uppercase text-white/50 mb-4 font-medium">
-            Real Estate · East Bay, CA
-          </p>
-
-          <h1
-            className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-tight mb-2"
-            data-testid="text-hero-name"
-          >
-            Muzamil Khan
-          </h1>
-          <p className="text-xl md:text-2xl text-white/70 font-medium mb-1">
-            Realtor®
-          </p>
-          <p className="text-sm text-white/40 mb-2">DRE# 02400805</p>
-
-          <div className="flex items-center gap-2 text-white/50 text-sm mb-8">
-            <MapPin className="w-4 h-4 flex-shrink-0" />
-            <span>Serving Alameda and Contra Costa counties</span>
+      {/* Hero */}
+      <section className="bg-[#0F172A] text-white py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center sm:items-start gap-10">
+          {/* Portrait */}
+          <div className="flex-shrink-0">
+            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden ring-4 ring-white/10">
+              <img
+                src={profilePhoto}
+                alt="Muzamil Khan — Realtor®"
+                className="w-full h-full object-cover object-top"
+                data-testid="img-hero-photo"
+              />
+            </div>
           </div>
 
-          <div className="w-16 h-px bg-white/20 mb-8" />
-
-          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-md">
-            Data-driven guidance for first-time buyers and sellers in the East Bay. Clear information, strong negotiation, and 14+ years of sales experience behind every transaction.
-          </p>
-
-          <div className="space-y-3 mb-8">
-            <a
-              href="tel:+15105550123"
-              className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
-              data-testid="link-hero-phone"
+          {/* Info */}
+          <div>
+            <p className="text-xs tracking-widest uppercase text-white/40 mb-3 font-medium">
+              Real Estate · East Bay, CA
+            </p>
+            <h1
+              className="text-4xl md:text-5xl font-bold leading-tight mb-1"
+              data-testid="text-hero-name"
             >
-              <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-white/20 flex items-center justify-center flex-shrink-0 transition-colors">
+              Muzamil Khan
+            </h1>
+            <p className="text-lg text-white/60 font-medium mb-1">Realtor®</p>
+            <p className="text-sm text-white/35 mb-2">DRE# 02400805</p>
+            <div className="flex items-center gap-2 text-white/45 text-sm mb-6">
+              <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+              <span>Serving Alameda and Contra Costa counties</span>
+            </div>
+
+            <div className="w-12 h-px bg-white/20 mb-6" />
+
+            <p className="text-white/65 text-base leading-relaxed mb-6 max-w-lg">
+              Data-driven guidance for first-time buyers and sellers in the East Bay. Clear information, strong negotiation, and 14+ years of sales experience behind every transaction.
+            </p>
+
+            <div className="space-y-2 mb-7">
+              <a
+                href="tel:+15105550123"
+                className="flex items-center gap-2.5 text-white/60 hover:text-white transition-colors text-sm"
+                data-testid="link-hero-phone"
+              >
                 <Phone className="w-3.5 h-3.5" />
-              </div>
-              <span className="text-sm">(510) 555-0123</span>
-            </a>
-            <a
-              href="mailto:hello@muzamilkhanrealtor.com"
-              className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
-              data-testid="link-hero-email"
-            >
-              <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-white/20 flex items-center justify-center flex-shrink-0 transition-colors">
+                (510) 555-0123
+              </a>
+              <a
+                href="mailto:hello@muzamilkhanrealtor.com"
+                className="flex items-center gap-2.5 text-white/60 hover:text-white transition-colors text-sm"
+                data-testid="link-hero-email"
+              >
                 <Mail className="w-3.5 h-3.5" />
-              </div>
-              <span className="text-sm">hello@muzamilkhanrealtor.com</span>
-            </a>
-          </div>
+                hello@muzamilkhanrealtor.com
+              </a>
+            </div>
 
-          <div className="flex flex-wrap gap-3">
-            <Link href="/contact?type=buyer">
-              <Button
-                size="lg"
-                className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold px-6"
-                data-testid="button-buyer-cta"
-              >
-                I'm Buying
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-            <Link href="/contact?type=seller">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/40 text-white hover:bg-white/10 font-semibold px-6"
-                data-testid="button-seller-cta"
-              >
-                I'm Selling
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/contact?type=buyer">
+                <Button
+                  size="lg"
+                  className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold px-6"
+                  data-testid="button-buyer-cta"
+                >
+                  I'm Buying
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+              <Link href="/contact?type=seller">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white/40 text-white hover:bg-white/10 font-semibold px-6"
+                  data-testid="button-seller-cta"
+                >
+                  I'm Selling
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
