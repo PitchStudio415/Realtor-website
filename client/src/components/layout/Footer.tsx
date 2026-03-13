@@ -47,7 +47,7 @@ export function Footer() {
               <div className="w-9 h-9 rounded-md bg-white/20 flex items-center justify-center">
                 <Home className="w-5 h-5 text-white" />
               </div>
-              <span className="font-semibold text-lg text-white">Muzamil Khan Realtor</span>
+              <span className="font-semibold text-lg text-white">Muzamil Khan - Realtor®</span>
             </Link>
             <p className="text-sm text-primary-foreground/80 mb-4">
               Data-driven real estate guidance for first-time buyers and sellers in Alameda and Contra Costa counties.
@@ -121,7 +121,7 @@ export function Footer() {
         
         <div className="mt-8 pt-6 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-            <p>&copy; {new Date().getFullYear()} Muzamil Khan Realtor. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Muzamil Khan - Realtor®. All rights reserved.</p>
             <div className="flex items-center gap-4 flex-wrap justify-center">
               <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, Users, BadgeCheck } from "lucide-react";
-import profilePhoto from "@assets/ProfilePhoto_1769661549653.jpeg";
+import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -81,12 +81,12 @@ export default function About() {
 
         {/* Info panel */}
         <div className="order-1 lg:order-2 bg-[#0F172A] text-white flex flex-col justify-center px-8 md:px-14 py-14 lg:py-20">
-          <p className="text-xs tracking-widest uppercase text-white/50 mb-3 font-medium">Muzamil Khan Realtor</p>
+          <p className="text-xs tracking-widest uppercase text-white/50 mb-3 font-medium">Muzamil Khan - Realtor®</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2" data-testid="text-about-headline">
             Muzamil Khan
           </h1>
-          <p className="text-lg text-white/60 font-medium mb-1">REALTOR®</p>
-          <p className="text-sm text-white/40 mb-6">DRE # CA Licensed</p>
+          <p className="text-lg text-white/60 font-medium mb-1">Realtor®</p>
+          <p className="text-sm text-white/40 mb-6">DRE# 02400805</p>
 
           <div className="w-16 h-px bg-white/30 mb-8" />
 
