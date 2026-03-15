@@ -26,9 +26,9 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const stats = [
-  { icon: TrendingUp, label: "Years in Sales", value: "14+" },
-  { icon: Home, label: "East Bay Focus", value: "100%" },
-  { icon: Users, label: "Client First", value: "Always" },
+  { icon: TrendingUp, label: "Construction Experience", value: "15 yrs" },
+  { icon: Home, label: "East Bay Resident", value: "10+ yrs" },
+  { icon: Star, label: "Client Rating", value: "5-Star" },
   { icon: BadgeCheck, label: "DRE Licensed", value: "CA" },
 ];
 
