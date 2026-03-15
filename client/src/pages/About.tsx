@@ -174,7 +174,7 @@ export default function About() {
                 Before becoming a Realtor®, I spent 15 years working in the construction industry alongside builders, developers, and investors. That background gives me an edge few agents can offer: I can walk through a home and genuinely evaluate structural integrity, estimate renovation costs, and understand what inspection findings actually mean — so my clients never pay for problems they didn't see coming.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately — El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay — and I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. Honest communication and strong negotiation on your behalf, every time.
+                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately — El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay — and I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. I'm proud to be a 5-star rated, trusted local Realtor® known for honest communication, strong negotiation, and always putting my clients first.
               </p>
             </div>
 

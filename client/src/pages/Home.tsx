@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
-import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck } from "lucide-react";
+import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star } from "lucide-react";
 import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 
 export default function Home() {
@@ -88,6 +88,47 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Muzamil? */}
+      <section className="py-12 md:py-14 bg-muted/30 border-y border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-2">Why Work With Muzamil?</h2>
+            <p className="text-muted-foreground text-sm max-w-lg mx-auto">
+              A different kind of Realtor® — built on 15 years in construction and a decade of East Bay community roots.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div data-testid="differentiator-construction">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <Hammer className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-2">15 Years in Construction</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                I worked directly with builders, developers, and investors. I evaluate homes — spotting issues, understanding renovation potential, and reading inspection reports — at a level most agents simply can't.
+              </p>
+            </div>
+            <div data-testid="differentiator-local">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-2">El Cerrito Local · 5-Star Rated</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                10+ years living in El Cerrito with deep roots in Albany, Berkeley, and Kensington. A trusted, 5-star rated local Realtor® who knows these streets, schools, and market patterns intimately.
+              </p>
+            </div>
+            <div data-testid="differentiator-consultation">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <Star className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-2">Free Consultation</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                No pressure, no obligation. Just an honest conversation about your goals, your timeline, and what the current market actually looks like — so you can make the right move with confidence.
+              </p>
             </div>
           </div>
         </div>
