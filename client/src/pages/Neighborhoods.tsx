@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, MapPin, Home, Users, Car } from "lucide-react";
-import { neighborhoods, getNeighborhoodBySlug, getNeighborhoodsByCounty } from "@/lib/content";
+import { neighborhoods, getNeighborhoodBySlug } from "@/lib/content";
 import heroImage from "@assets/stock_images/oakland_california_s_3adec2da.jpg";
 
 function NeighborhoodDetail({ slug }: { slug: string }) {
@@ -159,8 +159,9 @@ function NeighborhoodDetail({ slug }: { slug: string }) {
 }
 
 function NeighborhoodIndex() {
-  const alamedaNeighborhoods = getNeighborhoodsByCounty('alameda');
-  const contraCostaNeighborhoods = getNeighborhoodsByCounty('contra-costa');
+  const featuredSlugs = ['el-cerrito', 'albany', 'berkeley', 'kensington'];
+  const featuredNeighborhoods = featuredSlugs.map(slug => neighborhoods.find(n => n.slug === slug)).filter(Boolean) as typeof neighborhoods;
+  const otherNeighborhoods = neighborhoods.filter(n => !featuredSlugs.includes(n.slug));
 
   return (
     <Layout>
@@ -177,10 +178,10 @@ function NeighborhoodIndex() {
               <span className="font-medium">Explore</span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-neighborhoods-headline">
-              East Bay Neighborhoods
+              Homes for Sale in El Cerrito, Albany, Berkeley, Kensington &amp; the East Bay
             </h1>
             <p className="text-lg md:text-xl text-white/90">
-              Get to know El Cerrito, Albany, Berkeley, Kensington, and the East Bay communities I serve.
+              Local expertise across the neighborhoods I know best — and beyond.
             </p>
           </div>
         </div>
@@ -189,17 +190,21 @@ function NeighborhoodIndex() {
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Alameda County</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {alamedaNeighborhoods.map((n) => (
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-2xl md:text-3xl font-bold">Core Neighborhoods</h2>
+              <span className="text-xs font-semibold uppercase tracking-wide bg-primary/10 text-primary px-2 py-1 rounded">Muzamil's Focus Areas</span>
+            </div>
+            <p className="text-muted-foreground mb-8">The communities I know best — where I live, work, and help clients every day.</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {featuredNeighborhoods.map((n) => (
                 <Link key={n.slug} href={`/neighborhoods/${n.slug}`}>
-                  <Card className="h-full hover-elevate cursor-pointer" data-testid={`card-neighborhood-${n.slug}`}>
+                  <Card className="h-full hover-elevate cursor-pointer border-primary/20" data-testid={`card-neighborhood-${n.slug}`}>
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-lg mb-2">{n.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                      <p className="text-sm text-muted-foreground mb-3 line-clamp-3">
                         {n.overview}
                       </p>
-                      <div className="flex items-center text-sm text-primary">
+                      <div className="flex items-center text-sm text-primary font-medium">
                         Learn more <ArrowRight className="w-4 h-4 ml-1" />
                       </div>
                     </CardContent>
@@ -210,9 +215,10 @@ function NeighborhoodIndex() {
           </div>
           
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Contra Costa County</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">More East Bay Communities</h2>
+            <p className="text-muted-foreground mb-8">I also serve buyers and sellers throughout the broader East Bay area.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {contraCostaNeighborhoods.map((n) => (
+              {otherNeighborhoods.map((n) => (
                 <Link key={n.slug} href={`/neighborhoods/${n.slug}`}>
                   <Card className="h-full hover-elevate cursor-pointer" data-testid={`card-neighborhood-${n.slug}`}>
                     <CardContent className="p-6">

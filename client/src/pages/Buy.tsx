@@ -60,7 +60,7 @@ export default function Buy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-buy-headline">
-              Buying Your First Home in the Bay Area
+              Buying a Home in El Cerrito, Albany, Berkeley &amp; the East Bay
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed">
               A data-driven approach to finding and winning the right home, with clear communication every step of the way.

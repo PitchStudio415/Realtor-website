@@ -59,7 +59,7 @@ export default function Sell() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-sell-headline">
-              Selling Your Bay Area Home
+              Sell Your Home for Top Dollar in El Cerrito, Albany, Berkeley &amp; the East Bay
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8">
               Strategic pricing, smart preparation, and skilled negotiation to maximize your sale.
@@ -67,6 +67,24 @@ export default function Sell() {
             <Link href="/contact?type=seller">
               <Button size="lg" className="shadow-lg" data-testid="button-sell-cta">
                 Book a seller consult
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Home Valuation Callout */}
+      <section className="bg-primary text-primary-foreground py-10 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold mb-1">Know Your Home's True Worth Before You List</h2>
+              <p className="text-primary-foreground/80">Free home valuation with no obligation — backed by 15 years of construction industry expertise.</p>
+            </div>
+            <Link href="/contact?type=seller" className="flex-shrink-0">
+              <Button size="lg" variant="secondary" className="font-semibold whitespace-nowrap" data-testid="button-valuation-cta">
+                Get a Free Valuation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -126,7 +144,7 @@ export default function Sell() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Repair Negotiations</h3>
                 <p className="text-sm text-muted-foreground">
-                  Construction experience helps me evaluate repair requests objectively.
+                  15 years working with builders and developers means I know exactly what repairs cost — and which ones matter to buyers.
                 </p>
               </CardContent>
             </Card>
@@ -136,6 +154,15 @@ export default function Sell() {
                 <h3 className="font-semibold mb-2">Escrow Management</h3>
                 <p className="text-sm text-muted-foreground">
                   I coordinate inspections, appraisals, and all parties through closing.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-sm">
+              <CardContent className="p-6">
+                <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
+                <h3 className="font-semibold mb-2">Relocation Coordination</h3>
+                <p className="text-sm text-muted-foreground">
+                  Moving out of the area? I'll coordinate your sale timeline with your move for a seamless transition.
                 </p>
               </CardContent>
             </Card>

@@ -1046,6 +1046,24 @@ Key terms you'll encounter when selling your home.
 
 export const neighborhoods: Neighborhood[] = [
   {
+    slug: "el-cerrito",
+    name: "El Cerrito",
+    county: "contra-costa",
+    overview: "Muzamil's home neighborhood. A diverse, welcoming hillside community with BART access, bay views, and a strong sense of community.",
+    housingStock: "Mid-century ranches, some Craftsman homes, newer townhomes. Generally more affordable than neighboring Berkeley with excellent value.",
+    lifestyle: "Two BART stations. Stunning bay views from hillside homes. Diverse dining scene along San Pablo Ave. Close to Tilden Regional Park.",
+    whoItFits: "Commuters wanting BART access, buyers seeking a Berkeley alternative at lower prices, families wanting good schools and community feel.",
+  },
+  {
+    slug: "albany",
+    name: "Albany",
+    county: "alameda",
+    overview: "Charming small city between Berkeley and El Cerrito. Known for top-rated schools, tree-lined streets, and a tight-knit community feel.",
+    housingStock: "Craftsman bungalows, mid-century homes, and classic California ranch-styles. A compact, highly desirable housing market.",
+    lifestyle: "Excellent Albany Unified schools. Walkable Solano Ave with local shops and restaurants. BART nearby. Safe, friendly neighborhoods.",
+    whoItFits: "Families prioritizing top-rated schools, buyers wanting a true neighborhood feel, those seeking a quieter alternative to Berkeley.",
+  },
+  {
     slug: "berkeley",
     name: "Berkeley",
     county: "alameda",
@@ -1053,6 +1071,15 @@ export const neighborhoods: Neighborhood[] = [
     housingStock: "Mix of Craftsman bungalows, mid-century homes, Victorians, and newer condos. Prices vary dramatically by neighborhood.",
     lifestyle: "Strong food and arts scene. BART accessible. UC Berkeley creates a youthful energy. Excellent public schools in the hills.",
     whoItFits: "Academics, families wanting urban walkability, food enthusiasts, those who value diversity and progressive community.",
+  },
+  {
+    slug: "kensington",
+    name: "Kensington",
+    county: "contra-costa",
+    overview: "Quiet hillside community bordering Berkeley and El Cerrito. Known for excellent schools, beautiful homes, and peaceful streets with bay views.",
+    housingStock: "Mix of Craftsman bungalows, Tudor Revival, and mid-century homes on large lots. Highly sought-after and well-maintained.",
+    lifestyle: "Exceptionally peaceful and safe. Kensington Hilltop Elementary is highly rated. Easy access to Tilden Park trails and bay views.",
+    whoItFits: "Families seeking top schools in a serene setting, those wanting a quiet hillside retreat with easy East Bay access.",
   },
   {
     slug: "oakland",
@@ -1071,15 +1098,6 @@ export const neighborhoods: Neighborhood[] = [
     housingStock: "Victorians, Craftsman homes, and mid-century ranches. No lots split since 1973, limiting density.",
     lifestyle: "Beach access, walkable downtown, good schools. Ferry to SF. Slightly removed from BART but shuttle connections.",
     whoItFits: "Families wanting excellent schools and safety, those seeking small-town feel with city access, historic home lovers.",
-  },
-  {
-    slug: "el-cerrito",
-    name: "El Cerrito",
-    county: "contra-costa",
-    overview: "Hillside community with BART access, diverse population, and views of the bay.",
-    housingStock: "Mid-century ranches, some Craftsman homes, newer townhomes. Generally more affordable than neighboring Berkeley.",
-    lifestyle: "Two BART stations. Views from hillside homes. Diverse dining scene. Close to Tilden Park.",
-    whoItFits: "Commuters wanting BART access, buyers seeking Berkeley alternative at lower prices, families wanting good schools.",
   },
   {
     slug: "richmond",
