@@ -81,7 +81,7 @@ export default function About() {
 
         {/* Info panel */}
         <div className="order-1 lg:order-2 bg-[#0F172A] text-white flex flex-col justify-center px-8 md:px-14 py-14 lg:py-20">
-          <p className="text-xs tracking-widest uppercase text-white/50 mb-3 font-medium">Muzamil Khan - Realtor®</p>
+          <p className="text-xs tracking-widest uppercase text-white/50 mb-3 font-medium">El Cerrito · Albany · Berkeley · Kensington</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2" data-testid="text-about-headline">
             Muzamil Khan
           </h1>
@@ -174,7 +174,7 @@ export default function About() {
                 Real estate is one of the most significant financial decisions people make, and I believe it should be approached with clear information and proper guidance at every step. With over 14 years of experience in sales across multiple industries, I have learned that the best outcomes and effective problem solving come from truly understanding my clients' needs and communicating honestly.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                I bring that same approach to real estate by providing clear data, explaining all available options, and advocating strongly for my clients' interests. I live in El Cerrito and know the East Bay deeply — from the hills of Berkeley and the neighborhoods of Oakland to Walnut Creek and Fremont — using that local knowledge to help buyers find the right fit and sellers understand who is buying in their area.
+                I bring that same approach to real estate by providing clear data, explaining all available options, and advocating strongly for my clients' interests. I live in El Cerrito and know these neighborhoods intimately — El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay communities — using that local knowledge to help buyers find the right fit and sellers understand exactly who is buying in their area.
               </p>
             </div>
 
@@ -198,7 +198,7 @@ export default function About() {
                 {
                   icon: Home,
                   title: "Deep local knowledge",
-                  body: "Based in El Cerrito, I know Alameda and Contra Costa counties inside and out.",
+                  body: "Based in El Cerrito, I know the West Contra Costa and Berkeley hills neighborhoods — El Cerrito, Albany, Kensington, Berkeley — inside and out.",
                 },
               ].map((item, i) => {
                 const Icon = item.icon;

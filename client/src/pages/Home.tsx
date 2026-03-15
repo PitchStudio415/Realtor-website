@@ -26,7 +26,7 @@ export default function Home() {
           {/* Info */}
           <div>
             <p className="text-xs tracking-widest uppercase text-white/40 mb-3 font-medium">
-              Real Estate · East Bay, CA
+              El Cerrito · Albany · Berkeley · Kensington
             </p>
             <h1
               className="text-4xl md:text-5xl font-bold leading-tight mb-1"
@@ -38,13 +38,13 @@ export default function Home() {
             <p className="text-sm text-white/35 mb-2">DRE# 02400805</p>
             <div className="flex items-center gap-2 text-white/45 text-sm mb-6">
               <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-              <span>Serving Alameda and Contra Costa counties</span>
+              <span>El Cerrito, Albany, Berkeley, Kensington & surrounding East Bay</span>
             </div>
 
             <div className="w-12 h-px bg-white/20 mb-6" />
 
             <p className="text-white/65 text-base leading-relaxed mb-6 max-w-lg">
-              Data-driven guidance for first-time buyers and sellers in the East Bay. Clear information, strong negotiation, and 14+ years of sales experience behind every transaction.
+              Helping buyers and sellers in El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay. Clear information, strong negotiation, and 14+ years of sales experience behind every transaction.
             </p>
 
             <div className="space-y-2 mb-7">

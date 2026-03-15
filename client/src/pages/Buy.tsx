@@ -143,7 +143,7 @@ export default function Buy() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Local Knowledge</h3>
                 <p className="text-sm text-muted-foreground">
-                  Based in El Cerrito, I know Alameda and Contra Costa counties deeply.
+                  Based in El Cerrito, I know El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay deeply.
                 </p>
               </CardContent>
             </Card>

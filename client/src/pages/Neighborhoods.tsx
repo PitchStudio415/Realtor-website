@@ -180,7 +180,7 @@ function NeighborhoodIndex() {
               East Bay Neighborhoods
             </h1>
             <p className="text-lg md:text-xl text-white/90">
-              Get to know the cities and neighborhoods of Alameda and Contra Costa counties.
+              Get to know El Cerrito, Albany, Berkeley, Kensington, and the East Bay communities I serve.
             </p>
           </div>
         </div>

@@ -50,7 +50,7 @@ export function Footer() {
               <span className="font-semibold text-lg text-white">Muzamil Khan - Realtor®</span>
             </Link>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Data-driven real estate guidance for first-time buyers and sellers in Alameda and Contra Costa counties.
+              Real estate guidance for buyers and sellers in El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay.
             </p>
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <div className="flex items-center gap-2">
