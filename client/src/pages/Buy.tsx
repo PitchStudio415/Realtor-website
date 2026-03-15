@@ -119,6 +119,29 @@ export default function Buy() {
         </div>
       </section>
 
+      {/* First-Time Buyer Callout */}
+      <section className="py-10 md:py-12 bg-primary/5 border-y border-primary/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <BookOpen className="w-7 h-7 text-primary" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-1 block">For First-Time Buyers</span>
+              <p className="text-lg md:text-xl font-medium text-foreground">
+                Never bought a home before? I'll walk you through every step — from pre-approval to closing — with clear explanations and zero pressure.
+              </p>
+            </div>
+            <Link href="/buyer-hub" className="flex-shrink-0">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" data-testid="button-first-time-buyer-hub">
+                First-Time Buyer Hub
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
