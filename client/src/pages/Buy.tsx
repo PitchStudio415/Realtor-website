@@ -94,7 +94,7 @@ export default function Buy() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">First-Time Buyers</h3>
-                <p className="text-sm text-muted-foreground">I'll explain every step clearly — no jargon, no pressure. You'll feel confident, not confused, from day one.</p>
+                <p className="text-base text-muted-foreground">I'll explain every step clearly — no jargon, no pressure. You'll feel confident, not confused, from day one.</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
@@ -103,7 +103,7 @@ export default function Buy() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Relocating to the East Bay</h3>
-                <p className="text-sm text-muted-foreground">Moving from out of area? I'll help you understand each neighborhood so you land in the right place, fast.</p>
+                <p className="text-base text-muted-foreground">Moving from out of area? I'll help you understand each neighborhood so you land in the right place, fast.</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
@@ -112,7 +112,7 @@ export default function Buy() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Experienced Buyers</h3>
-                <p className="text-sm text-muted-foreground">Know what you want? I'll help you move fast, compete smart, and negotiate the best deal with construction-level insight.</p>
+                <p className="text-base text-muted-foreground">Know what you want? I'll help you move fast, compete smart, and negotiate the best deal with construction-level insight.</p>
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function Buy() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Market Analysis</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   I analyze comparable sales and market trends so you know what homes are actually worth.
                 </p>
               </CardContent>
@@ -183,7 +183,7 @@ export default function Buy() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Offer Strategy</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   We craft competitive offers based on data, not emotion. No overbidding just because.
                 </p>
               </CardContent>
@@ -192,7 +192,7 @@ export default function Buy() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Negotiate the Best Deal</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   I know what repairs and renovations actually cost — which means I negotiate repair credits and price reductions with real numbers, not guesses.
                 </p>
               </CardContent>
@@ -201,7 +201,7 @@ export default function Buy() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Inspection Guidance</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   15 years in construction with builders and developers — I catch what others miss on inspections.
                 </p>
               </CardContent>
@@ -210,7 +210,7 @@ export default function Buy() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Clear Communication</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   I explain everything in plain language and respond quickly to your questions.
                 </p>
               </CardContent>
@@ -219,7 +219,7 @@ export default function Buy() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Local Knowledge</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   El Cerrito resident for 10+ years. Deep knowledge of El Cerrito, Albany, Berkeley, and Kensington.
                 </p>
               </CardContent>
@@ -250,7 +250,7 @@ export default function Buy() {
                         <span className="text-xs font-medium text-muted-foreground">Step {index + 1}</span>
                       </div>
                       <h3 className="font-semibold mb-1">{step.title}</h3>
-                      <p className="text-sm text-muted-foreground">{step.description}</p>
+                      <p className="text-base text-muted-foreground">{step.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -272,7 +272,7 @@ export default function Buy() {
               <Card className="h-full hover-elevate cursor-pointer border-primary/20 bg-primary/5">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1 text-primary">Affordability Calculator</h3>
-                  <p className="text-sm text-muted-foreground">What can you afford?</p>
+                  <p className="text-base text-muted-foreground">What can you afford?</p>
                 </CardContent>
               </Card>
             </Link>
@@ -280,7 +280,7 @@ export default function Buy() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Buying Timeline</h3>
-                  <p className="text-sm text-muted-foreground">Step-by-step process</p>
+                  <p className="text-base text-muted-foreground">Step-by-step process</p>
                 </CardContent>
               </Card>
             </Link>
@@ -288,7 +288,7 @@ export default function Buy() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Offer Basics</h3>
-                  <p className="text-sm text-muted-foreground">Price, contingencies & more</p>
+                  <p className="text-base text-muted-foreground">Price, contingencies & more</p>
                 </CardContent>
               </Card>
             </Link>
@@ -296,7 +296,7 @@ export default function Buy() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Pre-Approval Guide</h3>
-                  <p className="text-sm text-muted-foreground">What lenders look for</p>
+                  <p className="text-base text-muted-foreground">What lenders look for</p>
                 </CardContent>
               </Card>
             </Link>
@@ -304,7 +304,7 @@ export default function Buy() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Closing Costs</h3>
-                  <p className="text-sm text-muted-foreground">What to budget for</p>
+                  <p className="text-base text-muted-foreground">What to budget for</p>
                 </CardContent>
               </Card>
             </Link>

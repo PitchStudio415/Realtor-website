@@ -12,7 +12,7 @@ export default function Home() {
       <section className="bg-[#0F172A] text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center sm:items-start gap-10">
           {/* Portrait */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex flex-col items-center">
             <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden ring-4 ring-white/10">
               <img
                 src={profilePhoto}
@@ -21,6 +21,14 @@ export default function Home() {
                 data-testid="img-hero-photo"
               />
             </div>
+            <div className="flex items-center gap-0.5 mt-3" data-testid="hero-star-rating">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <span className="mt-2 text-xs font-bold bg-[#006AFF] text-white px-2.5 py-1 rounded-full tracking-wide" data-testid="badge-zillow-premier">
+              Zillow Premier Agent
+            </span>
           </div>
 
           {/* Info */}
@@ -98,7 +106,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-xl md:text-2xl font-bold mb-2">Why Work With Muzamil?</h2>
-            <p className="text-muted-foreground text-sm max-w-lg mx-auto">
+            <p className="text-muted-foreground text-base max-w-lg mx-auto">
               A different kind of Realtor® — built on 15 years in construction and a decade of East Bay community roots.
             </p>
           </div>
@@ -107,8 +115,8 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                 <Hammer className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">15 Years in Construction</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <h3 className="font-semibold mb-2 text-lg">15 Years in Construction</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 I worked directly with builders, developers, and investors. I evaluate homes — spotting issues, understanding renovation potential, and reading inspection reports — at a level most agents simply can't.
               </p>
             </div>
@@ -116,8 +124,8 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">El Cerrito Local · 5-Star Rated</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <h3 className="font-semibold mb-2 text-lg">El Cerrito Local · 5-Star Rated</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 10+ years living in El Cerrito with deep roots in Albany, Berkeley, and Kensington. A trusted, 5-star rated local Realtor® who knows these streets, schools, and market patterns intimately.
               </p>
             </div>
@@ -125,8 +133,8 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                 <Star className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">Free Consultation</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <h3 className="font-semibold mb-2 text-lg">Free Consultation</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 No pressure, no obligation. Just an honest conversation about your goals, your timeline, and what the current market actually looks like — so you can make the right move with confidence.
               </p>
             </div>

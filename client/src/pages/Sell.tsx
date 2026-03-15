@@ -107,7 +107,7 @@ export default function Sell() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Strategic Pricing</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Data-driven pricing that positions your home competitively in the current market.
                 </p>
               </CardContent>
@@ -116,7 +116,7 @@ export default function Sell() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Prep Guidance</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Focus your prep budget on improvements that actually impact sale price.
                 </p>
               </CardContent>
@@ -125,7 +125,7 @@ export default function Sell() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Skilled Negotiation</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   I evaluate offers holistically and negotiate to protect your interests.
                 </p>
               </CardContent>
@@ -134,7 +134,7 @@ export default function Sell() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Disclosure Support</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Help preparing thorough disclosures that protect you and build buyer trust.
                 </p>
               </CardContent>
@@ -143,7 +143,7 @@ export default function Sell() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Repair Negotiations</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   15 years working with builders and developers means I know exactly what repairs cost — and which ones matter to buyers.
                 </p>
               </CardContent>
@@ -152,7 +152,7 @@ export default function Sell() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Escrow Management</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   I coordinate inspections, appraisals, and all parties through closing.
                 </p>
               </CardContent>
@@ -161,7 +161,7 @@ export default function Sell() {
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Relocation Coordination</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Moving out of the area? I'll coordinate your sale timeline with your move for a seamless transition.
                 </p>
               </CardContent>
@@ -192,7 +192,7 @@ export default function Sell() {
                         <span className="text-xs font-medium text-muted-foreground">Step {index + 1}</span>
                       </div>
                       <h3 className="font-semibold mb-1">{step.title}</h3>
-                      <p className="text-sm text-muted-foreground">{step.description}</p>
+                      <p className="text-base text-muted-foreground">{step.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -278,7 +278,7 @@ export default function Sell() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Pricing Strategy</h3>
-                  <p className="text-sm text-muted-foreground">Comps & market analysis</p>
+                  <p className="text-base text-muted-foreground">Comps & market analysis</p>
                 </CardContent>
               </Card>
             </Link>
@@ -286,7 +286,7 @@ export default function Sell() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Disclosures Guide</h3>
-                  <p className="text-sm text-muted-foreground">What to disclose in CA</p>
+                  <p className="text-base text-muted-foreground">What to disclose in CA</p>
                 </CardContent>
               </Card>
             </Link>
@@ -294,7 +294,7 @@ export default function Sell() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Evaluating Offers</h3>
-                  <p className="text-sm text-muted-foreground">Beyond the price</p>
+                  <p className="text-base text-muted-foreground">Beyond the price</p>
                 </CardContent>
               </Card>
             </Link>
@@ -302,7 +302,7 @@ export default function Sell() {
               <Card className="h-full hover-elevate cursor-pointer">
                 <CardContent className="p-5">
                   <h3 className="font-semibold mb-1">Repairs vs Credits</h3>
-                  <p className="text-sm text-muted-foreground">How to decide</p>
+                  <p className="text-base text-muted-foreground">How to decide</p>
                 </CardContent>
               </Card>
             </Link>
