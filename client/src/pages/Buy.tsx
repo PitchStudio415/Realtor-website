@@ -162,7 +162,7 @@ export default function Buy() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Inspection Guidance</h3>
                 <p className="text-sm text-muted-foreground">
-                  15 years in construction means I can read inspection reports like a contractor — separating routine maintenance from real red flags.
+                  15 years in construction with builders and developers means I catch what others miss — separating routine maintenance from real red flags that affect value.
                 </p>
               </CardContent>
             </Card>
