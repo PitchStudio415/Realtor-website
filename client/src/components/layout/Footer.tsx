@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Home, Mail, Phone, MapPin } from "lucide-react";
+import { SiInstagram, SiGoogle, SiZillow } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -70,6 +71,17 @@ export function Footer() {
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <span>Muzamil@risegroup.com</span>
               </div>
+            </div>
+            <div className="flex items-center gap-3 mt-4">
+              <a href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-testid="link-social-instagram" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                <SiInstagram className="w-4 h-4 text-white" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile" data-testid="link-social-google" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                <SiGoogle className="w-4 h-4 text-white" />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Zillow" data-testid="link-social-zillow" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                <SiZillow className="w-4 h-4 text-white" />
+              </a>
             </div>
           </div>
           
