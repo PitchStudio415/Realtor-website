@@ -44,7 +44,7 @@ export default function Home() {
             <div className="w-12 h-px bg-white/20 mb-6" />
 
             <p className="text-white/65 text-base leading-relaxed mb-6 max-w-lg">
-              Helping buyers and sellers in El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay. Clear information, strong negotiation, and 14+ years of sales experience behind every transaction.
+              Your trusted El Cerrito, Albany &amp; Berkeley Realtor® — backed by 15 years in the construction industry working with builders, developers, and investors. Get expert guidance for buying, selling, or relocating in the East Bay.
             </p>
 
             <div className="space-y-2 mb-7">
