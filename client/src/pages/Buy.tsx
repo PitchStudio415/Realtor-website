@@ -114,9 +114,9 @@ export default function Buy() {
             <Card className="border-0 shadow-sm">
               <CardContent className="p-6">
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
-                <h3 className="font-semibold mb-2">Negotiation</h3>
+                <h3 className="font-semibold mb-2">Negotiate the Best Deal</h3>
                 <p className="text-sm text-muted-foreground">
-                  With 13+ years of sales experience, I advocate effectively for your interests.
+                  I know what repairs and renovations actually cost — which means I negotiate repair credits and price reductions with real numbers, not guesses.
                 </p>
               </CardContent>
             </Card>
@@ -125,7 +125,7 @@ export default function Buy() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Inspection Guidance</h3>
                 <p className="text-sm text-muted-foreground">
-                  My construction background helps me evaluate inspection findings objectively.
+                  15 years in construction means I can read inspection reports like a contractor — separating routine maintenance from real red flags.
                 </p>
               </CardContent>
             </Card>

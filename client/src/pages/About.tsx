@@ -92,7 +92,7 @@ export default function About() {
 
           <div className="space-y-3 mb-8">
             <a
-              href="tel:+15105550123"
+              href="tel:+15106866338"
               className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
               data-testid="link-phone"
             >
@@ -171,10 +171,10 @@ export default function About() {
                 Data-driven guidance you can trust in the East Bay.
               </h2>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                Real estate is one of the most significant financial decisions people make, and I believe it should be approached with clear information and proper guidance at every step. With over 14 years of experience in sales across multiple industries, I have learned that the best outcomes and effective problem solving come from truly understanding my clients' needs and communicating honestly.
+                Before becoming a Realtor®, I spent 15 years working in the construction industry alongside builders, developers, and investors. That background gives me an edge few agents can offer: I can walk through a home and genuinely evaluate structural integrity, estimate renovation costs, and understand what inspection findings actually mean — so my clients never pay for problems they didn't see coming.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                I bring that same approach to real estate by providing clear data, explaining all available options, and advocating strongly for my clients' interests. I live in El Cerrito and know these neighborhoods intimately — El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay communities — using that local knowledge to help buyers find the right fit and sellers understand exactly who is buying in their area.
+                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately — El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay — and I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. Honest communication and strong negotiation on your behalf, every time.
               </p>
             </div>
 
@@ -187,13 +187,13 @@ export default function About() {
                 },
                 {
                   icon: TrendingUp,
-                  title: "Data-first approach",
-                  body: "Every recommendation is backed by market data so you can make confident, informed choices.",
+                  title: "Expert home valuation",
+                  body: "15 years reading construction costs means I price homes with precision — so sellers don't leave money on the table and buyers don't overpay.",
                 },
                 {
                   icon: Users,
-                  title: "Strong advocacy",
-                  body: "I negotiate hard for my clients' interests and stay focused on your goals throughout the entire process.",
+                  title: "Negotiate the best deal",
+                  body: "I understand what repairs actually cost, which gives my clients a real edge at the negotiating table — whether buying or selling.",
                 },
                 {
                   icon: Home,

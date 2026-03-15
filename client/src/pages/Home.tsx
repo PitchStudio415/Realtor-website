@@ -108,7 +108,7 @@ export default function Home() {
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold mb-3">For Buyers</h3>
                 <p className="text-muted-foreground mb-5 leading-relaxed">
-                  Pre-approval guidance, offer strategy, negotiation support, and a clear timeline so you know exactly what to expect from search to closing.
+                  Offer strategy, tough negotiation, and inspection guidance backed by 15 years in construction — so you know exactly what you're buying and never overpay.
                 </p>
                 <div className="flex gap-3">
                   <Link href="/buy">
@@ -129,7 +129,7 @@ export default function Home() {
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold mb-3">For Sellers</h3>
                 <p className="text-muted-foreground mb-5 leading-relaxed">
-                  Pricing strategy, market positioning, and clear advice on disclosures and prep so you can sell with confidence and maximize your outcome.
+                  Expert home valuation, strategic pricing, and repair negotiations where my construction background puts more money in your pocket at closing.
                 </p>
                 <div className="flex gap-3">
                   <Link href="/sell">
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to get started?</h2>
           <p className="text-white/60 mb-8">
-            No pressure, no obligation — just a straightforward conversation about your goals.
+            Free consultation — no pressure, no obligation. Just a straightforward conversation about your goals.
           </p>
           <Link href="/contact">
             <Button

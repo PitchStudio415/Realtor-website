@@ -1,7 +1,7 @@
 # Muzamil Khan Realtor - Real Estate Website
 
 ## Overview
-A professional real estate website for a Bay Area realtor serving Alameda and Contra Costa counties. The site features educational content for first-time buyers and sellers, neighborhood guides, a blog, and contact/lead capture functionality.
+A professional real estate website for Muzamil Khan, Realtor® (DRE# 02400805), serving El Cerrito, Albany, Berkeley, Kensington, and surrounding East Bay communities. The site features educational content for first-time buyers and sellers, neighborhood guides, a blog, and contact/lead capture functionality.
 
 ## Tech Stack
 - **Frontend**: React + TypeScript, Wouter (routing), Tailwind CSS, Shadcn UI
