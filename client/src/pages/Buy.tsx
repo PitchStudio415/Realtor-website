@@ -119,9 +119,9 @@ export default function Buy() {
         </div>
       </section>
 
-      {/* First-Time Buyer Callout */}
+      {/* First-Time Buyer + Relocator Callouts */}
       <section className="py-10 md:py-12 bg-primary/5 border-y border-primary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
               <BookOpen className="w-7 h-7 text-primary" />
@@ -135,6 +135,23 @@ export default function Buy() {
             <Link href="/buyer-hub" className="flex-shrink-0">
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" data-testid="button-first-time-buyer-hub">
                 First-Time Buyer Hub
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+          <div className="border-t border-primary/10 pt-8 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Truck className="w-7 h-7 text-primary" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-1 block">Relocating to the East Bay?</span>
+              <p className="text-lg md:text-xl font-medium text-foreground">
+                Moving from out of the area? I'll help you understand the neighborhoods, schools, commute, and find the right fit fast.
+              </p>
+            </div>
+            <Link href="/neighborhoods" className="flex-shrink-0">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" data-testid="button-relocator-neighborhoods">
+                Explore Neighborhoods
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
