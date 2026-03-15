@@ -50,8 +50,13 @@ export function Footer() {
               <span className="font-semibold text-lg text-white">Muzamil Khan - Realtor®</span>
             </Link>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Real estate guidance for buyers and sellers in El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay.
+              Trusted, 5-star real estate guidance for first-time buyers, movers, and sellers in El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay.
             </p>
+            <Link href="/contact" data-testid="link-footer-free-consult">
+              <Button variant="secondary" size="sm" className="mb-4 font-semibold w-full">
+                Book a Free Consultation
+              </Button>
+            </Link>
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
