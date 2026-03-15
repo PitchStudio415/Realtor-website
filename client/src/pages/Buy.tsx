@@ -11,7 +11,9 @@ import {
   ArrowRight,
   ClipboardCheck,
   Banknote,
-  Building
+  Building,
+  BookOpen,
+  Truck
 } from "lucide-react";
 import heroImage from "@assets/stock_images/modern_home_exterior_d46ee0b9.jpg";
 
@@ -63,7 +65,7 @@ export default function Buy() {
               Buying a Home in El Cerrito, Albany, Berkeley &amp; the East Bay
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed">
-              A data-driven approach to finding and winning the right home, with clear communication every step of the way.
+              Whether you're a first-time buyer, relocating to the East Bay, or an experienced buyer — I'll guide you from search to closing with data, strategy, and honest advice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact?type=buyer">
@@ -82,12 +84,47 @@ export default function Buy() {
         </div>
       </section>
 
+      {/* Audience callouts */}
+      <section className="py-10 md:py-12 bg-muted/40 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex gap-4 items-start">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <BookOpen className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1">First-Time Buyers</h3>
+                <p className="text-sm text-muted-foreground">I'll explain every step clearly — no jargon, no pressure. You'll feel confident, not confused, from day one.</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Truck className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1">Relocating to the East Bay</h3>
+                <p className="text-sm text-muted-foreground">Moving from out of area? I'll help you understand each neighborhood so you land in the right place, fast.</p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Home className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1">Experienced Buyers</h3>
+                <p className="text-sm text-muted-foreground">Know what you want? I'll help you move fast, compete smart, and negotiate the best deal with construction-level insight.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">How I Help Buyers</h2>
             <p className="text-muted-foreground">
-              The Bay Area market moves fast. My job is to help you move confidently, 
+              The East Bay market moves fast. My job is to help you move confidently,
               armed with the information you need to make smart decisions.
             </p>
           </div>

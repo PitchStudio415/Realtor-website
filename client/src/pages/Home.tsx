@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
-import { Phone, Mail, ArrowRight, MapPin } from "lucide-react";
+import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck } from "lucide-react";
 import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 
 export default function Home() {
@@ -93,56 +93,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Who I Work With */}
       <section className="py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">How I Can Help</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">Who I Work With</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Whether you're buying your first home or ready to sell, I'll guide you through every step.
+              First-time buyers, relocators, experienced buyers, and sellers — I give every client the same clear guidance and strong advocacy.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="border border-border hover:shadow-md transition-shadow" data-testid="card-buyers">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold mb-3">For Buyers</h3>
-                <p className="text-muted-foreground mb-5 leading-relaxed">
-                  Offer strategy, tough negotiation, and inspection guidance backed by 15 years in construction — so you know exactly what you're buying and never overpay.
-                </p>
-                <div className="flex gap-3">
-                  <Link href="/buy">
-                    <Button variant="outline" size="sm" data-testid="link-learn-buying">
-                      Learn more
+          {/* First-Time Buyers — Featured */}
+          <Card className="border-2 border-primary/30 bg-primary/5 mb-6" data-testid="card-first-time-buyers">
+            <CardContent className="p-8">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-primary" />
+                    <span className="text-xs font-semibold uppercase tracking-wide bg-primary text-primary-foreground px-2.5 py-1 rounded">Primary Focus</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">First-Time Home Buyers</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Buying your first home in El Cerrito, Albany, Berkeley, or Kensington is one of the biggest decisions you'll make. I'll walk you through every step — pre-approval, offer strategy, inspections, and closing — in plain language, no pressure, no surprises. My construction background means I'll also flag anything in an inspection report that others would miss.
+                  </p>
+                </div>
+                <div className="flex sm:flex-col gap-3 flex-shrink-0">
+                  <Link href="/buyer-hub">
+                    <Button size="sm" className="whitespace-nowrap" data-testid="link-buyer-hub">
+                      First-Time Buyer Guide
+                      <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </Button>
                   </Link>
-                  <Link href="/buyer-hub">
-                    <Button variant="ghost" size="sm" data-testid="link-buyer-hub">
-                      Buyer guide <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  <Link href="/contact?type=buyer">
+                    <Button variant="outline" size="sm" className="whitespace-nowrap" data-testid="link-first-time-consult">
+                      Free consult
                     </Button>
                   </Link>
                 </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Other three audiences */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="border border-border hover:shadow-md transition-shadow" data-testid="card-relocators">
+              <CardContent className="p-7">
+                <Truck className="w-5 h-5 text-accent mb-3" />
+                <h3 className="text-lg font-bold mb-2">Moving to the East Bay</h3>
+                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
+                  Relocating from out of area or across town? I know every neighborhood from El Cerrito to Berkeley and can help you find the right fit — even before you've arrived.
+                </p>
+                <Link href="/contact?type=buyer">
+                  <Button variant="outline" size="sm" data-testid="link-relocation-cta">
+                    Plan your move <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-border hover:shadow-md transition-shadow" data-testid="card-buyers">
+              <CardContent className="p-7">
+                <ArrowRight className="w-5 h-5 text-accent mb-3" />
+                <h3 className="text-lg font-bold mb-2">Buying a Home</h3>
+                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
+                  Offer strategy and tough negotiation backed by 15 years in construction — so you know what you're buying and never overpay.
+                </p>
+                <Link href="/buy">
+                  <Button variant="outline" size="sm" data-testid="link-learn-buying">
+                    How I help buyers <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
             <Card className="border border-border hover:shadow-md transition-shadow" data-testid="card-sellers">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold mb-3">For Sellers</h3>
-                <p className="text-muted-foreground mb-5 leading-relaxed">
-                  Expert home valuation, strategic pricing, and repair negotiations where my construction background puts more money in your pocket at closing.
+              <CardContent className="p-7">
+                <ArrowRight className="w-5 h-5 text-accent mb-3" />
+                <h3 className="text-lg font-bold mb-2">Selling Your Home</h3>
+                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
+                  Expert valuation and repair negotiations where my construction knowledge puts more money in your pocket at closing.
                 </p>
-                <div className="flex gap-3">
-                  <Link href="/sell">
-                    <Button variant="outline" size="sm" data-testid="link-learn-selling">
-                      Learn more
-                    </Button>
-                  </Link>
-                  <Link href="/seller-hub">
-                    <Button variant="ghost" size="sm" data-testid="link-seller-hub">
-                      Seller guide <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                    </Button>
-                  </Link>
-                </div>
+                <Link href="/sell">
+                  <Button variant="outline" size="sm" data-testid="link-learn-selling">
+                    How I help sellers <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
