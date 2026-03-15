@@ -80,7 +80,7 @@ export default function Sell() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-xl md:text-2xl font-bold mb-1">Know Your Home's True Worth Before You List</h2>
-              <p className="text-primary-foreground/80">Free home valuation with no obligation — backed by 15 years of construction industry expertise.</p>
+              <p className="text-primary-foreground/80">Free home valuation with no obligation, backed by 15 years of construction industry expertise.</p>
             </div>
             <Link href="/contact?type=seller" className="flex-shrink-0">
               <Button size="lg" variant="secondary" className="font-semibold whitespace-nowrap" data-testid="button-valuation-cta">
@@ -144,7 +144,7 @@ export default function Sell() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Repair Negotiations</h3>
                 <p className="text-base text-muted-foreground">
-                  15 years working with builders and developers means I know exactly what repairs cost — and which ones matter to buyers.
+                  15 years working with builders and developers means I know exactly what repairs cost and which ones matter to buyers.
                 </p>
               </CardContent>
             </Card>

@@ -65,7 +65,7 @@ export default function Buy() {
               Buying a Home in El Cerrito, Albany, Berkeley &amp; the East Bay
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed">
-              Whether you're a first-time buyer, relocating to the East Bay, or an experienced buyer — I'll guide you from search to closing with data, strategy, and honest advice.
+              Whether you're a first-time buyer, relocating to the East Bay, or an experienced buyer, I'll guide you from search to closing with data, strategy, and honest advice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact?type=buyer">
@@ -94,7 +94,7 @@ export default function Buy() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">First-Time Buyers</h3>
-                <p className="text-base text-muted-foreground">I'll explain every step clearly — no jargon, no pressure. You'll feel confident, not confused, from day one.</p>
+                <p className="text-base text-muted-foreground">I'll explain every step clearly, no jargon, no pressure. You'll feel confident, not confused, from day one.</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
@@ -129,7 +129,7 @@ export default function Buy() {
             <div className="flex-1 text-center md:text-left">
               <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-1 block">For First-Time Buyers</span>
               <p className="text-lg md:text-xl font-medium text-foreground">
-                Never bought a home before? I'll walk you through every step — from pre-approval to closing — with clear explanations and zero pressure.
+                Never bought a home before? I'll walk you through every step, from pre-approval to closing, with clear explanations and zero pressure.
               </p>
             </div>
             <Link href="/buyer-hub" className="flex-shrink-0">
@@ -193,7 +193,7 @@ export default function Buy() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Negotiate the Best Deal</h3>
                 <p className="text-base text-muted-foreground">
-                  I know what repairs and renovations actually cost — which means I negotiate repair credits and price reductions with real numbers, not guesses.
+                  I know what repairs and renovations actually cost, which means I negotiate repair credits and price reductions with real numbers, not guesses.
                 </p>
               </CardContent>
             </Card>
@@ -202,7 +202,7 @@ export default function Buy() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Inspection Guidance</h3>
                 <p className="text-base text-muted-foreground">
-                  15 years in construction with builders and developers — I catch what others miss on inspections.
+                  15 years in construction with builders and developers. I catch what others miss on inspections.
                 </p>
               </CardContent>
             </Card>

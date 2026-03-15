@@ -181,7 +181,7 @@ function NeighborhoodIndex() {
               Homes for Sale in El Cerrito, Albany, Berkeley, Kensington &amp; the East Bay
             </h1>
             <p className="text-lg md:text-xl text-white/90">
-              Local expertise across the neighborhoods I know best — and beyond.
+              Local expertise across the neighborhoods I know best, and beyond.
             </p>
           </div>
         </div>
@@ -194,7 +194,7 @@ function NeighborhoodIndex() {
               <h2 className="text-2xl md:text-3xl font-bold">Core Neighborhoods</h2>
               <span className="text-xs font-semibold uppercase tracking-wide bg-primary/10 text-primary px-2 py-1 rounded">Muzamil's Focus Areas</span>
             </div>
-            <p className="text-muted-foreground mb-8">The communities I know best — where I live, work, and help clients every day.</p>
+            <p className="text-muted-foreground mb-8">The communities I know best, where I live, work, and help clients every day.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredNeighborhoods.map((n) => (
                 <Link key={n.slug} href={`/neighborhoods/${n.slug}`}>

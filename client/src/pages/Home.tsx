@@ -52,7 +52,7 @@ export default function Home() {
             <div className="w-12 h-px bg-white/20 mb-6" />
 
             <p className="text-white/65 text-base leading-relaxed mb-6 max-w-lg">
-              Your trusted El Cerrito, Albany &amp; Berkeley Realtor® — backed by 15 years in the construction industry working with builders, developers, and investors. Get expert guidance for buying, selling, or relocating in the East Bay.
+              Your trusted El Cerrito, Albany &amp; Berkeley Realtor®, backed by 15 years in the construction industry working with builders, developers, and investors. Get expert guidance for buying, selling, or relocating in the East Bay.
             </p>
 
             <div className="space-y-2 mb-7">
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-xl md:text-2xl font-bold mb-2">Why Work With Muzamil?</h2>
             <p className="text-muted-foreground text-base max-w-lg mx-auto">
-              A different kind of Realtor® — built on 15 years in construction and a decade of East Bay community roots.
+              A different kind of Realtor® built on 15 years in construction and a decade of East Bay community roots.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -117,7 +117,7 @@ export default function Home() {
               </div>
               <h3 className="font-semibold mb-2 text-lg">15 Years in Construction</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
-                I worked directly with builders, developers, and investors. I evaluate homes — spotting issues, understanding renovation potential, and reading inspection reports — at a level most agents simply can't.
+                I worked directly with builders, developers, and investors. I evaluate homes by spotting issues, understanding renovation potential, and reading inspection reports at a level most agents simply can't match.
               </p>
             </div>
             <div data-testid="differentiator-local">
@@ -135,7 +135,7 @@ export default function Home() {
               </div>
               <h3 className="font-semibold mb-2 text-lg">Free Consultation</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
-                No pressure, no obligation. Just an honest conversation about your goals, your timeline, and what the current market actually looks like — so you can make the right move with confidence.
+                No pressure, no obligation. Just an honest conversation about your goals, your timeline, and what the current market actually looks like, so you can make the right move with confidence.
               </p>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">Who I Work With</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              First-time buyers, relocators, experienced buyers, and sellers — I give every client the same clear guidance and strong advocacy.
+              First-time buyers, relocators, experienced buyers, and sellers. I give every client the same clear guidance and strong advocacy.
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold mb-3">First-Time Home Buyers</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Buying your first home in El Cerrito, Albany, Berkeley, or Kensington is one of the biggest decisions you'll make. I'll walk you through every step — pre-approval, offer strategy, inspections, and closing — in plain language, no pressure, no surprises. My construction background means I'll also flag anything in an inspection report that others would miss.
+                    Buying your first home in El Cerrito, Albany, Berkeley, or Kensington is one of the biggest decisions you'll ever make. I'll guide you through the entire process smoothly, from pre-approval to closing, with clear explanations at every step. I'll help you find your dream home, negotiate the best possible deal, and make sure there are no surprises along the way. My construction background means I catch what other agents miss on inspections, giving you a real edge.
                   </p>
                 </div>
                 <div className="flex sm:flex-col gap-3 flex-shrink-0">
@@ -190,7 +190,7 @@ export default function Home() {
                 <Truck className="w-5 h-5 text-accent mb-3" />
                 <h3 className="text-lg font-bold mb-2">Moving to the East Bay</h3>
                 <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Relocating from out of area or across town? I know every neighborhood from El Cerrito to Berkeley and can help you find the right fit — even before you've arrived.
+                  Relocating from out of area or across town? I know every neighborhood from El Cerrito to Berkeley and can help you find the right fit, even before you've arrived.
                 </p>
                 <Link href="/contact?type=buyer">
                   <Button variant="outline" size="sm" data-testid="link-relocation-cta">
@@ -205,7 +205,7 @@ export default function Home() {
                 <ArrowRight className="w-5 h-5 text-accent mb-3" />
                 <h3 className="text-lg font-bold mb-2">Buying a Home</h3>
                 <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Offer strategy and tough negotiation backed by 15 years in construction — so you know what you're buying and never overpay.
+                  Offer strategy and tough negotiation backed by 15 years in construction, so you know exactly what you're buying and never overpay.
                 </p>
                 <Link href="/buy">
                   <Button variant="outline" size="sm" data-testid="link-learn-buying">
@@ -238,7 +238,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to get started?</h2>
           <p className="text-white/60 mb-8">
-            Free consultation — no pressure, no obligation. Just a straightforward conversation about your goals.
+            Free consultation, no pressure, no obligation. Just a straightforward conversation about your goals.
           </p>
           <Link href="/contact">
             <Button

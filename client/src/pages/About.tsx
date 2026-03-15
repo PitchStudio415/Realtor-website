@@ -171,10 +171,10 @@ export default function About() {
                 Data-driven guidance you can trust in the East Bay.
               </h2>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                Before becoming a Realtor®, I spent 15 years working in the construction industry alongside builders, developers, and investors. That background gives me an edge few agents can offer: I can walk through a home and genuinely evaluate structural integrity, estimate renovation costs, and understand what inspection findings actually mean — so my clients never pay for problems they didn't see coming.
+                Before becoming a Realtor®, I spent 15 years working in the construction industry alongside builders, developers, and investors. That background gives me an edge few agents can offer: I can walk through a home and genuinely evaluate structural integrity, estimate renovation costs, and understand what inspection findings actually mean, so my clients never pay for problems they didn't see coming.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately — El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay — and I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. I'm proud to be a 5-star rated, trusted local Realtor® known for honest communication, strong negotiation, and always putting my clients first.
+                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately: El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay. I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. I'm proud to be a 5-star rated, trusted local Realtor® known for honest communication, strong negotiation, and always putting my clients first.
               </p>
             </div>
 
@@ -183,22 +183,22 @@ export default function About() {
                 {
                   icon: Star,
                   title: "Honest, clear communication",
-                  body: "I tell you what you need to know — not just what you want to hear. Clear information leads to better decisions.",
+                  body: "I tell you what you need to know, not just what you want to hear. Clear information leads to better decisions.",
                 },
                 {
                   icon: TrendingUp,
                   title: "Expert home valuation",
-                  body: "15 years reading construction costs means I price homes with precision — so sellers don't leave money on the table and buyers don't overpay.",
+                  body: "15 years reading construction costs means I price homes with precision, so sellers don't leave money on the table and buyers don't overpay.",
                 },
                 {
                   icon: Users,
                   title: "Negotiate the best deal",
-                  body: "I understand what repairs actually cost, which gives my clients a real edge at the negotiating table — whether buying or selling.",
+                  body: "I understand what repairs actually cost, which gives my clients a real edge at the negotiating table, whether buying or selling.",
                 },
                 {
                   icon: Home,
                   title: "Deep local knowledge",
-                  body: "Based in El Cerrito, I know the West Contra Costa and Berkeley hills neighborhoods — El Cerrito, Albany, Kensington, Berkeley — inside and out.",
+                  body: "Based in El Cerrito, I know the West Contra Costa and Berkeley hills neighborhoods: El Cerrito, Albany, Kensington, and Berkeley, inside and out.",
                 },
               ].map((item, i) => {
                 const Icon = item.icon;
@@ -230,7 +230,7 @@ export default function About() {
               </h2>
               <div className="w-12 h-px bg-border mb-6" />
               <p className="text-muted-foreground text-base md:text-lg mb-8">
-                Whether you're buying, selling, or just exploring your options, I'm happy to answer questions and discuss your goals — no pressure, no obligation.
+                Whether you're buying, selling, or just exploring your options, I'm happy to answer questions and discuss your goals, no pressure, no obligation.
               </p>
               <div className="space-y-3">
                 <a href="tel:+15106866338" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
