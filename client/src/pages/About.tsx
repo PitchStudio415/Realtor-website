@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, Users, BadgeCheck } from "lucide-react";
+import { SiInstagram, SiZillow } from "react-icons/si";
 import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -69,14 +70,43 @@ export default function About() {
       {/* Hero: photo + info split */}
       <section className="min-h-[85vh] grid lg:grid-cols-2">
         {/* Photo */}
-        <div className="relative order-2 lg:order-1 min-h-[50vh] lg:min-h-full">
-          <img
-            src={profilePhoto}
-            alt="Muzamil Khan — Realtor"
-            className="w-full h-full object-cover object-top absolute inset-0"
-            data-testid="img-profile-photo"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/10" />
+        <div className="order-2 lg:order-1 bg-[#0F172A] flex flex-col items-center justify-center py-14 px-8">
+          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-white/20 shadow-2xl flex-shrink-0">
+            <img
+              src={profilePhoto}
+              alt="Muzamil Khan, Realtor"
+              className="w-full h-full object-cover object-top"
+              data-testid="img-profile-photo"
+            />
+          </div>
+          <div className="flex items-center gap-1 mt-5">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+            ))}
+          </div>
+          <span className="mt-2 text-xs font-bold bg-[#006AFF] text-white px-3 py-1 rounded-full tracking-wide">
+            Zillow Premier Agent
+          </span>
+          <div className="flex items-center gap-5 mt-5">
+            <a
+              href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              data-testid="link-about-instagram"
+            >
+              <SiInstagram className="w-7 h-7 text-[#E1306C] hover:opacity-80 transition-opacity" />
+            </a>
+            <a
+              href="https://www.zillow.com/profile/muzamil7"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Zillow"
+              data-testid="link-about-zillow"
+            >
+              <SiZillow className="w-7 h-7 text-[#006AFF] hover:opacity-80 transition-opacity" />
+            </a>
+          </div>
         </div>
 
         {/* Info panel */}
