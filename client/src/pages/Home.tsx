@@ -112,9 +112,9 @@ export default function Home() {
       </section>
 
       {/* Why Muzamil? */}
-      <section className="py-12 md:py-14 bg-muted/30 border-y border-border">
+      <section className="py-8 md:py-10 bg-muted/30 border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <h2 className="text-xl md:text-2xl font-bold mb-2">Why Work With Muzamil?</h2>
             <p className="text-muted-foreground text-base max-w-lg mx-auto">
               A different kind of Realtor® built on 15 years in construction and a decade of East Bay community roots.
@@ -153,9 +153,9 @@ export default function Home() {
       </section>
 
       {/* Who I Work With */}
-      <section className="py-16 md:py-20">
+      <section className="py-10 md:py-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">Who I Work With</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               First-time buyers, relocators, experienced buyers, and sellers. I give every client the same clear guidance and strong advocacy.
@@ -244,7 +244,7 @@ export default function Home() {
       </section>
 
       {/* CTA strip */}
-      <section className="py-14 md:py-16 bg-[#0F172A] text-white">
+      <section className="py-10 md:py-12 bg-[#0F172A] text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to get started?</h2>
           <p className="text-white/60 mb-8">
