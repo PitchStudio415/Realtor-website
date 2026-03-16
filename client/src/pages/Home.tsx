@@ -30,6 +30,14 @@ export default function Home() {
             <span className="mt-2 text-xs font-bold bg-[#006AFF] text-white px-2.5 py-1 rounded-full tracking-wide" data-testid="badge-zillow-premier">
               Zillow Premier Agent
             </span>
+            <div className="flex items-center gap-4 mt-5">
+              <a href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-testid="link-photo-instagram">
+                <SiInstagram className="w-6 h-6 text-[#E1306C] hover:opacity-80 transition-opacity" />
+              </a>
+              <a href="https://www.zillow.com/profile/muzamil7" target="_blank" rel="noopener noreferrer" aria-label="Zillow" data-testid="link-photo-zillow">
+                <SiZillow className="w-6 h-6 text-[#006AFF] hover:opacity-80 transition-opacity" />
+              </a>
+            </div>
           </div>
 
           {/* Info */}
@@ -99,29 +107,6 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-5 mt-6">
-              <span className="text-xs font-semibold uppercase tracking-widest text-white/40">Follow me</span>
-              <a
-                href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA=="
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                data-testid="link-hero-instagram"
-                className="text-white/60 hover:text-white transition-colors"
-              >
-                <SiInstagram className="w-7 h-7" />
-              </a>
-              <a
-                href="https://www.zillow.com/profile/muzamil7"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Zillow"
-                data-testid="link-hero-zillow"
-                className="text-white/60 hover:text-white transition-colors"
-              >
-                <SiZillow className="w-7 h-7" />
-              </a>
-            </div>
           </div>
         </div>
       </section>
