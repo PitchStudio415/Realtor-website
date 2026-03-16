@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star } from "lucide-react";
+import { SiInstagram, SiZillow } from "react-icons/si";
 import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 
 export default function Home() {
@@ -96,6 +97,30 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
+            </div>
+
+            <div className="flex items-center gap-5 mt-6">
+              <span className="text-xs font-semibold uppercase tracking-widest text-white/40">Follow me</span>
+              <a
+                href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                data-testid="link-hero-instagram"
+                className="text-white/60 hover:text-white transition-colors"
+              >
+                <SiInstagram className="w-7 h-7" />
+              </a>
+              <a
+                href="https://www.zillow.com/profile/muzamil7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Zillow"
+                data-testid="link-hero-zillow"
+                className="text-white/60 hover:text-white transition-colors"
+              >
+                <SiZillow className="w-7 h-7" />
+              </a>
             </div>
           </div>
         </div>
