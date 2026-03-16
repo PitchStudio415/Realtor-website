@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-[#0F172A] text-white py-20 md:py-28">
+      <section className="bg-[#071B2C] text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center sm:items-start gap-10">
           {/* Portrait */}
           <div className="flex-shrink-0 flex flex-col items-center">
@@ -87,7 +87,7 @@ export default function Home() {
               <Link href="/contact?type=buyer">
                 <Button
                   size="lg"
-                  className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold px-6"
+                  className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-6"
                   data-testid="button-buyer-cta"
                 >
                   I'm Buying
@@ -244,7 +244,7 @@ export default function Home() {
       </section>
 
       {/* CTA strip */}
-      <section className="py-10 md:py-12 bg-[#0F172A] text-white">
+      <section className="py-10 md:py-12 bg-[#071B2C] text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to get started?</h2>
           <p className="text-white/60 mb-8">
@@ -253,7 +253,7 @@ export default function Home() {
           <Link href="/contact">
             <Button
               size="lg"
-              className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold px-8"
+              className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-8"
               data-testid="button-cta-contact"
             >
               Book a free consult

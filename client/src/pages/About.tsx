@@ -70,7 +70,7 @@ export default function About() {
       {/* Hero: photo + info split */}
       <section className="grid lg:grid-cols-2">
         {/* Photo */}
-        <div className="order-2 lg:order-1 bg-[#0F172A] flex flex-col items-center justify-center py-10 px-8">
+        <div className="order-2 lg:order-1 bg-[#071B2C] flex flex-col items-center justify-center py-10 px-8">
           <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-white/20 shadow-2xl flex-shrink-0">
             <img
               src={profilePhoto}
@@ -110,7 +110,7 @@ export default function About() {
         </div>
 
         {/* Info panel */}
-        <div className="order-1 lg:order-2 bg-[#0F172A] text-white flex flex-col justify-center px-8 md:px-14 py-10">
+        <div className="order-1 lg:order-2 bg-[#071B2C] text-white flex flex-col justify-center px-8 md:px-14 py-10">
           <p className="text-xs tracking-widest uppercase text-white/50 mb-3 font-medium">El Cerrito · Albany · Berkeley · Kensington</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2" data-testid="text-about-headline">
             Muzamil Khan
@@ -147,7 +147,7 @@ export default function About() {
             <a href="tel:+15106866338">
               <Button
                 size="lg"
-                className="bg-white text-[#0F172A] hover:bg-white/90 font-semibold px-6"
+                className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-6"
                 data-testid="button-call"
               >
                 <Phone className="w-4 h-4 mr-2" />
