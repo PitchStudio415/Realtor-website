@@ -194,12 +194,12 @@ export default function About() {
       {/* Mission / Bio */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs tracking-widest uppercase text-primary font-medium mb-3">About Me</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+            Data-driven guidance you can trust in the East Bay.
+          </h2>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
-              <p className="text-xs tracking-widest uppercase text-primary font-medium mb-3">About Me</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Data-driven guidance you can trust in the East Bay.
-              </h2>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
                 Before becoming a Realtor®, I spent 15 years working in the construction industry alongside builders, developers, and investors. That background gives me an edge few agents can offer: I can walk through a home and genuinely evaluate structural integrity, estimate renovation costs, and understand what inspection findings actually mean, so my clients never pay for problems they didn't see coming.
               </p>
