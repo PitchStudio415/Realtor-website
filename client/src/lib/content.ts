@@ -81,7 +81,7 @@ Getting pre-approved for a mortgage is one of the first steps in your home buyin
     content: `
 # What Closing Costs Actually Look Like in the Bay Area
 
-Closing costs can catch first-time buyers off guard. Here's what to expect in El Cerrito, Albany, Berkeley, and the broader East Bay.
+Closing costs can catch first-time buyers off guard. Here's what to expect across the East Bay: El Cerrito, Albany, Berkeley, Oakland, Richmond, and beyond.
 
 ## Buyer Closing Costs (Typical Range)
 
@@ -186,7 +186,7 @@ A credit reduces what the buyer pays at closing. If they're buying at $900,000 w
   {
     slug: "home-inspection-findings",
     title: "Common Inspection Findings in East Bay Homes",
-    excerpt: "What inspectors typically find in El Cerrito, Albany, Berkeley, and East Bay properties.",
+    excerpt: "What inspectors typically find in El Cerrito, Albany, Berkeley, Oakland, Richmond, and East Bay properties.",
     category: "inspections",
     publishedAt: "2024-12-10",
     content: `

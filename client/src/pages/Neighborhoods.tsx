@@ -178,7 +178,7 @@ function NeighborhoodIndex() {
               <span className="font-medium">Explore</span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-neighborhoods-headline">
-              Homes for Sale in El Cerrito, Albany, Berkeley, Kensington &amp; the East Bay
+              Homes for Sale Across the East Bay: El Cerrito, Albany, Berkeley, Oakland, Richmond &amp; More
             </h1>
             <p className="text-lg md:text-xl text-white/90">
               Local expertise across the neighborhoods I know best, and beyond.

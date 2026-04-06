@@ -43,7 +43,7 @@ export default function Home() {
           {/* Info */}
           <div>
             <p className="text-xs tracking-widest uppercase text-white/40 mb-3 font-medium">
-              El Cerrito · Albany · Berkeley · Kensington
+              El Cerrito · Albany · Berkeley · Oakland · Richmond & the East Bay
             </p>
             <h1
               className="text-4xl md:text-5xl font-bold leading-tight mb-1"
@@ -55,13 +55,13 @@ export default function Home() {
             <p className="text-sm text-white/35 mb-2">DRE# 02400805</p>
             <div className="flex items-center gap-2 text-white/45 text-sm mb-6">
               <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-              <span>El Cerrito, Albany, Berkeley, Kensington & surrounding East Bay</span>
+              <span>El Cerrito, Albany, Berkeley, Oakland, Richmond & the greater East Bay</span>
             </div>
 
             <div className="w-12 h-px bg-white/20 mb-6" />
 
             <p className="text-white/65 text-base leading-relaxed mb-6 max-w-lg">
-              Your trusted El Cerrito, Albany &amp; Berkeley Realtor®, backed by 15 years in the construction industry working with builders, developers, and investors. Get expert guidance for buying, selling, or relocating in the East Bay.
+              Your trusted East Bay Realtor®, backed by 15 years in construction. Serving El Cerrito, Albany, Berkeley, Kensington, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.
             </p>
 
             <div className="space-y-2 mb-7">
@@ -136,7 +136,7 @@ export default function Home() {
               </div>
               <h3 className="font-semibold mb-2 text-lg">El Cerrito Local · 5-Star Rated</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
-                10+ years living in El Cerrito with deep roots in Albany, Berkeley, and Kensington. A trusted, 5-star rated local Realtor® who knows these streets, schools, and market patterns intimately.
+                10+ years living in El Cerrito with deep roots across the East Bay: Albany, Berkeley, Kensington, Oakland, Richmond, and beyond. A trusted, 5-star rated local Realtor® who knows these streets, schools, and market patterns intimately.
               </p>
             </div>
             <div data-testid="differentiator-consultation">
@@ -173,7 +173,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold mb-3">First-Time Home Buyers</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Buying your first home in El Cerrito, Albany, Berkeley, or Kensington is one of the biggest decisions you'll ever make. I'll guide you through the entire process smoothly, from pre-approval to closing, with clear explanations at every step. I'll help you find your dream home, negotiate the best possible deal, and make sure there are no surprises along the way. My construction background means I catch what other agents miss on inspections, giving you a real edge.
+                    Buying your first home in El Cerrito, Albany, Berkeley, Oakland, or anywhere across the East Bay is one of the biggest decisions you'll ever make. I'll guide you through the entire process smoothly, from pre-approval to closing, with clear explanations at every step. I'll help you find your dream home, negotiate the best possible deal, and make sure there are no surprises along the way. My construction background means I catch what other agents miss on inspections, giving you a real edge.
                   </p>
                 </div>
                 <div className="flex sm:flex-col gap-3 flex-shrink-0">
@@ -200,7 +200,7 @@ export default function Home() {
                 <Truck className="w-5 h-5 text-accent mb-3" />
                 <h3 className="text-lg font-bold mb-2">Moving to the East Bay</h3>
                 <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Relocating from out of area or across town? I know every neighborhood from El Cerrito to Berkeley and can help you find the right fit, even before you've arrived.
+                  Relocating from out of area or across town? I know every neighborhood across the East Bay, from Oakland and Emeryville to El Cerrito, Richmond, and beyond, and can help you find the right fit even before you arrive.
                 </p>
                 <Link href="/contact?type=buyer">
                   <Button variant="outline" size="sm" data-testid="link-relocation-cta">

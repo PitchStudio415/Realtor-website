@@ -59,7 +59,7 @@ export default function Sell() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-sell-headline">
-              Sell Your Home for Top Dollar in El Cerrito, Albany, Berkeley &amp; the East Bay
+              Sell Your Home for Top Dollar in El Cerrito, Albany, Berkeley, Oakland &amp; Across the East Bay
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8">
               Strategic pricing, smart preparation, and skilled negotiation to maximize your sale.

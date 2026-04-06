@@ -62,7 +62,7 @@ export default function Buy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-buy-headline">
-              Buying a Home in El Cerrito, Albany, Berkeley &amp; the East Bay
+              Buying a Home in El Cerrito, Albany, Berkeley, Oakland &amp; Across the East Bay
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed">
               Whether you're a first-time buyer, relocating to the East Bay, or an experienced buyer, I'll guide you from search to closing with data, strategy, and honest advice.
@@ -220,7 +220,7 @@ export default function Buy() {
                 <CheckCircle2 className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold mb-2">Local Knowledge</h3>
                 <p className="text-base text-muted-foreground">
-                  El Cerrito resident for 10+ years. Deep knowledge of El Cerrito, Albany, Berkeley, and Kensington.
+                  El Cerrito resident for 10+ years. Deep knowledge of El Cerrito, Albany, Berkeley, Kensington, Oakland, Richmond, and the broader East Bay.
                 </p>
               </CardContent>
             </Card>

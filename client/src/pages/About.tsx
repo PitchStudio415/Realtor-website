@@ -111,7 +111,7 @@ export default function About() {
 
         {/* Info panel */}
         <div className="order-1 lg:order-2 bg-[#071B2C] text-white flex flex-col justify-center px-8 md:px-14 py-10">
-          <p className="text-xs tracking-widest uppercase text-white/50 mb-3 font-medium">El Cerrito · Albany · Berkeley · Kensington</p>
+          <p className="text-xs tracking-widest uppercase text-white/50 mb-3 font-medium">El Cerrito · Albany · Berkeley · Oakland · Richmond & the East Bay</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2" data-testid="text-about-headline">
             Muzamil Khan
           </h1>
@@ -204,7 +204,7 @@ export default function About() {
                 Before becoming a Realtor®, I spent 15 years working in the construction industry alongside builders, developers, and investors. That background gives me an edge few agents can offer: I can walk through a home and genuinely evaluate structural integrity, estimate renovation costs, and understand what inspection findings actually mean, so my clients never pay for problems they didn't see coming.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately: El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay. I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. I'm proud to be a 5-star rated, trusted local Realtor® known for honest communication, strong negotiation, and always putting my clients first.
+                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately: El Cerrito, Albany, Kensington, Berkeley, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante. I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. I'm proud to be a 5-star rated, trusted local Realtor® known for honest communication, strong negotiation, and always putting my clients first.
               </p>
             </div>
 
@@ -228,7 +228,7 @@ export default function About() {
                 {
                   icon: Home,
                   title: "Deep local knowledge",
-                  body: "Based in El Cerrito, I know the West Contra Costa and Berkeley hills neighborhoods: El Cerrito, Albany, Kensington, and Berkeley, inside and out.",
+                  body: "Based in El Cerrito, I serve the full East Bay: El Cerrito, Albany, Kensington, Berkeley, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.",
                 },
               ].map((item, i) => {
                 const Icon = item.icon;

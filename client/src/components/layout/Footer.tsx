@@ -51,7 +51,7 @@ export function Footer() {
               <span className="font-semibold text-lg text-white">Muzamil Khan - Realtor®</span>
             </Link>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Trusted, 5-star real estate guidance for first-time buyers, movers, and sellers in El Cerrito, Albany, Berkeley, Kensington, and the surrounding East Bay.
+              Trusted, 5-star real estate guidance for first-time buyers, movers, and sellers across the East Bay: El Cerrito, Albany, Berkeley, Kensington, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.
             </p>
             <Link href="/contact" data-testid="link-footer-free-consult">
               <Button variant="secondary" size="sm" className="mb-4 font-semibold w-full">
