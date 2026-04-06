@@ -43,7 +43,7 @@ export default function Home() {
           {/* Info */}
           <div>
             <p className="text-xs tracking-widest uppercase text-white/40 mb-3 font-medium">
-              El Cerrito · Albany · Berkeley · Oakland · Richmond & the East Bay
+              East Bay
             </p>
             <h1
               className="text-4xl md:text-5xl font-bold leading-tight mb-1"
@@ -61,7 +61,7 @@ export default function Home() {
             <div className="w-12 h-px bg-white/20 mb-6" />
 
             <p className="text-white/65 text-base leading-relaxed mb-6 max-w-lg">
-              Your trusted East Bay Realtor®, backed by 15 years in construction. Serving El Cerrito, Albany, Berkeley, Kensington, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.
+              Your trusted East Bay Realtor®, backed by 15 years in construction.
             </p>
 
             <div className="space-y-2 mb-7">
