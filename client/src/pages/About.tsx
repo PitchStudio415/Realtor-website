@@ -74,7 +74,7 @@ export default function About() {
           <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden ring-4 ring-white/20 shadow-2xl flex-shrink-0">
             <img
               src={profilePhoto}
-              alt="Muzamil Khan, Realtor"
+              alt="Muzamil Khan Real Estate"
               className="w-full h-full object-cover object-top scale-[1.5]"
               data-testid="img-profile-photo"
             />

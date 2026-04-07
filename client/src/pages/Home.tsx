@@ -79,7 +79,7 @@ export default function Home() {
               <div className="w-64 xl:w-72 h-[460px] xl:h-[500px] rounded-t-3xl overflow-hidden">
                 <img
                   src={profilePhoto}
-                  alt="Muzamil Khan — Realtor®"
+                  alt="Muzamil Khan Real Estate"
                   className="w-full h-full object-cover object-center scale-[1.3]"
                   data-testid="img-hero-photo"
                 />
