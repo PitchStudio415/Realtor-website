@@ -77,7 +77,7 @@ export default function Buy() {
                 </Button>
               </Link>
               <Link href="/calculator">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-foreground border-white hover:bg-white/90 shadow-lg" data-testid="button-calculator-cta">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-[#071B2C] border-white hover:bg-white/90 shadow-lg" data-testid="button-calculator-cta">
                   Affordability Calculator
                 </Button>
               </Link>
@@ -96,7 +96,7 @@ export default function Buy() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">First-Time Buyers</h3>
-                <p className="text-base text-muted-foreground">I'll explain every step clearly, no jargon, no pressure. You'll feel confident, not confused, from day one.</p>
+                <p className="text-base text-muted-foreground">I'll explain every step clearly, in plain language. You'll feel confident and informed from day one.</p>
               </div>
             </div>
             <div className="flex gap-4 items-start">
@@ -353,7 +353,7 @@ export default function Buy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Home Search?</h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let's discuss your goals, timeline, and budget. No pressure, just a conversation about your options.
+            Let's talk through your goals, timeline, and budget. I'll give you a clear picture of what's possible and what to expect.
           </p>
           <Link href="/contact?type=buyer">
             <Button size="lg" variant="secondary" data-testid="button-buy-cta-bottom">

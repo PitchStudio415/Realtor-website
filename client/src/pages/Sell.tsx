@@ -82,7 +82,7 @@ export default function Sell() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-xl md:text-2xl font-bold mb-1">Know Your Home's True Worth Before You List</h2>
-              <p className="text-primary-foreground/80">Free home valuation with no obligation, backed by 15 years of construction industry expertise.</p>
+              <p className="text-primary-foreground/80">Free home valuation backed by 15 years of construction expertise. Get a real number, not a guess.</p>
             </div>
             <Link href="/contact?type=seller" className="flex-shrink-0">
               <Button size="lg" variant="secondary" className="font-semibold whitespace-nowrap" data-testid="button-valuation-cta">
@@ -235,7 +235,7 @@ export default function Sell() {
           <div className="max-w-3xl mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Here's what I tell every seller before we list.</h2>
             <p className="text-muted-foreground">
-              After years in construction, I've seen what actually moves the needle — and what's just money out the window. Sellers who skip the wrong things and do the right ones come out ahead at closing.
+              After years in construction, I've seen what actually moves the needle and what's just money out the window. Sellers who spend wisely and skip the rest consistently come out ahead at closing.
             </p>
           </div>
           

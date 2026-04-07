@@ -10,7 +10,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 # 5 Offer Mistakes First-Time Buyers Make in the Bay Area
 
-The Bay Area housing market moves fast, and first-time buyers often feel pressure to act quickly. Here are the most common mistakes I see—and how to avoid them.
+The Bay Area housing market moves fast, and first-time buyers often feel pressure to act quickly. Here are the most common mistakes I see, and how to avoid them.
 
 ## 1. Not Getting Pre-Approved First
 
@@ -30,13 +30,13 @@ Things like a rent-back period or including the refrigerator might matter more t
 
 ## 5. Writing a Price You Can't Actually Afford
 
-Overbidding is common here, but make sure you can actually afford what you offer—especially if the appraisal comes in low.
+Overbidding is common here, but make sure you can actually afford what you offer, especially if the appraisal comes in low.
     `,
   },
   {
     slug: "pre-approval-explained",
     title: "The Pre-Approval Step Most Buyers Rush Through",
-    excerpt: "Pre-approval isn't just paperwork. Here's what it actually tells you — and your agent.",
+    excerpt: "Pre-approval isn't just paperwork. Here's what it actually tells you, and what it tells your agent.",
     category: "financing",
     publishedAt: "2025-01-05",
     content: `
@@ -487,7 +487,7 @@ If findings are too serious, exercise your contingency.
 
 - Focus on safety, structural, and expensive items
 - Get repair estimates to support requests
-- Be reasonable—minor issues are expected
+- Be reasonable; minor issues are expected
 - Consider seller's perspective and market conditions
     `,
   },
@@ -695,7 +695,7 @@ California has extensive disclosure requirements. Here's what you need to know.
 ## Required Disclosures
 
 ### Transfer Disclosure Statement (TDS)
-Your detailed knowledge of the property's condition—systems, repairs, problems.
+Your detailed knowledge of the property's condition: systems, repairs, problems.
 
 ### Seller Property Questionnaire (SPQ)
 Additional questions about history, neighbors, legal issues.
@@ -727,7 +727,7 @@ This includes:
 
 ## My Advice
 
-Disclose everything. It protects you legally and builds trust with buyers. Most issues, properly disclosed, don't kill deals—surprises do.
+Disclose everything. It protects you legally and builds trust with buyers. Most issues, properly disclosed, don't kill deals. Surprises do.
 
 **Note**: This is general information, not legal advice. Consult an attorney for specific situations.
     `,

@@ -26,7 +26,7 @@ export default function Home() {
                 Muzamil<br />Khan
               </h1>
               <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">
-                I spent 15 years in construction before becoming a Realtor — which means I walk into a house and see things most agents don't. What the inspection report actually means. What that repair will really cost. Whether the price makes sense given the bones. I work with first-time buyers, people moving to the East Bay, and sellers who want someone straight with them.
+                I spent 15 years in construction before becoming a Realtor, which means I walk into a house and see things most agents don't. What the inspection report actually means. What that repair will really cost. Whether the price makes sense given the bones. I work with first-time buyers, people moving to the East Bay, and sellers who want someone straight with them.
               </p>
 
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-8 text-sm">
@@ -140,7 +140,7 @@ export default function Home() {
               <div className="md:border-l md:border-border md:pl-12">
                 <h3 className="font-semibold text-xl mb-3">I read inspection reports differently</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  When an inspection flags foundation cracks, drainage issues, or a failing roof — I know what it actually costs to fix it, which problems are real, and which ones are noise. That knowledge changes what you offer, how you negotiate, and whether you walk or proceed. Most agents can't do that math. I can.
+                  When an inspection flags foundation cracks, drainage issues, or a failing roof, I know what it actually costs to fix it, which problems are real, and which ones are noise. That knowledge changes what you offer, how you negotiate, and whether you walk or proceed. Most agents can't do that math. I can.
                 </p>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function Home() {
               <div className="md:border-l md:border-border md:pl-12">
                 <h3 className="font-semibold text-xl mb-3">I actually live here</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I know which El Cerrito blocks get the morning fog and which ones don't. I know the Albany schools by reputation, not by star rating. I walk these neighborhoods. That kind of local knowledge doesn't show up on a map — it shows up when you're deciding between two offers or two houses.
+                  I know which El Cerrito blocks get the morning fog and which ones don't. I know the Albany schools by reputation, not by star rating. I walk these neighborhoods. That kind of local knowledge is invisible on a map. It shows up when you're deciding between two offers or two houses.
                 </p>
               </div>
             </div>
@@ -164,9 +164,9 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wide leading-snug">To talk<br />to me</p>
               </div>
               <div className="md:border-l md:border-border md:pl-12">
-                <h3 className="font-semibold text-xl mb-3">No pitch. Just a straight conversation.</h3>
+                <h3 className="font-semibold text-xl mb-3">A straight conversation, on your terms.</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  The first call is free, and I don't do the CRM follow-up pressure thing. If you want to talk through your situation — thinking about buying in six months or selling next spring — I'll give you my honest read on the market and what I'd actually do in your shoes.
+                  The first call is free, and I keep it simple after that. If you want to talk through your situation, whether you're thinking about buying in six months or selling next spring, I'll give you my honest read on the market and what I'd actually do in your shoes.
                 </p>
               </div>
             </div>
@@ -270,7 +270,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold mb-4">First-Time Home Buyers</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Buying your first home in the East Bay is one of the biggest decisions you'll ever make. I'll walk you through the entire process — pre-approval, offers, inspections, and closing — in plain language, at your pace. My construction background means I catch what other agents walk past on inspections, and I negotiate hard on your behalf because I actually know what repairs cost.
+                  Buying your first home in the East Bay is one of the biggest decisions you'll ever make. I'll walk you through the entire process: pre-approval, offers, inspections, and closing, in plain language, at your pace. My construction background means I catch what other agents walk past on inspections, and I negotiate hard on your behalf because I actually know what repairs cost.
                 </p>
                 <a
                   href="https://www.zillow.com/profile/muzamil7"
@@ -304,7 +304,7 @@ export default function Home() {
                 <Truck className="w-5 h-5 text-primary mb-3" />
                 <h3 className="text-lg font-bold mb-2">Moving to the East Bay</h3>
                 <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Relocating from out of area? I know every neighborhood from Oakland to El Cerrito to Richmond, and I can help you find your fit — even before you've arrived.
+                  Relocating from out of area? I know every neighborhood from Oakland to El Cerrito to Richmond, and I can help you find your fit, even before you've arrived.
                 </p>
                 <Link href="/contact?type=buyer">
                   <Button variant="outline" size="sm" data-testid="link-relocation-cta">
@@ -319,7 +319,7 @@ export default function Home() {
                 <Hammer className="w-5 h-5 text-primary mb-3" />
                 <h3 className="text-lg font-bold mb-2">Buying a Home</h3>
                 <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Strong offers, smart negotiation, and a construction eye that tells you what you're actually buying — not just what the listing says.
+                  Strong offers, smart negotiation, and a construction eye that tells you what you're actually buying, not just what the listing says.
                 </p>
                 <Link href="/buy">
                   <Button variant="outline" size="sm" data-testid="link-learn-buying">
@@ -334,7 +334,7 @@ export default function Home() {
                 <MapPin className="w-5 h-5 text-primary mb-3" />
                 <h3 className="text-lg font-bold mb-2">Selling Your Home</h3>
                 <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Accurate pricing, smart prep guidance, and repair negotiations where I know what things actually cost — so you keep more at closing.
+                  Accurate pricing, smart prep guidance, and repair negotiations where I know what things actually cost, so you keep more at closing.
                 </p>
                 <Link href="/sell">
                   <Button variant="outline" size="sm" data-testid="link-learn-selling">
@@ -350,9 +350,9 @@ export default function Home() {
       {/* CTA strip */}
       <section className="py-10 md:py-14 bg-[#071B2C] text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Ask me anything — seriously.</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">Ask me anything. Seriously.</h2>
           <p className="text-white/60 mb-8">
-            Not sure if now's the right time? Wondering what your place is worth? I'll give you a straight answer with no strings attached.
+            Not sure if now's the right time? Wondering what your place is worth? I'll give you a straight answer and a clear picture of your options.
           </p>
           <Link href="/contact">
             <Button
