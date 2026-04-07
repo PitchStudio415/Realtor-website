@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, BadgeCheck } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
-import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
+import profilePhoto from "@assets/DSC04311_1775541143310.jpeg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -75,7 +75,7 @@ export default function About() {
             <img
               src={profilePhoto}
               alt="Muzamil Khan, Realtor"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-top scale-[1.5]"
               data-testid="img-profile-photo"
             />
           </div>
