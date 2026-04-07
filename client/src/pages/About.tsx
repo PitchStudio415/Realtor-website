@@ -195,44 +195,16 @@ export default function About() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs tracking-widest uppercase text-primary font-medium mb-3">About Me</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 leading-tight max-w-2xl">
-            I moved here in 2014 and never left.
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                There's a spot on San Pablo I go to most Sunday mornings. I know which parks families with kids gravitate toward. I know the Nextdoor drama better than I probably should. I moved to El Cerrito for a construction job and just stayed. This part of the East Bay has something the rest doesn't: real neighborhoods where people actually know each other.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                Before getting my license, I spent 15 years working alongside builders, developers, and contractors on everything from single-family flips to larger commercial projects. That work taught me how to look at a house: whether the bones are sound, whether the price reflects what it's actually worth, and whether the inspection report is raising a real red flag or just covering the inspector's bases.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                I work with first-time buyers, people relocating to the East Bay, and sellers who want someone who gives it to them straight. I serve El Cerrito, Albany, Berkeley, Kensington, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              <div className="border-l-2 border-primary pl-6" data-testid="value-0">
-                <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-2">The inspection story</p>
-                <p className="text-foreground leading-relaxed">
-                  Last year a buyer in Kensington was under contract on a house they loved. The inspection flagged foundation cracks. The sellers called them cosmetic. I told my client: get a structural engineer in before we do anything. The engineer confirmed the cracks were active. We went back to the seller and got <strong>$22,000 off the price</strong>, with a repair plan already in place before closing. That's what 15 years reading construction problems gets you.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-primary pl-6" data-testid="value-1">
-                <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-2">The Albany offer</p>
-                <p className="text-foreground leading-relaxed">
-                  A couple relocating from LA was nervous about competing in the Albany market. They'd lost three houses already. I walked them through what the comparable sales actually told us, wrote an offer with a specific escalation structure, and explained exactly why. They beat four other buyers without going over their budget. They've been in the house two years now.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-primary pl-6" data-testid="value-2">
-                <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-2">What I tell sellers</p>
-                <p className="text-foreground leading-relaxed">
-                  A seller in Richmond came to me convinced her house was worth more than the comps supported. Instead of agreeing to win the listing, I showed her exactly what had sold and why, what improvements would actually move the needle, and what was just wishful thinking. We priced it right, got multiple offers in the first week, and she walked away with more than she'd expected.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-3xl">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6" data-testid="value-0">
+              With over 15 years of experience in the construction industry, I bring a strong foundation in how homes are built, valued, and maintained. I grew up in Los Angeles and have called the Bay Area home for over a decade, which has allowed me to develop a deep familiarity with its fast-moving and highly localized real estate market.
+            </p>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6" data-testid="value-1">
+              I pursued an MBA at UC Davis to better understand the economic forces and market trends that shape real estate in the Bay Area. Today, I focus on helping first-time home buyers navigate the process with clarity and confidence, while also supporting clients relocating to or from the East Bay.
+            </p>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed" data-testid="value-2">
+              I take a personable and thoughtful approach so my clients feel informed, supported, and well represented every step of the way.
+            </p>
           </div>
         </div>
       </section>
