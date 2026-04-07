@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+
 import { Layout } from "@/components/layout/Layout";
-import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, Users, BadgeCheck } from "lucide-react";
+import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, BadgeCheck } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
 import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 import { useForm } from "react-hook-form";
@@ -192,58 +192,46 @@ export default function About() {
       </section>
 
       {/* Mission / Bio */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs tracking-widest uppercase text-primary font-medium mb-3">About Me</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-            Data-driven guidance you can trust in the East Bay.
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 leading-tight max-w-2xl">
+            I moved here in 2014 and never left.
           </h2>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                Before becoming a Realtor®, I spent 15 years working in the construction industry alongside builders, developers, and investors. That background gives me an edge few agents can offer: I can walk through a home and genuinely evaluate structural integrity, estimate renovation costs, and understand what inspection findings actually mean, so my clients never pay for problems they didn't see coming.
+                There's a spot on San Pablo I go to most Sunday mornings. I know which parks families with kids gravitate toward. I know the Nextdoor drama better than I probably should. I moved to El Cerrito for a construction job and just stayed — because this part of the East Bay has something the rest doesn't: real neighborhoods where people actually know each other.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
+                Before getting my license, I spent 15 years working alongside builders, developers, and contractors on everything from single-family flips to larger commercial projects. That work taught me how to look at a house — not just whether it photographs well, but whether the bones are sound, whether the price reflects what it's actually worth, and whether the inspection report is raising a real red flag or just covering the inspector's bases.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                I live in El Cerrito and have been an East Bay local for over 10 years. I know these neighborhoods intimately: El Cerrito, Albany, Kensington, Berkeley, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante. I use that knowledge to help buyers find the right fit and sellers understand exactly what their home is worth and who is buying in their area. I'm proud to be a 5-star rated, trusted local Realtor® known for honest communication, strong negotiation, and always putting my clients first.
+                I work with first-time buyers, people relocating to the East Bay, and sellers who want someone who gives it to them straight. I serve El Cerrito, Albany, Berkeley, Kensington, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.
               </p>
             </div>
 
-            <div className="space-y-5">
-              {[
-                {
-                  icon: Star,
-                  title: "Honest, clear communication",
-                  body: "I tell you what you need to know, not just what you want to hear. Clear information leads to better decisions.",
-                },
-                {
-                  icon: TrendingUp,
-                  title: "Expert home valuation",
-                  body: "15 years reading construction costs means I price homes with precision, so sellers don't leave money on the table and buyers don't overpay.",
-                },
-                {
-                  icon: Users,
-                  title: "Negotiate the best deal",
-                  body: "I understand what repairs actually cost, which gives my clients a real edge at the negotiating table, whether buying or selling.",
-                },
-                {
-                  icon: Home,
-                  title: "Deep local knowledge",
-                  body: "Based in El Cerrito, I serve the full East Bay: El Cerrito, Albany, Kensington, Berkeley, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.",
-                },
-              ].map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <div key={i} className="flex gap-4" data-testid={`value-${i}`}>
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="space-y-8">
+              <div className="border-l-2 border-primary pl-6" data-testid="value-0">
+                <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-2">The inspection story</p>
+                <p className="text-foreground leading-relaxed">
+                  Last year a buyer in Kensington was under contract on a house they loved. The inspection came back flagging foundation cracks — the sellers called them cosmetic. I told my client: get a structural engineer in before we do anything. The engineer confirmed the cracks were active. We went back to the seller and got <strong>$22,000 off the price</strong>, with a repair plan already in place before closing. That's what 15 years reading construction problems gets you.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-primary pl-6" data-testid="value-1">
+                <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-2">The Albany offer</p>
+                <p className="text-foreground leading-relaxed">
+                  A couple relocating from LA was nervous about competing in the Albany market — they'd lost three houses already. I walked them through what the comparable sales actually told us, wrote an offer with a specific escalation structure, and explained exactly why. They beat four other buyers without going over their budget. They've been in the house two years now.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-primary pl-6" data-testid="value-2">
+                <p className="text-xs uppercase tracking-widest text-primary font-semibold mb-2">What I tell sellers</p>
+                <p className="text-foreground leading-relaxed">
+                  A seller in Richmond came to me convinced her house was worth more than the comps supported. Instead of agreeing to win the listing, I showed her exactly what had sold and why, what improvements would actually move the needle, and what was just wishful thinking. We priced it right, got multiple offers in the first week, and she walked away with more than she'd expected.
+                </p>
+              </div>
             </div>
           </div>
         </div>

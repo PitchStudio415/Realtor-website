@@ -205,9 +205,9 @@ export default function Sell() {
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Prep to Maximize Value</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Here's what I tell every seller before we list.</h2>
             <p className="text-muted-foreground">
-              Not all improvements are worth the investment. Here's what actually matters.
+              After years in construction, I've seen what actually moves the needle — and what's just money out the window. Sellers who skip the wrong things and do the right ones come out ahead at closing.
             </p>
           </div>
           

@@ -118,3 +118,10 @@ The application runs on port 5000 with `npm run dev`. Frontend and backend are s
 
 ## Recent Changes
 - January 2025: Initial build with all core pages and features
+- April 2026: Major visual + copy overhaul
+  - Homepage: Asymmetric hero (tall rectangular portrait flush right, big text left), staggered stat layout for "Why Work With Me" (15/10+/$0 big numbers), inline testimonials section, varied CTAs per section
+  - About page: Conversational personal bio ("I moved here in 2014..."), replaced generic 4-icon value props with 3 specific story blocks (Kensington inspection, Albany offer, Richmond seller)
+  - Sell page: Prep section reframed as personal advice ("Here's what I tell every seller...")
+  - Blog titles: Rewritten to be first-person and specific rather than SEO-style generic
+  - Color system: Zillow palette (primary #006AFF, dark navy #071B2C)
+  - Service area: Full East Bay throughout all pages

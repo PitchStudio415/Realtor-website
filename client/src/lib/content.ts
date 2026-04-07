@@ -3,8 +3,8 @@ import type { BlogPost, EducationModule, Neighborhood } from "@shared/schema";
 export const blogPosts: BlogPost[] = [
   {
     slug: "first-home-offer-mistakes",
-    title: "5 Offer Mistakes First-Time Buyers Make in the Bay Area",
-    excerpt: "Learn how to avoid common pitfalls when writing your first offer in a competitive market.",
+    title: "The Offer Mistakes That Cost First-Time Buyers in the Bay Area",
+    excerpt: "I see the same errors over and over. Here's what trips up new buyers and how to avoid it.",
     category: "first-time-buyers",
     publishedAt: "2025-01-10",
     content: `
@@ -35,8 +35,8 @@ Overbidding is common here, but make sure you can actually afford what you offer
   },
   {
     slug: "pre-approval-explained",
-    title: "How Mortgage Pre-Approval Actually Works",
-    excerpt: "A clear breakdown of the pre-approval process and what lenders look at.",
+    title: "The Pre-Approval Step Most Buyers Rush Through",
+    excerpt: "Pre-approval isn't just paperwork. Here's what it actually tells you — and your agent.",
     category: "financing",
     publishedAt: "2025-01-05",
     content: `
@@ -74,8 +74,8 @@ Getting pre-approved for a mortgage is one of the first steps in your home buyin
   },
   {
     slug: "bay-area-closing-costs",
-    title: "What Closing Costs Actually Look Like in the Bay Area",
-    excerpt: "A realistic breakdown of buyer and seller closing costs with example numbers.",
+    title: "What I Tell Buyers About Closing Costs Before They Fall in Love With a House",
+    excerpt: "Closing costs catch first-timers off guard. Here's what to budget for in the Bay Area.",
     category: "first-time-buyers",
     publishedAt: "2025-01-01",
     content: `
@@ -112,8 +112,8 @@ On a $900,000 home, expect roughly $18,000-$27,000 in closing costs (2-3% of pur
   },
   {
     slug: "staging-worth-it",
-    title: "Is Home Staging Actually Worth the Cost?",
-    excerpt: "When staging makes sense and when it doesn't—a data-driven look.",
+    title: "Is Staging Worth It? Here's My Honest Take.",
+    excerpt: "I've seen it add $30K to a sale and I've seen it be a waste. Here's when it matters.",
     category: "selling",
     publishedAt: "2024-12-20",
     content: `
@@ -149,8 +149,8 @@ Get a stager consultation first ($150-$300). They'll tell you what impact stagin
   },
   {
     slug: "repairs-vs-credits",
-    title: "Should You Make Repairs or Offer Credit to Buyers?",
-    excerpt: "How to decide between fixing issues yourself or giving buyers money to handle them.",
+    title: "Repairs or Credits? What I Actually Recommend to Sellers.",
+    excerpt: "After every inspection, sellers face this decision. Here's how I think through it.",
     category: "selling",
     publishedAt: "2024-12-15",
     content: `
@@ -185,8 +185,8 @@ A credit reduces what the buyer pays at closing. If they're buying at $900,000 w
   },
   {
     slug: "home-inspection-findings",
-    title: "Common Inspection Findings in East Bay Homes",
-    excerpt: "What inspectors typically find in El Cerrito, Albany, Berkeley, Oakland, Richmond, and East Bay properties.",
+    title: "What Inspectors Almost Always Find in East Bay Homes (and What It Means)",
+    excerpt: "I've been through hundreds of inspections. Here are the findings that actually matter in this market.",
     category: "inspections",
     publishedAt: "2024-12-10",
     content: `
