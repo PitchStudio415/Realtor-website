@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, BadgeCheck } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
-import profilePhoto from "@assets/DSC04311_1775541143310.jpeg";
+import profilePhoto from "@assets/DSC04643_1775541750146.jpeg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -195,7 +195,7 @@ export default function About() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs tracking-widest uppercase text-primary font-medium mb-3">About Me</p>
-          <div className="max-w-3xl">
+          <div>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6" data-testid="value-0">
               With over 15 years of experience in the construction industry, I bring a strong foundation in how homes are built, valued, and maintained. I grew up in Los Angeles and have called the Bay Area home for over a decade, which has allowed me to develop a deep familiarity with its fast-moving and highly localized real estate market.
             </p>
