@@ -26,7 +26,7 @@ export default function Home() {
                 Muzamil<br />Khan
               </h1>
               <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">
-                I spent 15 years in construction before becoming a Realtor, which means I walk into a house and see things most agents don't. What the inspection report actually means. What that repair will really cost. Whether the price makes sense given the bones. I work with first-time buyers, people moving to the East Bay, and sellers who want someone straight with them.
+                I spent 15 years in construction before becoming a Realtor, so when I walk into a home, I notice things others often miss, from what an inspection report is really saying to what a repair is likely to cost and whether the price truly reflects the quality of the home. I work with first time buyers, clients relocating to the East Bay, and sellers who value clear, honest guidance, and I take a straightforward, experience driven approach so you can make informed decisions with confidence.
               </p>
 
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-8 text-sm">
