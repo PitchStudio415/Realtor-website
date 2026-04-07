@@ -10,8 +10,10 @@ import {
   CheckCircle2,
   ArrowRight,
   HandshakeIcon,
-  Key
+  Key,
+  Star
 } from "lucide-react";
+import { SiZillow } from "react-icons/si";
 import heroImage from "@assets/stock_images/berkeley_california__0a7c1f06.jpg";
 
 const timeline = [
@@ -91,6 +93,32 @@ export default function Sell() {
           </div>
         </div>
       </section>
+
+      {/* Zillow pull-quote — Tenisi */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <a
+          href="https://www.zillow.com/profile/muzamil7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-start gap-4 group"
+          data-testid="pullquote-tenisi"
+        >
+          <div className="border-l-2 border-primary/40 pl-4 flex-1">
+            <p className="text-muted-foreground italic leading-relaxed">
+              "He walked us through the process from start to finish in a way that felt smooth and manageable. His attention to detail and willingness to go the extra mile made our experience truly a positive one."
+            </p>
+            <div className="flex items-center gap-2 mt-2">
+              <div className="flex items-center gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-xs text-muted-foreground">Tenisi Elena · Buyer · Zillow</span>
+              <SiZillow className="w-3.5 h-3.5 text-[#006AFF]" />
+            </div>
+          </div>
+        </a>
+      </div>
 
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

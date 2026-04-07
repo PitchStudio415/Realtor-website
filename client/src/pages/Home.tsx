@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
-import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star } from "lucide-react";
+import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
 import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
 
@@ -175,28 +175,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials — inline, no carousel */}
-      <section className="py-14 bg-muted/50 border-y border-border">
+      {/* Zillow Testimonials */}
+      <section className="py-14 bg-muted/40 border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div data-testid="testimonial-0">
-              <p className="text-foreground leading-relaxed mb-4 italic">
-                "Muzamil caught a drainage issue the inspector had marked 'monitor.' He told me right then it was a real problem. We got $18K off the price before closing."
+          <div className="flex items-center gap-2 mb-8">
+            <SiZillow className="w-5 h-5 text-[#006AFF]" />
+            <span className="text-sm font-medium text-muted-foreground">Verified Zillow Reviews</span>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+
+            {/* Timothy */}
+            <a
+              href="https://www.zillow.com/profile/muzamil7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
+              data-testid="testimonial-timothy"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
+              </div>
+              <p className="text-foreground leading-relaxed mb-5 italic">
+                "Muzamil went above and beyond by making multiple trips to meet and coordinate with contractors on our behalf when we weren't able to be there."
               </p>
-              <p className="text-sm font-semibold text-primary">Sarah T. · El Cerrito</p>
-            </div>
-            <div data-testid="testimonial-1">
-              <p className="text-foreground leading-relaxed mb-4 italic">
-                "He knew the Albany market cold. Told us exactly what to offer and how to write it. We beat four other buyers without going over asking."
+              <div>
+                <p className="font-semibold text-sm text-foreground">Timothy</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Bought a condo · Sunshine Gardens, South San Francisco · March 2026</p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 mt-4">
+                {["Local knowledge", "Process expertise", "Responsiveness", "Negotiation"].map((tag) => (
+                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </a>
+
+            {/* tenisi elena */}
+            <a
+              href="https://www.zillow.com/profile/muzamil7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
+              data-testid="testimonial-tenisi"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
+              </div>
+              <p className="text-foreground leading-relaxed mb-5 italic">
+                "He walked us through the process from start to finish in a way that felt smooth and manageable. His attention to detail and willingness to go the extra mile made our experience truly a positive one."
               </p>
-              <p className="text-sm font-semibold text-primary">Marcus & Jen · Albany</p>
-            </div>
-            <div data-testid="testimonial-2">
-              <p className="text-foreground leading-relaxed mb-4 italic">
-                "As a first-time buyer I was completely overwhelmed. Muzamil explained every step in plain English. Never felt rushed or confused."
-              </p>
-              <p className="text-sm font-semibold text-primary">Priya K. · Berkeley</p>
-            </div>
+              <div>
+                <p className="font-semibold text-sm text-foreground">Tenisi Elena</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Bought a single family home · Pittsburg, CA · February 2026</p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 mt-4">
+                {["Local knowledge", "Process expertise", "Responsiveness", "Negotiation"].map((tag) => (
+                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </a>
+
           </div>
         </div>
       </section>

@@ -13,8 +13,10 @@ import {
   Banknote,
   Building,
   BookOpen,
-  Truck
+  Truck,
+  Star
 } from "lucide-react";
+import { SiZillow } from "react-icons/si";
 import heroImage from "@assets/stock_images/modern_home_exterior_d46ee0b9.jpg";
 
 const timeline = [
@@ -118,6 +120,32 @@ export default function Buy() {
           </div>
         </div>
       </section>
+
+      {/* Zillow pull-quote — Timothy */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <a
+          href="https://www.zillow.com/profile/muzamil7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-start gap-4 group"
+          data-testid="pullquote-timothy"
+        >
+          <div className="border-l-2 border-primary/40 pl-4 flex-1">
+            <p className="text-muted-foreground italic leading-relaxed">
+              "Muzamil went above and beyond by making multiple trips to meet and coordinate with contractors on our behalf when we weren't able to be there."
+            </p>
+            <div className="flex items-center gap-2 mt-2">
+              <div className="flex items-center gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-xs text-muted-foreground">Timothy · Buyer · Zillow</span>
+              <SiZillow className="w-3.5 h-3.5 text-[#006AFF]" />
+            </div>
+          </div>
+        </a>
+      </div>
 
       {/* First-Time Buyer + Relocator Callouts */}
       <section className="py-10 md:py-12 bg-primary/5 border-y border-primary/10">
