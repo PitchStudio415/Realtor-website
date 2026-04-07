@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
-import profilePhoto from "@assets/ProfilePhoto_1773373912154.jpeg";
+import profilePhoto from "@assets/DSC04279_1775540256032.jpeg";
 
 export default function Home() {
   return (
@@ -80,7 +80,7 @@ export default function Home() {
                 <img
                   src={profilePhoto}
                   alt="Muzamil Khan — Realtor®"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                   data-testid="img-hero-photo"
                 />
               </div>
