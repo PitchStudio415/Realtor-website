@@ -44,10 +44,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <div className="lg:col-span-1">
-            <Link href="/" className="flex flex-col items-start leading-none mb-4">
-              <span className="text-[9px] tracking-[0.3em] uppercase font-medium text-white/50">Muzamil</span>
-              <span className="text-2xl font-bold tracking-wide text-white leading-none" style={{fontFamily: "var(--font-serif)"}}>Khan</span>
-              <span className="text-[8px] tracking-[0.35em] uppercase font-medium text-white/50">Real Estate</span>
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <span className="font-semibold text-lg text-white">Muzamil Khan Real Estate</span>
             </Link>
             <p className="text-sm text-primary-foreground/80 mb-4">
               Trusted, 5-star real estate guidance for first-time buyers, movers, and sellers across the East Bay: El Cerrito, Albany, Berkeley, Kensington, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.

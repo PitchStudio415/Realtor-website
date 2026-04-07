@@ -34,10 +34,8 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-4">
-          <Link href="/" className="flex flex-col items-start leading-none flex-shrink-0" data-testid="logo-text">
-            <span className="text-[9px] tracking-[0.3em] uppercase font-sans font-medium text-foreground/50">Muzamil</span>
-            <span className="text-2xl font-bold tracking-wide text-foreground font-serif leading-none" style={{fontFamily: "var(--font-serif)"}}>Khan</span>
-            <span className="text-[8px] tracking-[0.35em] uppercase font-sans font-medium text-foreground/50">Real Estate</span>
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <span className="font-semibold text-lg hidden sm:block" data-testid="logo-text">Muzamil Khan Real Estate</span>
           </Link>
           
           <nav className="hidden lg:flex items-center gap-1" data-testid="desktop-nav">
