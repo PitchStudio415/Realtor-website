@@ -80,7 +80,7 @@ export default function Home() {
                 <img
                   src={profilePhoto}
                   alt="Muzamil Khan Real Estate"
-                  className="w-full h-full object-cover object-center scale-[1.3]"
+                  className="w-full h-full object-cover object-top"
                   data-testid="img-hero-photo"
                 />
               </div>
