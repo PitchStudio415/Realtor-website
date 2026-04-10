@@ -15,7 +15,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row lg:items-end gap-0">
 
             {/* Content — left */}
-            <div className="flex-1 py-16 lg:py-24 lg:pr-16 flex flex-col justify-center">
+            <div className="flex-1 py-16 lg:py-24 lg:pr-6 flex flex-col justify-center">
               <p className="text-xs tracking-widest uppercase text-white/40 mb-6 font-medium">
                 East Bay Realtor® · DRE# 02400805
               </p>
@@ -25,7 +25,7 @@ export default function Home() {
               >
                 Muzamil<br />Khan
               </h1>
-              <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">
+              <p className="text-white/70 text-lg leading-relaxed mb-8">
                 I spent 15 years in construction before becoming a Realtor, so when I walk into a home, I notice things others often miss, from what an inspection report is really saying to what a repair is likely to cost and whether the price truly reflects the quality of the home. I work with first time buyers, clients relocating to the East Bay, and sellers who value clear, honest guidance, and I take a straightforward, experience driven approach so you can make informed decisions with confidence.
               </p>
 
