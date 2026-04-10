@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
-import profilePhoto from "@assets/DSC04279_1775540256032.jpeg";
+import profilePhoto from "@assets/DSC04279_1775796263349.jpeg";
 
 export default function Home() {
   return (
@@ -76,11 +76,12 @@ export default function Home() {
 
             {/* Photo — right, tall rectangle, flush to bottom */}
             <div className="hidden lg:flex flex-col items-center self-end flex-shrink-0">
-              <div className="w-64 xl:w-72 h-[460px] xl:h-[500px] rounded-t-3xl overflow-hidden">
+              <div className="w-64 xl:w-72 h-[460px] xl:h-[500px] rounded-t-3xl overflow-hidden relative">
                 <img
                   src={profilePhoto}
                   alt="Muzamil Khan Real Estate"
-                  className="w-full h-full object-cover object-top"
+                  className="absolute w-[160%] h-[160%] object-cover object-top"
+                  style={{ left: '-30%', top: '-5%' }}
                   data-testid="img-hero-photo"
                 />
               </div>
