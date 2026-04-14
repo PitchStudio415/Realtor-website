@@ -161,7 +161,7 @@ function NeighborhoodDetail({ slug }: { slug: string }) {
 const WCC_SLUGS = ['el-cerrito', 'richmond', 'hercules', 'san-pablo', 'pinole', 'el-sobrante', 'rodeo'];
 
 function NeighborhoodIndex() {
-  const featuredSlugs = ['el-cerrito', 'albany', 'berkeley', 'kensington', ...WCC_SLUGS.slice(1)];
+  const featuredSlugs = WCC_SLUGS;
   const featuredNeighborhoods = featuredSlugs.map(slug => neighborhoods.find(n => n.slug === slug)).filter(Boolean) as typeof neighborhoods;
   const otherNeighborhoods = neighborhoods.filter(n => !featuredSlugs.includes(n.slug));
 
