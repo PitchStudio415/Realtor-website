@@ -255,8 +255,8 @@ export default function Home() {
       {/* Who I Work With */}
       <section className="py-14 md:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Who I Work With</h2>
-          <p className="text-muted-foreground mb-10 max-w-xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Who I Work With</h2>
+          <p className="text-muted-foreground mb-10 max-w-xl mx-auto text-center">
             First-time buyers, people relocating to the East Bay, experienced buyers, and sellers ready to move on.
           </p>
 
