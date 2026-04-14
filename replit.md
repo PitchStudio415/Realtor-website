@@ -125,3 +125,5 @@ The application runs on port 5000 with `npm run dev`. Frontend and backend are s
   - Blog titles: Rewritten to be first-person and specific rather than SEO-style generic
   - Color system: Zillow palette (primary #006AFF, dark navy #071B2C)
   - Service area: Full East Bay throughout all pages
+  - SEO: llms.txt, sitemap.xml, JSON-LD RealEstateAgent schema, Google site verification
+  - City Pages: 7 individual city landing pages at `/cities/:slug` for El Cerrito, Richmond, Hercules, San Pablo, Pinole, El Sobrante, Rodeo. Each has hero with stats, 5 content sections, FAQ accordion, sidebar CTA + city links, bottom CTA, and dual JSON-LD schemas (RealEstateAgent + FAQPage). Data lives in `client/src/lib/cityData.ts`, reusable component in `client/src/pages/CityPage.tsx`.

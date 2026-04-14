@@ -17,6 +17,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
+import CityPage from "@/pages/CityPage";
 
 function Router() {
   return (
@@ -37,6 +38,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
+      <Route path="/cities/:slug" component={CityPage} />
       <Route component={NotFound} />
     </Switch>
   );
