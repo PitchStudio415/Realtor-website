@@ -31,12 +31,12 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-8 text-sm">
                 <a
-                  href="tel:+15106866338"
+                  href="tel:+14158198312"
                   className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
                   data-testid="link-hero-phone"
                 >
                   <Phone className="w-3.5 h-3.5" />
-                  (510) 686-6338
+                  (415) 819-8312
                 </a>
                 <span className="text-white/20 hidden sm:block">·</span>
                 <a

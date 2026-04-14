@@ -122,14 +122,14 @@ export default function About() {
 
           <div className="space-y-3 mb-8">
             <a
-              href="tel:+15106866338"
+              href="tel:+14158198312"
               className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
               data-testid="link-phone"
             >
               <div className="w-9 h-9 rounded-full bg-white/10 group-hover:bg-white/20 flex items-center justify-center flex-shrink-0 transition-colors">
                 <Phone className="w-4 h-4" />
               </div>
-              <span className="text-base">(510) 686-6338</span>
+              <span className="text-base">(415) 819-8312</span>
             </a>
             <a
               href="mailto:Muzamil@risegroup.com"
@@ -144,7 +144,7 @@ export default function About() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <a href="tel:+15106866338">
+            <a href="tel:+14158198312">
               <Button
                 size="lg"
                 className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-6"
@@ -223,9 +223,9 @@ export default function About() {
                 Whether you're buying, selling, or just exploring your options, I'm happy to answer questions and talk through your goals at whatever pace works for you.
               </p>
               <div className="space-y-3">
-                <a href="tel:+15106866338" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                <a href="tel:+14158198312" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                   <Phone className="w-4 h-4 text-primary" />
-                  <span>(510) 686-6338</span>
+                  <span>(415) 819-8312</span>
                 </a>
                 <a href="mailto:Muzamil@risegroup.com" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                   <Mail className="w-4 h-4 text-primary" />
