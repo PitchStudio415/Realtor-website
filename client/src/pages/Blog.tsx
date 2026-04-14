@@ -1,10 +1,10 @@
 import { Link, useParams } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, ArrowLeft, Search, Calendar } from "lucide-react";
+import { ArrowRight, ArrowLeft, Search, Calendar, ChevronDown } from "lucide-react";
 import { blogPosts, getBlogPostBySlug } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import heroImage from "@assets/stock_images/san_francisco_bay_wa_d2352847.jpg";
@@ -18,8 +18,103 @@ const categories = [
   { value: 'inspections', label: 'Inspections' },
 ];
 
+function FaqAccordion({ faq }: { faq: { question: string; answer: string }[] }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  return (
+    <div className="mt-12 pt-8 border-t border-border">
+      <h2 className="text-xl font-bold mb-6">Frequently Asked Questions</h2>
+      <div className="space-y-3">
+        {faq.map((item, i) => (
+          <div key={i} className="border border-border rounded-lg overflow-hidden">
+            <button
+              className="w-full flex items-center justify-between px-5 py-4 text-left font-medium hover:bg-muted/50 transition-colors"
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              data-testid={`faq-toggle-${i}`}
+            >
+              <span>{item.question}</span>
+              <ChevronDown className={`w-4 h-4 text-muted-foreground flex-shrink-0 ml-3 transition-transform ${openIndex === i ? 'rotate-180' : ''}`} />
+            </button>
+            {openIndex === i && (
+              <div className="px-5 pb-4 pt-1 text-muted-foreground text-sm leading-relaxed">
+                {item.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function BlogPostPage({ slug }: { slug: string }) {
   const post = getBlogPostBySlug(slug);
+
+  useEffect(() => {
+    if (!post) return;
+
+    const canonicalUrl = `https://muzamilkhan.com/blog/${post.slug}`;
+
+    // OG meta tags
+    const ogTags: Record<string, string> = {
+      'og:title': post.title,
+      'og:description': post.metaDescription || post.excerpt,
+      'og:type': 'article',
+      'og:url': canonicalUrl,
+    };
+    const metaEls: HTMLMetaElement[] = [];
+    Object.entries(ogTags).forEach(([property, content]) => {
+      let el = document.querySelector<HTMLMetaElement>(`meta[property="${property}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute('property', property);
+        document.head.appendChild(el);
+        metaEls.push(el);
+      }
+      el.setAttribute('content', content);
+    });
+
+    // meta description
+    let metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const prevDesc = metaDesc?.getAttribute('content') ?? '';
+    if (metaDesc) metaDesc.setAttribute('content', post.metaDescription || post.excerpt);
+
+    // JSON-LD Article schema
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": post.title,
+      "description": post.metaDescription || post.excerpt,
+      "datePublished": post.publishedAt,
+      "author": {
+        "@type": "Person",
+        "name": "M. Muzamil Khan",
+        "url": "https://muzamilkhan.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Rise Group Real Estate"
+      },
+      "url": canonicalUrl,
+      ...(post.faq ? {
+        "mainEntity": post.faq.map(f => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+        }))
+      } : {})
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'blog-post-jsonld';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+
+    return () => {
+      metaEls.forEach(el => el.remove());
+      if (metaDesc) metaDesc.setAttribute('content', prevDesc);
+      document.getElementById('blog-post-jsonld')?.remove();
+    };
+  }, [post]);
 
   if (!post) {
     return (
@@ -78,6 +173,8 @@ function BlogPostPage({ slug }: { slug: string }) {
               .replace(/\n/g, '<br/>')
           }}
         />
+
+        {post.faq && post.faq.length > 0 && <FaqAccordion faq={post.faq} />}
         
         <div className="mt-12 pt-8 border-t border-border">
           <h3 className="font-semibold mb-4">Ready to take the next step?</h3>

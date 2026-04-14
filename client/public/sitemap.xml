@@ -45,6 +45,17 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://muzamilkhanrealtor.com/blog/west-contra-costa-county-market-outlook-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://muzamilkhanrealtor.com/blog/best-neighborhoods-in-richmond-for-first-time-buyers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://muzamilkhanrealtor.com/calculator</loc>
     <changefreq>monthly</changefreq>

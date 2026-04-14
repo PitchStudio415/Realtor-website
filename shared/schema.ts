@@ -62,6 +62,8 @@ export interface BlogPost {
   category: 'first-time-buyers' | 'selling' | 'financing' | 'market-basics' | 'inspections';
   content: string;
   publishedAt: string;
+  metaDescription?: string;
+  faq?: { question: string; answer: string }[];
 }
 
 // Education module type
