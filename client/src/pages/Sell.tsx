@@ -122,7 +122,7 @@ export default function Sell() {
 
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mx-auto mb-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">How I Help Sellers</h2>
             <p className="text-muted-foreground">
               Selling a home involves dozens of decisions. I provide the data and guidance 
