@@ -158,8 +158,10 @@ function NeighborhoodDetail({ slug }: { slug: string }) {
   );
 }
 
+const WCC_SLUGS = ['el-cerrito', 'richmond', 'hercules', 'san-pablo', 'pinole', 'el-sobrante', 'rodeo'];
+
 function NeighborhoodIndex() {
-  const featuredSlugs = ['el-cerrito', 'albany', 'berkeley', 'kensington'];
+  const featuredSlugs = ['el-cerrito', 'albany', 'berkeley', 'kensington', ...WCC_SLUGS.slice(1)];
   const featuredNeighborhoods = featuredSlugs.map(slug => neighborhoods.find(n => n.slug === slug)).filter(Boolean) as typeof neighborhoods;
   const otherNeighborhoods = neighborhoods.filter(n => !featuredSlugs.includes(n.slug));
 
@@ -196,21 +198,24 @@ function NeighborhoodIndex() {
             </div>
             <p className="text-muted-foreground mb-8">The communities I know best, where I live, work, and help clients every day.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {featuredNeighborhoods.map((n) => (
-                <Link key={n.slug} href={`/neighborhoods/${n.slug}`}>
-                  <Card className="h-full hover-elevate cursor-pointer border-primary/20" data-testid={`card-neighborhood-${n.slug}`}>
-                    <CardContent className="p-6">
-                      <h3 className="font-semibold text-lg mb-2">{n.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-3 line-clamp-3">
-                        {n.overview}
-                      </p>
-                      <div className="flex items-center text-sm text-primary font-medium">
-                        Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
+              {featuredNeighborhoods.map((n) => {
+                const href = WCC_SLUGS.includes(n.slug) ? `/cities/${n.slug}` : `/neighborhoods/${n.slug}`;
+                return (
+                  <Link key={n.slug} href={href}>
+                    <Card className="h-full hover-elevate cursor-pointer border-primary/20" data-testid={`card-neighborhood-${n.slug}`}>
+                      <CardContent className="p-6">
+                        <h3 className="font-semibold text-lg mb-2">{n.name}</h3>
+                        <p className="text-sm text-muted-foreground mb-3 line-clamp-3">
+                          {n.overview}
+                        </p>
+                        <div className="flex items-center text-sm text-primary font-medium">
+                          Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
+              })}
             </div>
           </div>
           
