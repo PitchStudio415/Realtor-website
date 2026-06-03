@@ -96,6 +96,12 @@ export default function Home() {
                 >
                   Zillow Premier Agent
                 </span>
+                <span
+                  className="text-xs font-bold bg-[#D92228] text-white px-2.5 py-1 rounded-full tracking-wide"
+                  data-testid="badge-realtor"
+                >
+                  Realtor.com Agent
+                </span>
                 <div className="flex items-center gap-3 mt-1">
                   <a
                     href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA=="

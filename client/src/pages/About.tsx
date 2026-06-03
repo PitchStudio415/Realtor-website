@@ -84,9 +84,14 @@ export default function About() {
               <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <span className="mt-2 text-xs font-bold bg-[#006AFF] text-white px-3 py-1 rounded-full tracking-wide">
-            Zillow Premier Agent
-          </span>
+          <div className="flex flex-wrap gap-2 mt-2">
+            <span className="text-xs font-bold bg-[#006AFF] text-white px-3 py-1 rounded-full tracking-wide">
+              Zillow Premier Agent
+            </span>
+            <span className="text-xs font-bold bg-[#D92228] text-white px-3 py-1 rounded-full tracking-wide">
+              Realtor.com Agent
+            </span>
+          </div>
           <div className="flex items-center gap-5 mt-5">
             <a
               href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA=="
