@@ -5,8 +5,6 @@ import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
 import profilePhoto from "@assets/DSC04279_1775796380065.jpeg";
-import closingBalloons from "@assets/brand/closing-day-balloons.jpg";
-import closingKeys from "@assets/brand/closing-day-keys.jpg";
 
 export default function Home() {
   return (
@@ -257,31 +255,6 @@ export default function Home() {
             </a>
 
           </div>
-
-          {/* Real closings */}
-          <div className="grid md:grid-cols-3 gap-4 mt-8">
-            <div className="md:col-span-2 rounded-2xl overflow-hidden border border-border">
-              <img
-                src={closingBalloons}
-                alt="Muzamil Khan celebrating closing day with clients in their new kitchen"
-                className="w-full h-64 md:h-72 object-cover"
-                loading="lazy"
-                data-testid="img-closing-balloons"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-border">
-              <img
-                src={closingKeys}
-                alt="Clients holding their new keys with Muzamil Khan at the front door"
-                className="w-full h-64 md:h-72 object-cover object-top"
-                loading="lazy"
-                data-testid="img-closing-keys"
-              />
-            </div>
-          </div>
-          <p className="text-xs text-muted-foreground mt-3 text-center">
-            Closing day · East Bay · 2026
-          </p>
         </div>
       </section>
 

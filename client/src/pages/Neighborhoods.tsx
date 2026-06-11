@@ -159,10 +159,12 @@ function NeighborhoodDetail({ slug }: { slug: string }) {
   );
 }
 
-const WCC_SLUGS = ['el-cerrito', 'richmond', 'hercules', 'san-pablo', 'pinole', 'el-sobrante', 'rodeo'];
+const CORE_SLUGS = ['el-cerrito', 'kensington', 'albany', 'berkeley', 'oakland'];
+// cities with a dedicated deep-dive page at /cities/:slug
+const CITY_PAGE_SLUGS = ['el-cerrito', 'richmond', 'hercules', 'san-pablo', 'pinole', 'el-sobrante', 'rodeo'];
 
 function NeighborhoodIndex() {
-  const featuredSlugs = WCC_SLUGS;
+  const featuredSlugs = CORE_SLUGS;
   const featuredNeighborhoods = featuredSlugs.map(slug => neighborhoods.find(n => n.slug === slug)).filter(Boolean) as typeof neighborhoods;
   const otherNeighborhoods = neighborhoods.filter(n => !featuredSlugs.includes(n.slug));
 
@@ -192,7 +194,7 @@ function NeighborhoodIndex() {
             <p className="text-muted-foreground mb-8">The communities I know best, where I live, work, and help clients every day.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredNeighborhoods.map((n) => {
-                const href = WCC_SLUGS.includes(n.slug) ? `/cities/${n.slug}` : `/neighborhoods/${n.slug}`;
+                const href = CITY_PAGE_SLUGS.includes(n.slug) ? `/cities/${n.slug}` : `/neighborhoods/${n.slug}`;
                 return (
                   <Link key={n.slug} href={href}>
                     <Card className="h-full hover-elevate cursor-pointer border-primary/20" data-testid={`card-neighborhood-${n.slug}`}>
@@ -217,7 +219,7 @@ function NeighborhoodIndex() {
             <p className="text-muted-foreground mb-8">I also serve buyers and sellers throughout the broader East Bay area.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherNeighborhoods.map((n) => (
-                <Link key={n.slug} href={`/neighborhoods/${n.slug}`}>
+                <Link key={n.slug} href={CITY_PAGE_SLUGS.includes(n.slug) ? `/cities/${n.slug}` : `/neighborhoods/${n.slug}`}>
                   <Card className="h-full hover-elevate cursor-pointer" data-testid={`card-neighborhood-${n.slug}`}>
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-lg mb-2">{n.name}</h3>
