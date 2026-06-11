@@ -1,4 +1,7 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
+import { useEffect } from "react";
+import { getSeoForPath } from "./lib/seo";
+import { initAnalytics, trackPageview } from "./lib/analytics";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -18,6 +21,62 @@ import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import CityPage from "@/pages/CityPage";
+
+function setMetaContent(selector: string, content: string) {
+  const el = document.head.querySelector(selector) as HTMLMetaElement | null;
+  if (el) el.setAttribute("content", content);
+}
+
+/** Applies per-route title/meta/canonical/JSON-LD and reports SPA pageviews. */
+function HeadManager() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    initAnalytics();
+  }, []);
+
+  useEffect(() => {
+    const seo = getSeoForPath(location);
+
+    document.title = seo.title;
+    setMetaContent('meta[name="description"]', seo.description);
+    setMetaContent('meta[property="og:title"]', seo.title);
+    setMetaContent('meta[property="og:description"]', seo.description);
+    setMetaContent('meta[name="twitter:title"]', seo.title);
+    setMetaContent('meta[name="twitter:description"]', seo.description);
+    setMetaContent('meta[property="og:type"]', seo.ogType);
+
+    let ogUrl = document.head.querySelector('meta[property="og:url"]') as HTMLMetaElement | null;
+    if (!ogUrl) {
+      ogUrl = document.createElement("meta");
+      ogUrl.setAttribute("property", "og:url");
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute("content", seo.canonical);
+
+    let canonical = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", seo.canonical);
+
+    const JSONLD_ID = "route-jsonld";
+    document.getElementById(JSONLD_ID)?.remove();
+    if (seo.jsonLd.length) {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = JSONLD_ID;
+      script.textContent = JSON.stringify(seo.jsonLd.length === 1 ? seo.jsonLd[0] : seo.jsonLd);
+      document.head.appendChild(script);
+    }
+
+    trackPageview(location);
+  }, [location]);
+
+  return null;
+}
 
 function Router() {
   return (
@@ -50,6 +109,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
+          <HeadManager />
           <Router />
         </TooltipProvider>
       </QueryClientProvider>

@@ -1,5 +1,5 @@
 import { Link, useParams } from "wouter";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -48,73 +48,6 @@ function FaqAccordion({ faq }: { faq: { question: string; answer: string }[] }) 
 
 function BlogPostPage({ slug }: { slug: string }) {
   const post = getBlogPostBySlug(slug);
-
-  useEffect(() => {
-    if (!post) return;
-
-    const canonicalUrl = `https://muzamilkhan.com/blog/${post.slug}`;
-
-    // OG meta tags
-    const ogTags: Record<string, string> = {
-      'og:title': post.title,
-      'og:description': post.metaDescription || post.excerpt,
-      'og:type': 'article',
-      'og:url': canonicalUrl,
-    };
-    const metaEls: HTMLMetaElement[] = [];
-    Object.entries(ogTags).forEach(([property, content]) => {
-      let el = document.querySelector<HTMLMetaElement>(`meta[property="${property}"]`);
-      if (!el) {
-        el = document.createElement('meta');
-        el.setAttribute('property', property);
-        document.head.appendChild(el);
-        metaEls.push(el);
-      }
-      el.setAttribute('content', content);
-    });
-
-    // meta description
-    let metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    const prevDesc = metaDesc?.getAttribute('content') ?? '';
-    if (metaDesc) metaDesc.setAttribute('content', post.metaDescription || post.excerpt);
-
-    // JSON-LD Article schema
-    const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": post.title,
-      "description": post.metaDescription || post.excerpt,
-      "datePublished": post.publishedAt,
-      "author": {
-        "@type": "Person",
-        "name": "M. Muzamil Khan",
-        "url": "https://muzamilkhan.com/about"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Rise Group Real Estate"
-      },
-      "url": canonicalUrl,
-      ...(post.faq ? {
-        "mainEntity": post.faq.map(f => ({
-          "@type": "Question",
-          "name": f.question,
-          "acceptedAnswer": { "@type": "Answer", "text": f.answer }
-        }))
-      } : {})
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'blog-post-jsonld';
-    script.text = JSON.stringify(jsonLd);
-    document.head.appendChild(script);
-
-    return () => {
-      metaEls.forEach(el => el.remove());
-      if (metaDesc) metaDesc.setAttribute('content', prevDesc);
-      document.getElementById('blog-post-jsonld')?.remove();
-    };
-  }, [post]);
 
   if (!post) {
     return (

@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import { trackEvent } from "@/lib/analytics";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ export function Footer() {
       return apiRequest("POST", "/api/newsletter", { email, source: "footer" });
     },
     onSuccess: () => {
+      trackEvent("newsletter_signup", { source: "footer" });
       toast({
         title: "You're on the list!",
         description: "Thanks for subscribing to our newsletter.",

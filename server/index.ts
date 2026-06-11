@@ -89,7 +89,8 @@ app.use((req, res, next) => {
     {
       port,
       host: "0.0.0.0",
-      reusePort: true,
+      // SO_REUSEPORT is unsupported on macOS; only needed on Replit (Linux)
+      reusePort: process.platform === "linux",
     },
     () => {
       log(`serving on port ${port}`);

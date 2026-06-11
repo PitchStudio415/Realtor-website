@@ -11,6 +11,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, MapPin, Calendar, CheckCircle2 } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import { trackEvent } from "@/lib/analytics";
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -34,7 +35,9 @@ export default function Contact() {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
 
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(
+    typeof window === "undefined" ? "" : window.location.search,
+  );
   const typeParam = urlParams.get('type');
   const defaultType = typeParam === 'seller' ? 'seller' : 'buyer';
 
@@ -55,8 +58,9 @@ export default function Contact() {
     mutationFn: async (data: ContactFormData) => {
       return apiRequest("POST", "/api/contacts", data);
     },
-    onSuccess: () => {
+    onSuccess: (_res, data) => {
       setSubmitted(true);
+      trackEvent("contact_form_submit", { lead_type: data.type });
       toast({
         title: "Message sent!",
         description: "I'll get back to you within 24 hours.",

@@ -10,10 +10,21 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  app.use(express.static(distPath, { redirect: false }));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
+  // serve the prerendered page for the route if one exists,
+  // otherwise fall through to the SPA shell
+  app.use("*", (req, res) => {
+    let reqPath: string;
+    try {
+      reqPath = decodeURIComponent(req.originalUrl.split("?")[0]);
+    } catch {
+      reqPath = "/";
+    }
+    const candidate = path.normalize(path.join(distPath, reqPath, "index.html"));
+    if (candidate.startsWith(distPath + path.sep) && fs.existsSync(candidate)) {
+      return res.sendFile(candidate);
+    }
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
