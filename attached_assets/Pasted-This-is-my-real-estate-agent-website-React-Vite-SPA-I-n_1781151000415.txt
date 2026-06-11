@@ -1,0 +1,36 @@
+This is my real estate agent website (React + Vite SPA). I need it to be properly
+indexable by search engines and AI crawlers. Make these changes without altering the
+visual design:
+1. PER-PAGE METADATA: Right now every route serves the same <title> and meta
+   description from index.html. Add per-route SEO so each page has a unique title,
+   meta description, canonical URL, and Open Graph tags. Examples:
+   - /buy: "Buying a Home in El Cerrito & the East Bay | Muzamil Khan Realtor"
+   - /sell: "Sell Your Home in El Cerrito & the East Bay | Muzamil Khan Realtor"
+   - /neighborhoods: "East Bay Neighborhood Guides: El Cerrito, Richmond & More"
+   - /neighborhoods/[city]: "[City] CA Homes & Neighborhood Guide | Muzamil Khan"
+   - /blog: "East Bay Real Estate Blog | Muzamil Khan"
+   - Each blog post: its own title + description from the post data, plus
+     Article/BlogPosting JSON-LD schema (headline, datePublished, author).
+2. PRERENDERING: Because this is a client-rendered SPA, crawlers that don't execute
+   JavaScript see an empty page. Add build-time prerendering (static HTML snapshot
+   per route, including all blog posts and neighborhood pages) so every route serves
+   complete HTML with its content and meta tags. Keep React hydration working
+   normally after load. If full prerendering of every blog post is impractical, at
+   minimum prerender the static routes and inject per-post meta + JSON-LD
+   server-side.
+3. ROBOTS.TXT: /robots.txt currently returns the app HTML because of the SPA
+   catch-all. Serve a real robots.txt that allows all crawlers and points to
+   https://muzamilkhanrealtor.com/sitemap.xml. Also verify sitemap.xml includes
+   every blog post and neighborhood page with lastmod dates.
+4. FONTS: index.html loads ~25 Google Font families. Identify which font families
+   the site actually uses and trim the Google Fonts link to only those, with
+   display=swap. Remove the rest.
+5. ANALYTICS: Add Google Analytics 4. Use a GA4 measurement ID from an environment
+   variable (VITE_GA_MEASUREMENT_ID) so I can set it in Secrets. Track page views on
+   route change plus events for: phone link clicks, email link clicks, "Book a
+   consultation" clicks, contact form submissions, and newsletter signups.
+6. IMAGES: Convert hero/section images to WebP, add width/height attributes, lazy
+   load everything below the fold.
+Do not change any copy, layout, colors, or components beyond what's needed above.
+After finishing, list every route and the title/description it now serves so I can
+verify.
