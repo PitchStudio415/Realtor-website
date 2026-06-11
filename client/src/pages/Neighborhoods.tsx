@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, MapPin, Home, Users, Car } from "lucide-react";
 import { neighborhoods, getNeighborhoodBySlug } from "@/lib/content";
-import heroImage from "@assets/stock_images/oakland_california_s_3adec2da.jpg";
+import heroPhoto from "@assets/brand/muzamil-path-suit.jpg";
+import { SplitHero } from "@/components/SplitHero";
 
 function NeighborhoodDetail({ slug }: { slug: string }) {
   const neighborhood = getNeighborhoodBySlug(slug);
@@ -167,27 +168,19 @@ function NeighborhoodIndex() {
 
   return (
     <Layout>
-      <section className="relative overflow-hidden min-h-[400px] md:min-h-[450px]">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 text-white/80 mb-4">
-              <MapPin className="w-5 h-5" />
-              <span className="font-medium">Explore</span>
-            </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-neighborhoods-headline">
-              Homes for Sale Across the East Bay: El Cerrito, Albany, Berkeley, Oakland, Richmond &amp; More
-            </h1>
-            <p className="text-lg md:text-xl text-white/90">
-              Local expertise across the neighborhoods I know best, and beyond.
-            </p>
+      <SplitHero
+        eyebrow={
+          <div className="flex items-center gap-2 text-white/80 mb-4">
+            <MapPin className="w-5 h-5" />
+            <span className="font-medium">Explore</span>
           </div>
-        </div>
-      </section>
+        }
+        title={<>Homes for Sale Across the East Bay: El Cerrito, Albany, Berkeley, Oakland, Richmond &amp; More</>}
+        titleTestId="text-neighborhoods-headline"
+        subtitle="Local expertise across the neighborhoods I know best, and beyond."
+        photo={heroPhoto}
+        photoAlt="Muzamil Khan on a tree-lined East Bay sidewalk"
+      />
 
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, BadgeCheck } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
-import profilePhoto from "@assets/DSC04643_1775796328450.jpeg";
+import profilePhoto from "@assets/brand/muzamil-bridge-lean.jpg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";

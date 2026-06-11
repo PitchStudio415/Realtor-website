@@ -17,7 +17,9 @@ import {
   Star
 } from "lucide-react";
 import { SiZillow } from "react-icons/si";
-import heroImage from "@assets/stock_images/modern_home_exterior_d46ee0b9.jpg";
+import heroPhoto from "@assets/brand/muzamil-fireplace-suit.jpg";
+import consultPhoto from "@assets/brand/muzamil-dining-blue-shirt.jpg";
+import { SplitHero } from "@/components/SplitHero";
 
 const timeline = [
   {
@@ -55,36 +57,25 @@ const timeline = [
 export default function Buy() {
   return (
     <Layout>
-      <section className="relative overflow-hidden min-h-[400px] md:min-h-[450px]">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-buy-headline">
-              Buying a Home in El Cerrito, Albany, Berkeley, Oakland &amp; Across the East Bay
-            </h1>
-            <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-relaxed">
-              Whether you're a first-time buyer, relocating to the East Bay, or an experienced buyer, I'll guide you from search to closing with data, strategy, and honest advice.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact?type=buyer">
-                <Button size="lg" className="w-full sm:w-auto text-base px-8 py-6 shadow-lg" data-testid="button-buy-cta">
-                  Book a buyer consult
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-              <Link href="/calculator">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-[#071B2C] border-white hover:bg-white/90 shadow-lg" data-testid="button-calculator-cta">
-                  Affordability Calculator
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SplitHero
+        title={<>Buying a Home in El Cerrito, Albany, Berkeley, Oakland &amp; Across the East Bay</>}
+        titleTestId="text-buy-headline"
+        subtitle="Whether you're a first-time buyer, relocating to the East Bay, or an experienced buyer, I'll guide you from search to closing with data, strategy, and honest advice."
+        photo={heroPhoto}
+        photoAlt="Muzamil Khan inside a staged East Bay home by a brick fireplace"
+      >
+        <Link href="/contact?type=buyer">
+          <Button size="lg" className="w-full sm:w-auto text-base px-8 py-6 bg-white text-[#071B2C] hover:bg-white/90 shadow-lg" data-testid="button-buy-cta">
+            Book a buyer consult
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </Link>
+        <Link href="/calculator">
+          <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 border-white/40 text-white hover:bg-white/10 shadow-lg" data-testid="button-calculator-cta">
+            Affordability Calculator
+          </Button>
+        </Link>
+      </SplitHero>
 
       {/* Audience callouts */}
       <section className="py-10 md:py-12 bg-muted/40 border-b border-border">
@@ -350,17 +341,30 @@ export default function Buy() {
       </section>
 
       <section className="py-16 md:py-20 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Home Search?</h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let's talk through your goals, timeline, and budget. I'll give you a clear picture of what's possible and what to expect.
-          </p>
-          <Link href="/contact?type=buyer">
-            <Button size="lg" variant="secondary" data-testid="button-buy-cta-bottom">
-              Book a buyer consult
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </Link>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="hidden md:block rounded-2xl overflow-hidden">
+              <img
+                src={consultPhoto}
+                alt="Muzamil Khan at a dining table during a buyer consultation"
+                className="w-full h-80 object-cover object-top"
+                loading="lazy"
+                data-testid="img-buy-consult"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Home Search?</h2>
+              <p className="text-primary-foreground/80 mb-8">
+                Let's talk through your goals, timeline, and budget. I'll give you a clear picture of what's possible and what to expect.
+              </p>
+              <Link href="/contact?type=buyer">
+                <Button size="lg" variant="secondary" data-testid="button-buy-cta-bottom">
+                  Book a buyer consult
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

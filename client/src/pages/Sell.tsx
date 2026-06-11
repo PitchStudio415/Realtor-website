@@ -14,7 +14,9 @@ import {
   Star
 } from "lucide-react";
 import { SiZillow } from "react-icons/si";
-import heroImage from "@assets/stock_images/berkeley_california__0a7c1f06.jpg";
+import heroPhoto from "@assets/brand/muzamil-bridge-arms-crossed.jpg";
+import stagedPhoto from "@assets/brand/muzamil-console-staged.jpg";
+import { SplitHero } from "@/components/SplitHero";
 
 const timeline = [
   {
@@ -52,29 +54,20 @@ const timeline = [
 export default function Sell() {
   return (
     <Layout>
-      <section className="relative overflow-hidden min-h-[400px] md:min-h-[450px]">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white" data-testid="text-sell-headline">
-              Sell Your Home for Top Dollar in El Cerrito, Albany, Berkeley, Oakland &amp; Across the East Bay
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8">
-              Strategic pricing, smart preparation, and skilled negotiation to maximize your sale.
-            </p>
-            <Link href="/contact?type=seller">
-              <Button size="lg" className="shadow-lg" data-testid="button-sell-cta">
-                Book a seller consult
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <SplitHero
+        title={<>Sell Your Home for Top Dollar in El Cerrito, Albany, Berkeley, Oakland &amp; Across the East Bay</>}
+        titleTestId="text-sell-headline"
+        subtitle="Strategic pricing, smart preparation, and skilled negotiation to maximize your sale."
+        photo={heroPhoto}
+        photoAlt="Muzamil Khan standing on a footbridge in an East Bay park"
+      >
+        <Link href="/contact?type=seller">
+          <Button size="lg" className="w-full sm:w-auto bg-white text-[#071B2C] hover:bg-white/90 shadow-lg" data-testid="button-sell-cta">
+            Book a seller consult
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        </Link>
+      </SplitHero>
 
       {/* Home Valuation Callout */}
       <section className="bg-primary text-primary-foreground py-10 md:py-12">
@@ -194,6 +187,30 @@ export default function Sell() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Prep that pays */}
+          <div className="mt-12 grid md:grid-cols-2 gap-8 items-center">
+            <div className="rounded-2xl overflow-hidden border border-border order-2 md:order-1">
+              <img
+                src={stagedPhoto}
+                alt="Muzamil Khan in a staged East Bay listing"
+                className="w-full h-72 md:h-80 object-cover object-top"
+                loading="lazy"
+                data-testid="img-sell-staged"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h3 className="text-xl md:text-2xl font-bold mb-3">
+                Prep that pays for itself
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Most sellers either over-improve or under-prepare. After 15 years in
+                construction, I can walk your home and tell you exactly which
+                fixes buyers will pay for, which ones they won't notice, and what
+                each should cost — so every prep dollar comes back at closing.
+              </p>
+            </div>
           </div>
         </div>
       </section>

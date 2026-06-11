@@ -12,6 +12,7 @@ import { Phone, Mail, MapPin, Calendar, CheckCircle2 } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent } from "@/lib/analytics";
+import colonnadePhoto from "@assets/brand/muzamil-colonnade-phone.jpg";
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -281,6 +282,15 @@ export default function Contact() {
             </div>
             
             <div className="space-y-6">
+              <div className="rounded-2xl overflow-hidden border border-border hidden lg:block">
+                <img
+                  src={colonnadePhoto}
+                  alt="Muzamil Khan taking a call outside an East Bay storefront"
+                  className="w-full h-56 object-cover object-[center_30%]"
+                  loading="lazy"
+                  data-testid="img-contact-photo"
+                />
+              </div>
               <Card>
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-4">Book a Consultation</h3>
@@ -289,13 +299,23 @@ export default function Contact() {
                   </p>
                   <div className="space-y-3">
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="#" className="flex items-center gap-2">
+                      <a
+                        href="https://calendly.com/muzamil-risegroup/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
                         <Calendar className="w-4 h-4" />
                         Book buyer consultation
                       </a>
                     </Button>
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="#" className="flex items-center gap-2">
+                      <a
+                        href="https://calendly.com/muzamil-risegroup/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
                         <Calendar className="w-4 h-4" />
                         Book seller consultation
                       </a>
