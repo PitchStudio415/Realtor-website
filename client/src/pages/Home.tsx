@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
 import { SiInstagram, SiZillow } from "react-icons/si";
 import profilePhoto from "@assets/DSC04279_1775796380065.jpeg";
+import { AmbientVideo } from "@/components/AmbientVideo";
 
 export default function Home() {
   return (
@@ -77,11 +78,11 @@ export default function Home() {
             {/* Photo — right, tall rectangle, flush to bottom */}
             <div className="hidden lg:flex flex-col items-center self-end flex-shrink-0">
               <div className="w-64 xl:w-72 h-[460px] xl:h-[500px] rounded-t-3xl overflow-hidden">
-                <img
-                  src={profilePhoto}
-                  alt="Muzamil Khan Real Estate"
+                <AmbientVideo
+                  src="/videos/broll-park.mp4"
+                  poster={profilePhoto}
+                  alt="Muzamil Khan walking through an East Bay park"
                   className="w-full h-full object-cover object-top"
-                  data-testid="img-hero-photo"
                 />
               </div>
               <div className="py-5 flex flex-col items-center gap-2">

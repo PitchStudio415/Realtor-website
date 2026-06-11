@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import { AmbientVideo } from "@/components/AmbientVideo";
 
 interface SplitHeroProps {
   title: ReactNode;
@@ -7,6 +8,8 @@ interface SplitHeroProps {
   eyebrow?: ReactNode;
   photo: string;
   photoAlt: string;
+  /** Optional ambient loop shown in place of the photo (photo becomes the poster/fallback). */
+  video?: string;
   children?: ReactNode;
 }
 
@@ -21,6 +24,7 @@ export function SplitHero({
   eyebrow,
   photo,
   photoAlt,
+  video,
   children,
 }: SplitHeroProps) {
   return (
@@ -46,13 +50,22 @@ export function SplitHero({
           </div>
           <div className="hidden lg:block self-end flex-shrink-0">
             <div className="w-64 xl:w-72 h-[400px] xl:h-[440px] rounded-t-3xl overflow-hidden">
-              <img
-                src={photo}
-                alt={photoAlt}
-                className="w-full h-full object-cover object-top"
-                width={576}
-                height={880}
-              />
+              {video ? (
+                <AmbientVideo
+                  src={video}
+                  poster={photo}
+                  alt={photoAlt}
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <img
+                  src={photo}
+                  alt={photoAlt}
+                  className="w-full h-full object-cover object-top"
+                  width={576}
+                  height={880}
+                />
+              )}
             </div>
           </div>
         </div>

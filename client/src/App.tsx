@@ -21,6 +21,8 @@ import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import CityPage from "@/pages/CityPage";
+import HomeValuation from "@/pages/HomeValuation";
+import { MobileCtaBar } from "@/components/MobileCtaBar";
 
 function setMetaContent(selector: string, content: string) {
   const el = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -84,6 +86,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/buy" component={Buy} />
       <Route path="/sell" component={Sell} />
+      <Route path="/home-valuation" component={HomeValuation} />
       <Route path="/calculator" component={Calculator} />
       <Route path="/buyer-hub" component={BuyerHub} />
       <Route path="/buyer-hub/:slug" component={BuyerHub} />
@@ -111,6 +114,7 @@ function App() {
           <Toaster />
           <HeadManager />
           <Router />
+          <MobileCtaBar />
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>

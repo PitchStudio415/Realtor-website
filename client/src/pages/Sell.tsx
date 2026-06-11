@@ -16,6 +16,7 @@ import {
 import { SiZillow } from "react-icons/si";
 import heroPhoto from "@assets/brand/muzamil-bridge-arms-crossed.jpg";
 import stagedPhoto from "@assets/brand/muzamil-console-staged.jpg";
+import { ReelCard } from "@/components/ReelCard";
 import { SplitHero } from "@/components/SplitHero";
 
 const timeline = [
@@ -60,6 +61,7 @@ export default function Sell() {
         subtitle="Strategic pricing, smart preparation, and skilled negotiation to maximize your sale."
         photo={heroPhoto}
         photoAlt="Muzamil Khan standing on a footbridge in an East Bay park"
+        video="/videos/broll-laptop.mp4"
       >
         <Link href="/contact?type=seller">
           <Button size="lg" className="w-full sm:w-auto bg-white text-[#071B2C] hover:bg-white/90 shadow-lg" data-testid="button-sell-cta">
@@ -77,7 +79,7 @@ export default function Sell() {
               <h2 className="text-xl md:text-2xl font-bold mb-1">Know Your Home's True Worth Before You List</h2>
               <p className="text-primary-foreground/80">Free home valuation backed by 15 years of construction expertise. Get a real number, not a guess.</p>
             </div>
-            <Link href="/contact?type=seller" className="flex-shrink-0">
+            <Link href="/home-valuation" className="flex-shrink-0">
               <Button size="lg" variant="secondary" className="font-semibold whitespace-nowrap" data-testid="button-valuation-cta">
                 Get a Free Valuation
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -210,6 +212,39 @@ export default function Sell() {
                 fixes buyers will pay for, which ones they won't notice, and what
                 each should cost — so every prep dollar comes back at closing.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Just sold showcase */}
+      <section className="py-16 md:py-20 bg-[#071B2C] text-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <ReelCard
+              src="/videos/sold-316-durham.mp4"
+              poster="/videos/sold-316-durham-poster.jpg"
+              title="Just sold: 316 Durham Ct, Benicia"
+              testId="reel-sold-benicia"
+            />
+            <div className="text-center md:text-left">
+              <p className="text-xs tracking-widest uppercase text-white/40 mb-3 font-medium">
+                Just Sold
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                316 Durham Ct, Benicia
+              </h2>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Watch the tour of a recent sale I represented — from prep guidance
+                through closing day. This is the level of presentation your home
+                gets when we list together.
+              </p>
+              <Link href="/home-valuation">
+                <Button size="lg" className="bg-white text-[#071B2C] hover:bg-white/90" data-testid="button-sold-valuation-cta">
+                  What could your home sell for?
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -13,6 +13,7 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent } from "@/lib/analytics";
 import colonnadePhoto from "@assets/brand/muzamil-colonnade-phone.jpg";
+import { AmbientVideo } from "@/components/AmbientVideo";
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -283,12 +284,11 @@ export default function Contact() {
             
             <div className="space-y-6">
               <div className="rounded-2xl overflow-hidden border border-border hidden lg:block">
-                <img
-                  src={colonnadePhoto}
+                <AmbientVideo
+                  src="/videos/broll-colonnade.mp4"
+                  poster={colonnadePhoto}
                   alt="Muzamil Khan taking a call outside an East Bay storefront"
                   className="w-full h-56 object-cover object-[center_30%]"
-                  loading="lazy"
-                  data-testid="img-contact-photo"
                 />
               </div>
               <Card>

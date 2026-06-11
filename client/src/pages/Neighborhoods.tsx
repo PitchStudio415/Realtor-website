@@ -159,7 +159,7 @@ function NeighborhoodDetail({ slug }: { slug: string }) {
   );
 }
 
-const CORE_SLUGS = ['el-cerrito', 'kensington', 'albany', 'berkeley', 'oakland'];
+const CORE_SLUGS = ['albany', 'berkeley', 'oakland', 'el-cerrito', 'kensington', 'pinole'];
 // cities with a dedicated deep-dive page at /cities/:slug
 const CITY_PAGE_SLUGS = ['el-cerrito', 'richmond', 'hercules', 'san-pablo', 'pinole', 'el-sobrante', 'rodeo'];
 
@@ -187,12 +187,12 @@ function NeighborhoodIndex() {
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
-            <div className="flex items-center gap-3 mb-2">
+            <div className="flex items-center justify-center gap-3 mb-2">
               <h2 className="text-2xl md:text-3xl font-bold">Core Neighborhoods</h2>
               <span className="text-xs font-semibold uppercase tracking-wide bg-primary/10 text-primary px-2 py-1 rounded">Muzamil's Focus Areas</span>
             </div>
-            <p className="text-muted-foreground mb-8">The communities I know best, where I live, work, and help clients every day.</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <p className="text-muted-foreground mb-8 text-center">The communities I know best, where I live, work, and help clients every day.</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {featuredNeighborhoods.map((n) => {
                 const href = CITY_PAGE_SLUGS.includes(n.slug) ? `/cities/${n.slug}` : `/neighborhoods/${n.slug}`;
                 return (

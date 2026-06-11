@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, BookOpen, ChevronDown } from "lucide-react";
 import { buyerModules } from "@/lib/content";
+import { GuideEmailCard } from "@/components/GuideEmailCard";
 import {
   Accordion,
   AccordionContent,
@@ -47,6 +48,9 @@ export default function BuyerHub() {
 
       <section className="py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <GuideEmailCard />
+          </div>
           <Accordion type="single" collapsible className="space-y-3">
             {buyerModules.map((module, index) => (
               <AccordionItem 

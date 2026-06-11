@@ -19,6 +19,7 @@ import {
 import { SiZillow } from "react-icons/si";
 import heroPhoto from "@assets/brand/muzamil-fireplace-suit.jpg";
 import consultPhoto from "@assets/brand/muzamil-dining-blue-shirt.jpg";
+import { ReelCard } from "@/components/ReelCard";
 import { SplitHero } from "@/components/SplitHero";
 
 const timeline = [
@@ -336,6 +337,35 @@ export default function Buy() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Real buyer story */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="text-center md:text-left order-2 md:order-1">
+              <p className="text-xs tracking-widest uppercase text-muted-foreground mb-3 font-medium">
+                A Real Buyer Story
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Your dream home might not be where you started
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Sometimes the right home is one city over from where you began the
+                search. Watch how staying flexible — and knowing the whole East Bay —
+                helped this buyer find the right fit.
+              </p>
+            </div>
+            <div className="order-1 md:order-2">
+              <ReelCard
+                src="/videos/buyer-story-reel.mp4"
+                poster="/videos/buyer-story-reel-poster.jpg"
+                title="A real buyer story"
+                testId="reel-buyer-story"
+              />
+            </div>
           </div>
         </div>
       </section>

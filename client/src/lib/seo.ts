@@ -36,6 +36,11 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
     description:
       "Sell your East Bay home for top dollar: strategic pricing, smart prep guidance, and repair negotiations backed by 15 years of construction experience. Free home valuation.",
   },
+  "/home-valuation": {
+    title: "Free East Bay Home Valuation | Muzamil Khan Realtor",
+    description:
+      "Get a real valuation for your El Cerrito or East Bay home — based on live market data and 15 years of construction experience, not an algorithm. Free, no obligation, 24-hour response.",
+  },
   "/calculator": {
     title: "East Bay Home Affordability Calculator | Muzamil Khan",
     description:
@@ -199,6 +204,7 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/", priority: 1.0 },
     { path: "/buy", priority: 0.9 },
     { path: "/sell", priority: 0.9 },
+    { path: "/home-valuation", priority: 0.9 },
     { path: "/contact", priority: 0.9 },
     { path: "/about", priority: 0.8 },
     { path: "/calculator", priority: 0.6 },
