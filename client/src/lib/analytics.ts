@@ -1,4 +1,8 @@
-const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined;
+// GA4 measurement IDs are public by design (visible in any site's page source),
+// so a committed default is fine; the env var still allows overriding per deploy.
+const GA_ID =
+  (import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined) ||
+  "G-XD8QPD7X2K";
 
 declare global {
   interface Window {
