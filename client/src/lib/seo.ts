@@ -86,6 +86,28 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
   },
 };
 
+const SITE_IMAGE = `${SITE_URL}/muzamil-khan.jpg`;
+
+// Publisher node, @id-linked to the sitewide RealEstateAgent declared in
+// index.html so engines resolve the byline to the same Muzamil Khan entity.
+const PUBLISHER_NODE = {
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#agent`,
+  name: SITE_NAME,
+  logo: {
+    "@type": "ImageObject",
+    url: SITE_IMAGE,
+  },
+};
+
+const AUTHOR_NODE = {
+  "@type": "Person",
+  "@id": `${SITE_URL}/#muzamil`,
+  name: "Muzamil Khan",
+  jobTitle: "Real Estate Agent",
+  url: `${SITE_URL}/about`,
+};
+
 function faqJsonLd(faqs: { question: string; answer: string }[]): object {
   return {
     "@context": "https://schema.org",
@@ -94,6 +116,19 @@ function faqJsonLd(faqs: { question: string; answer: string }[]): object {
       "@type": "Question",
       name: f.question,
       acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+}
+
+function breadcrumbJsonLd(trail: { name: string; path: string }[]): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: `${SITE_URL}${c.path === "/" ? "" : c.path}`,
     })),
   };
 }
@@ -126,13 +161,20 @@ export function getSeoForPath(path: string): PageSeo {
           headline: post.title,
           description: post.metaDescription || post.excerpt,
           datePublished: post.publishedAt,
+          dateModified: post.publishedAt,
           url: canonical,
-          author: {
-            "@type": "Person",
-            name: "Muzamil Khan",
-            url: `${SITE_URL}/about`,
-          },
+          mainEntityOfPage: canonical,
+          image: SITE_IMAGE,
+          inLanguage: "en-US",
+          articleSection: post.category,
+          author: AUTHOR_NODE,
+          publisher: PUBLISHER_NODE,
         },
+        breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ]),
       ];
       if (post.faq?.length) jsonLd.push(faqJsonLd(post.faq));
       return {

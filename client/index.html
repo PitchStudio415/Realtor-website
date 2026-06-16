@@ -18,58 +18,121 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "Muzamil Khan",
-  "url": "https://muzamilkhanrealtor.com",
-  "telephone": "+14158198312",
-  "email": "Muzamil@risegroup.com",
-  "description": "Licensed California real estate buyer's agent serving El Cerrito, Albany, Berkeley, Kensington, and the broader East Bay. Specializing in first-time buyers and investor clients.",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "El Cerrito",
-    "addressRegion": "CA",
-    "postalCode": "94530",
-    "addressCountry": "US"
-  },
-  "openingHours": "Mo-Su 08:00-20:00",
-  "image": "https://muzamilkhanrealtor.com/muzamil-khan.jpg",
-  "areaServed": [
-    "El Cerrito, CA",
-    "Richmond, CA",
-    "Hercules, CA",
-    "San Pablo, CA",
-    "Pinole, CA",
-    "El Sobrante, CA",
-    "Rodeo, CA",
-    "Albany, CA",
-    "Berkeley, CA",
-    "Kensington, CA",
-    "Oakland, CA",
-    "Emeryville, CA"
-  ],
-  "hasCredential": {
-    "@type": "EducationalOccupationalCredential",
-    "credentialCategory": "Real Estate License",
-    "recognizedBy": {
-      "@type": "Organization",
-      "name": "California Department of Real Estate",
-      "identifier": "DRE #02400805"
+  "@graph": [
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://muzamilkhanrealtor.com/#agent",
+      "name": "Muzamil Khan Real Estate",
+      "url": "https://muzamilkhanrealtor.com",
+      "telephone": "+14158198312",
+      "email": "Muzamil@risegroup.com",
+      "description": "Licensed California real estate buyer's agent serving El Cerrito, Albany, Berkeley, Kensington, and the broader East Bay. Specializing in first-time buyers and investor clients.",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "El Cerrito",
+        "addressRegion": "CA",
+        "postalCode": "94530",
+        "addressCountry": "US"
+      },
+      "openingHours": "Mo-Su 08:00-20:00",
+      "image": "https://muzamilkhanrealtor.com/muzamil-khan.jpg",
+      "areaServed": [
+        "El Cerrito, CA",
+        "Richmond, CA",
+        "Hercules, CA",
+        "San Pablo, CA",
+        "Pinole, CA",
+        "El Sobrante, CA",
+        "Rodeo, CA",
+        "Albany, CA",
+        "Berkeley, CA",
+        "Kensington, CA",
+        "Oakland, CA",
+        "Emeryville, CA"
+      ],
+      "knowsAbout": [
+        "East Bay real estate",
+        "West Contra Costa County real estate",
+        "First-time home buying",
+        "Comparative market analysis",
+        "Real estate negotiation",
+        "Home inspections",
+        "El Cerrito neighborhoods"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Real Estate License",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "California Department of Real Estate",
+          "identifier": "DRE #02400805"
+        }
+      },
+      "founder": { "@id": "https://muzamilkhanrealtor.com/#muzamil" },
+      "employee": { "@id": "https://muzamilkhanrealtor.com/#muzamil" },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Rise Group Real Estate",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "El Cerrito",
+          "addressRegion": "CA",
+          "postalCode": "94530"
+        }
+      },
+      "sameAs": [
+        "https://www.instagram.com/muzamilkhan.realtor",
+        "https://www.zillow.com/profile/muzamil7"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://muzamilkhanrealtor.com/#muzamil",
+      "name": "Muzamil Khan",
+      "givenName": "Muzamil",
+      "familyName": "Khan",
+      "jobTitle": "Real Estate Agent",
+      "url": "https://muzamilkhanrealtor.com/about",
+      "image": "https://muzamilkhanrealtor.com/muzamil-khan.jpg",
+      "telephone": "+14158198312",
+      "email": "Muzamil@risegroup.com",
+      "description": "Licensed California real estate buyer's agent (DRE #02400805) serving El Cerrito and the East Bay, with a construction background and an MBA from UC Davis.",
+      "worksFor": { "@id": "https://muzamilkhanrealtor.com/#agent" },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of California, Davis"
+      },
+      "knowsAbout": [
+        "East Bay real estate",
+        "First-time home buyers",
+        "Comparative market analysis",
+        "Real estate negotiation",
+        "Home inspections"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Real Estate License",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "California Department of Real Estate",
+          "identifier": "DRE #02400805"
+        }
+      },
+      "sameAs": [
+        "https://www.instagram.com/muzamilkhan.realtor",
+        "https://www.zillow.com/profile/muzamil7"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://muzamilkhanrealtor.com/#website",
+      "name": "Muzamil Khan Real Estate",
+      "url": "https://muzamilkhanrealtor.com",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://muzamilkhanrealtor.com/#agent" },
+      "about": { "@id": "https://muzamilkhanrealtor.com/#muzamil" }
     }
-  },
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Rise Group Real Estate",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "El Cerrito",
-      "addressRegion": "CA",
-      "postalCode": "94530"
-    }
-  },
-  "sameAs": [
-    "https://www.instagram.com/muzamilkhan.realtor",
-    "https://www.zillow.com/profile/muzamil7"
   ]
 }
     </script>
