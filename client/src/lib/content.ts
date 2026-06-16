@@ -110,7 +110,7 @@ Oakland charges its own city real property transfer tax on top of the county's, 
 Oakland is big and its pockets pull in different directions, so this step matters more here than almost anywhere. No Oakland neighborhood wins on everything, so the ranking decides the trade-offs. Take this list and put it in your own order, most important at the top:
 
 1. Walkability
-2. Restaurants and grocery stores within walking distance
+2. Proximity to restaurants and grocery stores
 3. Public transportation or BART access
 4. A quieter neighborhood
 5. Schools
@@ -184,7 +184,7 @@ That patience is where my construction background earns its keep. A lot of Alban
 Albany is small, so the trade-offs are sharp, and ranking your priorities up front makes the whole search clearer. Take this list and put it in your own order, most important at the top:
 
 1. Walkability
-2. Restaurants and grocery stores within walking distance
+2. Proximity to restaurants and grocery stores
 3. Public transportation or BART access
 4. A quieter neighborhood
 5. Schools
@@ -311,7 +311,7 @@ That last piece is where my construction background pays off. A lot of El Cerrit
 No street wins on everything, so I have clients put their priorities in order before we look at homes. Take this list and rank it for yourself, most important at the top:
 
 1. Walkability
-2. Restaurants and grocery stores within walking distance
+2. Proximity to restaurants and grocery stores
 3. Public transportation or BART access
 4. A quieter neighborhood
 5. Schools
@@ -387,7 +387,7 @@ None of that has to scare anyone off. It belongs in the offer. Something is alwa
 This is the step my clients skip most often, and it saves the most heartache. No Berkeley neighborhood wins on everything, so the ranking decides the trade-offs. Take this list and put it in your own order, most important at the top:
 
 1. Walkability
-2. Restaurants and grocery stores within walking distance
+2. Proximity to restaurants and grocery stores
 3. Public transportation or BART access
 4. A quieter neighborhood
 5. Schools
@@ -395,7 +395,15 @@ This is the step my clients skip most often, and it saves the most heartache. No
 7. Price
 8. Something specific to you, like a short commute, a yard, single-level living, a particular school, or room for family
 
-Once that list has an order, Berkeley gets a lot simpler. A buyer who ranks walkability, restaurants, and BART at the top leans toward Elmwood or North Berkeley. A buyer who puts price and a quieter street first leans toward the north flats around Westbrae and Gilman, or south and west Berkeley block by block. A buyer who ranks parks and space high, with price further down, looks to the hills. And a buyer who ranks the same commute over the Berkeley name often finds the fit one city north, in El Cerrito or Albany, where the median runs closer to $1.1 million on the same BART line. The ranking does the work.
+Once that list has an order, Berkeley gets a lot simpler. A buyer who ranks walkability, restaurants, and BART at the top leans toward Elmwood or North Berkeley. A buyer who puts price and a quieter street first leans toward the north flats around Westbrae and Gilman, or south and west Berkeley block by block. A buyer who ranks parks and space high, with price further down, looks to the hills. And a buyer who ranks the same commute over the Berkeley name often finds the fit one city north, in El Cerrito, where the median runs closer to $1.1 million on the same BART line. The ranking does the work.
+
+### Competing here without giving up your protection
+
+Berkeley moves fast, and in competitive pockets buyers do waive contingencies. That part is normal here, and I would rather my clients hear it plainly than be blindsided by it. What I push back on is the idea that waiving has to mean going in unprotected, because it does not.
+
+An offer has several levers, and contingencies are only one of them. Your inspection and appraisal contingencies are one lever. Your close timeline is another, since a seller who is juggling their own move often values the right date as much as a higher number. Your down payment percentage, your earnest money deposit, and even a short rent-back for the seller all move the needle. When we understand which of these a particular seller actually cares about, we can compete hard on the ones that matter to them and keep the protections that matter to you, instead of stripping everything off the offer and hoping it works out.
+
+My construction background helps right here. If I have walked the home and have a real read on what the inspection is likely to turn up, we can make an informed decision about an inspection contingency instead of a blind one. Waiving with good information is a very different thing from waiving on faith, and that difference is where I earn my keep.
 
 ### A simple plan to start
 
@@ -414,11 +422,15 @@ If you want a second set of eyes on your list, or a read on a specific Berkeley 
       },
       {
         question: "Which Berkeley neighborhood works best for a first-time buyer?",
-        answer: "Usually the north flats around Westbrae and Gilman, or parts of south and west Berkeley, where entry prices stay more attainable than Elmwood or the hills. Local, block-by-block knowledge matters a lot in these areas. Many of my first-time buyers also do well looking one city north in El Cerrito or Albany for a similar commute at a lower price."
+        answer: "Usually the north flats around Westbrae and Gilman, or parts of south and west Berkeley, where entry prices stay more attainable than Elmwood or the hills. Local, block-by-block knowledge matters a lot in these areas. Many of my first-time buyers also do well looking one city north in El Cerrito for a similar commute at a lower price."
       },
       {
         question: "What should a buyer watch for in an older Berkeley home?",
         answer: "Knob-and-tube wiring, pre-seismic foundations, older plumbing, and drainage issues on hillside lots come up often. None are dealbreakers on their own, and they belong in the offer. A careful read of the inspection report, with real repair-cost estimates, separates a smart buy from an expensive surprise."
+      },
+      {
+        question: "Do I have to waive contingencies to win in Berkeley?",
+        answer: "Waiving is common in Berkeley's competitive pockets, but it does not have to mean going in unprotected. An offer has several levers beyond contingencies, including your close timeline, down payment, earnest money, and a possible rent-back, and a good agent helps you compete on the ones a particular seller values while keeping the protections that matter to you. When I have walked a home and have a read on the likely inspection findings, we can make an informed decision rather than a blind one."
       }
     ]
   },
@@ -499,7 +511,7 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
       },
       {
         question: "Can I redact my account number on proof of funds?",
-        answer: "Yes, and you should. Black out the account number for security. But the balance, the account type, and the statement date must remain visible. Listing agents will reject statements where the balance is also redacted — that defeats the entire purpose of the document."
+        answer: "Yes, and you should. Black out the account number for security. But the balance, the account type, and the statement date must remain visible. Listing agents will reject statements where the balance is also redacted, because that defeats the entire purpose of the document."
       },
       {
         question: "Do I need to show the full amount I'm pre-approved for in my offer letter?",
