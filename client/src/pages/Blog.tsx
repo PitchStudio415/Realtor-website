@@ -123,7 +123,7 @@ function BlogPostPage({ slug }: { slug: string }) {
         <div className="mt-12 pt-8 border-t border-border">
           <h3 className="font-semibold mb-2">Have a question about your move?</h3>
           <p className="text-muted-foreground text-sm mb-4">
-            No pressure and no obligation. Leave your contact info and I'll follow up, or book a quick 10 to 15 minute call and we'll talk through whatever you're weighing.
+            No pressure and no obligation. Leave your contact info and I'll follow up, or book a call and we'll talk through whatever you're weighing.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a href="https://calendly.com/muzamil-risegroup/30min" target="_blank" rel="noopener noreferrer">
