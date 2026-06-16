@@ -2,6 +2,84 @@ import type { BlogPost, EducationModule, Neighborhood } from "@shared/schema";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "berkeley-neighborhood-guide",
+    title: "Berkeley Neighborhood Guide: Where Your Money Actually Goes, From the Flats to the Hills",
+    excerpt: "Berkeley runs from an attainable entry point to four million dollar view homes, all under one city name. Here is how the neighborhoods really break down, what the older homes cost after the sale, and how to rank what matters before you start.",
+    category: "market-basics",
+    publishedAt: "2026-06-11",
+    metaDescription: "A calm, local Berkeley CA neighborhood guide: Elmwood, North Berkeley, the flats and the hills, current prices, and a construction-trained agent's take on what these older homes really cost. From Muzamil Khan, East Bay Realtor.",
+    content: `
+A lot of people tell me they want to buy in Berkeley, and they say it like Berkeley is one place with one price. It runs from an attainable entry point all the way up to four million dollar view homes, all under the same city name. So the first thing I do with a client is slow the conversation down and map out where their money actually goes.
+
+Let me walk you through it the way I would if we were driving around together.
+
+### Start with the flats and the hills
+
+Berkeley climbs from the bay up into the hills, and the higher you go, the more you pay. The flats, out west toward the water, hold the more attainable, walkable, transit-connected homes. The hills, east toward Tilden, give you the big lots, the views, and the prices that come with them. Almost every question a client asks me about Berkeley gets clearer once we place a neighborhood on that slope.
+
+Here is the citywide anchor. The median sale price has been running around $1.4 million, according to Redfin, and even with prices off slightly from a year ago, homes still sell at roughly 27% over list and go pending in about 15 days. I share those numbers early with every client. A softer market can still move fast, and Berkeley does. Knowing that up front is how my clients show up ready instead of surprised.
+
+### Berkeley neighborhood by neighborhood
+
+**Elmwood and Claremont sit at the top.** Picture College Avenue, the pastry shops, the tree-lined streets and preserved Craftsman homes. Elmwood draws people for good reason, and the prices follow. Zillow puts Elmwood's median around $1.65 million, with average values closer to $2 million, and the signature streets up toward Claremont regularly reach $3 to $4 million. Few first-time buyers land here, and that's fine. It helps to understand it as the top of the market that lifts everything below it.
+
+**North Berkeley and Thousand Oaks stay quiet and pricey.** This is the Chez Panisse, gourmet-ghetto, historic-Craftsman side of town. Calm streets, mature trees, some of the best food in the country a short walk away. Medians here often run north of $1.7 million, with Thousand Oaks just below that. Beautiful, established, and rarely a bargain.
+
+**Westbrae and the Gilman district land in the sweet spot.** This is where I send a lot of clients who want Berkeley without Elmwood money. The area around Westbrae and Gilman keeps a real neighborhood feel, sits close to the freeway and to El Cerrito just north, and offers a housing stock that's more within reach. My clients trade a little polish and a little walk-to-everything for a dollar that stretches noticeably further.
+
+**South and West Berkeley hold the entry point.** The lowest prices into Berkeley proper usually sit south and west. These areas have changed a lot over the past decade, and they shift block by block in a way that rewards local knowledge. Two houses on the same street can be very different buys. This is where having someone who actually walks these blocks earns its keep, because the listing photos won't tell a client which side of which street they really want.
+
+**The Berkeley Hills give you views and a different set of questions.** Up here come the space and the vistas people dream about, along with a different risk profile. Hillside homes raise foundation and drainage questions, retaining walls, and houses built decades ago on terrain that moves. A view lot can be worth every penny or it can drain your savings, and the difference usually hides in the inspection report rather than the listing.
+
+### What older Berkeley homes really cost
+
+Berkeley's charm comes from its old housing stock, and that same old housing stock drives what the inspection finds. I read these reports differently than most agents because I spent 15 years in construction before this work. In Berkeley specifically, my clients and I often see some mix of knob-and-tube wiring in the older homes, foundations that predate modern seismic standards, aging plumbing, and the occasional surprise behind a beautiful remodel.
+
+None of that has to scare anyone off. It belongs in the offer. Something is always imperfect in a hundred-year-old home, so the real question becomes what a repair actually costs and whether the price already reflects it. Getting my clients to that number is most of my job.
+
+**Plan for one Berkeley-specific cost: the transfer tax.** Berkeley charges its own city transfer tax on top of the county's, and it adds up. The current city rate runs 1.5% on homes up to $1.7 million and 2.5% above that, per the City of Berkeley. On a $1.4 million purchase, that's real money to plan for, and Measure W, already approved by voters, raises these rates starting in 2027. My clients build this into their cash-to-close from day one, so it never shows up as a surprise at the end.
+
+### Rank what matters before you look at neighborhoods
+
+This is the step my clients skip most often, and it saves the most heartache. No Berkeley neighborhood wins on everything, so the ranking decides the trade-offs. Take this list and put it in your own order, most important at the top:
+
+1. Walkability
+2. Restaurants and grocery stores within walking distance
+3. Public transportation or BART access
+4. A quieter neighborhood
+5. Schools
+6. Proximity to parks
+7. Price
+8. Something specific to you, like a short commute, a yard, single-level living, a particular school, or room for family
+
+Once that list has an order, Berkeley gets a lot simpler. A buyer who ranks walkability, restaurants, and BART at the top leans toward Elmwood or North Berkeley. A buyer who puts price and a quieter street first leans toward the north flats around Westbrae and Gilman, or south and west Berkeley block by block. A buyer who ranks parks and space high, with price further down, looks to the hills. And a buyer who ranks the same commute over the Berkeley name often finds the fit one city north, in El Cerrito or Albany, where the median runs closer to $1.1 million on the same BART line. The ranking does the work.
+
+### A simple plan to start
+
+Rank your priorities from the list above. Set a budget and your true cash-to-close. Match the neighborhoods that fit, and walk a few before deciding anything. Those are the things worth talking through with whatever agent you choose, and a good agent will help you weigh the trade-offs honestly.
+
+If you want a second set of eyes on your list, or a read on a specific Berkeley block, I'm always glad to help. No pressure, just a conversation whenever it's useful.
+`,
+    faq: [
+      {
+        question: "What is the median home price in Berkeley right now?",
+        answer: "Around $1.4 million citywide as of mid-2026 according to Redfin, though it ranges widely by neighborhood, from roughly $1.1 to $1.3 million in parts of the south and west flats up to $3 to $4 million on the prestige streets near Claremont. Prices move, so confirm the current figure when you start your search."
+      },
+      {
+        question: "Is Berkeley competitive for buyers?",
+        answer: "Yes, even when prices soften. Berkeley homes have been selling at roughly 27% over list and going pending in about 15 days, per Redfin. My clients come in fully pre-approved and ready to write a strong offer before they tour seriously, which is what makes the difference here."
+      },
+      {
+        question: "Which Berkeley neighborhood works best for a first-time buyer?",
+        answer: "Usually the north flats around Westbrae and Gilman, or parts of south and west Berkeley, where entry prices stay more attainable than Elmwood or the hills. Local, block-by-block knowledge matters a lot in these areas. Many of my first-time buyers also do well looking one city north in El Cerrito or Albany for a similar commute at a lower price."
+      },
+      {
+        question: "What should a buyer watch for in an older Berkeley home?",
+        answer: "Knob-and-tube wiring, pre-seismic foundations, older plumbing, and drainage issues on hillside lots come up often. None are dealbreakers on their own, and they belong in the offer. A careful read of the inspection report, with real repair-cost estimates, separates a smart buy from an expensive surprise."
+      }
+    ]
+  },
+  {
     slug: "pre-approval-proof-of-funds-east-bay-offer",
     title: "Pre-Approval and Proof of Funds: Why Both Matter Before You Write Your First East Bay Offer",
     excerpt: "The most fixable mistake first-time East Bay buyers make is showing up to write an offer without their pre-approval and proof of funds in order. Here's what each one is, why both matters, and the gotchas I see most often.",
