@@ -215,7 +215,11 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/privacy", priority: 0.1 },
     { path: "/terms", priority: 0.1 },
   ];
+  const buildMs = Date.now();
   for (const post of blogPosts) {
+    // Skip scheduled (future-dated) posts so they aren't prerendered or listed
+    // in the sitemap before their publish date.
+    if (new Date(post.publishedAt + "T00:00:00").getTime() > buildMs) continue;
     routes.push({ path: `/blog/${post.slug}`, lastmod: post.publishedAt, priority: 0.7 });
   }
   for (const mod of buyerModules) {

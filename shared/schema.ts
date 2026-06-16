@@ -59,7 +59,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
-  category: 'first-time-buyers' | 'selling' | 'financing' | 'market-basics' | 'inspections';
+  category: 'first-time-buyers' | 'selling' | 'financing' | 'market-basics' | 'inspections' | 'neighborhood-life';
   content: string;
   publishedAt: string;
   metaDescription?: string;

@@ -1,11 +1,18 @@
 import { Link, useParams } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, Search, Calendar, ChevronDown } from "lucide-react";
-import { blogPosts, getBlogPostBySlug } from "@/lib/content";
+import { blogPosts, getBlogPostBySlug, isPublished } from "@/lib/content";
+
+// Baked at build time (vite define). Falls back to now if the prerender
+// context doesn't apply the define. Used as the stable first-render reference
+// so scheduled posts don't cause a hydration mismatch.
+declare const __BUILD_MS__: number;
+const BUILD_MS: number =
+  typeof __BUILD_MS__ !== "undefined" ? __BUILD_MS__ : Date.now();
 import { Badge } from "@/components/ui/badge";
 import heroPhoto from "@assets/brand/muzamil-pinole-cafe.jpg";
 import { SplitHero } from "@/components/SplitHero";
@@ -17,6 +24,7 @@ const categories = [
   { value: 'financing', label: 'Financing' },
   { value: 'market-basics', label: 'Market Basics' },
   { value: 'inspections', label: 'Inspections' },
+  { value: 'neighborhood-life', label: 'Neighborhood Life' },
 ];
 
 function FaqAccordion({ faq }: { faq: { question: string; answer: string }[] }) {
@@ -50,7 +58,9 @@ function FaqAccordion({ faq }: { faq: { question: string; answer: string }[] }) 
 function BlogPostPage({ slug }: { slug: string }) {
   const post = getBlogPostBySlug(slug);
 
-  if (!post) {
+  // Treat a not-yet-published (scheduled) post as missing so its URL can't
+  // leak the content before its date.
+  if (!post || !isPublished(post)) {
     return (
       <Layout>
         <div className="max-w-3xl mx-auto px-4 py-16 text-center">
@@ -135,12 +145,19 @@ function BlogPostPage({ slug }: { slug: string }) {
 function BlogIndex() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
+  // Start from the build-time reference (identical on server + first client
+  // render), then switch to real time after mount so a scheduled post reveals
+  // itself on its publish date without a rebuild.
+  const [refMs, setRefMs] = useState(BUILD_MS);
+  useEffect(() => {
+    setRefMs(Date.now());
+  }, []);
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    return matchesSearch && matchesCategory && isPublished(post, refMs);
   });
 
   return (

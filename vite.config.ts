@@ -26,6 +26,11 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+  // Baked at build time so scheduled (future-dated) blog posts reveal on their
+  // publish date without a hydration mismatch (see isPublished in content.ts).
+  define: {
+    __BUILD_MS__: JSON.stringify(Date.now()),
+  },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),

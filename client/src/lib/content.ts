@@ -2,6 +2,349 @@ import type { BlogPost, EducationModule, Neighborhood } from "@shared/schema";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "living-in-el-cerrito-local-guide",
+    title: "Living in El Cerrito: My Honest Local Guide to Eating, Walking, and Why It Stands Out",
+    excerpt: "I live in El Cerrito, so when a client relocating to the East Bay asks what it's actually like here, I don't pull up a chamber-of-commerce list. Here's the real version: where I'd grab coffee, what the Greenway means day to day, and what makes this small city stand out.",
+    category: "neighborhood-life",
+    publishedAt: "2026-06-29",
+    metaDescription: "A local's honest guide to living in El Cerrito CA: the San Pablo Avenue food scene, coffee, the Ohlone Greenway, the hill views, and what makes the city stand out, from a Realtor who lives there. From Muzamil Khan.",
+    content: `
+When a client is relocating to the East Bay and asks me what El Cerrito is actually like to live in, I don't hand them a list off the internet. I live here. So here's the honest version, the way I'd tell a friend who was thinking about moving to my city.
+
+### The short version of why people stay
+
+El Cerrito is the quieter, more attainable cousin of Berkeley, with a lot of the same upside. You get two BART stations, genuinely walkable stretches, a diverse and unpretentious food scene, the Ohlone Greenway running right through town, and bay views from the hill. It doesn't try to impress you. It just turns out to be a really livable place, and the people who move here tend to stay.
+
+### San Pablo Avenue is the spine
+
+Most of the day-to-day life in El Cerrito happens along San Pablo Avenue. It's an unflashy stretch that quietly has a little of everything, and the food is genuinely diverse: Korean spots, Vietnamese pho, Tibetan, Japanese groceries, craft beer, independent shops. It's the kind of corridor where you end up with a regular order at three different places.
+
+- **The meal I take out-of-town buyers to: Tashi Delek.** The Tibetan and Himalayan spot on San Pablo. Momos, thukpa, butter chicken, the kind of meal that makes a relocating client say "wait, this is here?" It's exactly the unflashy, genuinely good food the corridor is full of.
+- **The weeknight rotation: the Korean and Vietnamese strip on San Pablo.** Gangnam Tofu for Korean comfort food, Tigon for a bowl of pho that holds up against anywhere in the East Bay. This is the food you end up eating once a week without planning to.
+- **A hidden one most newcomers miss: Yaoyasan.** A Japanese grocery and prepared-food market on San Pablo that most people walk right past and locals quietly love. The kind of find that tells you a neighborhood has more going on than its signs let on.
+- **Coffee, with an honest asterisk: Catahoula Coffee Company.** Coffee inside El Cerrito proper is thin, so a lot of us drift a few blocks up San Pablo into Richmond for Catahoula. Great beans, a cozy unfussy room, the kind of place you actually want to sit and work. It's close enough that I count it as ours.
+
+### The Ohlone Greenway is the secret weapon
+
+The thing people don't expect until they live here is the Ohlone Greenway, the paved walking-and-biking trail that runs the length of the city, right under the BART line. It connects the BART stations, parks, and the plaza, and it changes how you live: you walk and bike places you'd otherwise drive. For families, dog owners, and anyone who wants a car-light life, it's a bigger deal than any single restaurant. I'd start someone new on the stretch around El Cerrito Plaza and walk it north toward Del Norte, where the trail, the BART line, and the neighborhood all run together. Ten minutes on it and people get why locals build their week around it.
+
+### El Cerrito Plaza and everyday errands
+
+El Cerrito Plaza, anchored by its own BART station, covers the everyday: Trader Joe's, the grocery run, a weekend farmers market, the practical stuff that makes a place easy to actually live in rather than just visit. It's a short walk or bike from a lot of the city, which is part of why the blocks near it hold value. And for produce, my pick is Giovanni's, a family-run market just off San Pablo that's been an El Cerrito institution since the 1980s. Most clients shop there once and become regulars.
+
+### Up the hill: the views people don't know about
+
+Most people picture El Cerrito as flat and practical. Then they drive up into the hills above the Arlington at golden hour and find bay views that rival places costing far more. The hill neighborhoods are quieter, leafier, and a little more spread out, with hillside streets and open-space trails, and on a clear evening the view of the bay and the bridges is the kind of thing that sells a client on the city without me saying a word.
+
+### What actually makes El Cerrito stand out
+
+It's the combination, not any one thing. A diverse, genuine food corridor. Two BART stations. The Greenway. Real bay views. Solid schools my clients choose on reputation. Berkeley a few minutes south and Kensington and the Albany schools right next door. And all of it at a median that runs well below Berkeley's. El Cerrito doesn't stand out by being the flashiest city in the East Bay. It stands out by being one of the most livable for the money, which is exactly why I live here.
+
+### If you're thinking about it
+
+If you're relocating to the East Bay and El Cerrito is on your list, the best thing you can do is spend an evening here: walk a stretch of the Greenway, eat on San Pablo, drive up the hill at sunset, and see if it feels like you. That's the part no listing photo captures.
+
+If you'd like, I'm always glad to show a relocating client around my own city, the blocks, the trade-offs, the spots I'd actually send you to. No pressure, just a local's honest tour whenever it's useful.
+`,
+    faq: [
+      {
+        question: "What's it like to live in El Cerrito?",
+        answer: "Quietly livable. You get a walkable, diverse food corridor along San Pablo Avenue, two BART stations, the Ohlone Greenway running the length of the city, and bay views up the hill, all at a median that runs well below Berkeley's. It doesn't try to impress you, which is exactly why people who move here tend to stay."
+      },
+      {
+        question: "Is El Cerrito walkable?",
+        answer: "In stretches, yes. San Pablo Avenue, the Ohlone Greenway, and the areas around both BART stations and El Cerrito Plaza are genuinely walkable and bikeable. The hill neighborhoods are quieter and more car-dependent, so where you land depends on how much you rank walkability against views and space."
+      },
+      {
+        question: "What's there to do in El Cerrito?",
+        answer: "Walk or bike the Ohlone Greenway, eat your way down the San Pablo food scene (Tashi Delek for Tibetan, the Korean and Vietnamese spots, Yaoyasan for a Japanese-market browse), hit the El Cerrito Plaza farmers market, drive up into the hills for sunset bay views, and take BART to Berkeley or San Francisco in minutes. For coffee, locals drift a few blocks up into Richmond to Catahoula."
+      }
+    ]
+  },
+  {
+    slug: "oakland-neighborhood-guide",
+    title: "Oakland Neighborhood Guide: Where Your Money Goes, Pocket by Pocket, From the Flats to the Hills",
+    excerpt: "On paper, Oakland can mean a $600K starter or a $3M view home, all under one city name. Like Berkeley, it really moves as a dozen separate markets. Here's how the pockets break down, what to plan for, and how to rank what matters before you start.",
+    category: "market-basics",
+    publishedAt: "2026-06-26",
+    metaDescription: "A calm, local Oakland CA neighborhood guide: Rockridge, Temescal, Grand Lake, Montclair and the hills, the flats, current prices, the Oakland transfer tax, and a construction-trained agent's honest take. From Muzamil Khan, East Bay Realtor.",
+    content: `
+A lot of people tell me they want to buy in Oakland, and they say it like Oakland is one place with one price. It runs from an attainable starter home all the way up to multimillion-dollar view homes, all under the same city name. Oakland is even bigger and more varied than Berkeley, so the first thing I do with a client is slow the conversation down and map out where their money actually goes, pocket by pocket.
+
+Let me walk you through it the way I would if we were driving around together, because in Oakland that drive covers a lot of ground.
+
+### Start with the same idea as Berkeley: the flats and the hills
+
+Oakland climbs from the bay and the flats up into the Oakland Hills, and as a rough rule, the higher you go, the more you pay and the bigger the lots and views get. The flats hold the more attainable, walkable, transit-connected homes. The hills give you space, trees, views, and the prices that come with them. Almost every Oakland question a client asks me gets clearer once we place a neighborhood on that slope, and then look at the specific pocket, because Oakland's pockets vary block by block more than almost anywhere I work.
+
+Here's the citywide anchor. Oakland's median sale price has lately run around $850,000, down a couple percent from a year ago, with homes still drawing about three offers on average and going pending in around 25 days, according to Redfin in mid-2026. I share those numbers early, but I lean on them less in Oakland than anywhere, because the citywide median hides an enormous range. The real conversation is always about the specific pocket.
+
+### The top of the market: Rockridge, Montclair, and the hills
+
+**Rockridge sits at the top of the flats-and-BART tier.** College Avenue runs straight up from Berkeley's Elmwood into Rockridge, and it brings the same feel: tree-lined streets, preserved Craftsman homes, a walkable strip of restaurants and shops, and its own Rockridge BART station. It's one of the most in-demand pockets in the whole city, and the prices follow, running well above the Oakland median. Few first-time buyers land here, and that's fine, it helps to read it as the anchor that lifts the pockets nearby.
+
+**Montclair and the Oakland Hills are the view tier.** Up in the hills around Montclair Village, you get larger lots, big trees, bay views, and a quiet, almost-suburban feel, with Montclair Village itself as a walkable little hub. This is Oakland's hills market, the equivalent of Berkeley's prestige hill streets, and it sits at the top of the city's price range. Buyers here trade walk-to-BART convenience for space and views.
+
+**Piedmont Avenue holds its own near the top.** Not to be confused with the separate city of Piedmont, the Piedmont Avenue neighborhood is one of Oakland's most charming walkable strips: cafes, restaurants, older homes on calm streets. It draws steady demand and prices to match.
+
+### The sweet spot: Temescal, Grand Lake, Glenview, and Dimond
+
+**Temescal is where a lot of energy and a lot of my clients are.** Along Telegraph Avenue, Temescal has become one of Oakland's best food and coffee scenes, with Temescal Alley as the walkable centerpiece. It's more attainable than Rockridge next door, though it has been climbing for years. Buyers who want walkability and life on the street without Rockridge money look hard here.
+
+**Grand Lake and the Lake Merritt pockets give you urban Oakland at its best.** Around Lake Merritt and the Grand Lake district, you get the lake, the farmers market, the historic Grand Lake Theatre, and a genuinely walkable, lively setting, with a mix of condos, apartments, and homes in Adams Point and the streets nearby. For a buyer who wants to live without a car as much as possible, this is a strong pocket, and condos here are often one of the more attainable entry points into close-in Oakland.
+
+**Glenview, Dimond, and Laurel are the family-home sweet spot.** Sitting on the slope between the flats and the hills along the MacArthur corridor, these pockets offer well-kept single-family homes, neighborhood commercial streets, and more house for the money than Rockridge or Montclair. This is where I send a lot of families who want space and a real neighborhood without the top-tier price.
+
+### The entry level: Maxwell Park, Millsmont, the foothills, and West Oakland
+
+**Maxwell Park, Millsmont, the Mills College area, and the East Oakland foothills** hold some of Oakland's more attainable single-family homes. Value varies a lot block by block here, more than anywhere else in the city, so local, street-level knowledge matters most in these pockets. There are genuinely good buys for clients who do the homework.
+
+**West Oakland is the closest pocket to San Francisco and one of the most transitional.** West Oakland BART is a single stop to downtown SF, which is a real draw, and the area has historic Victorians and newer construction at prices below the close-in north Oakland pockets. It's changed a lot and is still changing, unevenly, block by block. I treat it the way I treat any transitional market: visit at different times of day, look at specific blocks rather than the neighborhood name, and lean on real data.
+
+### Plan for one Oakland-specific cost: the transfer tax
+
+Oakland charges its own city real property transfer tax on top of the county's, and it's one of the higher ones in the state. It's tiered by purchase price, so the rate climbs as the price climbs. As of 2026, per the City of Oakland, the city rate runs 1.0% on homes up to $300,000, 1.5% from $300,001 to $2 million, 1.75% from $2 million to $5 million, and 2.5% above $5 million, with a reduced rate in the lower tiers for qualifying first-time owner-occupants. The county adds its own $1.10 per $1,000 on top. On an $850,000 home, that's about $12,750 in city transfer tax plus roughly $935 to the county, close to $13,700 all in. My clients build that into their cash-to-close from day one so it never shows up as a surprise at the end. This is exactly the kind of number my construction-and-numbers approach is built to catch early. (Confirm current rates with the City of Oakland, they do change.)
+
+### Rank what matters before you tour
+
+Oakland is big and its pockets pull in different directions, so this step matters more here than almost anywhere. No Oakland neighborhood wins on everything, so the ranking decides the trade-offs. Take this list and put it in your own order, most important at the top:
+
+1. Walkability
+2. Restaurants and grocery stores within walking distance
+3. Public transportation or BART access
+4. A quieter neighborhood
+5. Schools
+6. Proximity to parks
+7. Price
+8. Something specific to you, like a short commute, a yard, single-level living, a particular school, or room for family
+
+Once that list has an order, Oakland gets a lot simpler. A buyer who ranks walkability, restaurants, and BART at the top leans toward Rockridge, Temescal, or Grand Lake. A buyer who ranks space, parks, and views high, with price further down, looks to Montclair and the hills. A buyer who puts price and a real family home first leans toward Glenview, Dimond, Laurel, or the more attainable foothill pockets, block by block. And a buyer who ranks the shortest commute to San Francisco above all often finds the fit in West Oakland or a Lake Merritt condo. The ranking does the work.
+
+### The honest take
+
+Oakland is not one market, it's a dozen, and that's good news for a prepared buyer. The range means there's almost certainly a pocket that fits your budget and your ranking, even when the citywide median looks out of reach. What Oakland rewards is doing the pocket-level homework: knowing the specific blocks, planning for the transfer tax, and reading older homes honestly before you write an offer.
+
+So here's the plan I'd give anyone eyeing Oakland. Get a real pre-approval and know your true cash-to-close, transfer tax included. Rank your priorities from the list above and let that point you to the right pockets before you fall for a single listing. Then look block by block, because in Oakland the name on the map matters less than the street. Those are the things worth talking through with whatever agent you work with, and a good one will know these pockets street by street.
+
+If you'd like a read on a specific Oakland pocket or block, or an honest opinion on which neighborhood fits your budget and commute, I'm always glad to help. No pressure, just my take whenever it's useful.
+`,
+    faq: [
+      {
+        question: "What is the median home price in Oakland right now?",
+        answer: "Around $850,000 citywide as of mid-2026, per Redfin, down a couple percent year over year, though that number hides an enormous range, from attainable starter homes and condos in the flats and around Lake Merritt up to multimillion-dollar view homes in Montclair and the hills. Prices move and vary hugely by pocket, so confirm the current figure for the specific neighborhood you're looking at."
+      },
+      {
+        question: "Which Oakland neighborhood is best for a first-time buyer?",
+        answer: "It depends on your ranking, but first-time buyers often do well with condos around Lake Merritt and Adams Point, or single-family homes in the more attainable foothill pockets like Maxwell Park and Millsmont, where local, block-by-block knowledge matters most. Temescal and the Glenview and Dimond area are strong if your budget stretches a bit further."
+      },
+      {
+        question: "How high is the Oakland transfer tax?",
+        answer: "Oakland's city transfer tax is among the higher ones in California and is tiered by price: as of 2026 it runs 1.0% up to $300,000, 1.5% from $300,001 to $2 million, 1.75% from $2 million to $5 million, and 2.5% above $5 million, per the City of Oakland, plus the county's $1.10 per $1,000. On an $850,000 home that's roughly $13,700 all in. My clients build it into their cash-to-close from the start so it isn't a surprise at closing. Confirm current rates with the City of Oakland."
+      }
+    ]
+  },
+  {
+    slug: "albany-neighborhood-guide",
+    title: "Albany Is One Square Mile and Three Different Buys. Here's How to Read It.",
+    excerpt: "Albany is small enough to walk across, and people assume that means one price. It doesn't. The schools, Solano Avenue, and the climb toward Albany Hill split it into a few distinct buys. Here's how my clients figure out which part fits.",
+    category: "market-basics",
+    publishedAt: "2026-06-23",
+    metaDescription: "A calm, local Albany CA neighborhood guide: the school premium, the Solano Avenue corridor, the flats and Albany Hill, current prices, and a construction-trained agent's honest take. From Muzamil Khan, East Bay Realtor.",
+    content: `
+People tell me they want to buy in Albany, and they say it like Albany is one small, simple place with one price. It is small. You can walk across the whole city in well under an hour. But that mile and change holds at least three different buys, and which one fits a client depends on what they actually care about. So the first thing I do is slow the conversation down and map it out.
+
+Let me walk you through it the way I would if we were driving around together, which in Albany takes about ten minutes.
+
+### Start with the schools, because most Albany buyers do
+
+There's no way around it. The biggest single reason people pay what they pay in Albany is the school district. Albany Unified carries one of the strongest reputations in the East Bay, and families move here specifically for it, year after year. That demand is the engine under Albany prices, and it's why a small city with modest lot sizes commands the kind of money it does.
+
+Here's the citywide anchor. Albany's median sale price has lately run around $1.6 million, up roughly 15% from a year ago, according to Redfin in early 2026. For such a small city that number is striking: it sits at or even above Berkeley's median, despite Albany's smaller lots and modest homes. Homes still tend to sell well over list, often around 20% or more in the most competitive pockets, and go pending in about 12 days. I share that early with every client, because Albany rarely gives a buyer a slow, easy market. The schools keep a floor under it.
+
+### The flats: most of Albany, and the walkable heart
+
+The bulk of Albany sits in the flats, the grid between the bay and the hill. This is where most of my clients actually buy. The homes are mostly older, modest in size, close together, and within a walk or short bike of Solano Avenue and the schools. If a client wants the Albany lifestyle, the walkability and the district, without reaching for a view, this is the sweet spot. It's also where the housing stock is most consistent, which matters for what comes next.
+
+### Solano Avenue is the reason the flats feel bigger than they are
+
+Solano Avenue runs from Albany up into Berkeley, and it's the spine of the city: independent restaurants, coffee, a movie theater, grocery, small shops, the kind of street people actually walk to on a weeknight. A home's distance to Solano is one of the quiet things that moves Albany prices. The closer a client wants to be to that walkable stretch, the more competition they should expect, and I price offers accordingly.
+
+### Up toward Albany Hill: a little more space, a little more view
+
+As Albany climbs toward Albany Hill on the west side, some homes pick up bay views and a touch more separation. There are fewer of these, so they trade less often and hold their value firmly when they do. A buyer who ranks views and quiet over walk-to-Solano convenience looks up here, with the understanding that inventory is thin and patience is part of the plan.
+
+### The one thing every Albany buyer should plan for: there's almost nothing for sale
+
+Albany's defining feature as a market isn't a neighborhood, it's the size. This is a tiny city, and only so many homes change hands in a year. Even when the broader East Bay loosens up and buyers get more room, Albany stays tight simply because supply is small and school demand is constant. I tell my Albany clients to expect a long, patient search and to be fully ready to move when the right home lists, because the wait between good options can be real.
+
+That patience is where my construction background earns its keep. A lot of Albany's homes are older and on the smaller side, which means buyers often weigh additions, foundation work, or a dated systems update. Walking a house and knowing what that work actually costs lets my clients tell the difference between a fixer that's a smart buy and one that will quietly eat their budget.
+
+### Rank what matters before you tour
+
+Albany is small, so the trade-offs are sharp, and ranking your priorities up front makes the whole search clearer. Take this list and put it in your own order, most important at the top:
+
+1. Walkability
+2. Restaurants and grocery stores within walking distance
+3. Public transportation or BART access
+4. A quieter neighborhood
+5. Schools
+6. Proximity to parks
+7. Price
+8. Something specific to you, like a short commute, a yard, single-level living, or room for family
+
+In Albany that order points you fast. Buyers who rank schools and walkability at the top settle into the flats near Solano. Buyers who put views and quiet first look up toward Albany Hill. Buyers who put BART access high should know Albany has no station of its own, so they lean toward the south end near El Cerrito Plaza BART, or look one city north in El Cerrito for more home at a lower median on the same line. And buyers who rank price first often find the most room just over the border in the Berkeley flats or in El Cerrito, where a similar lifestyle costs noticeably less.
+
+### The honest take
+
+Albany is a small, steady, school-driven market, which makes it one of the more predictable buys in the East Bay and one of the more competitive for its size. It rarely goes on sale. What it rewards is a prepared, patient buyer who knows exactly which of Albany's few homes fits their ranking and is ready to move when one appears.
+
+So here's the plan I'd give anyone eyeing Albany. Get a real pre-approval and know your true cash-to-close, including any work an older home might need. Rank your priorities from the list above and let that decide whether you're an Albany-flats buyer, an Albany-Hill buyer, or honestly an El Cerrito buyer in disguise. Then stay ready. Those are the things worth talking through with whatever agent you work with, and a good one will tell you honestly when the neighboring city is the smarter fit.
+
+If you'd like a read on a specific Albany block, or an honest opinion on whether Albany or El Cerrito fits your budget and timeline better, I'm always glad to help. No pressure, just my take whenever it's useful.
+`,
+    faq: [
+      {
+        question: "Why is Albany so expensive for such a small city?",
+        answer: "The Albany Unified school district is the main driver. Families move to Albany specifically for the schools, and that steady demand against a very small housing supply keeps prices high. The median has lately run around $1.6 million, per Redfin in early 2026, at or even above Berkeley's, despite Albany's small lots and modest homes. Confirm current figures when you start your search."
+      },
+      {
+        question: "Does Albany have its own BART station?",
+        answer: "No. Albany is served by the El Cerrito Plaza BART station at its north end, and the North Berkeley station is also reachable from the south side. Buyers who put transit access first often look at homes toward those edges, or consider El Cerrito just north for a home right by BART at a lower median."
+      },
+      {
+        question: "Is it hard to buy a home in Albany?",
+        answer: "It can be, mostly because of supply. Albany is tiny and few homes sell in a given year, so even in a softer regional market the good listings move quickly. My Albany clients come in fully pre-approved and patient, ready to write a strong offer when the right home finally appears."
+      }
+    ]
+  },
+  {
+    slug: "east-bay-market-update-spring-2026",
+    title: "The East Bay Market Right Now: More Room for Buyers, Still Worth Preparing For",
+    excerpt: "Inventory is loosening across the East Bay and buyers have more negotiating room than they've had in a while. The numbers also say preparation still wins. Here's my calm read on where Alameda and Contra Costa stand this spring, and what my clients are doing about it.",
+    category: "market-basics",
+    publishedAt: "2026-06-20",
+    metaDescription: "A plain-English East Bay market update for spring 2026: Alameda and Contra Costa County prices, inventory, and days on market, with a working agent's take on what it means for buyers and sellers. From Muzamil Khan.",
+    content: `
+Every few months a client asks me the same question: "Is now a good time?" My honest answer shifts a little each time, so here's where the East Bay actually stands this spring, in plain numbers, without the spin a headline uses to push people one way or the other.
+
+The one-line version: inventory is loosening, buyers have more room than they've had in a while, and preparation still wins. Both halves of that matter, and my clients do best when they hold them together.
+
+### The county numbers
+
+Alameda County's median sale price has been running around $1,325,000, down about 1.9% from a year ago. Contra Costa County sits lower at roughly $875,000, down about 2.8%. Modest dips, not a crash. Across the broader East Bay, the median time on market has hovered in the low three weeks, around 21 days, slower than the frantic pace of a year or two ago and still brisk by any normal standard.
+
+So prices have eased slightly and homes take a touch longer to sell. That's the extra room buyers feel right now.
+
+### What actually shifted
+
+The real story this spring comes down to inventory. After a long stretch of almost nothing for sale and fierce competition, more homes are finally listing. When inventory rises faster than buyers absorb it, options grow, and in a lot of submarkets buyers gain genuine negotiating leverage for the first time in a while, especially in the mid-market and move-up ranges. The entry level stays tighter, where competition runs hottest.
+
+One discipline check, though. Even with more inventory, regional supply stays tight by historical standards. This remains a balanced market where a prepared buyer can negotiate, and an unprepared one still loses the good homes to someone who came ready.
+
+### The averages hide a lot
+
+Here's something a county median won't tell you. The East Bay moves as many markets, not one. Within these same counties, some cities climbed and some slipped in the same stretch. The pricier inner-East-Bay cities behave differently from the move-up markets out in central Contra Costa, and the entry level behaves differently again. So I treat a countywide number as a starting point and look at what's actually selling on the streets my clients care about.
+
+### What this means for my buyers
+
+They hold more leverage than buyers had a year ago, especially in the mid and move-up ranges. I tell them to use it and stay ready at the same time. Get fully pre-approved, know your true cash-to-close, and prepare to move on the right house. There's real room to negotiate this spring, and the strong homes still go quickly, so being ready is what turns that room into a winning offer.
+
+### What this means for my sellers
+
+Presentation and pricing discipline carry more weight now than at any point in the last few years. When inventory sat near zero, almost anything sold. With more homes competing for the same buyers, the well-prepared, correctly-priced listing wins, and the overpriced one sits and then chases the market down. Pricing right the first time beats almost any other move, and my construction background helps me tell a seller which prep dollars come back at closing and which ones don't.
+
+### The bottom line
+
+This market reads more reasonable than it has in a while, for buyers and sellers both, which is genuinely good news. No fire sale, no frenzy. For anyone who's been waiting on the sidelines, unsure whether this is their moment, the smart move is to look at the actual numbers for their own situation instead of guessing from a headline.
+
+So here's what's worth discussing with your agent right now, whether that's me or someone else. If you're buying, talk through where your leverage actually sits in your price range, and how to stay ready to move when the right home appears. If you're selling, talk through how to price and present so your home leads this market instead of chasing it.
+
+If you'd like a second read on any of it, I'm glad to help. Tell me what you're working with and I'll give you my honest take, no pressure either way.
+`,
+    faq: [
+      {
+        question: "Is the East Bay housing market going up or down in 2026?",
+        answer: "As of spring 2026, county medians sit slightly below a year ago, with Alameda County around $1,325,000 (down about 1.9%) and Contra Costa around $875,000 (down about 2.8%), based on C.A.R.-sourced data. Inventory is rising and buyers have more negotiating room, while the market stays relatively tight overall. Numbers vary widely by city."
+      },
+      {
+        question: "Is it a buyer's market or a seller's market in the East Bay right now?",
+        answer: "More balanced than it's been in years, leaning slightly toward buyers in the mid and move-up price ranges where inventory has grown. The entry-level segment stays competitive. For most buyers it opens real negotiating room. For sellers it means correct pricing and presentation carry more weight than a year ago."
+      },
+      {
+        question: "How long are East Bay homes taking to sell?",
+        answer: "The median time on market across the East Bay has run around three weeks (about 21 days) this spring, slower than the very fast pace of a year or two ago and still brisk historically. Well-priced homes in desirable areas keep moving quickly."
+      }
+    ]
+  },
+  {
+    slug: "el-cerrito-buyer-window-2026",
+    title: "El Cerrito Dropped 8% While Berkeley Still Sells Over Asking. Here's the Opportunity.",
+    excerpt: "One East Bay city is down 8% year over year while its neighbor a mile away still sells 27% over list. My clients who prepare for a gap like that tend to do well. Here's my honest read on the El Cerrito window right now.",
+    category: "market-basics",
+    publishedAt: "2026-06-17",
+    metaDescription: "El Cerrito home prices are down about 8% year over year while nearby Berkeley still sells over asking. A local East Bay agent explains the opportunity for prepared buyers in 2026. From Muzamil Khan.",
+    content: `
+I live in El Cerrito and I work across the East Bay, so I watch these neighboring markets move against each other in real time. A gap opened up recently that's worth attention, and most buyers haven't spotted it yet.
+
+Here's the short version. El Cerrito's median sale price has been running around $1.1 million, down roughly 8% from a year ago, according to Redfin. One city south, Berkeley sits around $1.4 million and has barely moved, still selling at about 27% over list. Same BART line. Often the same commute. Very different price story.
+
+When two neighboring markets drift apart like this, it usually signals something temporary. And temporary gaps reward the clients who come prepared.
+
+### What the El Cerrito number actually means
+
+An 8% year-over-year dip sounds like a falling market, and plenty of buyers read it that way, which is part of why it opens a door. Softer prices than last year still mean people want El Cerrito. For this stretch, they just mean a little less competition and a little more room to negotiate than a buyer finds in Berkeley or Albany.
+
+Here's the part the headline skips. El Cerrito homes still sell at roughly 24% over list and go pending in about two weeks, per Redfin. So "down 8%" and "still competitive" hold true at the same time. A lowball-and-wait approach won't work here. A prepared buyer who moves quickly can win a home that cost more a year ago, and costs more in Berkeley today.
+
+### Why El Cerrito specifically
+
+I'm biased because it's home, and the case holds up anyway. Two BART stations. Genuinely walkable stretches along San Pablo Avenue. The Ohlone Greenway for biking and walking. Bay views up the hill. Schools my clients choose on reputation, not just star ratings. A buyer gets a lot of what makes Berkeley desirable, a few minutes north, for several hundred thousand dollars less at the median. For a first-time buyer or someone relocating to the East Bay, that math deserves a serious look right now.
+
+### How my clients actually use a window like this
+
+A softer market rewards preparation. Before I take a client touring in El Cerrito, three things need to be in place. They're fully pre-approved, with a lender who answers the phone on a weekend. They know their real cash-to-close, not just the down payment. And they've got someone who knows these specific blocks, because in El Cerrito the gap between two streets, or the flat side versus up the hill, decides whether an offer is a smart buy or an overpay.
+
+That last piece is where my construction background pays off. A lot of El Cerrito's housing stock predates 1970. The bones tend to be good, and the inspection reports still tell a story. Knowing what a finding actually costs to fix lets my clients price an offer with confidence instead of guessing.
+
+### Rank what matters before you tour
+
+No street wins on everything, so I have clients put their priorities in order before we look at homes. Take this list and rank it for yourself, most important at the top:
+
+1. Walkability
+2. Restaurants and grocery stores within walking distance
+3. Public transportation or BART access
+4. A quieter neighborhood
+5. Schools
+6. Proximity to parks
+7. Price
+8. Something specific to you, like a short commute, a yard, or room for family
+
+In El Cerrito that ranking points you quickly. Buyers who put BART and walkability first lean toward the blocks near Del Norte and Plaza stations and the San Pablo corridor. Buyers who put quiet and views first look up the hill. Buyers who put price first often find the most room down in the flats or just over the line in Richmond Annex and San Pablo.
+
+### The honest caveat
+
+Markets move. This gap could narrow by the time you read this, or widen. I won't tell anyone prices will or won't keep dropping, because nobody credible can promise that. What I can say plainly: right now, today, a real price spread sits between El Cerrito and its pricier neighbors, and a prepared buyer can use it.
+
+So here's a simple plan for anyone eyeing El Cerrito. Get a real pre-approval and know your true cash-to-close. Rank your priorities from the list above and let that guide which blocks you tour. Then move with confidence when the right home shows up. Those are the things worth talking through with whatever agent you work with, and a good one will help you weigh them honestly.
+
+If you'd like a second opinion on a listing, or a read on a specific El Cerrito street, I'm always glad to help. No pressure, just my honest take whenever it's useful.
+`,
+    faq: [
+      {
+        question: "Are El Cerrito home prices going down in 2026?",
+        answer: "El Cerrito's median sale price has been running around $1.1 million, down roughly 8% year over year according to Redfin as of mid-2026. Homes still sell at about 24% over list and go pending in around two weeks, so the market sits softer than last year while staying competitive. Confirm current figures when you start your search."
+      },
+      {
+        question: "Is El Cerrito cheaper than Berkeley?",
+        answer: "Yes, meaningfully. El Cerrito's median has been around $1.1 million against roughly $1.4 million in Berkeley, per Redfin, on the same BART line with a similar commute. That price gap is part of why my clients priced out of Berkeley take a serious look at El Cerrito."
+      },
+      {
+        question: "Is now a good time to buy in El Cerrito?",
+        answer: "For a prepared buyer, the current softening opens a real opportunity, with more negotiating room than the pricier neighbors offer. Softer still moves fast, though, since homes sell over asking quickly. My clients come in fully pre-approved and ready before they tour. Talk to a local agent about your specific budget and timeline."
+      }
+    ]
+  },
+  {
     slug: "berkeley-neighborhood-guide",
     title: "Berkeley Neighborhood Guide: Where Your Money Actually Goes, From the Flats to the Hills",
     excerpt: "Berkeley runs from an attainable entry point to four million dollar view homes, all under one city name. Here is how the neighborhoods really break down, what the older homes cost after the sale, and how to rank what matters before you start.",
@@ -1706,6 +2049,14 @@ export const neighborhoods: Neighborhood[] = [
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug);
+}
+
+// A post counts as published once its date has arrived. Lets us "schedule"
+// future-dated posts: they stay hidden from the blog list, post pages, and
+// sitemap until publishedAt, then surface automatically. `refMs` defaults to
+// now; callers can pass a stable build-time value to avoid hydration mismatch.
+export function isPublished(post: BlogPost, refMs: number = Date.now()): boolean {
+  return new Date(post.publishedAt + "T00:00:00").getTime() <= refMs;
 }
 
 export function getBlogPostsByCategory(category: BlogPost['category']): BlogPost[] {
