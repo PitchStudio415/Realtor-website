@@ -123,7 +123,7 @@ export default function Home() {
                     <SiZillow className="w-5 h-5 text-[#006AFF] hover:opacity-80 transition-opacity" />
                   </a>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Muzamil+Khan+-+Realtor+El+Cerrito"
+                    href="https://www.google.com/maps?cid=4248271409235072484"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Google Business Profile"
