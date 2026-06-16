@@ -21,8 +21,10 @@ import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import CityPage from "@/pages/CityPage";
+import BuyerGuide from "@/pages/BuyerGuide";
 import HomeValuation from "@/pages/HomeValuation";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
+import { buyerGuides } from "@/lib/buyerGuideData";
 
 function setMetaContent(selector: string, content: string) {
   const el = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -101,6 +103,9 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/cities/:slug" component={CityPage} />
+      {buyerGuides.map((g) => (
+        <Route key={g.slug} path={`/buying-in-${g.slug}`} component={BuyerGuide} />
+      ))}
       <Route component={NotFound} />
     </Switch>
   );

@@ -89,8 +89,9 @@ export function Footer() {
             <ul className="space-y-1.5 text-sm">
               <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buy" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buy">How I Help Buyers</Link></li>
               <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buyer-hub" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buyer-hub">First-Time Buyer Hub</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buyer-hub/timeline" className="text-primary-foreground/80 hover:text-white transition-colors">Buying Timeline</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buyer-hub/offer-basics" className="text-primary-foreground/80 hover:text-white transition-colors">Offer Basics</Link></li>
+              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buying-in-el-cerrito" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buying-el-cerrito">Buying in El Cerrito</Link></li>
+              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buying-in-albany" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buying-albany">Buying in Albany</Link></li>
+              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buying-in-berkeley" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buying-berkeley">Buying in Berkeley</Link></li>
               <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buyer-hub/financing" className="text-primary-foreground/80 hover:text-white transition-colors">Financing Guide</Link></li>
             </ul>
           </div>

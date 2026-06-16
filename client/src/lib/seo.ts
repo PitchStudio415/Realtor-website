@@ -9,6 +9,7 @@ import {
   getNeighborhoodBySlug,
 } from "./content";
 import { cities, getCityBySlug } from "./cityData";
+import { buyerGuides, getBuyerGuideBySlug } from "./buyerGuideData";
 
 export const SITE_URL = "https://muzamilkhanrealtor.com";
 const SITE_NAME = "Muzamil Khan Real Estate";
@@ -223,6 +224,20 @@ export function getSeoForPath(path: string): PageSeo {
     }
   }
 
+  const buyerGuideMatch = p.match(/^\/buying-in-([^/]+)$/);
+  if (buyerGuideMatch) {
+    const guide = getBuyerGuideBySlug(buyerGuideMatch[1]);
+    if (guide) {
+      // BuyerGuide renders its own RealEstateAgent + FAQPage JSON-LD in the body,
+      // which is included in the prerendered HTML — don't duplicate it here.
+      return {
+        ...base,
+        title: guide.metaTitle,
+        description: guide.metaDescription,
+      };
+    }
+  }
+
   const cityMatch = p.match(/^\/cities\/([^/]+)$/);
   if (cityMatch) {
     const city = getCityBySlug(cityMatch[1]);
@@ -275,6 +290,9 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
   }
   for (const city of cities) {
     routes.push({ path: `/cities/${city.slug}`, priority: 0.8 });
+  }
+  for (const guide of buyerGuides) {
+    routes.push({ path: `/buying-in-${guide.slug}`, priority: 0.9 });
   }
   return routes;
 }

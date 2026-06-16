@@ -5,7 +5,6 @@ import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
 import { SiInstagram, SiZillow, SiGoogle } from "react-icons/si";
 import profilePhoto from "@assets/DSC04279_1775796380065.jpeg";
-import { AmbientVideo } from "@/components/AmbientVideo";
 
 export default function Home() {
   return (
@@ -78,10 +77,9 @@ export default function Home() {
             {/* Photo — right, tall rectangle, flush to bottom */}
             <div className="hidden lg:flex flex-col items-center self-end flex-shrink-0">
               <div className="w-64 xl:w-72 h-[460px] xl:h-[500px] rounded-t-3xl overflow-hidden">
-                <AmbientVideo
-                  src="/videos/broll-park.mp4"
-                  poster={profilePhoto}
-                  alt="Muzamil Khan walking through an East Bay park"
+                <img
+                  src={profilePhoto}
+                  alt="Muzamil Khan, East Bay Realtor"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -359,6 +357,36 @@ export default function Home() {
                 </Link>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Buying by city */}
+      <section className="py-14 md:py-20 bg-muted/40 border-y border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Buying a Home in the East Bay</h2>
+          <p className="text-muted-foreground mb-10 max-w-xl mx-auto text-center">
+            Local, first-time-buyer guides to the cities I work in most: real prices, the buying process, and a construction eye on every home.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {[
+              { slug: "el-cerrito", name: "El Cerrito", blurb: "Two BART stations, walkable San Pablo Ave, flats vs. hills." },
+              { slug: "albany", name: "Albany", blurb: "Top-rated schools, Solano Avenue, tight inventory." },
+              { slug: "berkeley", name: "Berkeley", blurb: "A dozen neighborhoods and the widest price range in the area." },
+            ].map((c) => (
+              <Link key={c.slug} href={`/buying-in-${c.slug}`}>
+                <Card className="border border-border hover:border-primary/30 hover:shadow-md transition-all h-full cursor-pointer" data-testid={`card-buying-${c.slug}`}>
+                  <CardContent className="p-6">
+                    <MapPin className="w-5 h-5 text-primary mb-3" />
+                    <h3 className="text-lg font-bold mb-2">Buying in {c.name}</h3>
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{c.blurb}</p>
+                    <span className="text-sm text-primary font-medium inline-flex items-center">
+                      Read the guide <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
