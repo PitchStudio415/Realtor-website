@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, Star, Home, TrendingUp, BadgeCheck } from "lucide-react";
-import { SiInstagram, SiZillow } from "react-icons/si";
+import { SiInstagram, SiZillow, SiGoogle } from "react-icons/si";
 import profilePhoto from "@assets/brand/muzamil-bridge-lean.jpg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -110,6 +110,15 @@ export default function About() {
               data-testid="link-about-zillow"
             >
               <SiZillow className="w-7 h-7 text-[#006AFF] hover:opacity-80 transition-opacity" />
+            </a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Muzamil+Khan+-+Realtor+El+Cerrito"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Business Profile"
+              data-testid="link-about-google"
+            >
+              <SiGoogle className="w-7 h-7 text-[#4285F4] hover:opacity-80 transition-opacity" />
             </a>
           </div>
         </div>

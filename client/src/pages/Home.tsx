@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
-import { SiInstagram, SiZillow } from "react-icons/si";
+import { SiInstagram, SiZillow, SiGoogle } from "react-icons/si";
 import profilePhoto from "@assets/DSC04279_1775796380065.jpeg";
 import { AmbientVideo } from "@/components/AmbientVideo";
 
@@ -121,6 +121,15 @@ export default function Home() {
                     data-testid="link-photo-zillow"
                   >
                     <SiZillow className="w-5 h-5 text-[#006AFF] hover:opacity-80 transition-opacity" />
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Muzamil+Khan+-+Realtor+El+Cerrito"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Google Business Profile"
+                    data-testid="link-photo-google"
+                  >
+                    <SiGoogle className="w-5 h-5 text-[#4285F4] hover:opacity-80 transition-opacity" />
                   </a>
                 </div>
               </div>
