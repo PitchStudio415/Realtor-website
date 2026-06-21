@@ -22,6 +22,7 @@ import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import CityPage from "@/pages/CityPage";
 import BuyerGuide from "@/pages/BuyerGuide";
+import FirstTimeBuyerGuide from "@/pages/FirstTimeBuyerGuide";
 import HomeValuation from "@/pages/HomeValuation";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
 import { buyerGuides } from "@/lib/buyerGuideData";
@@ -90,6 +91,7 @@ function Router() {
       <Route path="/sell" component={Sell} />
       <Route path="/home-valuation" component={HomeValuation} />
       <Route path="/calculator" component={Calculator} />
+      <Route path="/first-time-home-buyer" component={FirstTimeBuyerGuide} />
       <Route path="/buyer-hub" component={BuyerHub} />
       <Route path="/buyer-hub/:slug" component={BuyerHub} />
       <Route path="/seller-hub" component={SellerHub} />

@@ -2,6 +2,138 @@ import type { BlogPost, EducationModule, Neighborhood } from "@shared/schema";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "down-payment-help-east-bay-first-time-buyers",
+    title: "You Can Buy Your First East Bay Home With as Little as 3.5% Down. Here's How.",
+    excerpt: "Most of my first-time East Bay buyers get in with a fraction of 20% down, and many qualify for help they've never heard of. Here's what the down payment actually looks like, the loan options that lower it, and the California programs that can cover part of it.",
+    category: "first-time-buyers",
+    publishedAt: "2026-06-18",
+    metaDescription: "You can buy a home in the East Bay with as little as 3.5% down. A local first-time-buyer agent explains FHA, low-down conventional loans, and CalHFA down payment assistance in plain English. From Muzamil Khan.",
+    content: `
+A first-time buyer sat across from me last year and told me she'd been saving for four years to hit 20% down on an El Cerrito condo. She had about half of what she thought she needed, and she was discouraged, because at her savings rate she was looking at another three or four years of renting.
+
+I asked her one question: who told you that you need 20% down? She couldn't remember. It was just something everybody knew.
+
+Here's the thing. It isn't true, and she could have bought two years earlier. Let's talk about why.
+
+## Where the 20% number comes from
+
+Twenty percent down is the threshold where you avoid paying mortgage insurance on a conventional loan. That's it. That's the whole reason the number exists. It is not a minimum to buy a house. It's a line where one specific monthly cost goes away.
+
+Plenty of first-time buyers put down 20% when they have it, because skipping mortgage insurance saves money every month. But treating it as the price of admission keeps people renting for years longer than they need to, in a market where waiting has its own cost.
+
+## What you can actually put down
+
+**FHA loans.** These are built for first-time and lower-down-payment buyers, and they allow as little as 3.5% down. On a $700K condo, that's about $24,500 instead of $140,000. That gap is years of saving. FHA has tradeoffs (you'll pay mortgage insurance, and there are loan limits and property condition rules), but for a lot of first-time buyers it's the door in.
+
+**Low-down conventional loans.** You don't have to choose between 3.5% and 20%. Conventional loans can go to 5%, sometimes 3%, down. You'll pay private mortgage insurance until you build enough equity, and then it can come off. For buyers with stronger credit, this is often a better long-term deal than FHA.
+
+**California down payment assistance.** This is the part most first-time buyers have never heard of. CalHFA, the state housing finance agency, runs programs that help eligible first-time buyers with the down payment and sometimes closing costs. There are income limits, price limits, and a homebuyer education requirement, and the programs change, so I'm not going to quote you specific numbers that might be stale by the time you read this. What I'll tell you is that they're real, and the way you find out if you qualify is by talking to a CalHFA-approved lender. It costs nothing to ask.
+
+## The catch, so you're not surprised
+
+Putting less down isn't free. When you go below 20%, you pay mortgage insurance, which adds to your monthly payment. On the lower-down loans your monthly number is higher, both because you're borrowing more and because of the insurance.
+
+That's a real tradeoff, and it's worth running the actual numbers with a lender before you decide. But "my monthly payment is a bit higher" is a very different problem than "I can't buy for another four years." For most of my first-time buyers, getting in and building equity beats waiting to save a number that was never required in the first place.
+
+## What to actually do
+
+Don't take my word for any of this, and don't take the internet's. Spend thirty minutes with a lender who works with first-time buyers and ask three things: what's the least I can put down, do I qualify for any California assistance programs, and what does my monthly payment look like at a few different down payment amounts. A good lender runs all of it on the spot.
+
+If you want to ballpark it yourself first, there's an affordability calculator on this site, and you can pull recently sold prices for any East Bay city on redfin.com or zillow.com to see what you'd actually be financing. Start from a monthly payment you're comfortable with and work backward. That's the honest way to figure out what you can buy, not a down payment myth.
+
+## The take
+
+The 20% rule has kept more good first-time buyers renting than almost anything else I see. If you've been telling yourself you're years away because you're saving for a fifth of the purchase price, get a second opinion from a real lender before you write off this year. You might be a lot closer than you think.
+
+If you want help finding a lender who actually knows the first-time-buyer programs, or you just want to talk through your numbers with no pressure, my number and email are on the homepage. This is the conversation I want to have before you've given up on buying.
+
+M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
+    `,
+    faq: [
+      {
+        question: "Do I really not need 20% down to buy a home in the East Bay?",
+        answer: "Correct. Twenty percent is just the point where you stop paying mortgage insurance on a conventional loan, not a minimum to buy. FHA loans allow as little as 3.5% down, many conventional loans go to 3 to 5% down, and California assistance programs can help further. The only way to know your real options is a quick call with a lender who works with first-time buyers."
+      },
+      {
+        question: "What is the lowest down payment for a first-time buyer in California?",
+        answer: "FHA loans commonly allow 3.5% down, and some conventional loan programs go as low as 3%. California's CalHFA programs can layer down-payment assistance on top of that for eligible buyers. Putting less down means paying mortgage insurance, so the right move is to compare your monthly payment at a few down-payment levels with a lender."
+      },
+      {
+        question: "What is CalHFA and how does it help first-time buyers?",
+        answer: "CalHFA is the California Housing Finance Agency. It runs programs that help eligible first-time buyers with their down payment and sometimes closing costs. There are income limits, purchase-price limits, and a homebuyer education requirement, and the specifics change over time. You apply through a CalHFA-approved lender, who can tell you quickly whether you qualify."
+      },
+      {
+        question: "Is it better to put less down and buy now, or wait and save 20%?",
+        answer: "It depends on your numbers, but for many first-time buyers, buying sooner with less down beats waiting years to save 20%, because you start building equity and stop paying rent. The tradeoff is a higher monthly payment from mortgage insurance and a larger loan. Run both scenarios with a lender before deciding; the math is usually clearer than the fear."
+      }
+    ]
+  },
+  {
+    slug: "what-i-check-older-east-bay-home-first-time-buyer",
+    title: "Most East Bay Homes Predate 1970. Here's What I Check Before You Offer.",
+    excerpt: "First-time buyers fall in love with a charming old East Bay house, then a thick inspection report scares them off the next morning. With 15 years in construction behind me, here's what I actually look at, and what's worth worrying about versus what isn't.",
+    category: "first-time-buyers",
+    publishedAt: "2026-06-18",
+    metaDescription: "A construction-trained East Bay agent walks first-time buyers through what to check on an older, pre-1970 home: foundation, drainage, plumbing, wiring, roof, and unpermitted work, and what's cosmetic versus a real expense. From Muzamil Khan.",
+    content: `
+A first-time buyer couple fell hard for a 1948 bungalow in the El Cerrito flats. Great block, good light, the kind of house you can picture your life in. Then they got the disclosure packet that night, saw the words foundation and knob-and-tube wiring and galvanized plumbing, and texted me at 10pm basically ready to walk away.
+
+I told them to sleep on it, and the next morning we went through the report line by line. Most of what scared them was normal for a house that age, and the one thing that actually mattered was negotiable. They bought it. They still live there.
+
+This is the part of my job I like most, and it's where my background helps. I spent 15 years in construction before I sold real estate. Here's what I'm actually looking at when we walk an older East Bay home, and what's worth worrying about.
+
+## First, what "old" means here
+
+Most of the housing in El Cerrito, Albany, Berkeley, and a lot of Richmond and Oakland was built before 1970. A surprising amount predates World War II. These houses have charm you can't get in new construction, and they also have systems that were normal in their day and are due for attention now. None of that is a reason to panic. It's a reason to know what you're buying.
+
+## The things that actually cost real money
+
+**Foundation and drainage.** This is the big one, especially on the hill streets. I'm looking at how the house sits, whether water is being directed away from it, any signs of past movement, and what kind of foundation it has. Cracks aren't automatically a crisis, plenty of old foundations have cosmetic ones, but I want to understand what's cosmetic and what's structural. On a sloped lot, drainage is half the battle.
+
+**Plumbing.** A lot of these homes still have original galvanized steel supply lines, which corrode from the inside over decades and eventually restrict your water and leak. Copper or PEX is what you want to see. If it's still galvanized, that's not a dealbreaker, but it's a real future cost and it belongs in the negotiation.
+
+**Wiring.** Knob-and-tube wiring shows up in pre-war homes. It can be safe if it's been maintained and not buried in insulation, but a lot of insurers won't write a policy on it, which matters more than people expect. I want to know how much is left and whether it's been partially updated.
+
+**The roof.** I'm looking at the age, the number of layers, the flashing, and whether the previous owner's idea of a repair was a bucket of tar. A roof at the end of its life is a known, plannable cost. A roof that's been quietly leaking into the framing is a different conversation.
+
+**Unpermitted work.** First-time buyers underestimate this one. That finished basement, the converted garage, the addition off the back: if it was done without permits, you're inheriting it. Sometimes that's fine. Sometimes it means the work isn't to code, the square footage doesn't officially count, and you'll have a headache when you go to sell or insure. I always want to know what was permitted and what wasn't.
+
+## What's usually cosmetic
+
+Old kitchens and bathrooms, scuffed floors, a couple of ungrounded outlets, a water heater near the end of its life, dated paint, a tired fence. These show up in inspection reports in alarming-sounding language, and they're mostly just the normal cost of a house that's lived a life. They're cheap relative to the big items, and sometimes they're your negotiating room.
+
+## How we use all of this
+
+Here's what first-time buyers don't realize: a scary inspection report is a tool, not a verdict. In California you usually get the reports up front. Once I've gone through them with you and we know what's cosmetic and what's a real expense, we walk into the offer knowing roughly what this house will cost you after the sale, not just the purchase price. That knowledge is leverage. We can price it in, ask for a credit, or decide it's not the house. What we don't do is panic at 10pm because a document used the word foundation.
+
+## The take
+
+Older East Bay homes are wonderful, and they stop being scary once someone who reads them for a living walks you through what you're looking at. As a first-time buyer, you are not supposed to know whether that crack matters or what galvanized plumbing costs to replace. That's what I'm for. The goal isn't a perfect house. It's a house you bought with your eyes open.
+
+If you're looking at older homes and want someone in your corner who can tell you what a report actually means before you offer, my number and email are on the homepage. Send me a listing you're curious about and I'll give you my honest read.
+
+M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
+    `,
+    faq: [
+      {
+        question: "Should I be worried about buying a home built before 1970 in the East Bay?",
+        answer: "Not on its own. Most East Bay homes are that age, and they can be excellent buys. The key is understanding the older systems, foundation and drainage, plumbing, wiring, and roof, and knowing what's cosmetic versus a real expense before you offer. A construction-trained agent and a good inspector turn an intimidating report into a clear picture."
+      },
+      {
+        question: "Is knob-and-tube wiring a dealbreaker?",
+        answer: "Usually not, but it matters. Knob-and-tube can be safe if it's been maintained and isn't buried in insulation, but some insurers won't write a policy on it, which can affect your ability to close. You want to know how much is left and whether it's been partially updated, and factor any rewiring into your offer."
+      },
+      {
+        question: "What is galvanized plumbing and does it need to be replaced?",
+        answer: "Galvanized steel was the standard supply pipe in older homes. Over decades it corrodes from the inside, which restricts water flow and eventually leaks. It's common in pre-1970 East Bay homes and isn't an emergency, but replacement with copper or PEX is a real future cost that belongs in your negotiation."
+      },
+      {
+        question: "What's the risk of buying a home with unpermitted work?",
+        answer: "Unpermitted additions or conversions can mean the work isn't to code, the extra square footage doesn't officially count toward value, and you may face issues when you sell, insure, or refinance. It's not always a dealbreaker, but you need to know what was permitted and what wasn't before you offer, so you can price the risk in."
+      }
+    ]
+  },
+  {
     slug: "living-in-el-cerrito-local-guide",
     title: "Living in El Cerrito: My Honest Local Guide to Eating, Walking, and Why It Stands Out",
     excerpt: "I live in El Cerrito, so when a client relocating to the East Bay asks what it's actually like here, I don't pull up a chamber-of-commerce list. Here's the real version: where I'd grab coffee, what the Greenway means day to day, and what makes this small city stand out.",

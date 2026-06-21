@@ -47,6 +47,11 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
     description:
       "Estimate what you can afford in the East Bay: monthly payment, income, and down payment scenarios for El Cerrito, Richmond, Berkeley and beyond.",
   },
+  "/first-time-home-buyer": {
+    title: "First-Time Home Buyer Guide for the East Bay | Muzamil Khan, Realtor",
+    description:
+      "An honest first-time home buyer guide for the East Bay from Muzamil Khan: how much you really need (as low as 3.5% down), down-payment programs, the step-by-step process, and a 15-year construction eye on every home. Free consultation.",
+  },
   "/buyer-hub": {
     title: "First-Time Buyer Hub: East Bay Home Buying Guides | Muzamil Khan",
     description:
@@ -265,6 +270,7 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/contact", priority: 0.9 },
     { path: "/about", priority: 0.8 },
     { path: "/calculator", priority: 0.6 },
+    { path: "/first-time-home-buyer", priority: 0.9 },
     { path: "/buyer-hub", priority: 0.8 },
     { path: "/seller-hub", priority: 0.8 },
     { path: "/neighborhoods", priority: 0.8 },

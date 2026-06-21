@@ -296,7 +296,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="flex flex-row md:flex-col gap-3 flex-shrink-0">
-                <Link href="/buyer-hub">
+                <Link href="/first-time-home-buyer">
                   <Button size="sm" className="whitespace-nowrap w-full" data-testid="link-buyer-hub">
                     First-Time Buyer Guide
                     <ArrowRight className="w-3.5 h-3.5 ml-1" />
