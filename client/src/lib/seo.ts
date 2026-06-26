@@ -47,6 +47,11 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
     description:
       "Estimate what you can afford in the East Bay: monthly payment, income, and down payment scenarios for El Cerrito, Richmond, Berkeley and beyond.",
   },
+  "/start": {
+    title: "Start Here: Buy or Sell in the East Bay | Muzamil Khan, Realtor",
+    description:
+      "Tell me where you're headed in 60 seconds and I'll personally reach out with a clear next step. Buying, selling, or just exploring the East Bay, no pressure. From Muzamil Khan, Rise Group.",
+  },
   "/first-time-home-buyer": {
     title: "First-Time Home Buyer Guide for the East Bay | Muzamil Khan, Realtor",
     description:
@@ -264,6 +269,7 @@ export function getSeoForPath(path: string): PageSeo {
 export function listAllRoutes(): { path: string; lastmod?: string; priority: number }[] {
   const routes: { path: string; lastmod?: string; priority: number }[] = [
     { path: "/", priority: 1.0 },
+    { path: "/start", priority: 0.8 },
     { path: "/buy", priority: 0.9 },
     { path: "/sell", priority: 0.9 },
     { path: "/home-valuation", priority: 0.9 },

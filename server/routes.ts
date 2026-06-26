@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema, insertNewsletterSchema } from "@shared/schema";
+import { deliverLead } from "./notify";
 import { z } from "zod";
 
 export async function registerRoutes(
@@ -14,6 +15,8 @@ export async function registerRoutes(
     try {
       const data = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(data);
+      // Best-effort delivery to email + Follow Up Boss; never blocks the response.
+      await deliverLead(contact);
       res.status(201).json(contact);
     } catch (error) {
       if (error instanceof z.ZodError) {

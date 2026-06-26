@@ -23,6 +23,7 @@ import Terms from "@/pages/Terms";
 import CityPage from "@/pages/CityPage";
 import BuyerGuide from "@/pages/BuyerGuide";
 import FirstTimeBuyerGuide from "@/pages/FirstTimeBuyerGuide";
+import Start from "@/pages/Start";
 import HomeValuation from "@/pages/HomeValuation";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
 import { buyerGuides } from "@/lib/buyerGuideData";
@@ -87,6 +88,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/start" component={Start} />
       <Route path="/buy" component={Buy} />
       <Route path="/sell" component={Sell} />
       <Route path="/home-valuation" component={HomeValuation} />
