@@ -1,4 +1,3 @@
-import nodemailer from "nodemailer";
 import type { Contact } from "@shared/schema";
 
 const TYPE_LABELS: Record<string, string> = {
@@ -16,12 +15,9 @@ const TIMELINE_LABELS: Record<string, string> = {
   researching: "Just researching",
 };
 
-/** Human-readable summary of a lead, used in both the email and the FUB note. */
+/** Human-readable summary of a lead, used as the Follow Up Boss inquiry note. */
 function summarize(c: Contact): string {
   const lines = [
-    `Name: ${c.name}`,
-    `Email: ${c.email}`,
-    c.phone ? `Phone: ${c.phone}` : null,
     `Looking to: ${TYPE_LABELS[c.type || ""] || c.type}`,
     c.timeline ? `Timeline: ${TIMELINE_LABELS[c.timeline] || c.timeline}` : null,
     c.city ? `Areas of interest: ${c.city}` : null,
@@ -30,32 +26,12 @@ function summarize(c: Contact): string {
   return lines.join("\n");
 }
 
-/** Emails the lead to the agent. No-op (silent) unless SMTP env vars are set. */
-export async function sendLeadEmail(c: Contact): Promise<void> {
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) return;
-  try {
-    const port = Number(SMTP_PORT || 587);
-    const transport = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port,
-      secure: port === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
-    const to = process.env.LEAD_NOTIFY_EMAIL || "Muzamil@risegroup.com";
-    await transport.sendMail({
-      from: `"New Website Lead" <${SMTP_USER}>`,
-      to,
-      replyTo: c.email,
-      subject: `New lead: ${c.name} (${TYPE_LABELS[c.type || ""] || c.type})`,
-      text: `You have a new lead from muzamilkhanrealtor.com/start\n\n${summarize(c)}\n\nReply to this email to respond directly to ${c.name}.`,
-    });
-  } catch (err) {
-    console.error("Lead email failed:", (err as Error).message);
-  }
-}
-
-/** Creates a lead in Follow Up Boss. No-op (silent) unless FUB_API_KEY is set. */
+/**
+ * Creates a lead in Follow Up Boss via the events API. Follow Up Boss then
+ * notifies the agent (email + app) per their own notification settings.
+ * No-op (silent) unless FUB_API_KEY is set, so the form keeps working before
+ * the secret is added.
+ */
 export async function sendToFollowUpBoss(c: Contact): Promise<void> {
   const apiKey = process.env.FUB_API_KEY;
   if (!apiKey) return;
@@ -71,7 +47,6 @@ export async function sendToFollowUpBoss(c: Contact): Promise<void> {
     };
     if (lastName) person.lastName = lastName;
     if (c.phone) person.phones = [{ value: c.phone }];
-    if (c.city) person.addresses = [{ city: c.city, type: "interested" }];
 
     const res = await fetch("https://api.followupboss.com/v1/events", {
       method: "POST",
@@ -96,7 +71,7 @@ export async function sendToFollowUpBoss(c: Contact): Promise<void> {
   }
 }
 
-/** Fire both delivery channels; never throws, so a failure can't block the submission. */
+/** Deliver a lead to all configured channels; never throws, so it can't block the submission. */
 export async function deliverLead(c: Contact): Promise<void> {
-  await Promise.allSettled([sendLeadEmail(c), sendToFollowUpBoss(c)]);
+  await Promise.allSettled([sendToFollowUpBoss(c)]);
 }
