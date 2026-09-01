@@ -8,7 +8,7 @@ export default function Privacy() {
         
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <p className="text-muted-foreground mb-6">
-            Last updated: January 2025
+            Last updated: September 2026
           </p>
           
           <h2 className="text-xl font-semibold mt-8 mb-4">Information We Collect</h2>

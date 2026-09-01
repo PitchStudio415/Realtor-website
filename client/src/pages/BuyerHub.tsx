@@ -1,9 +1,10 @@
-import { Link } from "wouter";
+import { Link, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, BookOpen, ChevronDown } from "lucide-react";
-import { buyerModules } from "@/lib/content";
+import { ArrowRight, BookOpen } from "lucide-react";
+import { buyerModules, getBuyerModuleBySlug } from "@/lib/content";
 import { GuideEmailCard } from "@/components/GuideEmailCard";
+import ModulePage from "@/pages/ModulePage";
 import {
   Accordion,
   AccordionContent,
@@ -26,6 +27,12 @@ function formatContent(content: string) {
 }
 
 export default function BuyerHub() {
+  const params = useParams<{ slug?: string }>();
+  if (params.slug) {
+    const module = getBuyerModuleBySlug(params.slug);
+    if (module) return <ModulePage hub="buyer" module={module} />;
+  }
+
   return (
     <Layout>
       <section className="bg-gradient-to-b from-primary/5 to-background py-10 md:py-12">
@@ -71,10 +78,15 @@ export default function BuyerHub() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-4">
-                  <div 
+                  <div
                     className="text-sm text-muted-foreground ml-14 [&_h2]:text-foreground [&_h3]:text-foreground [&_strong]:text-foreground leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: formatContent(module.content) }}
                   />
+                  <div className="ml-14 mt-4">
+                    <Link href={`/buyer-hub/${module.slug}`} className="inline-flex items-center text-sm font-medium text-primary hover:underline" data-testid={`link-module-${module.slug}`}>
+                      Read the full guide <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}

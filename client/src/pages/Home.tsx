@@ -5,6 +5,19 @@ import { Layout } from "@/components/layout/Layout";
 import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
 import { SiInstagram, SiZillow, SiGoogle } from "react-icons/si";
 import profilePhoto from "@assets/DSC04279_1775796380065.jpeg";
+import { getBlogPostBySlug } from "@/lib/content";
+
+// Hand-picked, strongest guides to surface from the homepage for internal linking.
+const HOME_POSTS = [
+  "el-cerrito-vs-richmond-vs-hercules-where-to-buy-2026",
+  "down-payment-help-east-bay-first-time-buyers",
+  "oakland-neighborhood-guide",
+  "what-i-check-older-east-bay-home-first-time-buyer",
+  "berkeley-neighborhood-guide",
+  "west-contra-costa-county-market-outlook-2026",
+]
+  .map((slug) => getBlogPostBySlug(slug))
+  .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
 export default function Home() {
   return (
@@ -382,6 +395,37 @@ export default function Home() {
                     <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{c.blurb}</p>
                     <span className="text-sm text-primary font-medium inline-flex items-center">
                       Read the guide <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* From the blog */}
+      <section className="py-14 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-1">East Bay Insights</h2>
+              <p className="text-muted-foreground">Local market reads and honest first-time-buyer guides.</p>
+            </div>
+            <Link href="/blog" className="hidden sm:inline-flex text-sm text-primary font-medium items-center">
+              All articles <ArrowRight className="w-3.5 h-3.5 ml-1" />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {HOME_POSTS.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
+                <Card className="border border-border hover:border-primary/30 hover:shadow-md transition-all h-full cursor-pointer" data-testid={`card-home-post-${post.slug}`}>
+                  <CardContent className="p-6">
+                    <BookOpen className="w-5 h-5 text-primary mb-3" />
+                    <h3 className="text-base font-bold mb-2 leading-snug">{post.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">{post.excerpt}</p>
+                    <span className="text-sm text-primary font-medium inline-flex items-center">
+                      Read more <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </span>
                   </CardContent>
                 </Card>

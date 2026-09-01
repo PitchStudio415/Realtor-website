@@ -62,6 +62,13 @@ interface PageSeo {
   jsonLd: object[];
 }
 
+interface RouteEntry {
+  path: string;
+  lastmod?: string;
+  priority: number;
+  noSitemap?: boolean;
+}
+
 function applySeoToTemplate(template: string, seo: PageSeo, appHtml: string): string {
   const title = escapeAttr(seo.title);
   const description = escapeAttr(seo.description);
@@ -114,8 +121,7 @@ async function prerender() {
   const { render, getSeoForPath, listAllRoutes } = await import(entryUrl);
 
   const template = await readFile(path.join(PUBLIC_DIR, "index.html"), "utf-8");
-  const routes: { path: string; lastmod?: string; priority: number }[] =
-    listAllRoutes();
+  const routes: RouteEntry[] = listAllRoutes();
 
   console.log(`prerendering ${routes.length} routes...`);
   let rendered = 0;
@@ -146,6 +152,7 @@ async function prerender() {
   const { SITE_URL } = await import(entryUrl);
   const buildDate = new Date().toISOString().slice(0, 10);
   const urls = routes
+    .filter((r) => !r.noSitemap)
     .map((r) => {
       const loc = `${SITE_URL}${r.path === "/" ? "" : r.path}`;
       return [

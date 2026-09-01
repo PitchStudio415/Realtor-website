@@ -25,6 +25,7 @@ import BuyerGuide from "@/pages/BuyerGuide";
 import FirstTimeBuyerGuide from "@/pages/FirstTimeBuyerGuide";
 import Start from "@/pages/Start";
 import HomeValuation from "@/pages/HomeValuation";
+import SellWithoutAgent from "@/pages/SellWithoutAgent";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
 import { buyerGuides } from "@/lib/buyerGuideData";
 
@@ -91,6 +92,7 @@ function Router() {
       <Route path="/start" component={Start} />
       <Route path="/buy" component={Buy} />
       <Route path="/sell" component={Sell} />
+      <Route path="/selling-without-an-agent-el-cerrito" component={SellWithoutAgent} />
       <Route path="/home-valuation" component={HomeValuation} />
       <Route path="/calculator" component={Calculator} />
       <Route path="/first-time-home-buyer" component={FirstTimeBuyerGuide} />

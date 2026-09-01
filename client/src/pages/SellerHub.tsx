@@ -1,8 +1,9 @@
-import { Link } from "wouter";
+import { Link, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { sellerModules } from "@/lib/content";
+import { sellerModules, getSellerModuleBySlug } from "@/lib/content";
+import ModulePage from "@/pages/ModulePage";
 import {
   Accordion,
   AccordionContent,
@@ -25,6 +26,12 @@ function formatContent(content: string) {
 }
 
 export default function SellerHub() {
+  const params = useParams<{ slug?: string }>();
+  if (params.slug) {
+    const module = getSellerModuleBySlug(params.slug);
+    if (module) return <ModulePage hub="seller" module={module} />;
+  }
+
   return (
     <Layout>
       <section className="bg-gradient-to-b from-accent/5 to-background py-10 md:py-12">
@@ -67,10 +74,15 @@ export default function SellerHub() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-4">
-                  <div 
+                  <div
                     className="text-sm text-muted-foreground ml-14 [&_h2]:text-foreground [&_h3]:text-foreground [&_strong]:text-foreground leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: formatContent(module.content) }}
                   />
+                  <div className="ml-14 mt-4">
+                    <Link href={`/seller-hub/${module.slug}`} className="inline-flex items-center text-sm font-medium text-accent hover:underline" data-testid={`link-module-${module.slug}`}>
+                      Read the full guide <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}

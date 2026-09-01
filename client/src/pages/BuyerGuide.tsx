@@ -86,10 +86,32 @@ export default function BuyerGuide() {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://muzamilkhanrealtor.com" },
+      { "@type": "ListItem", position: 2, name: "How I Help Buyers", item: "https://muzamilkhanrealtor.com/buy" },
+      { "@type": "ListItem", position: 3, name: `Buying in ${guide.name}`, item: guide.ogUrl },
+    ],
+  };
+
+  // Contextual in-body links to the deeper local reading for this city.
+  const relatedPosts: Record<string, { slug: string; label: string }[]> = {
+    "el-cerrito": [
+      { slug: "living-in-el-cerrito-local-guide", label: "Living in El Cerrito: A Local Guide" },
+      { slug: "el-cerrito-buyer-window-2026", label: "The El Cerrito Buyer Window in 2026" },
+    ],
+    albany: [{ slug: "albany-neighborhood-guide", label: "Albany Neighborhood Guide" }],
+    berkeley: [{ slug: "berkeley-neighborhood-guide", label: "Berkeley Neighborhood Guide" }],
+  };
+  const cityPosts = relatedPosts[guide.slug] || [];
+
   return (
     <Layout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section className="bg-[#071B2C] text-white py-16 md:py-24">
@@ -232,6 +254,25 @@ export default function BuyerGuide() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Related local reading */}
+              {cityPosts.length > 0 && (
+                <Card>
+                  <CardContent className="p-5">
+                    <p className="text-xs tracking-widest uppercase text-muted-foreground mb-3">Related Reading</p>
+                    <div className="space-y-1">
+                      {cityPosts.map((p) => (
+                        <Link key={p.slug} href={`/blog/${p.slug}`}>
+                          <div className="flex items-center justify-between py-2 px-2 rounded-md hover:bg-muted/50 transition-colors cursor-pointer group" data-testid={`link-post-${p.slug}`}>
+                            <span className="text-sm font-medium">{p.label}</span>
+                            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors" />
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
             </div>
           </div>
         </div>

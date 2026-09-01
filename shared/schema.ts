@@ -62,6 +62,8 @@ export interface BlogPost {
   category: 'first-time-buyers' | 'selling' | 'financing' | 'market-basics' | 'inspections' | 'neighborhood-life';
   content: string;
   publishedAt: string;
+  /** SEO <title> (<=60 chars). Falls back to `title` (the visible H1) when unset. */
+  metaTitle?: string;
   metaDescription?: string;
   faq?: { question: string; answer: string }[];
 }

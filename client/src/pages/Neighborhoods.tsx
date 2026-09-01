@@ -23,8 +23,19 @@ function NeighborhoodDetail({ slug }: { slug: string }) {
     );
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://muzamilkhanrealtor.com" },
+      { "@type": "ListItem", position: 2, name: "East Bay Neighborhoods", item: "https://muzamilkhanrealtor.com/neighborhoods" },
+      { "@type": "ListItem", position: 3, name: neighborhood.name, item: `https://muzamilkhanrealtor.com/neighborhoods/${neighborhood.slug}` },
+    ],
+  };
+
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/neighborhoods">
@@ -162,6 +173,15 @@ function NeighborhoodDetail({ slug }: { slug: string }) {
 const CORE_SLUGS = ['albany', 'berkeley', 'oakland', 'el-cerrito', 'kensington', 'pinole'];
 // cities with a dedicated deep-dive page at /cities/:slug
 const CITY_PAGE_SLUGS = ['el-cerrito', 'richmond', 'hercules', 'san-pablo', 'pinole', 'el-sobrante', 'rodeo'];
+// Slugs whose neighborhood stub 301s to a buyer guide; link straight to the target.
+const BUYING_IN_SLUGS = ['albany', 'berkeley'];
+
+/** Canonical link target for a neighborhood card, avoiding redirect hops. */
+function neighborhoodHref(slug: string): string {
+  if (CITY_PAGE_SLUGS.includes(slug)) return `/cities/${slug}`;
+  if (BUYING_IN_SLUGS.includes(slug)) return `/buying-in-${slug}`;
+  return `/neighborhoods/${slug}`;
+}
 
 function NeighborhoodIndex() {
   const featuredSlugs = CORE_SLUGS;
@@ -194,7 +214,7 @@ function NeighborhoodIndex() {
             <p className="text-muted-foreground mb-8 text-center">The communities I know best, where I live, work, and help clients every day.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {featuredNeighborhoods.map((n) => {
-                const href = CITY_PAGE_SLUGS.includes(n.slug) ? `/cities/${n.slug}` : `/neighborhoods/${n.slug}`;
+                const href = neighborhoodHref(n.slug);
                 return (
                   <Link key={n.slug} href={href}>
                     <Card className="h-full hover-elevate cursor-pointer border-primary/20" data-testid={`card-neighborhood-${n.slug}`}>
@@ -219,7 +239,7 @@ function NeighborhoodIndex() {
             <p className="text-muted-foreground mb-8">I also serve buyers and sellers throughout the broader East Bay area.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherNeighborhoods.map((n) => (
-                <Link key={n.slug} href={CITY_PAGE_SLUGS.includes(n.slug) ? `/cities/${n.slug}` : `/neighborhoods/${n.slug}`}>
+                <Link key={n.slug} href={neighborhoodHref(n.slug)}>
                   <Card className="h-full hover-elevate cursor-pointer" data-testid={`card-neighborhood-${n.slug}`}>
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-lg mb-2">{n.name}</h3>

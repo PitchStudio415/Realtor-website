@@ -10,6 +10,7 @@ import {
 } from "./content";
 import { cities, getCityBySlug } from "./cityData";
 import { buyerGuides, getBuyerGuideBySlug } from "./buyerGuideData";
+import { REDIRECT_SOURCES } from "@shared/redirects";
 
 export const SITE_URL = "https://muzamilkhanrealtor.com";
 const SITE_NAME = "Muzamil Khan Real Estate";
@@ -41,6 +42,11 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
     title: "Free East Bay Home Valuation | Muzamil Khan Realtor",
     description:
       "Get a real valuation for your El Cerrito or East Bay home — based on live market data and 15 years of construction experience, not an algorithm. Free, no obligation, 24-hour response.",
+  },
+  "/selling-without-an-agent-el-cerrito": {
+    title: "Selling Your El Cerrito Home Without an Agent (FSBO)",
+    description:
+      "Thinking of selling your El Cerrito home without an agent? An honest FSBO breakdown: what you save, what you take on, the California disclosures you owe, and when going it alone actually pays off.",
   },
   "/calculator": {
     title: "East Bay Home Affordability Calculator | Muzamil Khan",
@@ -98,6 +104,7 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
 };
 
 const SITE_IMAGE = `${SITE_URL}/muzamil-khan.jpg`;
+const SITE_LOGO = `${SITE_URL}/muzamil-logo.jpg`;
 
 // Publisher node, @id-linked to the sitewide RealEstateAgent declared in
 // index.html so engines resolve the byline to the same Muzamil Khan entity.
@@ -107,7 +114,9 @@ const PUBLISHER_NODE = {
   name: SITE_NAME,
   logo: {
     "@type": "ImageObject",
-    url: SITE_IMAGE,
+    url: SITE_LOGO,
+    width: 512,
+    height: 512,
   },
 };
 
@@ -188,9 +197,12 @@ export function getSeoForPath(path: string): PageSeo {
         ]),
       ];
       if (post.faq?.length) jsonLd.push(faqJsonLd(post.faq));
+      // Keep the long editorial headline as the on-page H1, but use a short
+      // metaTitle (<=60 chars) for the <title> so Google doesn't truncate it.
+      // No brand suffix on posts; it only ate the keyword-bearing part.
       return {
         ...base,
-        title: `${post.title} | ${SITE_NAME}`,
+        title: post.metaTitle || post.title,
         description: post.metaDescription || post.excerpt,
         ogType: "article",
         jsonLd,
@@ -265,13 +277,15 @@ export function getSeoForPath(path: string): PageSeo {
   return base;
 }
 
-/** Every prerenderable route on the site, with lastmod where known. Drives prerendering and the sitemap. */
-export function listAllRoutes(): { path: string; lastmod?: string; priority: number }[] {
-  const routes: { path: string; lastmod?: string; priority: number }[] = [
+/** Every prerenderable route on the site, with lastmod where known. Drives prerendering and the sitemap.
+ *  `noSitemap` routes are still prerendered but kept out of sitemap.xml. */
+export function listAllRoutes(): { path: string; lastmod?: string; priority: number; noSitemap?: boolean }[] {
+  const routes: { path: string; lastmod?: string; priority: number; noSitemap?: boolean }[] = [
     { path: "/", priority: 1.0 },
     { path: "/start", priority: 0.8 },
     { path: "/buy", priority: 0.9 },
     { path: "/sell", priority: 0.9 },
+    { path: "/selling-without-an-agent-el-cerrito", priority: 0.8 },
     { path: "/home-valuation", priority: 0.9 },
     { path: "/contact", priority: 0.9 },
     { path: "/about", priority: 0.8 },
@@ -281,8 +295,8 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/seller-hub", priority: 0.8 },
     { path: "/neighborhoods", priority: 0.8 },
     { path: "/blog", priority: 0.8 },
-    { path: "/privacy", priority: 0.1 },
-    { path: "/terms", priority: 0.1 },
+    { path: "/privacy", priority: 0.1, noSitemap: true },
+    { path: "/terms", priority: 0.1, noSitemap: true },
   ];
   const buildMs = Date.now();
   for (const post of blogPosts) {
@@ -298,7 +312,10 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     routes.push({ path: `/seller-hub/${mod.slug}`, priority: 0.6 });
   }
   for (const hood of neighborhoods) {
-    routes.push({ path: `/neighborhoods/${hood.slug}`, priority: 0.6 });
+    const path = `/neighborhoods/${hood.slug}`;
+    // Skip stubs that 301 to a richer /cities/* or /buying-in-* page.
+    if (REDIRECT_SOURCES.has(path)) continue;
+    routes.push({ path, priority: 0.6 });
   }
   for (const city of cities) {
     routes.push({ path: `/cities/${city.slug}`, priority: 0.8 });

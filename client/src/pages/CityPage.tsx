@@ -83,10 +83,21 @@ export default function CityPage() {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://muzamilkhanrealtor.com" },
+      { "@type": "ListItem", position: 2, name: "East Bay Neighborhoods", item: "https://muzamilkhanrealtor.com/neighborhoods" },
+      { "@type": "ListItem", position: 3, name: city.name, item: city.ogUrl },
+    ],
+  };
+
   return (
     <Layout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section className="bg-[#071B2C] text-white py-16 md:py-24">

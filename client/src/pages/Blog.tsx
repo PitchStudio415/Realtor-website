@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, ArrowLeft, Search, Calendar, ChevronDown } from "lucide-react";
 import { blogPosts, getBlogPostBySlug, isPublished } from "@/lib/content";
+import { renderMarkdown } from "@/lib/markdown";
+import type { BlogPost } from "@shared/schema";
 
 // Baked at build time (vite define). Falls back to now if the prerender
 // context doesn't apply the define. Used as the stable first-render reference
@@ -55,6 +57,48 @@ function FaqAccordion({ faq }: { faq: { question: string; answer: string }[] }) 
   );
 }
 
+/** Author box for E-E-A-T: a visible, linked byline block AI engines can read. */
+function AuthorBox() {
+  return (
+    <aside className="mt-12 pt-8 border-t border-border flex items-start gap-4">
+      <img src="/muzamil-logo.jpg" alt="Muzamil Khan, East Bay Realtor" width={64} height={64} className="w-16 h-16 rounded-full object-cover flex-shrink-0" loading="lazy" />
+      <div>
+        <h3 className="font-semibold">
+          <Link href="/about" className="hover:text-primary">Muzamil Khan</Link>, Realtor · DRE #02400805
+        </h3>
+        <p className="text-sm text-muted-foreground mt-1">
+          East Bay agent with 15 years in construction, based in El Cerrito. I help first-time buyers,
+          movers, and sellers across El Cerrito, Albany, Berkeley, Kensington, Richmond and Oakland, and
+          I read inspection reports differently than most agents. <Link href="/about" className="text-primary hover:underline">More about me</Link>.
+        </p>
+      </div>
+    </aside>
+  );
+}
+
+/** Contextual in-body links to related posts (same category first), for internal linking. */
+function RelatedPosts({ current }: { current: BlogPost }) {
+  const pool = blogPosts.filter((p) => p.slug !== current.slug && isPublished(p));
+  const sameCat = pool.filter((p) => p.category === current.category);
+  const picks = [...sameCat, ...pool.filter((p) => p.category !== current.category)].slice(0, 3);
+  if (!picks.length) return null;
+  return (
+    <section className="mt-12 pt-8 border-t border-border">
+      <h2 className="text-xl font-bold mb-5">Keep reading</h2>
+      <div className="grid sm:grid-cols-3 gap-4">
+        {picks.map((p) => (
+          <Link key={p.slug} href={`/blog/${p.slug}`}>
+            <div className="h-full rounded-lg border bg-card p-4 hover-elevate cursor-pointer">
+              <Badge variant="secondary" className="text-xs mb-2">{p.category.replace(/-/g, " ")}</Badge>
+              <h3 className="font-semibold text-sm leading-snug">{p.title}</h3>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function BlogPostPage({ slug }: { slug: string }) {
   const post = getBlogPostBySlug(slug);
 
@@ -101,24 +145,24 @@ function BlogPostPage({ slug }: { slug: string }) {
           <h1 className="text-3xl md:text-4xl font-bold" data-testid="text-blog-title">
             {post.title}
           </h1>
+          <div className="flex items-center gap-3 mt-4">
+            <img src="/muzamil-logo.jpg" alt="Muzamil Khan" width={40} height={40} className="w-10 h-10 rounded-full object-cover" loading="lazy" />
+            <p className="text-sm text-muted-foreground">
+              By <Link href="/about" className="font-medium text-foreground hover:text-primary">Muzamil Khan</Link>, Realtor, DRE #02400805
+            </p>
+          </div>
         </div>
-        
-        <div 
-          className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-6 prose-h3:text-lg prose-h3:mt-4 prose-p:text-muted-foreground prose-p:my-2 prose-li:text-muted-foreground prose-strong:text-foreground"
-          dangerouslySetInnerHTML={{ 
-            __html: post.content
-              .replace(/^# .+\n/m, '')
-              .replace(/### (.+)/g, '</p><h3>$1</h3><p>')
-              .replace(/## (.+)/g, '</p><h2>$1</h2><p>')
-              .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-              .replace(/^- /gm, '&#x2022; ')
-              .replace(/\n- /g, '<br/>&#x2022; ')
-              .replace(/\n\n+/g, '</p><p>')
-              .replace(/\n/g, '<br/>')
-          }}
+
+        <div
+          className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-6 prose-h3:text-lg prose-h3:mt-4 prose-p:text-muted-foreground prose-p:my-2 prose-li:text-muted-foreground prose-strong:text-foreground prose-a:text-primary"
+          dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content, { dropH1: true }) }}
         />
 
         {post.faq && post.faq.length > 0 && <FaqAccordion faq={post.faq} />}
+
+        <RelatedPosts current={post} />
+
+        <AuthorBox />
         
         <div className="mt-12 pt-8 border-t border-border">
           <h3 className="font-semibold mb-2">Have a question about your move?</h3>

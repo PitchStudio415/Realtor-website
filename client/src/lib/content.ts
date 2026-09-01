@@ -4,6 +4,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "down-payment-help-east-bay-first-time-buyers",
     title: "You Can Buy Your First East Bay Home With as Little as 3.5% Down. Here's How.",
+    metaTitle: "Buy Your First East Bay Home With as Little as 3.5% Down",
     excerpt: "Most of my first-time East Bay buyers get in with a fraction of 20% down, and many qualify for help they've never heard of. Here's what the down payment actually looks like, the loan options that lower it, and the California programs that can cover part of it.",
     category: "first-time-buyers",
     publishedAt: "2026-06-18",
@@ -71,6 +72,7 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
   {
     slug: "what-i-check-older-east-bay-home-first-time-buyer",
     title: "Most East Bay Homes Predate 1970. Here's What I Check Before You Offer.",
+    metaTitle: "What I Check on Older East Bay Homes Before You Offer",
     excerpt: "First-time buyers fall in love with a charming old East Bay house, then a thick inspection report scares them off the next morning. With 15 years in construction behind me, here's what I actually look at, and what's worth worrying about versus what isn't.",
     category: "first-time-buyers",
     publishedAt: "2026-06-18",
@@ -136,6 +138,7 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
   {
     slug: "living-in-el-cerrito-local-guide",
     title: "Living in El Cerrito: My Honest Local Guide to Eating, Walking, and Why It Stands Out",
+    metaTitle: "Living in El Cerrito: An Honest Local Guide",
     excerpt: "I live in El Cerrito, so when a client relocating to the East Bay asks what it's actually like here, I don't pull up a chamber-of-commerce list. Here's the real version: where I'd grab coffee, what the Greenway means day to day, and what makes this small city stand out.",
     category: "neighborhood-life",
     publishedAt: "2026-06-29",
@@ -196,6 +199,7 @@ If you'd like, I'm always glad to show a relocating client around my own city, t
   {
     slug: "oakland-neighborhood-guide",
     title: "Oakland Neighborhood Guide: Where Your Money Goes, Pocket by Pocket, From the Flats to the Hills",
+    metaTitle: "Oakland Neighborhood Guide: Where Your Money Goes",
     excerpt: "On paper, Oakland can mean a $600K starter or a $3M view home, all under one city name. Like Berkeley, it really moves as a dozen separate markets. Here's how the pockets break down, what to plan for, and how to rank what matters before you start.",
     category: "market-basics",
     publishedAt: "2026-06-26",
@@ -278,6 +282,7 @@ If you'd like a read on a specific Oakland pocket or block, or an honest opinion
   {
     slug: "albany-neighborhood-guide",
     title: "Albany Is One Square Mile and Three Different Buys. Here's How to Read It.",
+    metaTitle: "Albany Neighborhood Guide: Three Different Buys",
     excerpt: "Albany is small enough to walk across, and people assume that means one price. It doesn't. The schools, Solano Avenue, and the climb toward Albany Hill split it into a few distinct buys. Here's how my clients figure out which part fits.",
     category: "market-basics",
     publishedAt: "2026-06-23",
@@ -352,6 +357,7 @@ If you'd like a read on a specific Albany block, or an honest opinion on whether
   {
     slug: "east-bay-market-update-spring-2026",
     title: "The East Bay Market Right Now: More Room for Buyers, Still Worth Preparing For",
+    metaTitle: "East Bay Market Update, Spring 2026: More Buyer Room",
     excerpt: "Inventory is loosening across the East Bay and buyers have more negotiating room than they've had in a while. The numbers also say preparation still wins. Here's my calm read on where Alameda and Contra Costa stand this spring, and what my clients are doing about it.",
     category: "market-basics",
     publishedAt: "2026-06-20",
@@ -411,6 +417,7 @@ If you'd like a second read on any of it, I'm glad to help. Tell me what you're 
   {
     slug: "el-cerrito-buyer-window-2026",
     title: "El Cerrito Dropped 8% While Berkeley Still Sells Over Asking. Here's the Opportunity.",
+    metaTitle: "El Cerrito Is Down 8%: A 2026 Buyer's Window",
     excerpt: "One East Bay city is down 8% year over year while its neighbor a mile away still sells 27% over list. My clients who prepare for a gap like that tend to do well. Here's my honest read on the El Cerrito window right now.",
     category: "market-basics",
     publishedAt: "2026-06-17",
@@ -479,6 +486,7 @@ If you'd like a second opinion on a listing, or a read on a specific El Cerrito 
   {
     slug: "berkeley-neighborhood-guide",
     title: "Berkeley Neighborhood Guide: Where Your Money Actually Goes, From the Flats to the Hills",
+    metaTitle: "Berkeley Neighborhood Guide: Where Your Money Goes",
     excerpt: "Berkeley runs from an attainable entry point to four million dollar view homes, all under one city name. Here is how the neighborhoods really break down, what the older homes cost after the sale, and how to rank what matters before you start.",
     category: "market-basics",
     publishedAt: "2026-06-11",
@@ -569,6 +577,7 @@ If you want a second set of eyes on your list, or a read on a specific Berkeley 
   {
     slug: "pre-approval-proof-of-funds-east-bay-offer",
     title: "Pre-Approval and Proof of Funds: Why Both Matter Before You Write Your First East Bay Offer",
+    metaTitle: "Pre-Approval vs Proof of Funds Before Your Offer",
     excerpt: "The most fixable mistake first-time East Bay buyers make is showing up to write an offer without their pre-approval and proof of funds in order. Here's what each one is, why both matters, and the gotchas I see most often.",
     category: "first-time-buyers",
     publishedAt: "2026-04-30",
@@ -658,6 +667,7 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
   {
     slug: "el-cerrito-vs-richmond-vs-hercules-where-to-buy-2026",
     title: "El Cerrito vs Richmond vs Hercules: Where Should You Buy in 2026?",
+    metaTitle: "El Cerrito vs Richmond vs Hercules: Where to Buy 2026",
     excerpt: "A side-by-side comparison of El Cerrito, Richmond, and Hercules CA for home buyers. Prices, schools, commute, lifestyle, and which city fits your situation.",
     category: "market-basics",
     publishedAt: "2026-04-15",
@@ -777,6 +787,7 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
   {
     slug: "best-neighborhoods-in-richmond-for-first-time-buyers",
     title: "Best Neighborhoods in Richmond CA for First-Time Buyers in 2026",
+    metaTitle: "Best Richmond CA Neighborhoods for First-Time Buyers",
     excerpt: "A neighborhood-by-neighborhood breakdown of where first-time buyers should look in Richmond CA. Prices, vibes, commutes, and what to watch for.",
     category: "first-time-buyers",
     publishedAt: "2026-04-14",
@@ -888,6 +899,7 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
   {
     slug: "west-contra-costa-county-market-outlook-2026",
     title: "2026 West Contra Costa County Market Outlook: City-by-City Breakdown",
+    metaTitle: "2026 West Contra Costa County Market Outlook",
     excerpt: "Current median home prices, year-over-year trends, and what to expect across El Cerrito, Richmond, Hercules, San Pablo, Pinole, El Sobrante, and Rodeo in 2026.",
     category: "market-basics",
     publishedAt: "2026-04-14",
@@ -995,6 +1007,7 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
   {
     slug: "first-home-offer-mistakes",
     title: "The Offer Mistakes That Cost First-Time Buyers in the Bay Area",
+    metaTitle: "Offer Mistakes That Cost First-Time Bay Area Buyers",
     excerpt: "I see the same errors over and over. Here's what trips up new buyers and how to avoid it.",
     category: "first-time-buyers",
     publishedAt: "2025-01-10",
@@ -1066,6 +1079,7 @@ Getting pre-approved for a mortgage is one of the first steps in your home buyin
   {
     slug: "bay-area-closing-costs",
     title: "What I Tell Buyers About Closing Costs Before They Fall in Love With a House",
+    metaTitle: "What Buyers Should Know About Bay Area Closing Costs",
     excerpt: "Closing costs catch first-timers off guard. Here's what to budget for in the Bay Area.",
     category: "first-time-buyers",
     publishedAt: "2025-01-01",
@@ -1177,6 +1191,7 @@ A credit reduces what the buyer pays at closing. If they're buying at $900,000 w
   {
     slug: "home-inspection-findings",
     title: "What Inspectors Almost Always Find in East Bay Homes (and What It Means)",
+    metaTitle: "What Inspectors Almost Always Find in East Bay Homes",
     excerpt: "I've been through hundreds of inspections. Here are the findings that actually matter in this market.",
     category: "inspections",
     publishedAt: "2024-12-10",
