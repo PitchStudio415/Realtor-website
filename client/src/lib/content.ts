@@ -28,7 +28,7 @@ Plenty of first-time buyers put down 20% when they have it, because skipping mor
 
 **Low-down conventional loans.** You don't have to choose between 3.5% and 20%. Conventional loans can go to 5%, sometimes 3%, down. You'll pay private mortgage insurance until you build enough equity, and then it can come off. For buyers with stronger credit, this is often a better long-term deal than FHA.
 
-**California down payment assistance.** This is the part most first-time buyers have never heard of. CalHFA, the state housing finance agency, runs programs that help eligible first-time buyers with the down payment and sometimes closing costs. There are income limits, price limits, and a homebuyer education requirement, and the programs change, so I'm not going to quote you specific numbers that might be stale by the time you read this. What I'll tell you is that they're real, and the way you find out if you qualify is by talking to a CalHFA-approved lender. It costs nothing to ask.
+**California down payment assistance.** This is the part most first-time buyers have never heard of. [CalHFA](https://www.calhfa.ca.gov/), the state housing finance agency, runs programs that help eligible first-time buyers with the down payment and sometimes closing costs. There are income limits, price limits, and a homebuyer education requirement, and the programs change, so I'm not going to quote you specific numbers that might be stale by the time you read this. What I'll tell you is that they're real, and the way you find out if you qualify is by talking to a CalHFA-approved lender. It costs nothing to ask.
 
 ## The catch, so you're not surprised
 
@@ -239,7 +239,7 @@ Here's the citywide anchor. Oakland's median sale price has lately run around $8
 
 ### Plan for one Oakland-specific cost: the transfer tax
 
-Oakland charges its own city real property transfer tax on top of the county's, and it's one of the higher ones in the state. It's tiered by purchase price, so the rate climbs as the price climbs. As of 2026, per the City of Oakland, the city rate runs 1.0% on homes up to $300,000, 1.5% from $300,001 to $2 million, 1.75% from $2 million to $5 million, and 2.5% above $5 million, with a reduced rate in the lower tiers for qualifying first-time owner-occupants. The county adds its own $1.10 per $1,000 on top. On an $850,000 home, that's about $12,750 in city transfer tax plus roughly $935 to the county, close to $13,700 all in. My clients build that into their cash-to-close from day one so it never shows up as a surprise at the end. This is exactly the kind of number my construction-and-numbers approach is built to catch early. (Confirm current rates with the City of Oakland, they do change.)
+Oakland charges its own city real property transfer tax on top of the county's, and it's one of the higher ones in the state. It's tiered by purchase price, so the rate climbs as the price climbs. As of 2026, per the [City of Oakland](https://www.oaklandca.gov/), the city rate runs 1.0% on homes up to $300,000, 1.5% from $300,001 to $2 million, 1.75% from $2 million to $5 million, and 2.5% above $5 million, with a reduced rate in the lower tiers for qualifying first-time owner-occupants. The county adds its own $1.10 per $1,000 on top. On an $850,000 home, that's about $12,750 in city transfer tax plus roughly $935 to the county, close to $13,700 all in. My clients build that into their cash-to-close from day one so it never shows up as a surprise at the end. This is exactly the kind of number my construction-and-numbers approach is built to catch early. (Confirm current rates with the City of Oakland, they do change.)
 
 ### Rank what matters before you tour
 
@@ -296,7 +296,7 @@ Let me walk you through it the way I would if we were driving around together, w
 
 There's no way around it. The biggest single reason people pay what they pay in Albany is the school district. Albany Unified carries one of the strongest reputations in the East Bay, and families move here specifically for it, year after year. That demand is the engine under Albany prices, and it's why a small city with modest lot sizes commands the kind of money it does.
 
-Here's the citywide anchor. Albany's median sale price has lately run around $1.6 million, up roughly 15% from a year ago, according to Redfin in early 2026. For such a small city that number is striking: it sits at or even above Berkeley's median, despite Albany's smaller lots and modest homes. Homes still tend to sell well over list, often around 20% or more in the most competitive pockets, and go pending in about 12 days. I share that early with every client, because Albany rarely gives a buyer a slow, easy market. The schools keep a floor under it.
+Here's the citywide anchor. Albany's median sale price has lately run around $1.6 million, up roughly 15% from a year ago, according to [Redfin](https://www.redfin.com/news/data-center/) in early 2026. For such a small city that number is striking: it sits at or even above Berkeley's median, despite Albany's smaller lots and modest homes. Homes still tend to sell well over list, often around 20% or more in the most competitive pockets, and go pending in about 12 days. I share that early with every client, because Albany rarely gives a buyer a slow, easy market. The schools keep a floor under it.
 
 ### The flats: most of Albany, and the walkable heart
 
@@ -425,7 +425,7 @@ If you'd like a second read on any of it, I'm glad to help. Tell me what you're 
     content: `
 I live in El Cerrito and I work across the East Bay, so I watch these neighboring markets move against each other in real time. A gap opened up recently that's worth attention, and most buyers haven't spotted it yet.
 
-Here's the short version. El Cerrito's median sale price has been running around $1.1 million, down roughly 8% from a year ago, according to Redfin. One city south, Berkeley sits around $1.4 million and has barely moved, still selling at about 27% over list. Same BART line. Often the same commute. Very different price story.
+Here's the short version. El Cerrito's median sale price has been running around $1.1 million, down roughly 8% from a year ago, according to [Redfin](https://www.redfin.com/news/data-center/). One city south, Berkeley sits around $1.4 million and has barely moved, still selling at about 27% over list. Same BART line. Often the same commute. Very different price story.
 
 When two neighboring markets drift apart like this, it usually signals something temporary. And temporary gaps reward the clients who come prepared.
 
@@ -500,7 +500,7 @@ Let me walk you through it the way I would if we were driving around together.
 
 Berkeley climbs from the bay up into the hills, and the higher you go, the more you pay. The flats, out west toward the water, hold the more attainable, walkable, transit-connected homes. The hills, east toward Tilden, give you the big lots, the views, and the prices that come with them. Almost every question a client asks me about Berkeley gets clearer once we place a neighborhood on that slope.
 
-Here is the citywide anchor. The median sale price has been running around $1.4 million, according to Redfin, and even with prices off slightly from a year ago, homes still sell at roughly 27% over list and go pending in about 15 days. I share those numbers early with every client. A softer market can still move fast, and Berkeley does. Knowing that up front is how my clients show up ready instead of surprised.
+Here is the citywide anchor. The median sale price has been running around $1.4 million, according to [Redfin](https://www.redfin.com/news/data-center/), and even with prices off slightly from a year ago, homes still sell at roughly 27% over list and go pending in about 15 days. I share those numbers early with every client. A softer market can still move fast, and Berkeley does. Knowing that up front is how my clients show up ready instead of surprised.
 
 ### Berkeley neighborhood by neighborhood
 
@@ -520,7 +520,7 @@ Berkeley's charm comes from its old housing stock, and that same old housing sto
 
 None of that has to scare anyone off. It belongs in the offer. Something is always imperfect in a hundred-year-old home, so the real question becomes what a repair actually costs and whether the price already reflects it. Getting my clients to that number is most of my job.
 
-**Plan for one Berkeley-specific cost: the transfer tax.** Berkeley charges its own city transfer tax on top of the county's, and it adds up. The current city rate runs 1.5% on homes up to $1.7 million and 2.5% above that, per the City of Berkeley. On a $1.4 million purchase, that's real money to plan for, and Measure W, already approved by voters, raises these rates starting in 2027. My clients build this into their cash-to-close from day one, so it never shows up as a surprise at the end.
+**Plan for one Berkeley-specific cost: the transfer tax.** Berkeley charges its own city transfer tax on top of the county's, and it adds up. The current city rate runs 1.5% on homes up to $1.7 million and 2.5% above that, per the [City of Berkeley](https://www.cityofberkeley.info/). On a $1.4 million purchase, that's real money to plan for, and Measure W, already approved by voters, raises these rates starting in 2027. My clients build this into their cash-to-close from day one, so it never shows up as a surprise at the end.
 
 ### Rank what matters before you look at neighborhoods
 
@@ -603,7 +603,7 @@ You need both. They answer different questions. The pre-approval says "the bank 
 
 In a slower market in some other part of the country, you might get away with writing an offer first and scrambling for paperwork later. Not here. When a listing in Berkeley or El Cerrito gets 4 to 8 offers in a weekend, the listing agent is going to spend about 90 seconds on each one. If your packet is missing the pre-approval or the proof of funds, you're not getting a careful read. You're getting moved to the bottom of the pile, or skipped entirely.
 
-If you want to see why this matters, go to redfin.com or zillow.com and pull up the recently sold listings in any East Bay city you're looking at. Look at how many of them sold within a week of going on the market. That's how fast you have to move. There's no time to start gathering paperwork after you find the house.
+If you want to see why this matters, go to [Redfin](https://www.redfin.com/news/data-center/) or [Zillow](https://www.zillow.com/) and pull up the recently sold listings in any East Bay city you're looking at. Look at how many of them sold within a week of going on the market. That's how fast you have to move. There's no time to start gathering paperwork after you find the house.
 
 ## The gotchas I see most often
 
@@ -855,7 +855,7 @@ Best for: Buyers who want the El Cerrito or Albany lifestyle at a Richmond price
 
 ### What First-Time Buyers Should Know About Richmond
 
-**Down payment assistance exists.** CalHFA, GSFA, and Contra Costa County programs can help with 3 to 5 percent of the purchase price. I walk every first-time buyer through these options.
+**Down payment assistance exists.** [CalHFA](https://www.calhfa.ca.gov/), GSFA, and Contra Costa County programs can help with 3 to 5 percent of the purchase price. I walk every first-time buyer through these options.
 
 **Inspections matter more here.** Older housing stock means you need a thorough inspection. My construction background means I catch things other agents miss. I will walk through the inspection report with you line by line.
 
@@ -941,7 +941,7 @@ My take: Hercules is underpriced for what you get. If you have a 5-year horizon,
 
 San Pablo is the most affordable city in West Contra Costa. It is walkable to El Cerrito BART, which is a fact most people do not know. The housing stock is older and smaller, but the price-to-location ratio is hard to beat anywhere in the Bay Area.
 
-Prices are stable. No dramatic moves up or down. First-time buyers using FHA or CalHFA down payment assistance programs should have San Pablo on their list.
+Prices are stable. No dramatic moves up or down. First-time buyers using FHA or [CalHFA](https://www.calhfa.ca.gov/) down payment assistance programs should have San Pablo on their list.
 
 My take: If you are stretching to get into the Bay Area and you want BART access, San Pablo gives you that for $200K less than El Cerrito. The trade-offs are real (older homes, smaller lots), but the math works.
 
