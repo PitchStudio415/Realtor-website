@@ -202,12 +202,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Zillow Testimonials */}
+      {/* Client Testimonials */}
       <section className="py-14 bg-muted/40 border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-8">
+            <SiGoogle className="w-5 h-5 text-[#4285F4]" />
             <SiZillow className="w-5 h-5 text-[#006AFF]" />
-            <span className="text-sm font-medium text-muted-foreground">Verified Zillow Reviews</span>
+            <span className="text-sm font-medium text-muted-foreground">Verified 5-Star Client Reviews</span>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
 
@@ -245,7 +246,7 @@ export default function Home() {
 
             {/* Jimmy Moore */}
             <a
-              href="https://www.zillow.com/profile/muzamil7"
+              href="https://www.google.com/maps?cid=4248271409235072484"
               target="_blank"
               rel="noopener noreferrer"
               className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
@@ -277,7 +278,7 @@ export default function Home() {
 
             {/* Timothy */}
             <a
-              href="https://www.zillow.com/profile/muzamil7"
+              href="https://www.google.com/maps?cid=4248271409235072484"
               target="_blank"
               rel="noopener noreferrer"
               className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
@@ -309,7 +310,7 @@ export default function Home() {
 
             {/* tenisi elena */}
             <a
-              href="https://www.zillow.com/profile/muzamil7"
+              href="https://www.google.com/maps?cid=4248271409235072484"
               target="_blank"
               rel="noopener noreferrer"
               className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
