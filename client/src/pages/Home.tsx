@@ -211,6 +211,70 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
 
+            {/* Karen & Dave */}
+            <a
+              href="https://www.zillow.com/profile/muzamil7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
+              data-testid="testimonial-karen"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
+              </div>
+              <p className="text-foreground leading-relaxed mb-5 italic">
+                "Muzamil did an outstanding job getting us the home of our dreams. He was able to negotiate a price that saved us from a bidding war which saved us thousands. Highly recommend. He is going to sell my house too and I am super confident he will do an exceptional job."
+              </p>
+              <div>
+                <p className="font-semibold text-sm text-foreground">Karen &amp; Dave</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Bought and sold a single family home · Benicia, CA · August 2026</p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 mt-4">
+                {["Local knowledge", "Process expertise", "Responsiveness", "Negotiation skills"].map((tag) => (
+                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </a>
+
+            {/* Jimmy Moore */}
+            <a
+              href="https://www.zillow.com/profile/muzamil7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
+              data-testid="testimonial-jimmy"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
+              </div>
+              <p className="text-foreground leading-relaxed mb-5 italic">
+                "Muzamil helped me find my perfect home from three time zones away. I was relocating from the East Coast to the Bay Area. He helped me identify potential properties and then arranged an entire weekend of property tours in which we hit roughly 15 different homes. Once we settled on the perfect fit, he helped guide me through an especially tricky closing process, including finding a new lender at the last minute after my first fell through. He also coordinated multiple contractors working on my home post closing. I am eternally grateful for his patience and guidance."
+              </p>
+              <div>
+                <p className="font-semibold text-sm text-foreground">Jimmy Moore</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Relocated and bought a home · Bay Area · July 2026</p>
+              </div>
+              <div className="flex flex-wrap gap-1.5 mt-4">
+                {["Relocation", "Process expertise", "Responsiveness", "Coordination"].map((tag) => (
+                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </a>
+
             {/* Timothy */}
             <a
               href="https://www.zillow.com/profile/muzamil7"
