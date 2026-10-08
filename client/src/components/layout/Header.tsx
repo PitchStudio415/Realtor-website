@@ -23,6 +23,7 @@ const navItems = [
   },
   { label: "Neighborhoods", href: "/neighborhoods" },
   { label: "Blog", href: "/blog" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "About", href: "/about" },
 ];
 

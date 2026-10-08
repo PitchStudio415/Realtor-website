@@ -17,6 +17,7 @@ import SellerHub from "@/pages/SellerHub";
 import Neighborhoods from "@/pages/Neighborhoods";
 import Blog from "@/pages/Blog";
 import About from "@/pages/About";
+import Testimonials from "@/pages/Testimonials";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
@@ -105,6 +106,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={Blog} />
       <Route path="/about" component={About} />
+      <Route path="/testimonials" component={Testimonials} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />

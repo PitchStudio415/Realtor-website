@@ -88,6 +88,11 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
     description:
       "15 years in construction, 10+ years in El Cerrito. Meet Muzamil Khan, the East Bay Realtor who reads inspection reports differently. DRE #02400805.",
   },
+  "/testimonials": {
+    title: "Client Testimonials & Reviews | Muzamil Khan, East Bay Realtor®",
+    description:
+      "Video client stories and verified 5-star Google and Zillow reviews for Muzamil Khan, East Bay Realtor. Real clients, real closings in El Cerrito, Berkeley, Benicia, Pittsburg and beyond.",
+  },
   "/contact": {
     title: "Contact Muzamil Khan | East Bay Realtor® | Free Consultation",
     description:
@@ -289,6 +294,7 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/home-valuation", priority: 0.9 },
     { path: "/contact", priority: 0.9 },
     { path: "/about", priority: 0.8 },
+    { path: "/testimonials", priority: 0.8 },
     { path: "/calculator", priority: 0.6 },
     { path: "/first-time-home-buyer", priority: 0.9 },
     { path: "/buyer-hub", priority: 0.8 },
