@@ -6,6 +6,7 @@ import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, Externa
 import { SiInstagram, SiZillow, SiGoogle } from "react-icons/si";
 import profilePhoto from "@assets/DSC04279_1775796380065.jpeg";
 import { getBlogPostBySlug } from "@/lib/content";
+import { ReelCard } from "@/components/ReelCard";
 
 // Hand-picked, strongest guides to surface from the homepage for internal linking.
 const HOME_POSTS = [
@@ -340,6 +341,55 @@ export default function Home() {
               </div>
             </a>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Client Stories — video testimonials */}
+      <section className="py-16 md:py-20 bg-[#071B2C] text-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs tracking-widest uppercase text-white/40 mb-3 font-medium text-center">Client Stories</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">Real clients. Real keys.</h2>
+          <p className="text-white/70 text-center max-w-xl mx-auto mb-12 leading-relaxed">
+            A few recent closings, straight from the front door. This is what working together actually looks like.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <div data-testid="client-story-durham">
+              <ReelCard
+                src="/videos/client-story-durham.mp4"
+                poster="/videos/client-story-durham-poster.jpg"
+                title="Karen and Dave, 316 Durham Ct, Benicia"
+                testId="reel-story-durham"
+              />
+              <div className="text-center mt-3 max-w-xs mx-auto">
+                <p className="text-sm font-medium">"He saved us thousands in a bidding war."</p>
+                <p className="text-xs text-white/55 mt-1">Karen &amp; Dave &middot; 316 Durham Ct, Benicia</p>
+              </div>
+            </div>
+            <div data-testid="client-story-camelia">
+              <ReelCard
+                src="/videos/client-story-camelia.mp4"
+                poster="/videos/client-story-camelia-poster.jpg"
+                title="Sold in Berkeley, 1175 Camelia St"
+                testId="reel-story-camelia"
+              />
+              <div className="text-center mt-3 max-w-xs mx-auto">
+                <p className="text-sm font-medium">Sold in Berkeley.</p>
+                <p className="text-xs text-white/55 mt-1">1175 Camelia St, Berkeley</p>
+              </div>
+            </div>
+            <div data-testid="client-story-warren">
+              <ReelCard
+                src="/videos/client-story-warren.mp4"
+                poster="/videos/client-story-warren-poster.jpg"
+                title="Welcome home, 330 Warren Way, Pittsburg"
+                testId="reel-story-warren"
+              />
+              <div className="text-center mt-3 max-w-xs mx-auto">
+                <p className="text-sm font-medium">Welcome home.</p>
+                <p className="text-xs text-white/55 mt-1">330 Warren Way, Pittsburg</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
