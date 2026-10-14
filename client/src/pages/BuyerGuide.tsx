@@ -202,6 +202,14 @@ export default function BuyerGuide() {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
+                  {guide.playbookUrl && (
+                    <a href={guide.playbookUrl}>
+                      <Button variant="outline" className="w-full border-white/40 text-white hover:bg-white/10 font-semibold mb-3" data-testid="button-guide-playbook">
+                        View the {guide.name} Offer Playbook
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </a>
+                  )}
                   <div className="space-y-2 pt-2">
                     <a href="tel:+14158198312" className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm">
                       <Phone className="w-3.5 h-3.5" />

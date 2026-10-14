@@ -33,6 +33,8 @@ export interface BuyerGuideData {
   sections: BuyerGuideSection[];
   steps: BuyerGuideStep[];
   faqs: BuyerGuideFaq[];
+  /** Optional shareable one-pager playbook served as a static page (e.g. /berkeley-buyer-playbook). */
+  playbookUrl?: string;
 }
 
 const SITE = "https://muzamilkhanrealtor.com";
@@ -242,6 +244,7 @@ export const buyerGuides: BuyerGuideData[] = [
       },
     ],
     steps: buyingSteps("Berkeley"),
+    playbookUrl: "/berkeley-buyer-playbook",
     faqs: [
       {
         q: "Who is a good first-time buyer agent in Berkeley?",
