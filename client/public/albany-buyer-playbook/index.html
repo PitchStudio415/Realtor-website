@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Buyer Playbook - Albany</title>
+<meta name="description" content="What to know about buying a home in Albany: how listings move, why list prices run low, what a winning offer looks like, and Albany taxes and point-of-sale items. From Muzamil Khan, Rise Group." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#13213a; --blue:#2f5fd0; --blue-lt:#8fb0ff; --ink:#1b2333; --muted:#5d6675;
+    --cream:#f3efe7; --cream-line:#e4ddcf; --card-line:#e8e2d6; --chip:#e8eefc; --tan:#f3eee5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#e9e6df;color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .sheet{max-width:880px;margin:0 auto;background:#fff;}
+
+  header{background:var(--cream);padding:24px 34px 0;}
+  .toprow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;}
+  .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:800;}
+  .brand{font-size:12px;color:var(--muted);}
+  .brand b{color:var(--navy);font-weight:800;}
+  h1{font-size:33px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1;margin:12px 0 7px;}
+  .sub{font-size:13.5px;color:var(--muted);max-width:640px;}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:16px;}
+  .stat{background:#fff;border:1px solid var(--cream-line);border-radius:12px;padding:12px 15px;}
+  .stat .n{font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-.01em;line-height:1.05;}
+  .stat .l{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:5px;}
+  .stat.dark{background:var(--navy);border-color:var(--navy);}
+  .stat.dark .n{color:var(--blue-lt);}
+  .stat.dark .l{color:#fff;}
+  .caption{font-size:11.5px;color:var(--muted);margin-top:9px;}
+  .skyline{display:block;width:calc(100% + 68px);margin:6px -34px 0;height:auto;}
+
+  main{padding:18px 34px 0;}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:13px;align-items:start;}
+  .col{display:flex;flex-direction:column;gap:13px;}
+  .card{border:1px solid var(--card-line);border-radius:14px;padding:15px 16px 16px;background:#fff;}
+  .s-head{display:flex;align-items:center;gap:10px;padding-bottom:9px;margin-bottom:11px;border-bottom:1px solid var(--card-line);}
+  .s-num{width:23px;height:23px;border-radius:6px;background:var(--chip);color:var(--blue);font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  h2{font-size:16px;font-weight:700;color:var(--navy);letter-spacing:-.01em;line-height:1.25;}
+  h2 .aside{font-weight:400;color:var(--muted);}
+
+  .check{list-style:none;display:flex;flex-direction:column;gap:7px;}
+  .check li{display:flex;gap:9px;font-size:12.5px;color:var(--ink);align-items:flex-start;}
+  .check .box{width:16px;height:16px;border-radius:4px;border:1.6px solid var(--blue);flex-shrink:0;margin-top:2px;position:relative;}
+  .check .box::after{content:"";position:absolute;left:4.5px;top:1px;width:4px;height:8px;border:solid var(--blue);border-width:0 1.6px 1.6px 0;transform:rotate(45deg);}
+  .check b{font-weight:700;color:var(--navy);}
+
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);}
+  .tl-item{position:relative;padding:18px 12px 0 0;}
+  .tl-item::after{content:"";position:absolute;top:5px;left:0;right:0;height:1.5px;background:#bfcdf0;}
+  .tl-dot{position:absolute;top:0;left:0;width:11px;height:11px;border-radius:50%;background:var(--blue);z-index:1;}
+  .tl-k{font-size:10.5px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px;}
+  .tl-v{font-size:12.5px;color:var(--ink);}
+  .note{font-size:12px;color:var(--muted);margin-top:10px;}
+
+  p.body{font-size:12.5px;color:var(--ink);}
+  p.body b{font-weight:700;color:var(--navy);}
+  .bottomline{margin-top:11px;border-left:3px solid var(--navy);padding:2px 0 2px 12px;font-size:12.5px;color:var(--ink);}
+  .bottomline b{font-weight:800;color:var(--navy);}
+
+  .edge{margin-top:12px;background:var(--chip);border:1px solid #cfdaf6;border-radius:10px;padding:11px 14px;}
+  .edge .lbl{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;}
+  .edge p{font-size:12.5px;color:var(--ink);}
+  .edge b{font-weight:800;color:var(--navy);}
+
+  .levers{display:flex;flex-direction:column;}
+  .lead{font-size:12.5px;color:var(--ink);margin-bottom:8px;}
+  .lever{display:grid;grid-template-columns:132px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--card-line);font-size:12.5px;}
+  .lever:first-child{padding-top:2px;}
+  .lever:last-child{border-bottom:none;padding-bottom:0;}
+  .lever .l{font-weight:700;color:var(--navy);}
+  .lever .r{color:var(--ink);}
+
+  .full{margin-top:13px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .tc{background:var(--tan);border-radius:10px;padding:11px 12px;}
+  .tc h3{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  .tag{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:rgba(0,0,0,.05);padding:2px 6px;border-radius:4px;}
+  .tc p{font-size:11.5px;color:var(--muted);}
+  .tc a{display:inline-block;margin-top:7px;font-size:11.5px;font-weight:700;color:var(--blue);text-decoration:none;}
+  .cost{display:inline-block;margin-top:7px;font-size:11.5px;font-weight:700;color:var(--blue);background:var(--chip);padding:2px 8px;border-radius:5px;}
+
+  .cta{margin:13px 34px 22px;background:var(--navy);border-radius:14px;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;color:#fff;}
+  .cta .t{font-size:17px;font-weight:800;}
+  .cta .t span{display:block;font-size:12.5px;font-weight:400;color:rgba(255,255,255,.75);margin-top:2px;}
+  .cta .r{text-align:right;}
+  .cta .r a{font-size:20px;font-weight:800;color:var(--blue-lt);text-decoration:none;}
+  .cta .r span{display:block;font-size:11px;color:rgba(255,255,255,.7);margin-top:2px;}
+
+  @media(max-width:720px){
+    header{padding:20px 18px 0;} main{padding:16px 18px 0;} .cta{margin:13px 18px 20px;}
+    .skyline{width:calc(100% + 36px);margin:6px -18px 0;}
+    h1{font-size:27px;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .cols{grid-template-columns:1fr;}
+    .grid4{grid-template-columns:repeat(2,1fr);}
+    .grid3{grid-template-columns:1fr;}
+    .cta .r{text-align:left;}
+  }
+  @media(max-width:460px){
+    .grid4{grid-template-columns:1fr;}
+    .timeline{grid-template-columns:1fr;}
+    .tl-item{padding:0 0 12px 22px;}
+    .tl-item::after{top:11px;left:5px;right:auto;bottom:-1px;width:1.5px;height:auto;}
+    .lever{grid-template-columns:1fr;gap:2px;}
+  }
+  @media print{
+    @page{size:letter portrait;margin:0;}
+    body{background:#fff;}
+    .sheet{max-width:100%;zoom:.79;}
+    .card,.stats,.grid4,.grid3,.cta,.edge{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div class="toprow">
+      <div class="eyebrow">Buyer Playbook &middot; Albany</div>
+      <div class="brand"><b>Muzamil Khan Real Estate</b> &middot; Rise Group &middot; (415) 819-8312</div>
+    </div>
+    <h1>What to know about buying a home in Albany</h1>
+    <p class="sub">Albany is one square mile, and homes here move fast and sell over asking. Here is where the market stands and how to write the offer that gets picked.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">$1.40M</div><div class="l">Median sale price</div></div>
+      <div class="stat"><div class="n">125%</div><div class="l">Sale to list</div></div>
+      <div class="stat"><div class="n">13 days</div><div class="l">Days on market</div></div>
+      <div class="stat dark"><div class="n">73%</div><div class="l">Sold over asking</div></div>
+    </div>
+    <p class="caption">All Albany neighborhoods &middot; detached single-family homes &middot; last 12 months &middot; 90 MLS sales</p>
+    <svg class="skyline" viewBox="0 0 1000 110" preserveAspectRatio="none" aria-hidden="true">
+      <rect x="0" y="80" width="1000" height="8" fill="#d3dbe8"/>
+      <g fill="#cbbf9f">
+        <path d="M560,81 Q610,58 660,81 Z"/>
+        <rect x="742" y="54" width="10" height="27"/><rect x="756" y="46" width="9" height="35"/><polygon points="770,81 776,30 782,81"/>
+        <rect x="786" y="40" width="12" height="41"/><rect x="802" y="56" width="10" height="25"/><rect x="816" y="34" width="11" height="47"/>
+        <rect x="831" y="50" width="10" height="31"/><rect x="845" y="44" width="12" height="37"/><rect x="861" y="58" width="11" height="23"/>
+        <rect x="876" y="62" width="14" height="19"/><rect x="894" y="66" width="12" height="15"/>
+      </g>
+      <g stroke="#7d8aa0" stroke-width="1.6" fill="none" stroke-linecap="round">
+        <path d="M355,79 L585,79"/>
+        <path d="M466,79 L466,18"/>
+        <path d="M466,22 L395,79 M466,22 L420,79 M466,22 L444,79 M466,22 L488,79 M466,22 L512,79 M466,22 L537,79"/>
+        <path d="M620,79 L760,79"/>
+        <path d="M650,79 L650,46 M690,79 L690,46 M730,79 L730,46"/>
+        <path d="M620,79 Q635,52 650,47 Q670,66 690,47 Q710,66 730,47 Q745,52 760,79"/>
+      </g>
+      <g fill="#13213a">
+        <path d="M110,92 L110,86 C150,62 175,44 205,42 C240,40 265,60 300,86 L300,92 Z"/>
+        <circle cx="160" cy="60" r="9"/><circle cx="178" cy="49" r="10"/><circle cx="200" cy="43" r="10"/><circle cx="222" cy="44" r="10"/><circle cx="244" cy="52" r="9"/><circle cx="264" cy="64" r="8"/>
+        <path d="M0,110 L0,86 L22,86 L22,79 L32,70 L42,79 L42,86 L70,86 L70,78 L82,67 L94,78 L94,86 L118,86 A9,9 0 0 1 136,86 L150,86 L150,79 L162,69 L174,79 L174,86 L230,86 A9,9 0 0 1 248,86 L262,86 L262,78 L274,68 L286,78 L286,86 L312,86 L312,80 L322,72 L332,80 L332,86 L372,86 A8,8 0 0 1 388,86 L470,86 L470,80 L480,73 L490,80 L490,86 L620,86 A9,9 0 0 1 638,86 L880,86 L880,80 L892,71 L904,80 L904,86 L955,86 L955,80 L966,72 L977,80 L977,86 L1000,86 L1000,110 Z"/>
+      </g>
+    </svg>
+  </header>
+
+  <main>
+    <div class="cols">
+      <div class="col">
+        <section class="card">
+          <div class="s-head"><div class="s-num">1</div><h2>Do this first, before you shop</h2></div>
+          <ul class="check">
+            <li><span class="box"></span><span><b>Get pre-approved.</b> Knowing your budget is the critical first step.</span></li>
+            <li><span class="box"></span><span><b>Set aside cash</b> for earnest money (about 3% of price) and a possible appraisal gap, so a release never catches you short.</span></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="s-head"><div class="s-num">2</div><h2>How a listing moves</h2></div>
+          <div class="timeline">
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-k">Days 1&ndash;3</div><div class="tl-v">Listing goes live, usually midweek.</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-k">Two weekends</div><div class="tl-v">Back-to-back weekends of open houses.</div></div>
+            <div class="tl-item"><div class="tl-dot"></div><div class="tl-k">Around day 14</div><div class="tl-v">Offers due, usually midweek after the second weekend.</div></div>
+          </div>
+          <p class="note">About two weeks to tour, read disclosures, and build your offer. We start prepping yours on day one.</p>
+        </section>
+
+        <section class="card">
+          <div class="s-head"><div class="s-num">3</div><h2>The list price is low by design <span class="aside">(I know, it's annoying)</span></h2></div>
+          <p class="body">Homes list low on purpose to draw multiple offers. <b>73% sold over asking</b> last year, and not by a few thousand. The typical home sold <b>25% over list</b>, sometimes hundreds of thousands over. Asking price won't win. To recommend an offer price, we use <b>broader market comps</b>, specifically recent sales in the area, plus what the <b>disclosure packet</b> tells us about the home.</p>
+          <p class="bottomline"><b>Bottom line:</b> the highest number still loses if it misses the seller's terms on closing date or contingencies. Strategy is part of the offer.</p>
+        </section>
+      </div>
+
+      <div class="col">
+        <section class="card">
+          <div class="s-head"><div class="s-num">4</div><h2>Before you write an offer</h2></div>
+          <ul class="check">
+            <li><span class="box"></span><span><b>Read the disclosure and inspection package first.</b> I turn it into a clear read with red flags and likely repair costs, so a short inspection window is all you need.</span></li>
+            <li><span class="box"></span><span><b>Set your number from the CMA:</b> recent comparable sales, repairs needed, and the listing team's strategy.</span></li>
+          </ul>
+          <div class="edge">
+            <div class="lbl">How every home gets reviewed</div>
+            <p>Disclosures and comps both run through <b>AgentPrep</b>. You get the home's real condition, red flags, repair costs, and likely sale price. No 200-page packet to decode.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="s-head"><div class="s-num">5</div><h2>What a winning offer looks like</h2></div>
+          <p class="lead">Buyers here are more protected than in Berkeley. You can usually keep your contingencies, just on shorter timelines.</p>
+          <div class="levers">
+            <div class="lever"><div class="l">Short inspection</div><div class="r">Keep it, but short: 7 days is common here. Waiving is an option on the most competitive homes.</div></div>
+            <div class="lever"><div class="l">Appraisal, 14 days</div><div class="r">Often kept. If it appraises low, you can renegotiate or cover the gap in cash.</div></div>
+            <div class="lever"><div class="l">Loan, 14 days</div><div class="r">Often kept. Release once you are fully underwritten.</div></div>
+            <div class="lever"><div class="l">Close in 14&ndash;21 days</div><div class="r">A clean, on-time close still makes your offer stronger.</div></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="card full">
+      <div class="s-head"><div class="s-num">6</div><h2>Albany taxes &amp; point-of-sale items</h2></div>
+      <div class="grid3">
+        <div class="tc"><h3>City transfer tax</h3><p>1.5%, split between buyer and seller. The county's 0.11% is paid by the seller. Offering to cover more can make your offer stand out.</p><a href="https://chicagotitleconnection.com/transfertax.htm" target="_blank" rel="noopener">Chicago Title rate table &rarr;</a></div>
+        <div class="tc"><h3>Property tax <span class="tag">approx</span></h3><p>A 1% base plus local parcel taxes and bonds, which add up in Albany. Prorated at closing. We confirm the exact figure before you offer.</p></div>
+        <div class="tc"><h3>Sewer lateral</h3><p>The private sewer lateral needs an EBMUD compliance certificate at sale. We settle who pays up front.</p><span class="cost">Usually $6,500&ndash;$10,000</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cta">
+    <div class="t">Questions on any of this?<span>Text or call. I'll walk you through it, no pressure.</span></div>
+    <div class="r"><a href="tel:+14158198312">(415) 819-8312</a><span>Muzamil Khan &middot; DRE #02400805 &middot; muzamilkhanrealtor.com</span></div>
+  </div>
+</div>
+</body>
+</html>

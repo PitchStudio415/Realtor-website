@@ -102,6 +102,7 @@ export const buyerGuides: BuyerGuideData[] = [
       },
     ],
     steps: buyingSteps("El Cerrito"),
+    playbookUrl: "/el-cerrito-buyer-playbook",
     faqs: [
       {
         q: "Who is a good first-time buyer agent in El Cerrito?",
@@ -177,6 +178,7 @@ export const buyerGuides: BuyerGuideData[] = [
       },
     ],
     steps: buyingSteps("Albany"),
+    playbookUrl: "/albany-buyer-playbook",
     faqs: [
       {
         q: "Who is a good first-time buyer agent in Albany, CA?",
