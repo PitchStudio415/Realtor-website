@@ -36,7 +36,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <span className="font-semibold text-lg hidden sm:block" data-testid="logo-text">Muzamil Khan Real Estate</span>
+            <span className="font-semibold text-xl hidden sm:block" data-testid="logo-text">Muzamil Khan Real Estate</span>
           </Link>
           
           <nav className="hidden lg:flex items-center gap-1" data-testid="desktop-nav">
@@ -47,7 +47,7 @@ export function Header() {
                     <Button 
                       variant="ghost" 
                       size="sm"
-                      className="flex items-center gap-1"
+                      className="flex items-center gap-1 text-[15px]"
                       data-testid={`nav-${item.label.toLowerCase()}`}
                     >
                       {item.label}
@@ -73,7 +73,7 @@ export function Header() {
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    className={location === item.href ? "text-primary" : ""}
+                    className={`text-[15px] ${location === item.href ? "text-primary" : ""}`}
                     data-testid={`nav-${item.label.toLowerCase()}`}
                   >
                     {item.label}

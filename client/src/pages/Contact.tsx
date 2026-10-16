@@ -12,7 +12,6 @@ import { Phone, Mail, MapPin, Calendar, CheckCircle2 } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent } from "@/lib/analytics";
-import colonnadePhoto from "@assets/brand/muzamil-colonnade-phone.jpg";
 import { AmbientVideo } from "@/components/AmbientVideo";
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
@@ -286,9 +285,9 @@ export default function Contact() {
               <div className="rounded-2xl overflow-hidden border border-border hidden lg:block">
                 <AmbientVideo
                   src="/videos/broll-colonnade.mp4"
-                  poster={colonnadePhoto}
-                  alt="Muzamil Khan taking a call outside an East Bay storefront"
-                  className="w-full h-56 object-cover object-[center_30%]"
+                  poster="/videos/broll-colonnade-poster.jpg"
+                  alt="Muzamil Khan standing outside an East Bay storefront"
+                  className="w-full h-56 object-cover object-[center_60%]"
                 />
               </div>
               <Card>
