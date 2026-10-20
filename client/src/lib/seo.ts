@@ -102,7 +102,7 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
       "Every step of buying an East Bay home, from the buyer agreement to the keys: who does what, the documents you sign, contingency windows, and an escrow clock with your real dates.",
   },
   "/buy/path-to-keys/documents": {
-    title: "Home Buying Documents Explained: All 29 | Path to Keys",
+    title: "Home Buying Documents Explained: All 28 | Path to Keys",
     description:
       "Every document in a California home purchase, from the buyer agreement and RPA to disclosures, contingency removal and the grant deed, explained in plain English.",
   },

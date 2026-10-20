@@ -32,6 +32,8 @@ export const REDIRECTS: Record<string, string> = {
   "/testimonials": "/about#reviews",
   "/buyer-hub": "/buy",
   "/seller-hub": "/sell",
+  // Path to Keys document removed Oct 2026.
+  "/buy/path-to-keys/documents/ad": "/buy/path-to-keys/documents",
 };
 
 /** Paths that should be redirected away and therefore never prerendered or listed. */

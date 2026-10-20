@@ -101,8 +101,7 @@ export const PTK = {
         "Ask how either of you ends the agreement early"
       ],
       "documents": [
-        "BRBC",
-        "AD"
+        "BRBC"
       ]
     },
     {
@@ -952,22 +951,6 @@ export const PTK = {
         "Length of the agreement",
         "Compensation amount and who pays it",
         "How either side ends it early"
-      ],
-      "usedInSteps": [
-        "buyer-agreement"
-      ]
-    },
-    {
-      "abbr": "AD",
-      "slug": "ad",
-      "name": "Disclosure Regarding Real Estate Agency Relationship",
-      "phase": 1,
-      "what": "Explains the duties an agent owes you and confirms who represents whom.",
-      "comesFrom": "Your agent",
-      "whoSigns": "You",
-      "when": "At first meeting",
-      "lookFor": [
-        "Whether any agent represents both sides"
       ],
       "usedInSteps": [
         "buyer-agreement"
