@@ -300,25 +300,28 @@ export default function PathToKeys() {
             </Link>
             <h1 data-testid="text-ptk-headline">Path to Keys</h1>
             <p className="lede">
-              Every step from signing with your agent to getting keys. You make a handful of big decisions. I handle the rest with you, start to finish.
+              Buying a home anywhere is a journey. In the Bay Area, that journey can get complicated, depending on where you're
+              buying, the local rules, and your network.
             </p>
+            <p className="goal">My goal is simple:</p>
             <div className="partner">
               <div>
                 <Marker shape="circle" color="#2c7a4f" />
                 <span>
-                  <b>I keep it simple.</b> One step at a time, in plain English, so you always know what's next.
+                  <b>Keep it simple.</b> Clear data in plain English, so you have everything you need to make the best decision.
                 </span>
               </div>
               <div>
                 <Marker shape="square" color="#2b5fb8" />
                 <span>
-                  <b>I go the extra mile.</b> I show up for the parts many agents leave to buyers, like attending your inspections.
+                  <b>Go the extra mile.</b> I limit how many clients I take on at once, so I can focus on the people I'm working
+                  with: attending your inspections, finding the right contractor for a specific job, and more.
                 </span>
               </div>
               <div>
                 <Marker shape="diamond" color="#c2461a" />
                 <span>
-                  <b>I review every document with you.</b> Disclosures, reports, and contracts, so we negotiate from what the house really needs and you get a great deal.
+                  <b>Keep it fun.</b> Buying a home and calling it your own is exciting, and the process should feel that way too.
                 </span>
               </div>
             </div>
