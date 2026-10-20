@@ -5,7 +5,7 @@ import { REVIEWS, STORIES, GOOGLE_URL, ZILLOW_URL } from "@/lib/trail";
 export default function About() {
   return (
     <TrailPage>
-      <section className="phero">
+      <section className="phero about-hero">
         <div className="contours" aria-hidden="true" />
         <div className="w bio">
           <img className="ph" src="/muzamil-khan.jpg" alt="Muzamil Khan" width={480} height={600} />

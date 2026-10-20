@@ -524,3 +524,17 @@ footer.tm .links{display:flex;gap:22px;flex-wrap:wrap}
 .tm .partner svg.lic{width:24px;height:24px;margin-top:0}
 .tm .partner div{grid-template-columns:26px 1fr}
 .tm .way{grid-template-columns:40px 1fr}
+/* Contours stay out from behind text: fade them toward the text column. */
+.tm .hero .contours,.tm .phero .contours{
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 42%,rgba(0,0,0,.55) 66%,#000 100%);
+          mask-image:linear-gradient(90deg,transparent 0%,transparent 42%,rgba(0,0,0,.55) 66%,#000 100%)}
+.tm .phero.about-hero .contours{
+  -webkit-mask-image:linear-gradient(270deg,transparent 0%,transparent 52%,rgba(0,0,0,.55) 70%,#000 100%);
+          mask-image:linear-gradient(270deg,transparent 0%,transparent 52%,rgba(0,0,0,.55) 70%,#000 100%)}
+.tm .about-hero .prose p{color:var(--ink);font-size:18px;line-height:1.7}
+@media (max-width:860px){
+  /* Phones: text runs full width, so keep the linework to the top edge only. */
+  .tm .hero .contours,.tm .phero .contours,.tm .phero.about-hero .contours{
+    -webkit-mask-image:linear-gradient(180deg,#000 0,transparent 140px);
+            mask-image:linear-gradient(180deg,#000 0,transparent 140px)}
+}
