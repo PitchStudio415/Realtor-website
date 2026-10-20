@@ -1,4 +1,5 @@
 import { Link, useParams } from "wouter";
+import { DocDrawerProvider, DocLink } from "@/components/trail/DocDrawer";
 import { TrailPage, PageHero, Section, CloseBand } from "@/components/trail/Parts";
 import { PTK } from "@/lib/pathToKeys";
 import { PHASE_NAME, PTK_BASE, docBySlug, docPath, stepBySlug, stepPath } from "@/lib/ptk";
@@ -7,6 +8,7 @@ import NotFound from "@/pages/not-found";
 function DocIndex() {
   return (
     <TrailPage>
+      <DocDrawerProvider>
       <PageHero
         title="Document library"
         lede={`All ${PTK.documents.length} documents you'll see between your buyer agreement and your keys, in the order they show up.`}
@@ -22,16 +24,17 @@ function DocIndex() {
             {PTK.documents
               .filter((d) => d.phase === p.number)
               .map((d) => (
-                <Link key={d.slug} className="doc" href={docPath(d.slug)}>
+                <DocLink key={d.slug} abbr={d.abbr} className="doc">
                   <span className="ab">{d.abbr}</span>
                   <span className="n">{d.name}</span>
                   <span className="p">{d.what}</span>
-                </Link>
+                </DocLink>
               ))}
           </div>
         </Section>
       ))}
       <CloseBand title="Want help reading yours?" sub="Send it over. I'll walk you through what matters." />
+      </DocDrawerProvider>
     </TrailPage>
   );
 }

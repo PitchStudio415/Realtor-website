@@ -1,4 +1,5 @@
 import { Link, useParams } from "wouter";
+import { DocDrawerProvider, DocLink } from "@/components/trail/DocDrawer";
 import { TrailPage, Section, CloseBand, Arrow } from "@/components/trail/Parts";
 import { PTK } from "@/lib/pathToKeys";
 import { DOCS, PHASE_NAME, stepBySlug, stepPath, docPath, PTK_BASE, deadlineDate, fmtLong, sampleAcceptance, ESCROW_DAYS } from "@/lib/ptk";
@@ -20,6 +21,7 @@ export default function PtkStep() {
 
   return (
     <TrailPage>
+      <DocDrawerProvider>
       <section className="phero sp-hero">
         <div className="contours" aria-hidden="true" style={{ opacity: 0.45 }} />
         <div className="w">
@@ -121,10 +123,10 @@ export default function PtkStep() {
                 {s.documents
                   .filter((a) => DOCS[a])
                   .map((a) => (
-                    <Link key={a} className="dl" href={docPath(DOCS[a].slug)}>
+                    <DocLink key={a} abbr={a} className="dl">
                       <span className="dc">{a}</span>
                       {DOCS[a].name}
-                    </Link>
+                    </DocLink>
                   ))}
               </div>
             )}
@@ -153,6 +155,7 @@ export default function PtkStep() {
         </div>
       </section>
       <CloseBand title="Ready to start at step 1?" />
+      </DocDrawerProvider>
     </TrailPage>
   );
 }

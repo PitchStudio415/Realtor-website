@@ -4,6 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent } from "@/lib/analytics";
 import { useToast } from "@/hooks/use-toast";
+import { DocDrawerProvider, DocLink } from "@/components/trail/DocDrawer";
 import { TrailPage, Acts, BookButton, Section, LineIcon, Arrow } from "@/components/trail/Parts";
 import { PTK, type PtkStep, type PtkInsert } from "@/lib/pathToKeys";
 import {
@@ -124,9 +125,9 @@ function StepCard({ s, clock }: { s: PtkStep; clock: Clock }) {
           {s.documents
             .filter((a) => DOCS[a])
             .map((a) => (
-              <Link key={a} className="dc" href={docPath(DOCS[a].slug)} title={DOCS[a].name}>
+              <DocLink key={a} abbr={a} className="dc" title={DOCS[a].name}>
                 {a}
-              </Link>
+              </DocLink>
             ))}
           <Link className="rg" href={stepPath(s.slug)}>
             Read the guide <Arrow />
@@ -291,6 +292,7 @@ export default function PathToKeys() {
 
   return (
     <TrailPage>
+      <DocDrawerProvider>
       <section className="phero ptk-hero">
         <div className="contours" aria-hidden="true" />
         <div className="w">
@@ -401,13 +403,13 @@ export default function PathToKeys() {
       <Section title="Document library">
         <div className="docs">
           {FEATURED_DOCS.map((a) => (
-            <Link key={a} className="doc" href={docPath(DOCS[a].slug)}>
+            <DocLink key={a} abbr={a} className="doc">
               <span className="ab">{a}</span>
               <span className="n">{DOCS[a].name}</span>
               <span className="p">
                 Phase {DOCS[a].phase} &middot; {PHASE_NAME[DOCS[a].phase]}
               </span>
-            </Link>
+            </DocLink>
           ))}
         </div>
         <Link className="more-link" href={`${PTK_BASE}/documents`}>
@@ -435,6 +437,7 @@ export default function PathToKeys() {
           </p>
         </div>
       </section>
+      </DocDrawerProvider>
     </TrailPage>
   );
 }
