@@ -4,7 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent } from "@/lib/analytics";
 import { useToast } from "@/hooks/use-toast";
-import { TrailPage, Acts, BookButton, Section, Marker, Arrow } from "@/components/trail/Parts";
+import { TrailPage, Acts, BookButton, Section, LineIcon, Arrow } from "@/components/trail/Parts";
 import { PTK, type PtkStep, type PtkInsert } from "@/lib/pathToKeys";
 import {
   TD,
@@ -306,20 +306,20 @@ export default function PathToKeys() {
             <p className="goal">My goal is simple:</p>
             <div className="partner">
               <div>
-                <Marker shape="circle" color="#2c7a4f" />
+                <LineIcon name="list" />
                 <span>
                   <b>Keep it simple.</b> Clear data in plain English, so you have everything you need to make the best decision.
                 </span>
               </div>
               <div>
-                <Marker shape="square" color="#2b5fb8" />
+                <LineIcon name="route" />
                 <span>
                   <b>Go the extra mile.</b> I limit how many clients I take on at once, so I can focus on the people I'm working
                   with: attending your inspections, finding the right contractor for a specific job, and more.
                 </span>
               </div>
               <div>
-                <Marker shape="diamond" color="#c2461a" />
+                <LineIcon name="key" />
                 <span>
                   <b>Keep it fun.</b> Buying a home and calling it your own is exciting, and the process should feel that way too.
                 </span>

@@ -42,6 +42,56 @@ export const Arrow = ({ back }: { back?: boolean }) => (
   </svg>
 );
 
+/** Thin single-line icons, ink stroke with one trail-orange dot (echoes the MK. mark). */
+export type IconName = "house" | "data" | "route" | "focus" | "list" | "key";
+export const LineIcon = ({ name }: { name: IconName }) => (
+  <svg className="lic" viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="#1c2a24" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    {name === "house" && (
+      <>
+        <path d="M4.5 13 L14 5 L23.5 13" />
+        <path d="M7 11 V23 H21 V11" />
+        <path d="M12 23 V17 H16 V23" />
+        <circle cx="14" cy="11.5" r="1.6" fill="#c2461a" stroke="none" />
+      </>
+    )}
+    {name === "data" && (
+      <>
+        <path d="M4.5 4.5 V23.5 H23.5" />
+        <path d="M8 19 L12.5 14 L16 16.5 L21.5 9.5" />
+        <circle cx="21.5" cy="9.5" r="1.9" fill="#c2461a" stroke="none" />
+      </>
+    )}
+    {name === "route" && (
+      <>
+        <path d="M6 22 C 11 22, 10 14, 14 14 S 17 6, 22 6" strokeDasharray="2.4 2.6" />
+        <circle cx="6" cy="22" r="2" />
+        <circle cx="22" cy="6" r="2.2" fill="#c2461a" stroke="none" />
+      </>
+    )}
+    {name === "focus" && (
+      <>
+        <circle cx="14" cy="14" r="9.5" />
+        <circle cx="14" cy="14" r="2.4" fill="#c2461a" stroke="none" />
+      </>
+    )}
+    {name === "list" && (
+      <>
+        <path d="M11 8 H23 M11 14 H23 M11 20 H19" />
+        <circle cx="6" cy="8" r="1.4" />
+        <circle cx="6" cy="14" r="1.4" />
+        <circle cx="6" cy="20" r="1.8" fill="#c2461a" stroke="none" />
+      </>
+    )}
+    {name === "key" && (
+      <>
+        <circle cx="9" cy="14" r="4.5" />
+        <path d="M13.5 14 H23.5 M20 14 V18 M23.5 14 V17" />
+        <circle cx="9" cy="14" r="1.5" fill="#c2461a" stroke="none" />
+      </>
+    )}
+  </svg>
+);
+
 export const Star = () => (
   <svg viewBox="0 0 20 20" aria-hidden="true">
     <path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z" fill="#c2461a" />
@@ -196,18 +246,12 @@ export function Rows({ items }: { items: { title: string; meta?: string; href: s
   );
 }
 
-export function Ways({ items }: { items: { title: string; body: string }[] }) {
-  const shapes = [
-    ["circle", "#2c7a4f"],
-    ["square", "#2b5fb8"],
-    ["triangle", "#1c2a24"],
-    ["diamond", "#c2461a"],
-  ] as const;
+export function Ways({ items }: { items: { title: string; body: string; icon: IconName }[] }) {
   return (
     <div className="ways">
-      {items.map((it, i) => (
+      {items.map((it) => (
         <div className="way" key={it.title}>
-          <Marker shape={shapes[i % 4][0]} color={shapes[i % 4][1]} />
+          <LineIcon name={it.icon} />
           <div>
             <h3>{it.title}</h3>
             <p>{it.body}</p>

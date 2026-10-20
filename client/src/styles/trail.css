@@ -520,3 +520,7 @@ footer.tm .links{display:flex;gap:22px;flex-wrap:wrap}
 .tm .mark .sep{width:1px;height:22px;background:var(--line)}
 .tm .ptk-hero .goal{font-weight:800;font-size:18px;margin-top:24px}
 .tm .ptk-hero .goal+.partner{margin-top:14px}
+.tm .way svg.lic{width:36px;height:36px;margin-top:-4px}
+.tm .partner svg.lic{width:24px;height:24px;margin-top:0}
+.tm .partner div{grid-template-columns:26px 1fr}
+.tm .way{grid-template-columns:40px 1fr}

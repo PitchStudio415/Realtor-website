@@ -56,10 +56,10 @@ export default function Home() {
           <h2>What working with me looks like</h2>
           <Ways
             items={[
-              { title: "I read the house", body: "15 years in construction. I know what the inspection report is really saying and what a repair will cost before you offer." },
-              { title: "I bring the real numbers", body: "Every city has a playbook built on MLS sales, so your number comes from comparable homes, not the list price." },
-              { title: "I build the strategy", body: "The best price may not always win. Closing timing and contingencies count too, and we plan them before you write." },
-              { title: "You get my full attention", body: "I keep my client list small on purpose, so you are never waiting on a callback." },
+              { icon: "house", title: "I read the house", body: "15 years in construction help me read a property: what's solid, what may be wrong, and what it will take to fix. When a home needs a closer look or a repair, I bring in my network of inspectors and contractors." },
+              { icon: "data", title: "I use the data", body: "Every city has a playbook built on MLS sales, so your number comes from comparable homes, not the list price." },
+              { icon: "route", title: "I build the strategy", body: "The best price may not always win. Closing timing and contingencies count too, and we plan them before you write." },
+              { icon: "focus", title: "You get my full attention", body: "I keep my client list small on purpose, so you're never waiting on a callback and we can move quickly when we find the right house." },
             ]}
           />
         </div>

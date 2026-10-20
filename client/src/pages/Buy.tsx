@@ -19,10 +19,10 @@ export default function Buy() {
       <Section title="What I bring to your side">
         <Ways
           items={[
-            { title: "Inspection read", body: "15 years in construction. I tell you what a finding means and what it costs to fix." },
-            { title: "Offer strategy", body: "The best price may not always win. We plan terms and timing around what the seller needs." },
-            { title: "Negotiation", body: "Repair credits and price changes backed by real repair numbers, not guesses." },
-            { title: "Full attention", body: "I keep my client list small, so your calls and texts get answered." },
+            { icon: "house", title: "Inspection read", body: "15 years in construction. I tell you what a finding means and what it costs to fix." },
+            { icon: "route", title: "Offer strategy", body: "The best price may not always win. We plan terms and timing around what the seller needs." },
+            { icon: "data", title: "Negotiation", body: "Repair credits and price changes backed by real repair numbers, not guesses." },
+            { icon: "focus", title: "Full attention", body: "I keep my client list small, so your calls and texts get answered." },
           ]}
         />
       </Section>
