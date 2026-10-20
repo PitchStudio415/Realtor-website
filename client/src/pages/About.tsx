@@ -17,8 +17,13 @@ export default function About() {
                 maintained. I grew up in Los Angeles and have called the Bay Area home for over a decade.
               </p>
               <p>
-                I earned an MBA at UC Davis to better understand the forces that shape Bay Area real estate. Today I help
-                first-time buyers move with clarity and confidence, and I work with people relocating to or from the East Bay.
+                I earned an MBA to better understand the forces that shape Bay Area real estate. Today I help first-time home
+                buyers move with clarity and confidence, and I work with people relocating to or from the East Bay.
+              </p>
+              <p>
+                The East Bay plays by its own rules. Homes list low on purpose, offers are due on a set day, and the inspection
+                reports usually arrive before you bid. I help you navigate those norms, which most other markets don't have, so you
+                can buy with confidence.
               </p>
             </div>
             <div className="facts num">
