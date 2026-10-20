@@ -1,0 +1,121 @@
+{
+  "title": "Choose the look for muzamilkhanrealtor.com",
+  "question": "The roll picked 'The Spec Sheet'. Keep it, take an alternate, or re-roll for a new hand.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Spec Sheet",
+      "kicker": "THE ROLL",
+      "lineage": "MLS listing data sheets and your one-page playbooks",
+      "thesis": "Every page reads like a listing spec sheet: the real numbers first, then your plain-English read.",
+      "palette": ["#ffffff", "#12161c", "#eef1f4", "#2453ff"],
+      "materials": ["oversized numerals", "ruled data tables", "your real photos as plates"],
+      "viewport": "Your photo beside a market strip for your four cities (median, % over asking) and one big 'Text me' action.",
+      "risk": "Can feel like a dashboard if your photos and voice do not lead.",
+      "raised": [
+        {"from": "challenger-tabs", "raise": "Each city owns one color, carried from its site page to its playbook and IG posts, so people find their city by color."},
+        {"from": "challenger-darkroom", "raise": "Buying runs as fixed numbered stations in order, the same rail on Buy, the playbooks, and the blog's Start here."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "The Inspection Report",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "home inspection reports and construction drawings",
+      "thesis": "The site annotated like an inspection report: what the house is, what it needs, what it costs.",
+      "palette": ["#f7f8fa", "#1a2433", "#d6dde6", "#e2572b"],
+      "materials": ["drawing linework", "numbered callouts", "redline notes"],
+      "viewport": "A house drawing with numbered callouts beside 'I read the house, not just the listing.'",
+      "risk": "The 'blueprint' look is familiar and can feel technical to first-time buyers."
+    },
+    {
+      "id": "challenger-tabs",
+      "label": "Tabbed Reference Manual",
+      "verdict": "declined",
+      "lineage": "boxed-software manuals with colored divider tabs",
+      "thesis": "The site as a tabbed manual: one colored tab per section down the edge.",
+      "palette": ["#e8692c", "#f2c230", "#2f9e6e", "#3a5bd9"],
+      "materials": ["divider board color", "clear acetate leaves"],
+      "viewport": "A stepped tab rail with Buy, Sell, Neighborhoods, Blog as colored tabs.",
+      "case": "Fuses poorly: the manual metaphor adds weight to a site that needs to feel simple.",
+      "kept": "One color per section for wayfinding.",
+      "risk": "Busy and retro if the tabs dominate."
+    },
+    {
+      "id": "challenger-darkroom",
+      "label": "Darkroom Stations",
+      "verdict": "declined",
+      "lineage": "photo darkroom under amber safelight",
+      "thesis": "Work moves through fixed stations in a set order.",
+      "palette": ["#c8781e", "#2b2b2b", "#e9e4da"],
+      "materials": ["amber light", "test strips"],
+      "viewport": "Amber-lit stations for each step of buying.",
+      "case": "Fuses poorly: buyers do not identify with a darkroom; amber hurts readability.",
+      "kept": "Steps run in a fixed, numbered order.",
+      "risk": "Dark and moody, the opposite of simple."
+    },
+    {
+      "id": "challenger-night-city",
+      "label": "East Bay at Night",
+      "verdict": "declined",
+      "lineage": "blue-hour cityscape, transit lights, wet streets",
+      "thesis": "The Bay at blue hour, with BART lines as the paths between cities.",
+      "palette": ["#1d3a8a", "#0b0f1a", "#f2a33a", "#c9d1dc"],
+      "materials": ["night photography", "transit-line glow"],
+      "viewport": "A night skyline with amber transit lines linking your four cities.",
+      "case": "Fuses partly: local and atmospheric, but dark and heavy, which you already moved away from.",
+      "kept": "Cities connected as one map you move along.",
+      "risk": "Reads like the old dark site."
+    },
+    {
+      "id": "challenger-spectrum",
+      "label": "Spectrum Rail",
+      "verdict": "declined",
+      "lineage": "glass spectrograms, hairline emission lines",
+      "thesis": "Everything hangs off one rail; color only as thin lines.",
+      "palette": ["#2a2c30", "#e8e3d6", "#f2c531"],
+      "materials": ["hairline color", "charcoal field"],
+      "viewport": "A dark rail with each page as a tick mark.",
+      "case": "Fuses poorly: too abstract and technical for buyers.",
+      "kept": "A strict, small type scale.",
+      "risk": "Cold and hard to read."
+    },
+    {
+      "id": "challenger-quilt",
+      "label": "Memory Quilt",
+      "verdict": "declined",
+      "lineage": "hand-pieced quilts from worn fabric",
+      "thesis": "Each block a different story, stitched together.",
+      "palette": ["#5f7fa8", "#1c1c1c", "#c8352b"],
+      "materials": ["fabric blocks", "stitch lines"],
+      "viewport": "A patchwork of client stories.",
+      "case": "Fuses poorly: crafty and busy, not modern.",
+      "kept": "Every story keeps its source visible.",
+      "risk": "Cluttered."
+    },
+    {
+      "id": "challenger-collage",
+      "label": "Album-Sleeve Collage",
+      "verdict": "declined",
+      "lineage": "1960s Brazilian album covers",
+      "thesis": "Cut-out photos pasted at wild scales.",
+      "palette": ["#2f8f3a", "#f2a22a", "#e0402f"],
+      "materials": ["cut-out photos", "scattered lettering"],
+      "viewport": "Your photo cut out in a painted scene.",
+      "case": "Fuses poorly: playful but undermines trust for a big purchase.",
+      "kept": "Confidence with real photography.",
+      "risk": "Unserious."
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "canon": true,
+  "canonCard": {
+    "label": "The standard realtor site",
+    "thesis": "What top agent sites ship (Compass-style), executed cleanly.",
+    "palette": ["#ffffff", "#111827", "#1f6feb"],
+    "materials": ["large photo hero", "city photo tiles", "review strip"],
+    "viewport": "Big photo of you, your cities as photo tiles, reviews, and contact.",
+    "risk": "Looks like every other agent site by design."
+  },
+  "steer": true
+}

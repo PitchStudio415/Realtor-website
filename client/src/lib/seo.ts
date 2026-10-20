@@ -9,7 +9,10 @@ import {
   getNeighborhoodBySlug,
 } from "./content";
 import { cities, getCityBySlug } from "./cityData";
-import { buyerGuides, getBuyerGuideBySlug } from "./buyerGuideData";
+import { getBuyerGuideBySlug } from "./buyerGuideData";
+import { CITIES, CITY_ORDER, type CitySlug } from "./trail";
+import { PTK } from "./pathToKeys";
+import { stepBySlug, docBySlug, PTK_BASE } from "./ptk";
 import { REDIRECT_SOURCES } from "@shared/redirects";
 
 export const SITE_URL = "https://muzamilkhanrealtor.com";
@@ -74,24 +77,34 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
       "Everything East Bay sellers need: pricing strategy, disclosures, inspection prep, repairs vs credits, and evaluating offers — explained without jargon.",
   },
   "/neighborhoods": {
-    title: "East Bay Neighborhood Guides: El Cerrito, Richmond & More | Muzamil Khan",
+    title: 'East Bay Neighborhoods: Berkeley, Oakland, Albany & El Cerrito | Muzamil Khan',
     description:
-      "Local guides to West Contra Costa and East Bay neighborhoods: El Cerrito, Richmond, Hercules, Pinole, San Pablo, El Sobrante, Kensington and beyond.",
+      'Median price, sale-to-list, days on market and percent sold over asking for Berkeley, Oakland, Albany and El Cerrito, plus nearby West Contra Costa cities, from a local Realtor.',
   },
   "/blog": {
-    title: "East Bay Real Estate Blog | Muzamil Khan",
+    title: 'East Bay Real Estate Blog: Start Here & City Guides | Muzamil Khan',
     description:
-      "Practical insights for East Bay buyers and sellers: market outlooks, neighborhood comparisons, offer strategy, and inspection know-how from a construction-background Realtor.",
+      'Start with three essentials for first-time East Bay buyers, then read city guides for Berkeley, Oakland, Albany, El Cerrito and West County, plus buying and selling advice.',
   },
   "/about": {
-    title: "About Muzamil Khan | East Bay Realtor® with a Construction Background",
+    title: 'About Muzamil Khan | East Bay Realtor®, Reviews & Client Stories',
     description:
-      "15 years in construction, 10+ years in El Cerrito. Meet Muzamil Khan, the East Bay Realtor who reads inspection reports differently. DRE #02400805.",
+      '15 years in construction, 10+ years in El Cerrito. Meet Muzamil Khan, read 5-star client reviews, and watch client stories. Realtor with Rise Group, DRE #02400805.',
   },
   "/testimonials": {
     title: "Client Testimonials & Reviews | Muzamil Khan, East Bay Realtor®",
     description:
       "Video client stories and verified 5-star Google and Zillow reviews for Muzamil Khan, East Bay Realtor. Real clients, real closings in El Cerrito, Berkeley, Benicia, Pittsburg and beyond.",
+  },
+  "/buy/path-to-keys": {
+    title: "Path to Keys: How Buying a Home Works in the East Bay | Muzamil Khan",
+    description:
+      "Every step of buying an East Bay home, from the buyer agreement to the keys: who does what, the documents you sign, contingency windows, and an escrow clock with your real dates.",
+  },
+  "/buy/path-to-keys/documents": {
+    title: "Home Buying Documents Explained: All 29 | Path to Keys",
+    description:
+      "Every document in a California home purchase, from the buyer agreement and RPA to disclosures, contingency removal and the grant deed, explained in plain English.",
   },
   "/contact": {
     title: "Contact Muzamil Khan | East Bay Realtor® | Free Consultation",
@@ -171,6 +184,66 @@ export function getSeoForPath(path: string): PageSeo {
     ogType: "website",
     jsonLd: [],
   };
+
+
+  if (p === PTK_BASE) {
+    return {
+      ...base,
+      ...STATIC_META[p],
+      jsonLd: [
+        faqJsonLd(PTK.faq.map((f) => ({ question: f.q, answer: f.a }))),
+        breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Buy", path: "/buy" },
+          { name: "Path to Keys", path: PTK_BASE },
+        ]),
+      ],
+    };
+  }
+
+  const ptkDocMatch = p.match(/^\/buy\/path-to-keys\/documents\/([^/]+)$/);
+  if (ptkDocMatch) {
+    const d = docBySlug(ptkDocMatch[1]);
+    if (d) {
+      const title = `${d.name} (${d.abbr}) Explained | Path to Keys`;
+      return {
+        ...base,
+        title,
+        description: d.what,
+        ogType: "article",
+        jsonLd: [
+          { "@context": "https://schema.org", "@type": "Article", headline: d.name, description: d.what, dateModified: PTK.meta.lastReviewed, author: AUTHOR_NODE, publisher: PUBLISHER_NODE, mainEntityOfPage: canonical },
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Path to Keys", path: PTK_BASE },
+            { name: "Documents", path: `${PTK_BASE}/documents` },
+            { name: d.abbr, path: p },
+          ]),
+        ],
+      };
+    }
+  }
+
+  const ptkStepMatch = p.match(/^\/buy\/path-to-keys\/([^/]+)$/);
+  if (ptkStepMatch) {
+    const st = stepBySlug(ptkStepMatch[1]);
+    if (st) {
+      return {
+        ...base,
+        title: `${st.title} When Buying a Home in California | Path to Keys`,
+        description: `${st.summary} Step ${st.number} of ${PTK.steps.length} in buying an East Bay home.`,
+        ogType: "article",
+        jsonLd: [
+          { "@context": "https://schema.org", "@type": "Article", headline: st.title, description: st.summary, dateModified: PTK.meta.lastReviewed, author: AUTHOR_NODE, publisher: PUBLISHER_NODE, mainEntityOfPage: canonical },
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Path to Keys", path: PTK_BASE },
+            { name: st.title, path: p },
+          ]),
+        ],
+      };
+    }
+  }
 
   const staticMeta = STATIC_META[p];
   if (staticMeta) return { ...base, ...staticMeta };
@@ -252,17 +325,18 @@ export function getSeoForPath(path: string): PageSeo {
   }
 
   const buyerGuideMatch = p.match(/^\/buying-in-([^/]+)$/);
-  if (buyerGuideMatch) {
-    const guide = getBuyerGuideBySlug(buyerGuideMatch[1]);
-    if (guide) {
-      // BuyerGuide renders its own RealEstateAgent + FAQPage JSON-LD in the body,
-      // which is included in the prerendered HTML — don't duplicate it here.
-      return {
-        ...base,
-        title: guide.metaTitle,
-        description: guide.metaDescription,
-      };
-    }
+  if (buyerGuideMatch && buyerGuideMatch[1] in CITIES) {
+    const city = CITIES[buyerGuideMatch[1] as CitySlug];
+    const faqs = getBuyerGuideBySlug(city.slug)?.faqs ?? [];
+    const jsonLd: object[] = [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Neighborhoods", path: "/neighborhoods" },
+        { name: city.name, path: p },
+      ]),
+    ];
+    if (faqs.length) jsonLd.push(faqJsonLd(faqs.map((f) => ({ question: f.q, answer: f.a }))));
+    return { ...base, title: city.metaTitle, description: city.metaDescription, jsonLd };
   }
 
   const cityMatch = p.match(/^\/cities\/([^/]+)$/);
@@ -294,11 +368,10 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/home-valuation", priority: 0.9 },
     { path: "/contact", priority: 0.9 },
     { path: "/about", priority: 0.8 },
-    { path: "/testimonials", priority: 0.8 },
     { path: "/calculator", priority: 0.6 },
     { path: "/first-time-home-buyer", priority: 0.9 },
-    { path: "/buyer-hub", priority: 0.8 },
-    { path: "/seller-hub", priority: 0.8 },
+    { path: PTK_BASE, lastmod: PTK.meta.lastReviewed, priority: 0.9 },
+    { path: `${PTK_BASE}/documents`, lastmod: PTK.meta.lastReviewed, priority: 0.6 },
     { path: "/neighborhoods", priority: 0.8 },
     { path: "/blog", priority: 0.8 },
     { path: "/privacy", priority: 0.1, noSitemap: true },
@@ -326,8 +399,15 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
   for (const city of cities) {
     routes.push({ path: `/cities/${city.slug}`, priority: 0.8 });
   }
-  for (const guide of buyerGuides) {
-    routes.push({ path: `/buying-in-${guide.slug}`, priority: 0.9 });
+  for (const slug of CITY_ORDER) {
+    routes.push({ path: `/buying-in-${slug}`, priority: 0.9 });
   }
-  return routes;
+  for (const st of PTK.steps) {
+    routes.push({ path: `${PTK_BASE}/${st.slug}`, lastmod: PTK.meta.lastReviewed, priority: 0.6 });
+  }
+  for (const d of PTK.documents) {
+    routes.push({ path: `${PTK_BASE}/documents/${d.slug}`, lastmod: PTK.meta.lastReviewed, priority: 0.5 });
+  }
+  // Anything that 301s elsewhere is never prerendered or listed.
+  return routes.filter((r) => !REDIRECT_SOURCES.has(r.path));
 }

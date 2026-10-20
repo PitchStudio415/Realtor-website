@@ -1,370 +1,140 @@
-import { useLocation } from "wouter";
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Layout } from "@/components/layout/Layout";
-import { Phone, Mail, MapPin, Calendar, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { Link } from "wouter";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent } from "@/lib/analytics";
-import { AmbientVideo } from "@/components/AmbientVideo";
 import { useToast } from "@/hooks/use-toast";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { TrailPage, PageHero, ChatIcon } from "@/components/trail/Parts";
+import { PHONE, SMS, EMAIL, CALENDLY } from "@/lib/trail";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().optional(),
-  type: z.enum(["buyer", "seller"]),
-  timeline: z.string().optional(),
-  city: z.string().optional(),
-  message: z.string().optional(),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+type Intent = "buy" | "sell" | "exploring";
 
 export default function Contact() {
-  const [, navigate] = useLocation();
   const { toast } = useToast();
-  const [submitted, setSubmitted] = useState(false);
+  const params = new URLSearchParams(typeof window === "undefined" ? "" : window.location.search);
+  const [intent, setIntent] = useState<Intent>(params.get("type") === "seller" ? "sell" : "buy");
+  const [form, setForm] = useState({ name: "", email: "", phone: "", city: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sent, setSent] = useState(false);
 
-  const urlParams = new URLSearchParams(
-    typeof window === "undefined" ? "" : window.location.search,
-  );
-  const typeParam = urlParams.get('type');
-  const defaultType = typeParam === 'seller' ? 'seller' : 'buyer';
-
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      type: defaultType,
-      timeline: "",
-      city: "",
-      message: "",
+  const send = useMutation({
+    mutationFn: async () =>
+      apiRequest("POST", "/api/contacts", {
+        ...form,
+        type: intent === "sell" ? "seller" : "buyer",
+        timeline: intent === "exploring" ? "exploring" : "",
+      }),
+    onSuccess: () => {
+      setSent(true);
+      trackEvent("contact_form_submit", { lead_type: intent === "sell" ? "seller" : "buyer" });
     },
+    onError: () => toast({ title: "Something went wrong", description: `Please text ${PHONE} instead.`, variant: "destructive" }),
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      return apiRequest("POST", "/api/contacts", data);
-    },
-    onSuccess: (_res, data) => {
-      setSubmitted(true);
-      trackEvent("contact_form_submit", { lead_type: data.type });
-      toast({
-        title: "Message sent!",
-        description: "I'll get back to you within 24 hours.",
-      });
-    },
-    onError: () => {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or email directly.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: ContactFormData) => {
-    contactMutation.mutate(data);
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const errs: Record<string, string> = {};
+    if (form.name.trim().length < 2) errs.name = "Please add your name.";
+    if (!/^\S+@\S+\.\S+$/.test(form.email)) errs.email = "Please add a valid email.";
+    setErrors(errs);
+    if (!Object.keys(errs).length) send.mutate();
   };
 
-  if (submitted) {
-    return (
-      <Layout>
-        <div className="max-w-2xl mx-auto px-4 py-16 md:py-24 text-center">
-          <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 className="w-8 h-8 text-accent" />
-          </div>
-          <h1 className="text-3xl font-bold mb-4">Thanks for reaching out!</h1>
-          <p className="text-muted-foreground mb-8">
-            I'll review your message and get back to you within 24 hours.
-            In the meantime, feel free to explore the buyer and seller resources.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button onClick={() => navigate("/buyer-hub")}>
-              Buyer Resources
-            </Button>
-            <Button variant="outline" onClick={() => navigate("/seller-hub")}>
-              Seller Resources
-            </Button>
-          </div>
-        </div>
-      </Layout>
-    );
-  }
+  const field = (key: keyof typeof form, label: string, props: React.InputHTMLAttributes<HTMLInputElement> = {}) => (
+    <>
+      <label htmlFor={`f-${key}`}>{label}</label>
+      <input
+        id={`f-${key}`}
+        className="in"
+        value={form[key]}
+        onChange={(e) => setForm({ ...form, [key]: e.target.value })}
+        aria-invalid={!!errors[key]}
+        data-testid={`input-contact-${key}`}
+        {...props}
+      />
+      {errors[key] && <p className="err">{errors[key]}</p>}
+    </>
+  );
 
   return (
-    <Layout>
-      <section className="bg-gradient-to-b from-muted/50 to-background py-10 md:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3" data-testid="text-contact-headline">
-              Get in Touch
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              Ready to discuss your real estate goals? Fill out the form below or 
-              book a time to chat.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 md:py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            <div className="lg:col-span-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Contact Form</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
-                          name="name"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Name *</FormLabel>
-                              <FormControl>
-                                <Input placeholder="Your name" {...field} data-testid="input-contact-name" />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="email"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Email *</FormLabel>
-                              <FormControl>
-                                <Input type="email" placeholder="you@example.com" {...field} data-testid="input-contact-email" />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-                      
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Phone (optional)</FormLabel>
-                            <FormControl>
-                              <Input type="tel" placeholder="(510) 555-0123" {...field} data-testid="input-contact-phone" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="type"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>I'm looking to... *</FormLabel>
-                            <FormControl>
-                              <RadioGroup
-                                onValueChange={field.onChange}
-                                defaultValue={field.value}
-                                className="flex gap-4"
-                              >
-                                <div className="flex items-center space-x-2">
-                                  <RadioGroupItem value="buyer" id="buyer" data-testid="radio-buyer" />
-                                  <Label htmlFor="buyer">Buy a home</Label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                  <RadioGroupItem value="seller" id="seller" data-testid="radio-seller" />
-                                  <Label htmlFor="seller">Sell a home</Label>
-                                </div>
-                              </RadioGroup>
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
-                          name="timeline"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Timeline</FormLabel>
-                              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                <FormControl>
-                                  <SelectTrigger data-testid="select-timeline">
-                                    <SelectValue placeholder="Select timeline" />
-                                  </SelectTrigger>
-                                </FormControl>
-                                <SelectContent>
-                                  <SelectItem value="asap">As soon as possible</SelectItem>
-                                  <SelectItem value="1-3months">1-3 months</SelectItem>
-                                  <SelectItem value="3-6months">3-6 months</SelectItem>
-                                  <SelectItem value="6-12months">6-12 months</SelectItem>
-                                  <SelectItem value="exploring">Just exploring</SelectItem>
-                                </SelectContent>
-                              </Select>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="city"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>City of interest</FormLabel>
-                              <FormControl>
-                                <Input placeholder="e.g., Berkeley, Oakland" {...field} data-testid="input-contact-city" />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-                      
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Message (optional)</FormLabel>
-                            <FormControl>
-                              <Textarea 
-                                placeholder="Tell me about your situation and goals..."
-                                className="min-h-[120px] resize-none"
-                                {...field} 
-                                data-testid="textarea-contact-message"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <p className="text-xs text-muted-foreground">
-                        By submitting this form, you agree to be contacted about real estate services. 
-                        Your information will never be sold to third parties.
-                      </p>
-                      
-                      <Button 
-                        type="submit" 
-                        size="lg" 
-                        className="w-full"
-                        disabled={contactMutation.isPending}
-                        data-testid="button-contact-submit"
-                      >
-                        {contactMutation.isPending ? "Sending..." : "Send Message"}
-                      </Button>
-                    </form>
-                  </Form>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="rounded-2xl overflow-hidden border border-border hidden lg:block">
-                <AmbientVideo
-                  src="/videos/broll-colonnade.mp4"
-                  poster="/videos/broll-colonnade-poster.jpg"
-                  alt="Muzamil Khan standing outside an East Bay storefront"
-                  className="w-full h-56 object-cover object-[center_60%]"
-                />
+    <TrailPage>
+      <PageHero title="Get in touch" lede="Buying, selling, or just exploring? Text is fastest. I'll get back to you within a business day." />
+      <section className="s">
+        <div className="w ct">
+          {sent ? (
+            <div className="form" data-testid="contact-success">
+              <h2 style={{ fontSize: 32 }}>Thanks, I've got it.</h2>
+              <p style={{ color: "var(--ink-2)", marginTop: 12 }}>
+                I'll get back to you within a business day. While you wait, the Path to Keys guide walks through every step of buying here.
+              </p>
+              <div className="acts" style={{ marginTop: 22, display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link className="btn go" href="/buy/path-to-keys">See Path to Keys</Link>
+                <Link className="btn alt" href="/blog">Read the blog</Link>
               </div>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-4">Book a Consultation</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Prefer to schedule a specific time? Book directly on my calendar.
-                  </p>
-                  <div className="space-y-3">
-                    <Button variant="outline" className="w-full justify-start" asChild>
-                      <a
-                        href="https://calendly.com/muzamil-risegroup/30min"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        <Calendar className="w-4 h-4" />
-                        Book buyer consultation
-                      </a>
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start" asChild>
-                      <a
-                        href="https://calendly.com/muzamil-risegroup/30min"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        <Calendar className="w-4 h-4" />
-                        Book seller consultation
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium">Location</p>
-                        <p className="text-sm text-muted-foreground">El Cerrito, CA</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium">Phone</p>
-                        <p className="text-sm text-muted-foreground">(415) 819-8312</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Mail className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium">Email</p>
-                        <p className="text-sm text-muted-foreground">Muzamil@risegroup.com</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-muted/30 border-0">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2">Response Time</h3>
-                  <p className="text-sm text-muted-foreground">
-                    I typically respond within 24 hours during business days. 
-                    For urgent matters, please call.
-                  </p>
-                </CardContent>
-              </Card>
+            </div>
+          ) : (
+            <form className="form" onSubmit={submit} noValidate>
+              {field("name", "Name", { placeholder: "Your name", autoComplete: "name" })}
+              {field("email", "Email", { type: "email", placeholder: "you@example.com", autoComplete: "email" })}
+              {field("phone", "Phone (optional)", { type: "tel", placeholder: "(510) 555-0123", autoComplete: "tel" })}
+              <label id="intent-label">I'm looking to</label>
+              <div className="chips" role="radiogroup" aria-labelledby="intent-label">
+                {(
+                  [
+                    ["buy", "Buy"],
+                    ["sell", "Sell"],
+                    ["exploring", "Just exploring"],
+                  ] as [Intent, string][]
+                ).map(([v, l]) => (
+                  <button type="button" key={v} role="radio" aria-checked={intent === v} className={`chip${intent === v ? " on" : ""}`} onClick={() => setIntent(v)} data-testid={`chip-${v}`}>
+                    {l}
+                  </button>
+                ))}
+              </div>
+              {field("city", "City you're focused on (optional)", { placeholder: "Berkeley, Oakland, El Cerrito..." })}
+              <label htmlFor="f-message">Message</label>
+              <textarea
+                id="f-message"
+                className="in ta"
+                placeholder="Tell me about your situation"
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                data-testid="input-contact-message"
+              />
+              <button className="btn go" type="submit" style={{ marginTop: 24 }} disabled={send.isPending} data-testid="button-contact-submit">
+                {send.isPending ? "Sending..." : "Send message"}
+              </button>
+            </form>
+          )}
+          <div className="direct">
+            <div className="it">
+              <div className="lab">Call or text</div>
+              <div className="val num">{PHONE}</div>
+              <a className="btn go small" href={SMS}>
+                <ChatIcon />
+                Text me
+              </a>
+            </div>
+            <div className="it">
+              <div className="lab">Email</div>
+              <div className="val" style={{ fontSize: 20 }}>
+                <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+              </div>
+            </div>
+            <div className="it">
+              <div className="lab">Prefer a set time?</div>
+              <div className="val" style={{ fontSize: 20 }}>Book a 30-minute call</div>
+              <a className="btn alt small" href={CALENDLY} target="_blank" rel="noopener noreferrer" data-testid="link-calendly">
+                Open my calendar
+              </a>
+            </div>
+            <div className="it">
+              <div className="lab">Based in</div>
+              <div className="val" style={{ fontSize: 20 }}>El Cerrito, CA</div>
             </div>
           </div>
         </div>
       </section>
-    </Layout>
+    </TrailPage>
   );
 }

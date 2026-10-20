@@ -50,7 +50,7 @@ export function ReelCard({
             data-testid={testId ? `${testId}-play` : undefined}
           >
             <span className="w-16 h-16 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center shadow-lg transition-colors">
-              <Play className="w-7 h-7 text-[#071B2C] ml-1" fill="currentColor" />
+              <Play className="w-7 h-7 text-[#1c2a24] ml-1" fill="currentColor" />
             </span>
           </button>
         )}

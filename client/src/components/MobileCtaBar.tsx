@@ -11,7 +11,7 @@ export function MobileCtaBar() {
 
   return (
     <div
-      className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#071B2C]/95 backdrop-blur border-t border-white/10 pb-[env(safe-area-inset-bottom)]"
+      className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#1c2a24]/95 backdrop-blur border-t border-white/10 pb-[env(safe-area-inset-bottom)]"
       data-testid="mobile-cta-bar"
     >
       <div className="grid grid-cols-3 divide-x divide-white/10">

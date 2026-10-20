@@ -1,157 +1,83 @@
 import { Link } from "wouter";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { SiInstagram, SiGoogle, SiZillow } from "react-icons/si";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { trackEvent } from "@/lib/analytics";
+import { useToast } from "@/hooks/use-toast";
+import { PHONE, EMAIL, GOOGLE_URL, ZILLOW_URL, INSTAGRAM_URL, CITIES, CITY_CARD_ORDER, cityPath } from "@/lib/trail";
 
 export function Footer() {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
-
-  const newsletterMutation = useMutation({
-    mutationFn: async (email: string) => {
-      return apiRequest("POST", "/api/newsletter", { email, source: "footer" });
-    },
+  const signup = useMutation({
+    mutationFn: async (e: string) => apiRequest("POST", "/api/newsletter", { email: e, source: "footer" }),
     onSuccess: () => {
       trackEvent("newsletter_signup", { source: "footer" });
-      toast({
-        title: "You're on the list!",
-        description: "Thanks for subscribing to our newsletter.",
-      });
+      toast({ title: "You're on the list", description: "Market notes and buyer tips, now and then." });
       setEmail("");
     },
-    onError: () => {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    },
+    onError: () => toast({ title: "Something went wrong", description: "Please try again.", variant: "destructive" }),
   });
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      newsletterMutation.mutate(email);
-    }
-  };
-
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="font-semibold text-lg text-white">Muzamil Khan Real Estate</span>
-            </Link>
-            <p className="text-sm text-primary-foreground/80 mb-4">
-              Trusted, 5-star real estate guidance for first-time buyers, movers, and sellers across the East Bay: El Cerrito, Albany, Berkeley, Kensington, Oakland, Emeryville, Richmond, Hercules, Pinole, San Pablo, and El Sobrante.
-            </p>
-            <Link href="/contact" data-testid="link-footer-free-consult">
-              <Button variant="secondary" size="sm" className="mb-4 font-semibold w-full">
-                Book a Free Consultation
-              </Button>
-            </Link>
-            <div className="space-y-2 text-sm text-primary-foreground/80">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 flex-shrink-0" />
-                <span>El Cerrito, CA</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(415) 819-8312</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>Muzamil@risegroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 mt-4">
-              <a href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-testid="link-social-instagram" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                <SiInstagram className="w-4 h-4 text-white" />
-              </a>
-              <a href="https://www.google.com/maps?cid=4248271409235072484" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile" data-testid="link-social-google" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                <SiGoogle className="w-4 h-4 text-white" />
-              </a>
-              <a href="https://www.zillow.com/profile/muzamil7" target="_blank" rel="noopener noreferrer" aria-label="Zillow" data-testid="link-social-zillow" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                <SiZillow className="w-4 h-4 text-white" />
-              </a>
-            </div>
-          </div>
-          
+    <footer className="tm">
+      <div className="w" style={{ display: "block" }}>
+        <div className="frow">
           <div>
-            <h3 className="font-semibold mb-3 text-white">For Buyers</h3>
-            <ul className="space-y-1.5 text-sm">
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/start" className="text-primary-foreground/80 hover:text-white transition-colors font-semibold" data-testid="link-footer-start">Get Started</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buy" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buy">How I Help Buyers</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/first-time-home-buyer" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-ftb-guide">First-Time Home Buyer Guide</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buyer-hub" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buyer-hub">First-Time Buyer Hub</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buying-in-el-cerrito" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buying-el-cerrito">Buying in El Cerrito</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buying-in-albany" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buying-albany">Buying in Albany</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buying-in-berkeley" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-buying-berkeley">Buying in Berkeley</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/buyer-hub/financing" className="text-primary-foreground/80 hover:text-white transition-colors">Financing Guide</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-3 text-white">For Sellers</h3>
-            <ul className="space-y-1.5 text-sm">
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/sell" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-sell">How I Help Sellers</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/seller-hub" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-seller-hub">Seller Education Hub</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/selling-without-an-agent-el-cerrito" className="text-primary-foreground/80 hover:text-white transition-colors" data-testid="link-footer-fsbo">Selling Without an Agent</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/seller-hub/pricing" className="text-primary-foreground/80 hover:text-white transition-colors">Pricing Strategy</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/seller-hub/disclosures" className="text-primary-foreground/80 hover:text-white transition-colors">Disclosures Guide</Link></li>
-              <li className="flex items-center gap-2"><span className="text-primary-foreground/60">&#x2022;</span><Link href="/seller-hub/evaluating-offers" className="text-primary-foreground/80 hover:text-white transition-colors">Evaluating Offers</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-3 text-white">Stay Updated</h3>
-            <p className="text-sm text-primary-foreground/80 mb-3">
-              Get market insights and first-time buyer tips delivered to your inbox.
-            </p>
-            <form onSubmit={handleSubscribe} className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
-                data-testid="input-footer-email"
-              />
-              <Button 
-                type="submit" 
-                variant="secondary"
-                className="w-full" 
-                size="sm"
-                disabled={newsletterMutation.isPending}
-                data-testid="button-footer-subscribe"
-              >
-                {newsletterMutation.isPending ? "Subscribing..." : "Subscribe"}
-              </Button>
+            <h3>Market notes by email</h3>
+            <p>Local numbers and buyer tips, a few times a year.</p>
+            <form
+              className="fnews"
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (email) signup.mutate(email);
+              }}
+            >
+              <input type="email" required placeholder="you@example.com" aria-label="Email" value={email} onChange={(e) => setEmail(e.target.value)} data-testid="input-footer-email" />
+              <button className="btn alt small" type="submit" disabled={signup.isPending} data-testid="button-footer-subscribe">
+                {signup.isPending ? "Sending..." : "Subscribe"}
+              </button>
             </form>
           </div>
-        </div>
-        
-        <div className="mt-8 pt-6 border-t border-white/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-            <p>&copy; {new Date().getFullYear()} Muzamil Khan Real Estate. All rights reserved.</p>
-            <div className="flex items-center gap-4 flex-wrap justify-center">
-              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-            </div>
+          <div>
+            <h3>Cities</h3>
+            <ul>
+              {CITY_CARD_ORDER.map((s) => (
+                <li key={s}>
+                  <Link href={cityPath(s)}>Buying in {CITIES[s].name}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/neighborhoods">All neighborhoods</Link>
+              </li>
+            </ul>
           </div>
-          <p className="mt-4 text-xs text-primary-foreground/60 text-center">
-            This website provides general information only and does not constitute legal, tax, or financial advice. 
-            Consult with appropriate professionals for specific guidance.
-          </p>
+          <div>
+            <h3>Guides</h3>
+            <ul>
+              <li><Link href="/buy/path-to-keys">Path to Keys</Link></li>
+              <li><Link href="/first-time-home-buyer">First-time buyer guide</Link></li>
+              <li><Link href="/home-valuation">What's my home worth?</Link></li>
+              <li><Link href="/calculator">Affordability calculator</Link></li>
+              <li><Link href="/about#reviews">Reviews</Link></li>
+            </ul>
+          </div>
         </div>
+        <div style={{ display: "flex", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
+          <span>
+            Muzamil Khan | Rise Group &middot; DRE #02400805 &middot; {PHONE} &middot; {EMAIL} &middot; El Cerrito, CA
+          </span>
+          <span className="links">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" data-testid="link-social-instagram">Instagram</a>
+            <a href={GOOGLE_URL} target="_blank" rel="noopener noreferrer" data-testid="link-social-google">Google</a>
+            <a href={ZILLOW_URL} target="_blank" rel="noopener noreferrer" data-testid="link-social-zillow">Zillow</a>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+          </span>
+        </div>
+        <p className="fine">
+          General information only, not legal, tax, or financial advice. Equal Housing Opportunity.
+        </p>
       </div>
     </footer>
   );

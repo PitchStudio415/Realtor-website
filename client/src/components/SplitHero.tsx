@@ -28,7 +28,7 @@ export function SplitHero({
   children,
 }: SplitHeroProps) {
   return (
-    <section className="bg-[#071B2C] text-white overflow-hidden">
+    <section className="bg-[#1c2a24] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end gap-0">
           <div className="flex-1 py-14 lg:py-20 lg:pr-10 flex flex-col justify-center">

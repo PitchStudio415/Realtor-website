@@ -76,7 +76,7 @@ export default function HomeValuation() {
 
   return (
     <Layout>
-      <section className="bg-[#071B2C] text-white">
+      <section className="bg-[#1c2a24] text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-testid="text-valuation-headline">
             What's your home actually worth?

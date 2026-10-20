@@ -100,7 +100,7 @@ export default function CityPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="bg-[#071B2C] text-white py-16 md:py-24">
+      <section className="bg-[#1c2a24] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/">
             <Button variant="ghost" size="sm" className="text-white/60 hover:text-white mb-6 -ml-2">
@@ -154,7 +154,7 @@ export default function CityPage() {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* CTA Card */}
-              <Card className="bg-[#071B2C] text-white border-0 shadow-xl">
+              <Card className="bg-[#1c2a24] text-white border-0 shadow-xl">
                 <CardContent className="p-6">
                   <p className="text-xs tracking-widest uppercase text-white/50 mb-2">Work With Me</p>
                   <h3 className="text-xl font-bold mb-1">Buying or Selling in {city.name}?</h3>
@@ -162,7 +162,7 @@ export default function CityPage() {
                     M. Muzamil Khan and Rise Group Real Estate can help you navigate this market with local knowledge and honest guidance.
                   </p>
                   <Link href="/contact">
-                    <Button className="w-full bg-white text-[#071B2C] hover:bg-white/90 font-semibold mb-3" data-testid="button-city-contact">
+                    <Button className="w-full bg-white text-[#1c2a24] hover:bg-white/90 font-semibold mb-3" data-testid="button-city-contact">
                       Get in Touch
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -220,7 +220,7 @@ export default function CityPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-16 md:py-20 bg-[#071B2C] text-white">
+      <section className="py-16 md:py-20 bg-[#1c2a24] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs tracking-widest uppercase text-white/40 mb-3">Ready to Move Forward?</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -231,7 +231,7 @@ export default function CityPage() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/contact?type=buyer">
-              <Button size="lg" className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-6" data-testid="button-cta-buyer">
+              <Button size="lg" className="bg-white text-[#1c2a24] hover:bg-white/90 font-semibold px-6" data-testid="button-cta-buyer">
                 I'm Buying
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

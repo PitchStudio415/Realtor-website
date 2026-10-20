@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T00:22:21+00:00",
+  "title": "Design System: Muzamil Khan Real Estate",
+  "extensions": {
+    "colorMeta": {
+      "trail": {
+        "role": "primary",
+        "displayName": "Trail Marker Orange",
+        "canonical": "#c2461a",
+        "tonalRamp": [
+          "#210000",
+          "#450d00",
+          "#721f00",
+          "#a0340a",
+          "#cc5026",
+          "#f3734a",
+          "#fcae95",
+          "#ffe9e3"
+        ]
+      },
+      "trail-deep": {
+        "role": "primary",
+        "displayName": "Trail Deep",
+        "canonical": "#a93b14",
+        "tonalRamp": [
+          "#220000",
+          "#460d00",
+          "#721e00",
+          "#a13308",
+          "#c65632",
+          "#ec7854",
+          "#fdae95",
+          "#ffe9e2"
+        ]
+      },
+      "trail-ink": {
+        "role": "neutral",
+        "displayName": "Trail Ink White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Trail Ink",
+        "canonical": "#1c2a24",
+        "tonalRamp": [
+          "#030e09",
+          "#1a2822",
+          "#35443d",
+          "#52625b",
+          "#71827a",
+          "#92a39b",
+          "#b7c9c1",
+          "#e1f4eb"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "#47554d",
+        "tonalRamp": [
+          "#040e08",
+          "#1b2720",
+          "#36433c",
+          "#536259",
+          "#738179",
+          "#93a39a",
+          "#b9c9bf",
+          "#e3f3ea"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Map Paper",
+        "canonical": "#f5f7f3",
+        "tonalRamp": [
+          "#0a0c09",
+          "#232522",
+          "#3f403d",
+          "#5d5e5b",
+          "#7c7e7a",
+          "#9d9f9b",
+          "#c3c5c1",
+          "#edefeb"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Map Paper Shade",
+        "canonical": "#ebf0e8",
+        "tonalRamp": [
+          "#090c07",
+          "#222520",
+          "#3d413b",
+          "#5b5f58",
+          "#7a7f78",
+          "#9ba099",
+          "#c1c6be",
+          "#ebf0e8"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Contour Line",
+        "canonical": "#d6dfd3",
+        "tonalRamp": [
+          "#070d06",
+          "#20261d",
+          "#3b4239",
+          "#596056",
+          "#788075",
+          "#99a196",
+          "#bec7bb",
+          "#e9f2e6"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Legend Sheet",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "on-ink": {
+        "role": "neutral",
+        "displayName": "On-Ink",
+        "canonical": "#eef2ec",
+        "tonalRamp": [
+          "#0a0c08",
+          "#222521",
+          "#3e413c",
+          "#5b5f5a",
+          "#7b7e79",
+          "#9ca09a",
+          "#c2c5c0",
+          "#ecf0ea"
+        ]
+      },
+      "on-ink-muted": {
+        "role": "neutral",
+        "displayName": "On-Ink Muted",
+        "canonical": "#c9d3cc",
+        "tonalRamp": [
+          "#070d09",
+          "#1f2621",
+          "#3a423c",
+          "#57605a",
+          "#77807a",
+          "#98a19b",
+          "#bdc7c0",
+          "#e7f2ea"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error",
+        "canonical": "#a8321a",
+        "tonalRamp": [
+          "#220000",
+          "#4a0300",
+          "#751a06",
+          "#a42e15",
+          "#ca5239",
+          "#f0745a",
+          "#faae9d",
+          "#fee9e4"
+        ]
+      },
+      "berkeley": {
+        "role": "secondary",
+        "displayName": "Berkeley Blue",
+        "canonical": "#2b5fb8",
+        "tonalRamp": [
+          "#000038",
+          "#001e58",
+          "#02388e",
+          "#2559b1",
+          "#457ad6",
+          "#659dfc",
+          "#a3c5ff",
+          "#e6effe"
+        ]
+      },
+      "oakland": {
+        "role": "secondary",
+        "displayName": "Oakland Green",
+        "canonical": "#2c7a4f",
+        "tonalRamp": [
+          "#001004",
+          "#022c17",
+          "#0c4c2c",
+          "#1e6e44",
+          "#438f63",
+          "#66b283",
+          "#8bd8a8",
+          "#c7feda"
+        ]
+      },
+      "albany": {
+        "role": "secondary",
+        "displayName": "Albany Violet",
+        "canonical": "#7d4aa8",
+        "tonalRamp": [
+          "#150027",
+          "#350055",
+          "#551f7b",
+          "#74419e",
+          "#9562c2",
+          "#b783e6",
+          "#d7b2fc",
+          "#f3eafe"
+        ]
+      },
+      "elcerrito": {
+        "role": "secondary",
+        "displayName": "El Cerrito Amber",
+        "canonical": "#a86d0e",
+        "tonalRamp": [
+          "#170700",
+          "#351e00",
+          "#5a3700",
+          "#80520c",
+          "#aa6f12",
+          "#ce903f",
+          "#f6b666",
+          "#feebd6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Homepage hero headline only."
+      },
+      "headline-page": {
+        "displayName": "Page Headline",
+        "purpose": "Interior page hero h1."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "City medians and fact figures, tabular, over a small Faded Ink label."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3 in routes, ways, cards, FAQ."
+      },
+      "row-title": {
+        "displayName": "Row Title",
+        "purpose": "Linked list rows and guide titles."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero subcopy."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default copy."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Long-form articles and bios."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Captions, sources, labels in Faded Ink."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "All pill buttons."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hover-lift",
+        "value": "0 14px 34px -18px rgba(28,42,36,.35)",
+        "purpose": "City and document cards on hover only, with a 2px upward translate."
+      },
+      {
+        "name": "pin-halo",
+        "value": "0 0 0 4px color-mix(in srgb, var(--c) 18%, transparent)",
+        "purpose": "Soft ring around a city pin; 6px at 24% when highlighted."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-trail",
+        "value": "cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Hover lifts, pin scale, arrow nudges (0.25-0.3s)."
+      },
+      {
+        "name": "ridge-draw",
+        "value": "1.6s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Elevation-profile ridge draws in; only under prefers-reduced-motion: no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-collapse",
+        "value": "860px"
+      },
+      {
+        "name": "timeline-collapse",
+        "value": "900px"
+      }
+    ],
+    "focusRing": "2.5px solid var(--trail), offset 3px (2px on fields)",
+    "contourTexture": "/contours.svg at 70-85% opacity behind heroes; inverted at 12% inside dark ink blocks"
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single trail-orange action per view: Text me, Contact, See the full path.",
+      "html": "<a class=\"ds-btn ds-btn-go\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 12a8 8 0 0 1-11.6 7.2L4 20l1-4.6A8 8 0 1 1 21 12z\"/></svg>Text me</a>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-btn{font-family:'Overpass',system-ui,sans-serif;display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:16px;border-radius:999px;padding:14px 24px;text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}.ds-btn svg{width:18px;height:18px}.ds-btn:hover{transform:translateY(-1px)}.ds-btn:focus-visible{outline:2.5px solid var(--trail);outline-offset:3px}.ds-btn-go{background:var(--trail);color:var(--trail-ink)}.ds-btn-go:hover{background:#a93b14}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action beside the primary, usually Book a call.",
+      "html": "<a class=\"ds-btn-alt\" href=\"#\">Book a call</a>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-btn-alt{font-family:'Overpass',system-ui,sans-serif;display:inline-flex;align-items:center;font-weight:800;font-size:16px;border-radius:999px;padding:12px 22px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1)}.ds-btn-alt:hover{transform:translateY(-1px)}.ds-btn-alt:focus-visible{outline:2.5px solid var(--trail);outline-offset:3px}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Sticky blurred paper header; active section underlined in trail orange.",
+      "html": "<header class=\"ds-hdr\"><a class=\"ds-mark\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2 L22 20 H2 Z\" fill=\"none\" stroke=\"#1c2a24\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><path d=\"M7.5 20 L12 12 L16.5 20\" fill=\"none\" stroke=\"#c2461a\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/></svg>Muzamil Khan</a><nav class=\"ds-nav\"><a class=\"on\" href=\"#\">Buy</a><a href=\"#\">Sell</a><a href=\"#\">Neighborhoods</a><a href=\"#\">Blog</a><a href=\"#\">About</a></nav></header>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-hdr{font-family:'Overpass',system-ui,sans-serif;display:flex;align-items:center;justify-content:space-between;gap:24px;height:70px;padding:0 32px;background:rgba(245,247,243,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}.ds-mark{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}.ds-mark svg{width:22px;height:22px}.ds-nav{display:flex;gap:30px;font-weight:600;font-size:15.5px}.ds-nav a{color:var(--ink-2);text-decoration:none}.ds-nav a:hover{color:var(--ink)}.ds-nav a.on{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px;text-decoration-color:var(--trail)}.ds-nav a:focus-visible{outline:2.5px solid var(--trail);outline-offset:3px;border-radius:8px}"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form field on the contact form: paper fill, hairline border, orange focus ring.",
+      "html": "<label class=\"ds-label\">Your name<input class=\"ds-in\" placeholder=\"First and last\"></label>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-label{font-family:'Overpass',system-ui,sans-serif;display:block;font-weight:800;font-size:15px;color:var(--ink)}.ds-in{display:block;width:100%;margin-top:8px;font:inherit;font-weight:400;color:var(--ink);min-height:48px;border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;background:var(--paper)}.ds-in::placeholder{color:#5f6d65}.ds-in:focus-visible{outline:2.5px solid var(--trail);outline-offset:2px}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill choice; selected fills with ink.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip on\">Buying</button><button class=\"ds-chip\">Selling</button><button class=\"ds-chip\">Both</button></div>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-chips{display:flex;gap:10px;flex-wrap:wrap}.ds-chip{font-family:'Overpass',system-ui,sans-serif;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:600;font-size:15px;min-height:44px;color:var(--ink);cursor:pointer}.ds-chip:hover{border-color:var(--ink)}.ds-chip:focus-visible{outline:2.5px solid var(--trail);outline-offset:3px}.ds-chip.on{background:var(--ink);border-color:var(--ink);color:#fff}"
+    },
+    {
+      "name": "City Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Legend sheet tinted 5% in its city color; lifts on hover.",
+      "html": "<a class=\"ds-card\" href=\"#\" style=\"--c:var(--berkeley)\"><span class=\"ds-hd\"><span class=\"ds-pin\"></span><b>Berkeley</b></span><span class=\"ds-quad\"><span><b>$1.64M</b>median</span><span><b>128%</b>of asking</span><span><b>14</b>days</span><span><b>84%</b>over asking</span></span></a>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-card{font-family:'Overpass',system-ui,sans-serif;display:block;color:var(--ink);text-decoration:none;background:color-mix(in srgb,var(--c) 5%,#fff);border:1px solid var(--line);border-radius:var(--tr-radius);padding:30px 30px 26px;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}.ds-card:hover{transform:translateY(-2px);box-shadow:0 14px 34px -18px rgba(28,42,36,.35)}.ds-card:focus-visible{outline:2.5px solid var(--trail);outline-offset:3px}.ds-hd{display:flex;align-items:center;gap:14px;font-size:32px;font-weight:800;letter-spacing:-.03em}.ds-pin{width:16px;height:16px;border-radius:50%;background:var(--c);box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 20%,transparent)}.ds-quad{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}.ds-quad b{display:block;font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums lining-nums}"
+    },
+    {
+      "name": "Trailhead",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Signature city cell: pin, name, big median numeral, small label; tints on hover.",
+      "html": "<a class=\"ds-th\" href=\"#\" style=\"--c:var(--elcerrito)\"><span class=\"ds-name\"><span class=\"ds-tpin\"></span>El Cerrito</span><span class=\"ds-fig\">$1.18M</span><span class=\"ds-sub\">median &middot; 86% over asking</span></a>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-th{font-family:'Overpass',system-ui,sans-serif;display:block;width:240px;padding:24px 22px 26px;color:var(--ink);text-decoration:none;transition:background .3s}.ds-name{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px}.ds-tpin{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 18%,transparent);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}.ds-fig{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;margin-top:10px;font-variant-numeric:tabular-nums lining-nums}.ds-sub{display:block;font-size:14.5px;color:var(--ink-2)}.ds-th:hover,.ds-th:focus-visible{background:color-mix(in srgb,var(--c) 6%,var(--paper))}.ds-th:hover .ds-tpin,.ds-th:focus-visible .ds-tpin{transform:scale(1.35);box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 24%,transparent)}.ds-th:focus-visible{outline:2.5px solid var(--trail);outline-offset:3px}"
+    },
+    {
+      "name": "Route",
+      "kind": "custom",
+      "refersTo": "route-marker",
+      "description": "Numbered stops joined by a dashed trail line; the last stop fills orange.",
+      "html": "<div class=\"ds-route\"><div class=\"ds-stop\"><div class=\"ds-mk\">1</div><h3>Price it</h3></div><div class=\"ds-stop\"><div class=\"ds-mk\">2</div><h3>Prep it</h3></div><div class=\"ds-stop\"><div class=\"ds-mk\">3</div><h3>Close it</h3></div></div>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-route{font-family:'Overpass',system-ui,sans-serif;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;color:var(--ink)}.ds-stop{position:relative}.ds-stop:not(:last-child)::after{content:'';position:absolute;left:52px;right:-20px;top:21px;border-top:2.5px dashed color-mix(in srgb,var(--ink) 35%,transparent)}.ds-mk{width:44px;height:44px;border-radius:50%;background:var(--paper);border:2.5px solid var(--ink);display:grid;place-items:center;font-weight:800;font-size:17px;box-sizing:border-box}.ds-stop:last-child .ds-mk{background:var(--trail);border-color:var(--trail);color:#fff}.ds-stop h3{font-size:19px;font-weight:800;margin:18px 0 0}"
+    },
+    {
+      "name": "Close Band",
+      "kind": "custom",
+      "refersTo": "close-band",
+      "description": "Dark ink closing block with inverted contour texture and the page actions.",
+      "html": "<div class=\"ds-close\"><div><h2>Ready to look at homes?</h2><p>Text or call. I’ll give you a straight answer.</p></div><a class=\"ds-cgo\" href=\"#\">Text (415) 819-8312</a></div>",
+      "css": ":host{--paper:#f5f7f3;--paper-2:#ebf0e8;--ink:#1c2a24;--ink-2:#47554d;--line:#d6dfd3;--trail:#c2461a;--trail-ink:#fff;--berkeley:#2b5fb8;--oakland:#2c7a4f;--albany:#7d4aa8;--elcerrito:#a86d0e;--tr-radius:14px} .ds-close{font-family:'Overpass',system-ui,sans-serif;background:var(--ink);color:#eef2ec;border-radius:22px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}.ds-close h2{color:#fff;font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0;max-width:16ch}.ds-close p{color:#c9d3cc;margin:12px 0 0}.ds-cgo{background:var(--trail);color:#fff;font-weight:800;border-radius:999px;padding:14px 24px;text-decoration:none}.ds-cgo:hover{background:#a93b14}.ds-cgo:focus-visible{outline:2.5px solid var(--trail);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Trail Map",
+    "overview": "The site reads like a park trail map of the East Bay. Pale map paper is the ground, faint contour linework sits behind the heroes, deep green-black ink carries every word, and a single trail-marker orange marks the way forward. The climb from the flats to the hills is the price ladder: each city is a trailhead with its own color and its own four numbers, and that color follows the city onto its page, its playbook card, and its posts.\n\nHierarchy is carried by size and weight inside one typeface, Overpass, not by a second family, color, or decoration. Numbers are set huge over small plain labels. Structure comes from thin hairlines and dashed trail lines rather than boxes; when a box does appear it is a white legend sheet laid on the paper. Depth is almost absent: surfaces are flat at rest and lift only on hover.\n\nThe system is light-only. Everything lives under the `.tm` scope, so pages still on the older shadcn/Tailwind styling (first-time buyer guide, legacy city pages, home valuation, calculator, hub modules, Start) are unaffected and are not part of this system.",
+    "keyCharacteristics": [
+      "Map-paper ground (sage-tinted off-white) with contour linework at hero scale only.",
+      "One accent, trail orange, reserved for the primary action, the last stop of a route, and active-state underlines.",
+      "Four city colors, each bound to one city and used only as marker, pin, tint, or underline.",
+      "One family, Overpass, at three working weights (400, 600, 800); headings tight and negative-tracked.",
+      "Hairline rows and dashed route lines instead of cards for lists and sequences.",
+      "Flat surfaces; shadow only as a hover response."
+    ],
+    "rules": [
+      {
+        "name": "The One Marker Rule",
+        "body": "Trail orange marks the next step and nothing decorative. If two orange fills compete in one viewport, one of them is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bound City Rule",
+        "body": "A city color is only ever used for that city, and only as a pin, marker, tint, or underline, never as body or heading text (El Cerrito Amber is 4.32:1 on white and fails as text).",
+        "section": "colors"
+      },
+      {
+        "name": "The Size Alone Rule",
+        "body": "Hierarchy comes from size and weight in one family. No second typeface, no uppercase tracked labels, no colored headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Big Number Rule",
+        "body": "A figure is set larger and heavier than its label and the label sits under it in Faded Ink; numbers always use tabular lining figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Rhythm Rule",
+        "body": "Lists are rows separated by 1px hairlines with 22-28px vertical padding, not stacks of cards.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat at Rest Rule",
+        "body": "No surface carries a shadow at rest. Lift is a reply to the pointer.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** wrap every new page in the `.tm` scope and build from the shared parts (page hero, section, rows, route, close band) before writing new CSS.",
+      "**Do** pass a city's color through `--c` so the city reads the same in pins, tints, and underlines everywhere it appears.",
+      "**Do** keep one primary orange action per view and close content pages with the dark close band.",
+      "**Do** set figures in tabular numerals, larger than their labels, with real sourced numbers only.",
+      "**Do** use Muzamil's real photos for any portrait or story image.",
+      "**Do** separate list items with 1px hairlines and draw sequences with dashed trail lines."
+    ],
+    "donts": [
+      "**Don't** use a city color for text or for anything that is not that city.",
+      "**Don't** put shadows on surfaces at rest.",
+      "**Don't** add a second typeface, uppercase tracked labels, or small labels stacked above headings.",
+      "**Don't** build feature lists as same-size icon cards; use the Marker shapes inline with text.",
+      "**Don't** introduce a dark theme; the system is light-only.",
+      "**Don't** extend the legacy shadcn/Tailwind tokens in `client/src/index.css`; new work belongs in the Trail Map scope."
+    ]
+  }
+}

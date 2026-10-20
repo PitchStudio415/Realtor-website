@@ -78,7 +78,7 @@ export default function SellWithoutAgent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="bg-[#071B2C] text-white py-14 md:py-20">
+      <section className="bg-[#1c2a24] text-white py-14 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-1.5 text-sm text-white/50 mb-5" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white">Home</Link>

@@ -13,7 +13,8 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("theme") as Theme) || "system";
+      // Light theme only (Oct 2026 redesign); the dark toggle was removed.
+      return "light";
     }
     return "system";
   });

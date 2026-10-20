@@ -1,306 +1,212 @@
 import { Link, useParams } from "wouter";
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, ArrowLeft, Search, Calendar, ChevronDown } from "lucide-react";
+import { useState, useEffect, type CSSProperties } from "react";
+import { TrailPage, PageHero, Section, Rows, CloseBand, Crumb, Arrow } from "@/components/trail/Parts";
 import { blogPosts, getBlogPostBySlug, isPublished } from "@/lib/content";
 import { renderMarkdown } from "@/lib/markdown";
+import { CITIES, START_HERE, cityPath, type CitySlug } from "@/lib/trail";
 import type { BlogPost } from "@shared/schema";
 
-// Baked at build time (vite define). Falls back to now if the prerender
-// context doesn't apply the define. Used as the stable first-render reference
-// so scheduled posts don't cause a hydration mismatch.
+// Baked at build time (vite define). Used as the stable first-render reference
+// so scheduled posts reveal on their date without a rebuild.
 declare const __BUILD_MS__: number;
-const BUILD_MS: number =
-  typeof __BUILD_MS__ !== "undefined" ? __BUILD_MS__ : Date.now();
-import { Badge } from "@/components/ui/badge";
-import heroPhoto from "@assets/brand/muzamil-pinole-cafe.jpg";
-import { SplitHero } from "@/components/SplitHero";
+const BUILD_MS: number = typeof __BUILD_MS__ !== "undefined" ? __BUILD_MS__ : Date.now();
 
-const categories = [
-  { value: 'all', label: 'All' },
-  { value: 'first-time-buyers', label: 'First-Time Buyers' },
-  { value: 'selling', label: 'Selling' },
-  { value: 'financing', label: 'Financing' },
-  { value: 'market-basics', label: 'Market Basics' },
-  { value: 'inspections', label: 'Inspections' },
-  { value: 'neighborhood-life', label: 'Neighborhood Life' },
+interface Group {
+  name: string;
+  color: string;
+  posts: string[];
+  href?: string;
+  city?: CitySlug;
+}
+
+const CITY_GROUPS: Group[] = [
+  ...(["berkeley", "oakland", "albany", "el-cerrito"] as CitySlug[]).map((s) => ({
+    name: CITIES[s].name,
+    color: CITIES[s].color,
+    posts: CITIES[s].posts,
+    href: cityPath(s),
+    city: s,
+  })),
+  {
+    name: "Richmond & West County",
+    color: "var(--ink-2)",
+    posts: ["best-neighborhoods-in-richmond-for-first-time-buyers", "west-contra-costa-county-market-outlook-2026", "el-cerrito-vs-richmond-vs-hercules-where-to-buy-2026"],
+  },
+  { name: "All East Bay", color: "var(--trail)", posts: ["east-bay-market-update-spring-2026"] },
 ];
 
-function FaqAccordion({ faq }: { faq: { question: string; answer: string }[] }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+const fmtMonth = (d: string) => new Date(d + "T12:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
+
+/** The first city group a post belongs to, for its breadcrumb color and playbook callout. */
+function cityOf(slug: string): Group | undefined {
+  return CITY_GROUPS.find((g) => g.city && g.posts[0] === slug) || CITY_GROUPS.find((g) => g.city && g.posts.includes(slug));
+}
+
+function BlogIndex() {
+  const [refMs, setRefMs] = useState(BUILD_MS);
+  useEffect(() => setRefMs(Date.now()), []);
+  const live = (slug: string) => {
+    const p = getBlogPostBySlug(slug);
+    return p && isPublished(p, refMs) ? p : undefined;
+  };
+  const grouped = new Set([...START_HERE.map((s) => s.slug), ...CITY_GROUPS.flatMap((g) => g.posts)]);
+  const rest = blogPosts.filter((p) => isPublished(p, refMs) && !grouped.has(p.slug));
+  const row = (p: BlogPost) => ({ title: p.title, meta: fmtMonth(p.publishedAt), href: `/blog/${p.slug}` });
+
   return (
-    <div className="mt-12 pt-8 border-t border-border">
-      <h2 className="text-xl font-bold mb-6">Frequently Asked Questions</h2>
-      <div className="space-y-3">
-        {faq.map((item, i) => (
-          <div key={i} className="border border-border rounded-lg overflow-hidden">
-            <button
-              className="w-full flex items-center justify-between px-5 py-4 text-left font-medium hover:bg-muted/50 transition-colors"
-              onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              data-testid={`faq-toggle-${i}`}
-            >
-              <span>{item.question}</span>
-              <ChevronDown className={`w-4 h-4 text-muted-foreground flex-shrink-0 ml-3 transition-transform ${openIndex === i ? 'rotate-180' : ''}`} />
-            </button>
-            {openIndex === i && (
-              <div className="px-5 pb-4 pt-1 text-muted-foreground text-sm leading-relaxed">
-                {item.answer}
+    <TrailPage>
+      <PageHero title="Blog" lede="Start with the three essentials, then read up on the city you are looking at." />
+
+      <Section title="Start here" intro="What first-time East Bay buyers ask me most.">
+        <div className="guides">
+          {START_HERE.map(({ topic, slug }) => {
+            const p = live(slug);
+            if (!p) return null;
+            return (
+              <Link key={slug} className="guide" href={`/blog/${slug}`}>
+                <span className="topic">{topic}</span>
+                <span className="t">{p.title}</span>
+                <span className="arr"><Arrow /></span>
+              </Link>
+            );
+          })}
+        </div>
+      </Section>
+
+      <Section title="By city">
+        <div className="bycity">
+          {CITY_GROUPS.map((g) => {
+            const posts = g.posts.map(live).filter((p): p is BlogPost => !!p);
+            if (!posts.length) return null;
+            return (
+              <div className="cb" key={g.name} style={{ "--c": g.color } as CSSProperties}>
+                <div className="hd">
+                  <h3>
+                    <span className="pin" />
+                    {g.name}
+                  </h3>
+                  {g.href && <Link href={g.href}>City <Arrow /></Link>}
+                </div>
+                {posts.map((p) => (
+                  <Link key={p.slug} className="p" href={`/blog/${p.slug}`} data-testid={`card-blog-${p.slug}`}>
+                    {p.title}
+                  </Link>
+                ))}
               </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+            );
+          })}
+        </div>
+      </Section>
 
-/** Author box for E-E-A-T: a visible, linked byline block AI engines can read. */
-function AuthorBox() {
-  return (
-    <aside className="mt-12 pt-8 border-t border-border flex items-start gap-4">
-      <img src="/muzamil-logo.jpg" alt="Muzamil Khan, East Bay Realtor" width={64} height={64} className="w-16 h-16 rounded-full object-cover flex-shrink-0" loading="lazy" />
-      <div>
-        <h3 className="font-semibold">
-          <Link href="/about" className="hover:text-primary">Muzamil Khan</Link>, Realtor · DRE #02400805
-        </h3>
-        <p className="text-sm text-muted-foreground mt-1">
-          East Bay agent with 15 years in construction, based in El Cerrito. I help first-time buyers,
-          movers, and sellers across El Cerrito, Albany, Berkeley, Kensington, Richmond and Oakland, and
-          I read inspection reports differently than most agents. <Link href="/about" className="text-primary hover:underline">More about me</Link>.
-        </p>
-      </div>
-    </aside>
-  );
-}
+      {rest.some((p) => p.category !== "selling") && (
+        <Section title="More on buying">
+          <Rows items={rest.filter((p) => p.category !== "selling").map(row)} />
+        </Section>
+      )}
+      {rest.some((p) => p.category === "selling") && (
+        <Section title="Selling">
+          <Rows items={rest.filter((p) => p.category === "selling").map(row)} />
+        </Section>
+      )}
 
-/** Contextual in-body links to related posts (same category first), for internal linking. */
-function RelatedPosts({ current }: { current: BlogPost }) {
-  const pool = blogPosts.filter((p) => p.slug !== current.slug && isPublished(p));
-  const sameCat = pool.filter((p) => p.category === current.category);
-  const picks = [...sameCat, ...pool.filter((p) => p.category !== current.category)].slice(0, 3);
-  if (!picks.length) return null;
-  return (
-    <section className="mt-12 pt-8 border-t border-border">
-      <h2 className="text-xl font-bold mb-5">Keep reading</h2>
-      <div className="grid sm:grid-cols-3 gap-4">
-        {picks.map((p) => (
-          <Link key={p.slug} href={`/blog/${p.slug}`}>
-            <div className="h-full rounded-lg border bg-card p-4 hover-elevate cursor-pointer">
-              <Badge variant="secondary" className="text-xs mb-2">{p.category.replace(/-/g, " ")}</Badge>
-              <h3 className="font-semibold text-sm leading-snug">{p.title}</h3>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </section>
+      <CloseBand title="Have a question I haven't written about?" sub="Text me. It might be the next post." />
+    </TrailPage>
   );
 }
 
 function BlogPostPage({ slug }: { slug: string }) {
   const post = getBlogPostBySlug(slug);
 
-  // Treat a not-yet-published (scheduled) post as missing so its URL can't
-  // leak the content before its date.
+  // A scheduled (future-dated) post is treated as missing so its URL can't leak early.
   if (!post || !isPublished(post)) {
     return (
-      <Layout>
-        <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-          <h1 className="text-2xl font-bold mb-4">Post Not Found</h1>
-          <Link href="/blog">
-            <Button>Back to Blog</Button>
-          </Link>
-        </div>
-      </Layout>
+      <TrailPage>
+        <section className="notfound">
+          <div className="w">
+            <h1 style={{ fontSize: 40, fontWeight: 800 }}>Post not found</h1>
+            <p style={{ margin: "14px 0 24px", color: "var(--ink-2)" }}>It may have moved. The blog has everything in one place.</p>
+            <Link className="btn go" href="/blog">
+              Back to the blog
+            </Link>
+          </div>
+        </section>
+      </TrailPage>
     );
   }
 
-  const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
+  const g = cityOf(post.slug);
+  const city = g?.city ? CITIES[g.city] : undefined;
+  const pool = blogPosts.filter((p) => p.slug !== post.slug && isPublished(p));
+  const related = [...pool.filter((p) => p.category === post.category), ...pool.filter((p) => p.category !== post.category)].slice(0, 3);
+  const date = new Date(post.publishedAt + "T12:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
   return (
-    <Layout>
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-        <div className="mb-8">
-          <Link href="/blog">
-            <Button variant="ghost" size="sm" className="mb-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Button>
-          </Link>
-          <div className="flex items-center gap-3 mb-4">
-            <Badge variant="secondary" className="text-xs">
-              {post.category.replace('-', ' ')}
-            </Badge>
-            <span className="text-sm text-muted-foreground flex items-center gap-1">
-              <Calendar className="w-3 h-3" />
-              {formattedDate}
-            </span>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold" data-testid="text-blog-title">
-            {post.title}
-          </h1>
-          <div className="flex items-center gap-3 mt-4">
-            <img src="/muzamil-logo.jpg" alt="Muzamil Khan" width={40} height={40} className="w-10 h-10 rounded-full object-cover" loading="lazy" />
-            <p className="text-sm text-muted-foreground">
-              By <Link href="/about" className="font-medium text-foreground hover:text-primary">Muzamil Khan</Link>, Realtor, DRE #02400805
-            </p>
-          </div>
-        </div>
-
-        <div
-          className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:mt-6 prose-h3:text-lg prose-h3:mt-4 prose-p:text-muted-foreground prose-p:my-2 prose-li:text-muted-foreground prose-strong:text-foreground prose-a:text-primary"
-          dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content, { dropH1: true }) }}
-        />
-
-        {post.faq && post.faq.length > 0 && <FaqAccordion faq={post.faq} />}
-
-        <RelatedPosts current={post} />
-
-        <AuthorBox />
-        
-        <div className="mt-12 pt-8 border-t border-border">
-          <h3 className="font-semibold mb-2">Have a question about your move?</h3>
-          <p className="text-muted-foreground text-sm mb-4">
-            No pressure and no obligation. Leave your contact info and I'll follow up, or book a call and we'll talk through whatever you're weighing.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a href="https://calendly.com/muzamil-risegroup/30min" target="_blank" rel="noopener noreferrer">
-              <Button>
-                Book a call
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </a>
-            <Link href="/contact">
-              <Button variant="outline">
-                Leave your contact info
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </Layout>
-  );
-}
-
-function BlogIndex() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  // Start from the build-time reference (identical on server + first client
-  // render), then switch to real time after mount so a scheduled post reveals
-  // itself on its publish date without a rebuild.
-  const [refMs, setRefMs] = useState(BUILD_MS);
-  useEffect(() => {
-    setRefMs(Date.now());
-  }, []);
-
-  const filteredPosts = blogPosts.filter((post) => {
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory && isPublished(post, refMs);
-  });
-
-  return (
-    <Layout>
-      <SplitHero
-        title="Blog"
-        titleTestId="text-blog-headline"
-        subtitle="Practical insights for Bay Area buyers and sellers."
-        photo={heroPhoto}
-        photoAlt="Muzamil Khan at a café table in Old Town Pinole"
-      />
-
-      <section className="py-8 border-b border-border sticky top-16 bg-background z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto">
-              {categories.map((cat) => (
-                <Button
-                  key={cat.value}
-                  variant={selectedCategory === cat.value ? "default" : "ghost"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(cat.value)}
-                  className="whitespace-nowrap"
-                  data-testid={`button-category-${cat.value}`}
-                >
-                  {cat.label}
-                </Button>
-              ))}
-            </div>
-            <div className="relative w-full md:w-64">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9"
-                data-testid="input-blog-search"
-              />
+    <TrailPage>
+      <section className="phero">
+        <div className="contours" aria-hidden="true" style={{ opacity: 0.45 }} />
+        <div className="w">
+          <div className="article">
+            <Crumb trail={[{ label: "Blog", href: "/blog" }, { label: g?.name || "Article" }]} color={g?.color} />
+            <h1 data-testid="text-blog-title">{post.title}</h1>
+            <div className="byline">
+              <span className="av" aria-hidden="true" />
+              <span>
+                <b>
+                  <Link href="/about">Muzamil Khan</Link>
+                </b>
+                , Realtor, DRE #02400805
+                <br />
+                {date}
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredPosts.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground mb-4">No articles found matching your search.</p>
-              <Button variant="outline" onClick={() => { setSearchQuery(""); setSelectedCategory("all"); }}>
-                Clear filters
-              </Button>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredPosts.map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`}>
-                  <Card className="h-full hover-elevate cursor-pointer" data-testid={`card-blog-${post.slug}`}>
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Badge variant="secondary" className="text-xs">
-                          {post.category.replace('-', ' ')}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground">
-                          {new Date(post.publishedAt).toLocaleDateString('en-US', {
-                            month: 'short',
-                            day: 'numeric',
-                            year: 'numeric'
-                          })}
-                        </span>
-                      </div>
-                      <h3 className="font-semibold text-lg mb-2 line-clamp-2">{post.title}</h3>
-                      <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center text-sm text-primary">
-                        Read more <ArrowRight className="w-4 h-4 ml-1" />
-                      </div>
-                    </CardContent>
-                  </Card>
+      <section className="s">
+        <div className="w">
+          <div className="article prose" style={g ? ({ "--c": g.color } as CSSProperties) : undefined}>
+            {/* renderMarkdown escapes all HTML in the authored content before adding its own tags. */}
+            <div dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content, { dropH1: true }) }} />
+            {city && (
+              <div className="inline-pb">
+                <span>
+                  <b>Buying in {city.name}?</b>
+                  <br />
+                  <span>The city page has the numbers, the offer strategy, and the one-page playbook.</span>
+                </span>
+                <Link className="btn go small" href={cityPath(city.slug)}>
+                  {city.name} page
                 </Link>
-              ))}
+              </div>
+            )}
+          </div>
+          {post.faq && post.faq.length > 0 && (
+            <div className="article" style={{ marginTop: 48 }}>
+              <h2 style={{ fontSize: 30 }}>Common questions</h2>
+              <div className="faq">
+                {post.faq.map((f) => (
+                  <details key={f.question}>
+                    <summary>{f.question}</summary>
+                    <div className="a">{f.answer}</div>
+                  </details>
+                ))}
+              </div>
             </div>
           )}
         </div>
       </section>
-    </Layout>
+
+      <Section title="Keep reading">
+        <Rows items={related.map((p) => ({ title: p.title, meta: fmtMonth(p.publishedAt), href: `/blog/${p.slug}` }))} />
+      </Section>
+
+      <CloseBand title={city ? `Questions about ${city.name}?` : "Have a question about your move?"} />
+    </TrailPage>
   );
 }
 
 export default function Blog() {
   const params = useParams<{ slug?: string }>();
-  
-  if (params.slug) {
-    return <BlogPostPage slug={params.slug} />;
-  }
-  
-  return <BlogIndex />;
+  return params.slug ? <BlogPostPage slug={params.slug} /> : <BlogIndex />;
 }

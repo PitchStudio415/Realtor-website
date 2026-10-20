@@ -1,0 +1,121 @@
+{
+  "title": "Choose the look for muzamilkhanrealtor.com (new set)",
+  "question": "The roll picked 'Trail Map'. Keep it, take an alternate, or re-roll again.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Trail Map",
+      "kicker": "THE ROLL",
+      "lineage": "East Bay Regional Parks trail maps (Tilden, Wildcat Canyon)",
+      "thesis": "The East Bay as a trail map: flats to the hills in faint contour lines, each city a marked trailhead.",
+      "palette": ["#f5f7f3", "#1c2a24", "#cdd8c9", "#e8582a"],
+      "materials": ["faint contour linework", "colored trail lines per city", "map-legend panels"],
+      "viewport": "Your photo over a faint contour map of the hills, four city markers with their numbers, one 'Text me' action.",
+      "risk": "Contours turn decorative fast; they must stay faint so your words and numbers lead.",
+      "raised": [
+        {"from": "challenger-specimen", "raise": "Hierarchy by size alone: huge numbers, small labels, one typeface, no extra decoration."},
+        {"from": "challenger-gauges", "raise": "Every city shows the same four numbers in the same order on every page, so they compare at a glance."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "BART Map",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "BART system map and station signage",
+      "thesis": "Your cities as stations on colored lines; every page is a stop you can see from the map.",
+      "palette": ["#ffffff", "#141414", "#0099d8", "#f5c400", "#d62b1f"],
+      "materials": ["colored route lines", "station dots", "signage type"],
+      "viewport": "A simple line map linking Berkeley, Oakland, Albany, El Cerrito, with your photo and one action.",
+      "risk": "Transit-map design is a familiar trope."
+    },
+    {
+      "id": "challenger-quiz",
+      "label": "Which City Fits You? Quiz",
+      "verdict": "declined",
+      "lineage": "90s magazine quiz spreads",
+      "thesis": "A short quiz that ends with the city that fits your budget and life.",
+      "palette": ["#ffffff", "#ff3c8e", "#b6f23a"],
+      "materials": ["checkbox rows", "verdict box"],
+      "viewport": "Five quick questions, then 'Your city: Albany' with its playbook.",
+      "case": "Fun and useful, but the magazine look undercuts trust for a $1M+ decision.",
+      "kept": "A clear verdict at the end of a short path.",
+      "risk": "Gimmicky."
+    },
+    {
+      "id": "challenger-specimen",
+      "label": "Type Specimen",
+      "verdict": "declined",
+      "lineage": "font specimen sheets",
+      "thesis": "Giant type does all the work; nothing else on the page.",
+      "palette": ["#fbfbfa", "#0d0d0d", "#3b5bff"],
+      "materials": ["enormous display type", "tiny labels"],
+      "viewport": "One huge number, '84%', and one line under it.",
+      "case": "Bold and clean, but says little about you or the house.",
+      "kept": "Hierarchy by size alone.",
+      "risk": "Cold."
+    },
+    {
+      "id": "challenger-gauges",
+      "label": "Instrument Panel",
+      "verdict": "declined",
+      "lineage": "night-flight cockpit gauges",
+      "thesis": "Six calm gauges you cross-check at a glance.",
+      "palette": ["#0b0d0f", "#e9ecef", "#36d07a"],
+      "materials": ["round gauges", "glowing needles"],
+      "viewport": "Market gauges for each city on a dark panel.",
+      "case": "Dark and technical, both things you moved away from.",
+      "kept": "The same numbers in the same order, always.",
+      "risk": "Feels like an app, not a person."
+    },
+    {
+      "id": "challenger-bass",
+      "label": "Cut-Paper Title Cards",
+      "verdict": "declined",
+      "lineage": "Saul Bass film titles",
+      "thesis": "One idea per full-screen color card.",
+      "palette": ["#e2611f", "#111111", "#f2ede3"],
+      "materials": ["cut-paper shapes", "flat color fields"],
+      "viewport": "A burnt-orange card with a cut-paper house.",
+      "case": "Striking but artsy; buyers want facts fast.",
+      "kept": "One idea per screen.",
+      "risk": "Style over substance."
+    },
+    {
+      "id": "challenger-raku",
+      "label": "Raku Ceramic",
+      "verdict": "declined",
+      "lineage": "smoke-fired pottery",
+      "thesis": "Soot-black and crackled silver, shaped by fire.",
+      "palette": ["#141210", "#d9d6cf", "#e2702a"],
+      "materials": ["crackle glaze", "soot texture"],
+      "viewport": "A dark crackled field with ember accents.",
+      "case": "Beautiful but dark and unrelated to homes.",
+      "kept": "Accepting asymmetry.",
+      "risk": "Moody."
+    },
+    {
+      "id": "challenger-garden",
+      "label": "Gravity Garden",
+      "verdict": "declined",
+      "lineage": "surreal dream landscapes",
+      "thesis": "Rain that falls in every direction.",
+      "palette": ["#6f7d6a", "#2b6fd6", "#d33a3a"],
+      "materials": ["physics animation"],
+      "viewport": "An animated garden with colored rain.",
+      "case": "Pure art piece; no fit for buyers.",
+      "kept": "Color as a guide to direction.",
+      "risk": "Confusing."
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "canon": true,
+  "canonCard": {
+    "label": "The standard realtor site",
+    "thesis": "What top agent sites (Compass-style) ship, executed cleanly.",
+    "palette": ["#ffffff", "#111827", "#1f6feb"],
+    "materials": ["large photo hero", "city photo tiles", "review strip"],
+    "viewport": "Big photo of you, your cities as photo tiles, reviews, contact.",
+    "risk": "Looks like every other agent site by design."
+  },
+  "steer": true
+}

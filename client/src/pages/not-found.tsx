@@ -1,21 +1,21 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
+import { Link } from "wouter";
+import { TrailPage } from "@/components/trail/Parts";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
-          </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
+    <TrailPage>
+      <section className="notfound">
+        <div className="w">
+          <h1 style={{ fontSize: 44, fontWeight: 800, letterSpacing: "-.03em" }}>This trail doesn't go anywhere.</h1>
+          <p style={{ margin: "14px auto 26px", color: "var(--ink-2)", maxWidth: "44ch" }}>
+            The page may have moved in the redesign. Start from the home page or jump to a city.
           </p>
-        </CardContent>
-      </Card>
-    </div>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link className="btn go" href="/">Home</Link>
+            <Link className="btn alt" href="/neighborhoods">Neighborhoods</Link>
+          </div>
+        </div>
+      </section>
+    </TrailPage>
   );
 }

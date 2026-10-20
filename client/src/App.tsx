@@ -17,7 +17,6 @@ import SellerHub from "@/pages/SellerHub";
 import Neighborhoods from "@/pages/Neighborhoods";
 import Blog from "@/pages/Blog";
 import About from "@/pages/About";
-import Testimonials from "@/pages/Testimonials";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
@@ -28,7 +27,19 @@ import Start from "@/pages/Start";
 import HomeValuation from "@/pages/HomeValuation";
 import SellWithoutAgent from "@/pages/SellWithoutAgent";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
-import { buyerGuides } from "@/lib/buyerGuideData";
+import PathToKeys from "@/pages/PathToKeys";
+import PtkStep from "@/pages/PtkStep";
+import PtkDocs from "@/pages/PtkDocs";
+import { CITY_ORDER } from "@/lib/trail";
+import { REDIRECTS } from "@shared/redirects";
+
+/** Client-side counterpart of the server's 301s, for in-app links to old URLs. */
+function ClientRedirect({ to }: { to: string }) {
+  useEffect(() => {
+    window.location.replace(to);
+  }, [to]);
+  return null;
+}
 
 function setMetaContent(selector: string, content: string) {
   const el = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -89,30 +100,36 @@ function HeadManager() {
 function Router() {
   return (
     <Switch>
+      {Object.entries(REDIRECTS).map(([from, to]) => (
+        <Route key={from} path={from}>
+          <ClientRedirect to={to} />
+        </Route>
+      ))}
       <Route path="/" component={Home} />
       <Route path="/start" component={Start} />
       <Route path="/buy" component={Buy} />
+      <Route path="/buy/path-to-keys" component={PathToKeys} />
+      <Route path="/buy/path-to-keys/documents" component={PtkDocs} />
+      <Route path="/buy/path-to-keys/documents/:slug" component={PtkDocs} />
+      <Route path="/buy/path-to-keys/:slug" component={PtkStep} />
       <Route path="/sell" component={Sell} />
       <Route path="/selling-without-an-agent-el-cerrito" component={SellWithoutAgent} />
       <Route path="/home-valuation" component={HomeValuation} />
       <Route path="/calculator" component={Calculator} />
       <Route path="/first-time-home-buyer" component={FirstTimeBuyerGuide} />
-      <Route path="/buyer-hub" component={BuyerHub} />
       <Route path="/buyer-hub/:slug" component={BuyerHub} />
-      <Route path="/seller-hub" component={SellerHub} />
       <Route path="/seller-hub/:slug" component={SellerHub} />
       <Route path="/neighborhoods" component={Neighborhoods} />
       <Route path="/neighborhoods/:slug" component={Neighborhoods} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={Blog} />
       <Route path="/about" component={About} />
-      <Route path="/testimonials" component={Testimonials} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/cities/:slug" component={CityPage} />
-      {buyerGuides.map((g) => (
-        <Route key={g.slug} path={`/buying-in-${g.slug}`} component={BuyerGuide} />
+      {CITY_ORDER.map((slug) => (
+        <Route key={slug} path={`/buying-in-${slug}`} component={BuyerGuide} />
       ))}
       <Route component={NotFound} />
     </Switch>

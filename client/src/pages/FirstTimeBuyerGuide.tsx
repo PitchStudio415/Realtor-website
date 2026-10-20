@@ -152,7 +152,7 @@ export default function FirstTimeBuyerGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <section className="bg-[#071B2C] text-white py-16 md:py-24">
+      <section className="bg-[#1c2a24] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/buy">
             <Button variant="ghost" size="sm" className="text-white/60 hover:text-white mb-6 -ml-2">
@@ -245,7 +245,7 @@ export default function FirstTimeBuyerGuide() {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <Card className="bg-[#071B2C] text-white border-0 shadow-xl lg:sticky lg:top-24">
+              <Card className="bg-[#1c2a24] text-white border-0 shadow-xl lg:sticky lg:top-24">
                 <CardContent className="p-6">
                   <p className="text-xs tracking-widest uppercase text-white/50 mb-2">Free Consultation</p>
                   <h3 className="text-xl font-bold mb-1">New to all this? Let's talk.</h3>
@@ -253,7 +253,7 @@ export default function FirstTimeBuyerGuide() {
                     Tell me where you are, even if it's "I have no idea where to start." I'll give you a straight answer and a clear first step. No pressure, no obligation.
                   </p>
                   <Link href="/contact?type=buyer">
-                    <Button className="w-full bg-white text-[#071B2C] hover:bg-white/90 font-semibold mb-3" data-testid="button-ftb-contact">
+                    <Button className="w-full bg-white text-[#1c2a24] hover:bg-white/90 font-semibold mb-3" data-testid="button-ftb-contact">
                       Book a Free Consultation
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -319,7 +319,7 @@ export default function FirstTimeBuyerGuide() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-16 md:py-20 bg-[#071B2C] text-white">
+      <section className="py-16 md:py-20 bg-[#1c2a24] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs tracking-widest uppercase text-white/40 mb-3">Ready When You Are</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Find Your First Home</h2>
@@ -328,7 +328,7 @@ export default function FirstTimeBuyerGuide() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/contact?type=buyer">
-              <Button size="lg" className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-6" data-testid="button-cta-ftb">
+              <Button size="lg" className="bg-white text-[#1c2a24] hover:bg-white/90 font-semibold px-6" data-testid="button-cta-ftb">
                 Book a Free Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

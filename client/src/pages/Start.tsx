@@ -204,7 +204,7 @@ export default function Start() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-[#071B2C] text-white py-12 md:py-16">
+      <section className="bg-[#1c2a24] text-white py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs tracking-widest uppercase text-white/40 mb-3">East Bay Realtor · DRE# 02400805</p>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4" data-testid="text-start-headline">

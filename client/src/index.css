@@ -14,17 +14,17 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 0 0% 100%;
+  --background: 90 20% 96%;
 
-  --foreground: 240 5% 18%;
+  --foreground: 154 20% 14%;
 
-  --border: 220 10% 90%;
+  --border: 105 16% 85%;
 
   --card: 0 0% 100%;
 
-  --card-foreground: 240 5% 18%;
+  --card-foreground: 154 20% 14%;
 
-  --card-border: 220 10% 90%;
+  --card-border: 105 16% 85%;
 
   --sidebar: 240 5% 14%;
 
@@ -44,23 +44,23 @@
 
   --popover: 0 0% 100%;
 
-  --popover-foreground: 240 5% 18%;
+  --popover-foreground: 154 20% 14%;
 
-  --popover-border: 220 10% 90%;
+  --popover-border: 105 16% 85%;
 
-  --primary: 219 100% 50%;
+  --primary: 16 76% 43%;
 
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 219 100% 97%;
+  --secondary: 98 21% 93%;
 
-  --secondary-foreground: 219 60% 22%;
+  --secondary-foreground: 154 20% 14%;
 
-  --muted: 0 0% 96%;
+  --muted: 98 21% 93%;
 
-  --muted-foreground: 240 4% 44%;
+  --muted-foreground: 146 9% 31%;
 
-  --accent: 219 100% 50%;
+  --accent: 154 20% 14%;
 
   --accent-foreground: 0 0% 100%;
 
@@ -68,15 +68,15 @@
 
   --destructive-foreground: 0 0% 100%;
 
-  --input: 220 10% 86%;
-  --ring: 219 100% 50%;
+  --input: 105 16% 85%;
+  --ring: 16 76% 43%;
   --chart-1: 219 100% 50%;
   --chart-2: 219 80% 42%;
   --chart-3: 240 5% 35%;
   --chart-4: 35 90% 55%;
   --chart-5: 280 65% 60%;
 
-  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-sans: 'Overpass', system-ui, sans-serif;
   --font-serif: 'Libre Baskerville', Georgia, serif;
   --font-mono: 'JetBrains Mono', Menlo, monospace;
   --radius: .5rem; /* 8px */

@@ -1,574 +1,111 @@
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Layout } from "@/components/layout/Layout";
-import { Phone, Mail, ArrowRight, MapPin, BookOpen, Truck, Hammer, Star, ExternalLink } from "lucide-react";
-import { SiInstagram, SiZillow, SiGoogle } from "react-icons/si";
-import profilePhoto from "@assets/DSC04279_1775796380065.jpeg";
+import {
+  TrailPage,
+  TextMeButton,
+  BookButton,
+  Trailheads,
+  ElevationProfile,
+  CityHoverProvider,
+  Ways,
+  Stars,
+  CloseBand,
+  PtkCallout, Arrow } from "@/components/trail/Parts";
+import { REVIEWS, START_HERE } from "@/lib/trail";
 import { getBlogPostBySlug } from "@/lib/content";
-import { ReelCard } from "@/components/ReelCard";
-
-// Hand-picked, strongest guides to surface from the homepage for internal linking.
-const HOME_POSTS = [
-  "el-cerrito-vs-richmond-vs-hercules-where-to-buy-2026",
-  "down-payment-help-east-bay-first-time-buyers",
-  "oakland-neighborhood-guide",
-  "what-i-check-older-east-bay-home-first-time-buyer",
-  "berkeley-neighborhood-guide",
-  "west-contra-costa-county-market-outlook-2026",
-]
-  .map((slug) => getBlogPostBySlug(slug))
-  .filter((p): p is NonNullable<typeof p> => Boolean(p));
+import { ptkPhaseCounts } from "@/lib/ptk";
 
 export default function Home() {
   return (
-    <Layout>
-      {/* Hero — asymmetric layout */}
-      <section className="bg-[#071B2C] text-white overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end gap-0">
-
-            {/* Content — left */}
-            <div className="flex-1 py-16 lg:py-24 lg:pr-6 flex flex-col justify-center">
-              <p className="text-xs tracking-widest uppercase text-white/40 mb-6 font-medium">
-                East Bay Realtor® · DRE# 02400805
-              </p>
-              <h1
-                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-8"
-                data-testid="text-hero-name"
-              >
-                Muzamil<br />Khan
-              </h1>
-              <p className="text-white/70 text-lg leading-relaxed mb-8">
-                I spent 15 years in construction before becoming a Realtor, so when I walk into a home, I notice things others often miss, from what an inspection report is really saying to what a repair is likely to cost and whether the price truly reflects the quality of the home. I work with first time buyers, clients relocating to the East Bay, and sellers who value clear, honest guidance, and I take a straightforward, experience driven approach so you can make informed decisions with confidence.
-              </p>
-
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-8 text-sm">
-                <a
-                  href="tel:+14158198312"
-                  className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
-                  data-testid="link-hero-phone"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  (415) 819-8312
-                </a>
-                <span className="text-white/20 hidden sm:block">·</span>
-                <a
-                  href="mailto:Muzamil@risegroup.com"
-                  className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
-                  data-testid="link-hero-email"
-                >
-                  <Mail className="w-3.5 h-3.5" />
-                  Muzamil@risegroup.com
-                </a>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <Link href="/contact?type=buyer">
-                  <Button
-                    size="lg"
-                    className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-6"
-                    data-testid="button-buyer-cta"
-                  >
-                    I'm Buying
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-                <Link href="/contact?type=seller">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/40 text-white hover:bg-white/10 font-semibold px-6"
-                    data-testid="button-seller-cta"
-                  >
-                    I'm Selling
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Photo — right, tall rectangle, flush to bottom */}
-            <div className="hidden lg:flex flex-col items-center self-end flex-shrink-0">
-              <div className="w-64 xl:w-72 h-[460px] xl:h-[500px] rounded-t-3xl overflow-hidden">
-                <img
-                  src={profilePhoto}
-                  alt="Muzamil Khan, East Bay Realtor"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="py-5 flex flex-col items-center gap-2">
-                <div className="flex items-center gap-0.5" data-testid="hero-star-rating">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <span
-                  className="text-xs font-bold bg-[#006AFF] text-white px-2.5 py-1 rounded-full tracking-wide"
-                  data-testid="badge-zillow-premier"
-                >
-                  Zillow Premier Agent
-                </span>
-                <span
-                  className="text-xs font-bold bg-[#D92228] text-white px-2.5 py-1 rounded-full tracking-wide"
-                  data-testid="badge-realtor"
-                >
-                  Realtor.com Agent
-                </span>
-                <div className="flex items-center gap-3 mt-1">
-                  <a
-                    href="https://www.instagram.com/muzamilkhan.realtor?igsh=MzRlODBiNWFlZA=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    data-testid="link-photo-instagram"
-                  >
-                    <SiInstagram className="w-5 h-5 text-[#E1306C] hover:opacity-80 transition-opacity" />
-                  </a>
-                  <a
-                    href="https://www.zillow.com/profile/muzamil7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Zillow"
-                    data-testid="link-photo-zillow"
-                  >
-                    <SiZillow className="w-5 h-5 text-[#006AFF] hover:opacity-80 transition-opacity" />
-                  </a>
-                  <a
-                    href="https://www.google.com/maps?cid=4248271409235072484"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Google Business Profile"
-                    data-testid="link-photo-google"
-                  >
-                    <SiGoogle className="w-5 h-5 text-[#4285F4] hover:opacity-80 transition-opacity" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Why Muzamil — staggered stat layout */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-primary font-medium mb-2">Why Work With Me</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-14 leading-tight max-w-xl">
-            Not your average agent.
-          </h2>
-          <div className="space-y-14">
-
-            <div className="grid md:grid-cols-[140px_1fr] gap-6 md:gap-16 items-start" data-testid="differentiator-construction">
-              <div>
-                <p className="text-6xl font-bold text-primary leading-none">15</p>
-                <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wide leading-snug">Years in<br />Construction</p>
-              </div>
-              <div className="md:border-l md:border-border md:pl-12">
-                <h3 className="font-semibold text-xl mb-3">I read inspection reports differently</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  When an inspection flags foundation cracks, drainage issues, or a failing roof, I know what it actually costs to fix it, which problems are real, and which ones are noise. That knowledge changes what you offer, how you negotiate, and whether you walk or proceed. Most agents can't do that math. I can.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-[140px_1fr] gap-6 md:gap-16 items-start" data-testid="differentiator-local">
-              <div>
-                <p className="text-6xl font-bold text-primary leading-none">10+</p>
-                <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wide leading-snug">Years in<br />El Cerrito</p>
-              </div>
-              <div className="md:border-l md:border-border md:pl-12">
-                <h3 className="font-semibold text-xl mb-3">I actually live here</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  I know which El Cerrito blocks get the morning fog and which ones don't. I know the Albany schools by reputation, not by star rating. I walk these neighborhoods. That kind of local knowledge is invisible on a map. It shows up when you're deciding between two offers or two houses.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-[140px_1fr] gap-6 md:gap-16 items-start" data-testid="differentiator-consultation">
-              <div>
-                <p className="text-6xl font-bold text-primary leading-none">$0</p>
-                <p className="text-sm text-muted-foreground mt-2 uppercase tracking-wide leading-snug">To talk<br />to me</p>
-              </div>
-              <div className="md:border-l md:border-border md:pl-12">
-                <h3 className="font-semibold text-xl mb-3">A straight conversation, on your terms.</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  The first call is free, and I keep it simple after that. If you want to talk through your situation, whether you're thinking about buying in six months or selling next spring, I'll give you my honest read on the market and what I'd actually do in your shoes.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Client Testimonials */}
-      <section className="py-14 bg-muted/40 border-y border-border">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 mb-8">
-            <SiGoogle className="w-5 h-5 text-[#4285F4]" />
-            <SiZillow className="w-5 h-5 text-[#006AFF]" />
-            <span className="text-sm font-medium text-muted-foreground">Verified 5-Star Client Reviews</span>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-
-            {/* Karen & Dave */}
-            <a
-              href="https://www.zillow.com/profile/muzamil7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
-              data-testid="testimonial-karen"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
-              </div>
-              <p className="text-foreground leading-relaxed mb-5 italic">
-                "Muzamil did an outstanding job getting us the home of our dreams. He was able to negotiate a price that saved us from a bidding war which saved us thousands. Highly recommend. He is going to sell my house too and I am super confident he will do an exceptional job."
-              </p>
-              <div>
-                <p className="font-semibold text-sm text-foreground">Karen &amp; Dave</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Bought and sold a single family home · Benicia, CA · August 2026</p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-4">
-                {["Local knowledge", "Process expertise", "Responsiveness", "Negotiation skills"].map((tag) => (
-                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-
-            {/* Jimmy Moore */}
-            <a
-              href="https://www.google.com/maps?cid=4248271409235072484"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
-              data-testid="testimonial-jimmy"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
-              </div>
-              <p className="text-foreground leading-relaxed mb-5 italic">
-                "Muzamil helped me find my perfect home from three time zones away. I was relocating from the East Coast to the Bay Area. He helped me identify potential properties and then arranged an entire weekend of property tours in which we hit roughly 15 different homes. Once we settled on the perfect fit, he helped guide me through an especially tricky closing process, including finding a new lender at the last minute after my first fell through. He also coordinated multiple contractors working on my home post closing. I am eternally grateful for his patience and guidance."
-              </p>
-              <div>
-                <p className="font-semibold text-sm text-foreground">Jimmy Moore</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Relocated and bought a home · Bay Area · July 2026</p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-4">
-                {["Relocation", "Process expertise", "Responsiveness", "Coordination"].map((tag) => (
-                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-
-            {/* Timothy */}
-            <a
-              href="https://www.google.com/maps?cid=4248271409235072484"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
-              data-testid="testimonial-timothy"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
-              </div>
-              <p className="text-foreground leading-relaxed mb-5 italic">
-                "Muzamil went above and beyond by making multiple trips to meet and coordinate with contractors on our behalf when we weren't able to be there."
-              </p>
-              <div>
-                <p className="font-semibold text-sm text-foreground">Timothy</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Bought a condo · Sunshine Gardens, South San Francisco · March 2026</p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-4">
-                {["Local knowledge", "Process expertise", "Responsiveness", "Negotiation"].map((tag) => (
-                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-
-            {/* tenisi elena */}
-            <a
-              href="https://www.google.com/maps?cid=4248271409235072484"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border border-border rounded-2xl p-7 bg-background hover:border-primary/30 hover:shadow-md transition-all"
-              data-testid="testimonial-tenisi"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
-              </div>
-              <p className="text-foreground leading-relaxed mb-5 italic">
-                "He walked us through the process from start to finish in a way that felt smooth and manageable. His attention to detail and willingness to go the extra mile made our experience truly a positive one."
-              </p>
-              <div>
-                <p className="font-semibold text-sm text-foreground">Tenisi Elena</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Bought a single family home · Pittsburg, CA · February 2026</p>
-              </div>
-              <div className="flex flex-wrap gap-1.5 mt-4">
-                {["Local knowledge", "Process expertise", "Responsiveness", "Negotiation"].map((tag) => (
-                  <span key={tag} className="text-xs bg-primary/8 text-primary px-2 py-0.5 rounded-full font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Client Stories — video testimonials */}
-      <section className="py-16 md:py-20 bg-[#071B2C] text-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-white/40 mb-3 font-medium text-center">Client Stories</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">Real clients. Real keys.</h2>
-          <p className="text-white/70 text-center max-w-xl mx-auto mb-12 leading-relaxed">
-            A few recent closings, straight from the front door. This is what working together actually looks like.
-          </p>
-          <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div data-testid="client-story-durham">
-              <ReelCard
-                src="/videos/client-story-durham.mp4"
-                poster="/videos/client-story-durham-poster.jpg"
-                title="Karen and Dave, 316 Durham Ct, Benicia"
-                testId="reel-story-durham"
-              />
-              <div className="text-center mt-3 max-w-xs mx-auto">
-                <p className="text-sm font-medium">"He saved us thousands in a bidding war."</p>
-                <p className="text-xs text-white/55 mt-1">Karen &amp; Dave &middot; 316 Durham Ct, Benicia</p>
-              </div>
-            </div>
-            <div data-testid="client-story-camelia">
-              <ReelCard
-                src="/videos/client-story-camelia.mp4"
-                poster="/videos/client-story-camelia-poster.jpg"
-                title="Sold in Berkeley, 1175 Camelia St"
-                testId="reel-story-camelia"
-              />
-              <div className="text-center mt-3 max-w-xs mx-auto">
-                <p className="text-sm font-medium">Sold in Berkeley.</p>
-                <p className="text-xs text-white/55 mt-1">1175 Camelia St, Berkeley</p>
-              </div>
-            </div>
-            <div data-testid="client-story-warren">
-              <ReelCard
-                src="/videos/client-story-warren.mp4"
-                poster="/videos/client-story-warren-poster.jpg"
-                title="Welcome home, 330 Warren Way, Pittsburg"
-                testId="reel-story-warren"
-              />
-              <div className="text-center mt-3 max-w-xs mx-auto">
-                <p className="text-sm font-medium">Welcome home.</p>
-                <p className="text-xs text-white/55 mt-1">330 Warren Way, Pittsburg</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who I Work With */}
-      <section className="py-14 md:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Who I Work With</h2>
-          <p className="text-muted-foreground mb-10 max-w-xl mx-auto text-center">
-            First-time buyers, people relocating to the East Bay, experienced buyers, and sellers ready to move on.
-          </p>
-
-          {/* First-Time Buyers — Featured */}
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 mb-6" data-testid="card-first-time-buyers">
-            <div className="flex items-center gap-2 mb-5">
-              <BookOpen className="w-5 h-5 text-primary" />
-              <span className="text-xs font-semibold uppercase tracking-wide text-primary">Where I spend most of my time</span>
-            </div>
-            <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">First-Time Home Buyers</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Buying your first home in the East Bay is one of the biggest decisions you'll ever make. I'll walk you through the entire process: pre-approval, offers, inspections, and closing, in plain language, at your pace. My construction background means I catch what other agents walk past on inspections, and I negotiate hard on your behalf because I actually know what repairs cost.
-                </p>
-                <a
-                  href="https://www.zillow.com/profile/muzamil7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-primary hover:underline font-medium"
-                >
-                  See my reviews on Zillow →
-                </a>
-              </div>
-              <div className="flex flex-row md:flex-col gap-3 flex-shrink-0">
-                <Link href="/first-time-home-buyer">
-                  <Button size="sm" className="whitespace-nowrap w-full" data-testid="link-buyer-hub">
-                    First-Time Buyer Guide
-                    <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                  </Button>
-                </Link>
-                <Link href="/contact?type=buyer">
-                  <Button variant="outline" size="sm" className="whitespace-nowrap w-full" data-testid="link-first-time-consult">
-                    Let's talk
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Other audiences */}
-          <div className="grid md:grid-cols-3 gap-5">
-            <Card className="border border-border hover:shadow-md transition-shadow" data-testid="card-relocators">
-              <CardContent className="p-7">
-                <Truck className="w-5 h-5 text-primary mb-3" />
-                <h3 className="text-lg font-bold mb-2">Moving to the East Bay</h3>
-                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Relocating from out of area? I know every neighborhood from Oakland to El Cerrito to Richmond, and I can help you find your fit, even before you've arrived.
-                </p>
-                <Link href="/contact?type=buyer">
-                  <Button variant="outline" size="sm" data-testid="link-relocation-cta">
-                    Get my neighborhood take <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="border border-border hover:shadow-md transition-shadow" data-testid="card-buyers">
-              <CardContent className="p-7">
-                <Hammer className="w-5 h-5 text-primary mb-3" />
-                <h3 className="text-lg font-bold mb-2">Buying a Home</h3>
-                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Strong offers, smart negotiation, and a construction eye that tells you what you're actually buying, not just what the listing says.
-                </p>
-                <Link href="/buy">
-                  <Button variant="outline" size="sm" data-testid="link-learn-buying">
-                    How I help buyers <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="border border-border hover:shadow-md transition-shadow" data-testid="card-sellers">
-              <CardContent className="p-7">
-                <MapPin className="w-5 h-5 text-primary mb-3" />
-                <h3 className="text-lg font-bold mb-2">Selling Your Home</h3>
-                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
-                  Accurate pricing, smart prep guidance, and repair negotiations where I know what things actually cost, so you keep more at closing.
-                </p>
-                <Link href="/sell">
-                  <Button variant="outline" size="sm" data-testid="link-learn-selling">
-                    How I help sellers <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Buying by city */}
-      <section className="py-14 md:py-20 bg-muted/40 border-y border-border">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Buying a Home in the East Bay</h2>
-          <p className="text-muted-foreground mb-10 max-w-xl mx-auto text-center">
-            Local, first-time-buyer guides to the cities I work in most: real prices, the buying process, and a construction eye on every home.
-          </p>
-          <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              { slug: "el-cerrito", name: "El Cerrito", blurb: "Two BART stations, walkable San Pablo Ave, flats vs. hills." },
-              { slug: "albany", name: "Albany", blurb: "Top-rated schools, Solano Avenue, tight inventory." },
-              { slug: "berkeley", name: "Berkeley", blurb: "A dozen neighborhoods and the widest price range in the area." },
-            ].map((c) => (
-              <Link key={c.slug} href={`/buying-in-${c.slug}`}>
-                <Card className="border border-border hover:border-primary/30 hover:shadow-md transition-all h-full cursor-pointer" data-testid={`card-buying-${c.slug}`}>
-                  <CardContent className="p-6">
-                    <MapPin className="w-5 h-5 text-primary mb-3" />
-                    <h3 className="text-lg font-bold mb-2">Buying in {c.name}</h3>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{c.blurb}</p>
-                    <span className="text-sm text-primary font-medium inline-flex items-center">
-                      Read the guide <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                    </span>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* From the blog */}
-      <section className="py-14 md:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-8">
+    <TrailPage>
+      <CityHoverProvider>
+        <section className="hero">
+          <div className="contours" aria-hidden="true" />
+          <div className="w lead">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-1">East Bay Insights</h2>
-              <p className="text-muted-foreground">Local market reads and honest first-time-buyer guides.</p>
+              <h1 data-testid="text-hero-headline">Buying in the East Bay, mapped out.</h1>
+              <p className="lede">
+                I spent 15 years in construction before real estate. I read the house and the market, and I keep my client
+                list small so you get my full attention.
+              </p>
+              <div className="acts">
+                <TextMeButton />
+                <BookButton />
+              </div>
             </div>
-            <Link href="/blog" className="hidden sm:inline-flex text-sm text-primary font-medium items-center">
-              All articles <ArrowRight className="w-3.5 h-3.5 ml-1" />
-            </Link>
+            <img className="portrait" src="/muzamil-khan.jpg" alt="Muzamil Khan" width={420} height={525} />
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {HOME_POSTS.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`}>
-                <Card className="border border-border hover:border-primary/30 hover:shadow-md transition-all h-full cursor-pointer" data-testid={`card-home-post-${post.slug}`}>
-                  <CardContent className="p-6">
-                    <BookOpen className="w-5 h-5 text-primary mb-3" />
-                    <h3 className="text-base font-bold mb-2 leading-snug">{post.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-2">{post.excerpt}</p>
-                    <span className="text-sm text-primary font-medium inline-flex items-center">
-                      Read more <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                    </span>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+          <Trailheads />
+        </section>
+
+        <section className="s">
+          <div className="w">
+            <h2>From the flats to the hills</h2>
+            <p className="intro">
+              What the typical detached home sold for in each city over the last 12 months, from MLS sales. Every city has a
+              one-page playbook with the full numbers and how to win an offer there.
+            </p>
+            <ElevationProfile />
+          </div>
+        </section>
+      </CityHoverProvider>
+
+      <PtkCallout counts={ptkPhaseCounts()} />
+
+      <section className="s">
+        <div className="w">
+          <h2>What working with me looks like</h2>
+          <Ways
+            items={[
+              { title: "I read the house", body: "15 years in construction. I know what the inspection report is really saying and what a repair will cost before you offer." },
+              { title: "I bring the real numbers", body: "Every city has a playbook built on MLS sales, so your number comes from comparable homes, not the list price." },
+              { title: "I build the strategy", body: "The best price may not always win. Closing timing and contingencies count too, and we plan them before you write." },
+              { title: "You get my full attention", body: "I keep my client list small on purpose, so you are never waiting on a callback." },
+            ]}
+          />
+        </div>
+      </section>
+
+      <section className="s">
+        <div className="w">
+          <h2>Start here</h2>
+          <p className="intro">Three short reads that answer what first-time East Bay buyers ask me most.</p>
+          <div className="guides">
+            {START_HERE.map(({ topic, slug }) => {
+              const post = getBlogPostBySlug(slug);
+              if (!post) return null;
+              return (
+                <Link key={slug} className="guide" href={`/blog/${slug}`}>
+                  <span className="topic">{topic}</span>
+                  <span className="t">{post.title}</span>
+                  <span className="arr"><Arrow /></span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* CTA strip */}
-      <section className="py-10 md:py-14 bg-[#071B2C] text-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Ask me anything. Seriously.</h2>
-          <p className="text-white/60 mb-8">
-            Not sure if now's the right time? Wondering what your place is worth? I'll give you a straight answer and a clear picture of your options.
+      <section className="s">
+        <div className="w review">
+          {REVIEWS.slice(0, 2).map((r) => (
+            <div key={r.name}>
+              <Stars />
+              <blockquote>&ldquo;{r.short}&rdquo;</blockquote>
+              <cite>
+                {r.name}, {r.meta.replace(/, \w+ \d{4}$/, "")}
+              </cite>
+            </div>
+          ))}
+          <p style={{ gridColumn: "1/-1", marginTop: 8 }}>
+            <Link href="/about#reviews" style={{ fontWeight: 800 }}>
+              Read all reviews <Arrow />
+            </Link>{" "}
+            <span style={{ color: "var(--ink-2)" }}>&nbsp;5.0 on Google and Zillow</span>
           </p>
-          <Link href="/contact">
-            <Button
-              size="lg"
-              className="bg-white text-[#071B2C] hover:bg-white/90 font-semibold px-8"
-              data-testid="button-cta-contact"
-            >
-              Let's talk about your situation
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </Link>
         </div>
       </section>
-    </Layout>
+
+      <CloseBand title="Questions about a city or a house?" />
+    </TrailPage>
   );
 }
