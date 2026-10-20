@@ -95,21 +95,22 @@ function HeadManager() {
   }, [location]);
 
   // New page opens at the top; a link with a #section jumps to that section instead.
-  // Back/forward keeps the browser's own scroll position.
+  // Back/forward keeps the browser's own scroll position. Popstate also fires for
+  // same-page #jump links, so remember which path it fired on and only skip the
+  // scroll when the page we just rendered is that path.
   useEffect(() => {
     const onPop = () => {
-      (window as unknown as { __navBack?: boolean }).__navBack = true;
+      (window as unknown as { __popPath?: string }).__popPath = window.location.pathname;
     };
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
 
   useEffect(() => {
-    const w = window as unknown as { __navBack?: boolean };
-    if (w.__navBack) {
-      w.__navBack = false;
-      return;
-    }
+    const w = window as unknown as { __popPath?: string };
+    const fromBackButton = w.__popPath === window.location.pathname;
+    w.__popPath = undefined;
+    if (fromBackButton) return;
     // Runs after the new page is in the DOM; scroll right away (no animation frame,
     // which some browsers pause) so the page never opens mid-scroll.
     const id = window.location.hash.slice(1);
