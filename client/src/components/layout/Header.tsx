@@ -1,6 +1,5 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
-import { TrailMark } from "@/components/trail/Parts";
 
 const navItems = [
   { label: "Buy", href: "/buy", match: ["/buy/", "/first-time-home-buyer", "/buyer-hub", "/calculator"] },
@@ -19,7 +18,10 @@ export function Header() {
     <header className="tm top">
       <div className="w">
         <Link href="/" className="mark" data-testid="logo-text">
-          <TrailMark />
+          <span className="mk" aria-hidden="true">
+            MK<span className="dot">.</span>
+          </span>
+          <span className="sep" aria-hidden="true" />
           Muzamil Khan
         </Link>
         <nav className="main" aria-label="Main" data-testid="desktop-nav">

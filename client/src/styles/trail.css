@@ -515,3 +515,6 @@ footer.tm .links{display:flex;gap:22px;flex-wrap:wrap}
   .tm .guide .t{font-size:17px}
 }
 .tm section[id],.tm [id^="phase-"],.tm article.st{scroll-margin-top:84px}
+.tm .mark .mk{font-weight:800;font-size:22px;letter-spacing:-.04em;line-height:1}
+.tm .mark .mk .dot{color:var(--trail)}
+.tm .mark .sep{width:1px;height:22px;background:var(--line)}

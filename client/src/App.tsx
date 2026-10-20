@@ -110,12 +110,12 @@ function HeadManager() {
       w.__navBack = false;
       return;
     }
+    // Runs after the new page is in the DOM; scroll right away (no animation frame,
+    // which some browsers pause) so the page never opens mid-scroll.
     const id = window.location.hash.slice(1);
-    requestAnimationFrame(() => {
-      const target = id ? document.getElementById(decodeURIComponent(id)) : null;
-      if (target) target.scrollIntoView();
-      else window.scrollTo(0, 0);
-    });
+    const target = id ? document.getElementById(decodeURIComponent(id)) : null;
+    if (target) target.scrollIntoView();
+    else window.scrollTo(0, 0);
   }, [location]);
 
   return null;
