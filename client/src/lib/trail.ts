@@ -174,7 +174,7 @@ export const CITIES: Record<CitySlug, TrailCity> = {
 
 /** West to east, cheapest to priciest: the order of the elevation profile. */
 export const CITY_ORDER: CitySlug[] = ["el-cerrito", "albany", "oakland", "berkeley"];
-/** Display order on the Neighborhoods page. */
+/** Most to least expensive: the order cities are listed everywhere except the price chart. */
 export const CITY_CARD_ORDER: CitySlug[] = ["berkeley", "oakland", "albany", "el-cerrito"];
 
 export const cityPath = (slug: CitySlug) => `/buying-in-${slug}`;

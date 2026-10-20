@@ -514,3 +514,4 @@ footer.tm .links{display:flex;gap:22px;flex-wrap:wrap}
   .tm .guide .topic{grid-column:auto;font-size:13.5px}
   .tm .guide .t{font-size:17px}
 }
+.tm section[id],.tm [id^="phase-"],.tm article.st{scroll-margin-top:84px}

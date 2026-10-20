@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { createContext, useContext, useState, type ReactNode, type CSSProperties } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { CITIES, CITY_ORDER, cityPath, SMS, PHONE, type CitySlug } from "@/lib/trail";
+import { CITIES, CITY_ORDER, CITY_CARD_ORDER, cityPath, SMS, PHONE, type CitySlug } from "@/lib/trail";
 
 /** Wraps a redesigned page: site header/footer plus the .tm design scope. */
 export function TrailPage({ children }: { children: ReactNode }) {
@@ -260,7 +260,7 @@ export function Trailheads({ style }: { style?: CSSProperties }) {
   return (
     <div className="trailheads" style={style}>
       <div className="w" style={style ? { padding: 0 } : undefined}>
-        {CITY_ORDER.map((s) => (
+        {CITY_CARD_ORDER.map((s) => (
           <Trailhead key={s} slug={s} />
         ))}
       </div>

@@ -94,6 +94,30 @@ function HeadManager() {
     trackPageview(location);
   }, [location]);
 
+  // New page opens at the top; a link with a #section jumps to that section instead.
+  // Back/forward keeps the browser's own scroll position.
+  useEffect(() => {
+    const onPop = () => {
+      (window as unknown as { __navBack?: boolean }).__navBack = true;
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  useEffect(() => {
+    const w = window as unknown as { __navBack?: boolean };
+    if (w.__navBack) {
+      w.__navBack = false;
+      return;
+    }
+    const id = window.location.hash.slice(1);
+    requestAnimationFrame(() => {
+      const target = id ? document.getElementById(decodeURIComponent(id)) : null;
+      if (target) target.scrollIntoView();
+      else window.scrollTo(0, 0);
+    });
+  }, [location]);
+
   return null;
 }
 

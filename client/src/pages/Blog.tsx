@@ -3,7 +3,7 @@ import { useState, useEffect, type CSSProperties } from "react";
 import { TrailPage, PageHero, Section, Rows, CloseBand, Crumb, Arrow } from "@/components/trail/Parts";
 import { blogPosts, getBlogPostBySlug, isPublished } from "@/lib/content";
 import { renderMarkdown } from "@/lib/markdown";
-import { CITIES, START_HERE, cityPath, type CitySlug } from "@/lib/trail";
+import { CITIES, CITY_CARD_ORDER, START_HERE, cityPath, type CitySlug } from "@/lib/trail";
 import type { BlogPost } from "@shared/schema";
 
 // Baked at build time (vite define). Used as the stable first-render reference
@@ -20,7 +20,7 @@ interface Group {
 }
 
 const CITY_GROUPS: Group[] = [
-  ...(["berkeley", "oakland", "albany", "el-cerrito"] as CitySlug[]).map((s) => ({
+  ...CITY_CARD_ORDER.map((s) => ({
     name: CITIES[s].name,
     color: CITIES[s].color,
     posts: CITIES[s].posts,
