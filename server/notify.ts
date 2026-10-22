@@ -1,5 +1,8 @@
 import type { Contact } from "@shared/schema";
 
+/** Lead source label shown in Follow Up Boss. */
+const LEAD_SOURCE = "Muzamil's Website";
+
 const TYPE_LABELS: Record<string, string> = {
   buyer: "Buy a home",
   seller: "Sell a home",
@@ -44,6 +47,7 @@ export async function sendToFollowUpBoss(c: Contact): Promise<void> {
       firstName,
       emails: [{ value: c.email }],
       tags: ["Website Lead", "Start Form"],
+      source: LEAD_SOURCE,
     };
     if (lastName) person.lastName = lastName;
     if (c.phone) person.phones = [{ value: c.phone }];
@@ -56,7 +60,7 @@ export async function sendToFollowUpBoss(c: Contact): Promise<void> {
         "X-System": "muzamilkhanrealtor.com",
       },
       body: JSON.stringify({
-        source: "muzamilkhanrealtor.com",
+        source: LEAD_SOURCE,
         system: "muzamilkhanrealtor.com",
         type: "Inquiry",
         message: summarize(c),
