@@ -1,5 +1,6 @@
-import { TrailPage, PageHero, Acts, TextMeButton, BookButton, Section, Ways, Rows, Trailheads, CityHoverProvider, CloseBand, PtkCallout } from "@/components/trail/Parts";
+import { TrailPage, PageHero, Acts, TextMeButton, BookButton, Section, Ways, Rows, Trailheads, CityHoverProvider, CloseBand, PtkCallout, MoCallout, Compare } from "@/components/trail/Parts";
 import { ptkPhaseCounts } from "@/lib/ptk";
+import { BUYER_COMPARE } from "@/lib/trail";
 
 export default function Buy() {
   return (
@@ -14,7 +15,9 @@ export default function Buy() {
         </Acts>
       </PageHero>
 
-      <PtkCallout counts={ptkPhaseCounts()} />
+      <PtkCallout counts={ptkPhaseCounts()}>
+        <MoCallout />
+      </PtkCallout>
 
       <Section title="What I bring to your side">
         <Ways
@@ -27,9 +30,14 @@ export default function Buy() {
         />
       </Section>
 
+      <Section title="What I do vs. a standard realtor" intro="How I handle each part of a purchase, next to the way it's commonly done.">
+        <Compare rows={BUYER_COMPARE} />
+      </Section>
+
       <Section title="Buyer guides" id="guides">
         <Rows
           items={[
+            { title: "Winning multiple offers", meta: "How to compete and win", href: "/buy/winning-multiple-offers" },
             { title: "First-time buyer guide", meta: "Start to finish", href: "/first-time-home-buyer" },
             { title: "Pre-approval", meta: "What lenders look for", href: "/buyer-hub/financing" },
             { title: "Offer basics", meta: "Price, contingencies, closing date", href: "/buyer-hub/offer-basics" },

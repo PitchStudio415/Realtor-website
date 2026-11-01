@@ -30,6 +30,9 @@ import { MobileCtaBar } from "@/components/MobileCtaBar";
 import PathToKeys from "@/pages/PathToKeys";
 import PtkStep from "@/pages/PtkStep";
 import PtkDocs from "@/pages/PtkDocs";
+import MultipleOffers from "@/pages/MultipleOffers";
+import MoTopic from "@/pages/MoTopic";
+import SellerDisclosures from "@/pages/SellerDisclosures";
 import { CITY_ORDER } from "@/lib/trail";
 import { REDIRECTS } from "@shared/redirects";
 
@@ -137,12 +140,15 @@ function Router() {
       <Route path="/buy/path-to-keys/documents" component={PtkDocs} />
       <Route path="/buy/path-to-keys/documents/:slug" component={PtkDocs} />
       <Route path="/buy/path-to-keys/:slug" component={PtkStep} />
+      <Route path="/buy/winning-multiple-offers" component={MultipleOffers} />
+      <Route path="/buy/winning-multiple-offers/:slug" component={MoTopic} />
       <Route path="/sell" component={Sell} />
       <Route path="/selling-without-an-agent-el-cerrito" component={SellWithoutAgent} />
       <Route path="/home-valuation" component={HomeValuation} />
       <Route path="/calculator" component={Calculator} />
       <Route path="/first-time-home-buyer" component={FirstTimeBuyerGuide} />
       <Route path="/buyer-hub/:slug" component={BuyerHub} />
+      <Route path="/seller-hub/disclosures" component={SellerDisclosures} />
       <Route path="/seller-hub/:slug" component={SellerHub} />
       <Route path="/neighborhoods" component={Neighborhoods} />
       <Route path="/neighborhoods/:slug" component={Neighborhoods} />

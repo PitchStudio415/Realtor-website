@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { TrailPage, PageHero, Acts, BookButton, Section, Route, Rows, Marker, CloseBand } from "@/components/trail/Parts";
+import { TrailPage, PageHero, Acts, BookButton, Section, Route, Rows, Marker, CloseBand, Compare } from "@/components/trail/Parts";
 import { getBlogPostBySlug } from "@/lib/content";
+import { SELLER_COMPARE } from "@/lib/trail";
 
 const steps = [
   { title: "Price it right", body: "Recent sales and current competition set the strategy." },
@@ -30,6 +31,10 @@ export default function Sell() {
           <BookButton />
         </Acts>
       </PageHero>
+
+      <Section title="What I do vs. a standard realtor" intro="How I handle each part of a sale, next to the way it's commonly done.">
+        <Compare rows={SELLER_COMPARE} />
+      </Section>
 
       <Section title="Prep that pays for itself" intro="I spent 15 years in construction. Here is where your prep dollars come back at sale.">
         <div className="pair">

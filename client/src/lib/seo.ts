@@ -13,6 +13,7 @@ import { getBuyerGuideBySlug } from "./buyerGuideData";
 import { CITIES, CITY_ORDER, type CitySlug } from "./trail";
 import { PTK } from "./pathToKeys";
 import { stepBySlug, docBySlug, PTK_BASE } from "./ptk";
+import { MO, MO_BASE, moTopicBySlug, moTopicNumber } from "./multipleOffers";
 import { REDIRECT_SOURCES } from "@shared/redirects";
 
 export const SITE_URL = "https://muzamilkhanrealtor.com";
@@ -100,6 +101,11 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
     title: "Path to Keys: How Buying a Home Works in the East Bay | Muzamil Khan",
     description:
       "Every step of buying an East Bay home, from the buyer agreement to the keys: who does what, the documents you sign, contingency windows, and an escrow clock with your real dates.",
+  },
+  "/buy/winning-multiple-offers": {
+    title: "How to Win a Home in Multiple Offers in the East Bay | Muzamil Khan",
+    description:
+      "How to compete when an East Bay home gets several offers: pre-approval, reading the disclosure packet, contingencies, appraisal gaps, terms sellers want, offer day and best and final.",
   },
   "/buy/path-to-keys/documents": {
     title: "Home Buying Documents Explained: All 28 | Path to Keys",
@@ -199,6 +205,42 @@ export function getSeoForPath(path: string): PageSeo {
         ]),
       ],
     };
+  }
+
+  if (p === MO_BASE) {
+    return {
+      ...base,
+      ...STATIC_META[p],
+      jsonLd: [
+        faqJsonLd(MO.faq.map((f) => ({ question: f.q, answer: f.a }))),
+        breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Buy", path: "/buy" },
+          { name: "Winning Multiple Offers", path: MO_BASE },
+        ]),
+      ],
+    };
+  }
+
+  const moMatch = p.match(/^\/buy\/winning-multiple-offers\/([^/]+)$/);
+  if (moMatch) {
+    const t = moTopicBySlug(moMatch[1]);
+    if (t) {
+      return {
+        ...base,
+        title: `${t.title} | Winning Multiple Offers`,
+        description: `${t.summary} Part ${moTopicNumber(t)} of ${MO.topics.length} in winning a competitive East Bay home.`,
+        ogType: "article",
+        jsonLd: [
+          { "@context": "https://schema.org", "@type": "Article", headline: t.title, description: t.summary, dateModified: MO.meta.lastReviewed, author: AUTHOR_NODE, publisher: PUBLISHER_NODE, mainEntityOfPage: canonical },
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Winning Multiple Offers", path: MO_BASE },
+            { name: t.title, path: p },
+          ]),
+        ],
+      };
+    }
   }
 
   const ptkDocMatch = p.match(/^\/buy\/path-to-keys\/documents\/([^/]+)$/);
@@ -372,6 +414,7 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/first-time-home-buyer", priority: 0.9 },
     { path: PTK_BASE, lastmod: PTK.meta.lastReviewed, priority: 0.9 },
     { path: `${PTK_BASE}/documents`, lastmod: PTK.meta.lastReviewed, priority: 0.6 },
+    { path: MO_BASE, lastmod: MO.meta.lastReviewed, priority: 0.9 },
     { path: "/neighborhoods", priority: 0.8 },
     { path: "/blog", priority: 0.8 },
     { path: "/privacy", priority: 0.1, noSitemap: true },
@@ -407,6 +450,9 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
   }
   for (const d of PTK.documents) {
     routes.push({ path: `${PTK_BASE}/documents/${d.slug}`, lastmod: PTK.meta.lastReviewed, priority: 0.5 });
+  }
+  for (const t of MO.topics) {
+    routes.push({ path: `${MO_BASE}/${t.slug}`, lastmod: MO.meta.lastReviewed, priority: 0.6 });
   }
   // Anything that 301s elsewhere is never prerendered or listed.
   return routes.filter((r) => !REDIRECT_SOURCES.has(r.path));

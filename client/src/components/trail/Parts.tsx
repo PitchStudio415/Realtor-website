@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { createContext, useContext, useState, type ReactNode, type CSSProperties } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { CITIES, CITY_ORDER, CITY_CARD_ORDER, cityPath, SMS, PHONE, type CitySlug } from "@/lib/trail";
+import { MO, MO_BASE } from "@/lib/multipleOffers";
 
 /** Wraps a redesigned page: site header/footer plus the .tm design scope. */
 export function TrailPage({ children }: { children: ReactNode }) {
@@ -376,7 +377,7 @@ export function ElevationProfile() {
 
 /* ---------- Path to Keys callout (homepage and Buy) ---------- */
 
-export function PtkCallout({ counts }: { counts: { number: number; title: string; steps: number }[] }) {
+export function PtkCallout({ counts, children }: { counts: { number: number; title: string; steps: number }[]; children?: ReactNode }) {
   return (
     <section className="s">
       <div className="w">
@@ -401,7 +402,71 @@ export function PtkCallout({ counts }: { counts: { number: number; title: string
             ))}
           </div>
         </div>
+        {children}
       </div>
     </section>
+  );
+}
+
+/** Companion card to Path to Keys: the Winning Multiple Offers guide. */
+export function MoCallout() {
+  return (
+    <div className="ptk-call mo-call">
+      <div>
+        <h2>Winning Multiple Offers</h2>
+        <p>Competing with other buyers? How I get my clients ready, from the first tour to best and final.</p>
+        <div className="acts">
+          <Link className="btn go" href={MO_BASE}>
+            Read the guide
+          </Link>
+        </div>
+      </div>
+      <div className="mini">
+        {MO.parts.map((p) => (
+          <Link key={p.number} className="s" href={`${MO_BASE}#part-${p.number}`}>
+            <span className="pm">{p.number}</span>
+            <b>{p.title}</b>
+            <span>{MO.topics.filter((t) => t.part === p.number).length} topics</span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** Side-by-side comparison: what Muzamil does vs. a standard realtor. */
+export function Compare({
+  rows,
+  me = "What I do",
+  them = "A standard realtor",
+}: {
+  rows: { label: string; me: string; them: string }[];
+  me?: string;
+  them?: string;
+}) {
+  return (
+    <div className="cmp-wrap">
+      <table className="cmp">
+        <thead>
+          <tr>
+            <th scope="col"><span className="sr">What you need</span></th>
+            <th scope="col" className="me">{me}</th>
+            <th scope="col">{them}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.label}>
+              <th scope="row">{r.label}</th>
+              <td className="me" data-col={me}>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" /></svg>
+                {r.me}
+              </td>
+              <td data-col={them}>{r.them}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

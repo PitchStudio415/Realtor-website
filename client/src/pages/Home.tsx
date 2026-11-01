@@ -9,8 +9,8 @@ import {
   Ways,
   Stars,
   CloseBand,
-  PtkCallout, Arrow } from "@/components/trail/Parts";
-import { REVIEWS, START_HERE } from "@/lib/trail";
+  PtkCallout, MoCallout, Compare, Arrow } from "@/components/trail/Parts";
+import { REVIEWS, START_HERE, BUYER_COMPARE } from "@/lib/trail";
 import { getBlogPostBySlug } from "@/lib/content";
 import { ptkPhaseCounts } from "@/lib/ptk";
 
@@ -49,7 +49,14 @@ export default function Home() {
         </section>
       </CityHoverProvider>
 
-      <PtkCallout counts={ptkPhaseCounts()} />
+      <PtkCallout counts={ptkPhaseCounts()}>
+        <MoCallout />
+        <div className="cmp-head">
+          <h2>What I do vs. a standard realtor</h2>
+          <p className="intro">How I handle each part of a purchase, next to the way it's commonly done.</p>
+        </div>
+        <Compare rows={BUYER_COMPARE} />
+      </PtkCallout>
 
       <section className="s">
         <div className="w">

@@ -245,3 +245,27 @@ export const STORIES = [
   { src: "/videos/client-story-camelia.mp4", poster: "/videos/client-story-camelia-poster.jpg", title: "Sold in Berkeley" },
   { src: "/videos/client-story-warren.mp4", poster: "/videos/client-story-warren-poster.jpg", title: "Welcome home, Pittsburg" },
 ];
+
+/** "What I do vs. a standard realtor" rows. Only claims Muzamil confirmed he does for every client. */
+export const BUYER_COMPARE = [
+  { label: "Reading the house", me: "I walk the home with you. With 15 years in construction, I point out what's solid, what may be wrong, and what it would take to fix.", them: "Questions about condition wait for the inspection report." },
+  { label: "Repair costs", me: "A rough cost for the repairs I see, before you write an offer.", them: "Repair costs come out after you're in contract." },
+  { label: "Disclosures", me: "I read the full disclosure packet and give you a plain-English summary of what matters.", them: "The packet is forwarded for you to read on your own." },
+  { label: "Inspections", me: "I'm at the inspection in person and walk the findings with you.", them: "The inspector sends a report and you sort through it." },
+  { label: "Pricing your offer", me: "Your number comes from comparable sales in my city playbooks, built on MLS data.", them: "Offers start from the list price." },
+  { label: "Offer strategy", me: "We plan price, timing, and contingencies around what the seller needs.", them: "Price is the main lever." },
+  { label: "Your team", me: "My lenders, insurance brokers, contractors, pest and general inspectors, and engineers, so you never spin your wheels.", them: "You find and vet each vendor yourself." },
+  { label: "Negotiating repairs", me: "Credits and price changes backed by real repair numbers.", them: "Requests built on rough guesses." },
+  { label: "Reaching me", me: "I keep my client list small, so your calls and texts get answered.", them: "Busy rosters and slower callbacks." },
+];
+
+export const SELLER_COMPARE = [
+  { label: "Pricing", me: "Your price comes from recent sales and the homes you're competing with right now.", them: "Price set from list prices and online estimates." },
+  { label: "Before you list", me: "I walk your home with a builder's eye and tell you what a buyer's inspector will likely flag.", them: "Issues surface during the buyer's inspection." },
+  { label: "Prep", me: "Only the repairs and staging that earn their cost back.", them: "Long upgrade lists that may not pay off." },
+  { label: "Disclosures", me: "I review your disclosures and pre-inspections with you, so buyers get a clear, complete story.", them: "Forms filled out and sent along." },
+  { label: "Your team", me: "Contractors, pest and general inspectors, and engineers I trust for pre-inspections and repairs.", them: "You line up each vendor yourself." },
+  { label: "Comparing offers", me: "Every offer side by side: price, terms, contingencies, and buyer strength.", them: "The highest price wins by default." },
+  { label: "Buyer inspections", me: "I'm there for the buyer's inspections and answer repair requests with real numbers.", them: "Repair requests negotiated on rough estimates." },
+  { label: "Reaching me", me: "I keep my client list small, so your calls and texts get answered.", them: "Busy rosters and slower callbacks." },
+];

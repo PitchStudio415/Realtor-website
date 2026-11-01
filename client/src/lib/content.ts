@@ -1849,7 +1849,7 @@ I analyze 10-15 comparable sales, consider active competition, and factor in cur
   {
     slug: "disclosures",
     title: "Disclosures in California",
-    description: "Understanding your disclosure obligations as a seller.",
+    description: "What California sellers disclose: the TDS, SPQ, NHD and lead paint forms, what to include, and why full disclosure protects your sale.",
     hub: "seller",
     order: 2,
     content: `

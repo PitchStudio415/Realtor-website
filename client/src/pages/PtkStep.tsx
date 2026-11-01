@@ -3,6 +3,7 @@ import { DocDrawerProvider, DocLink } from "@/components/trail/DocDrawer";
 import { TrailPage, Section, CloseBand, Arrow } from "@/components/trail/Parts";
 import { PTK } from "@/lib/pathToKeys";
 import { DOCS, PHASE_NAME, stepBySlug, stepPath, docPath, PTK_BASE, deadlineDate, fmtLong, sampleAcceptance, ESCROW_DAYS } from "@/lib/ptk";
+import { MO, MO_BASE, moTopicNumber, moTopicPath } from "@/lib/multipleOffers";
 import NotFound from "@/pages/not-found";
 
 declare const __BUILD_MS__: number;
@@ -18,6 +19,7 @@ export default function PtkStep() {
   const d = deadlineDate(s.deadline, sampleAcceptance(new Date(BUILD_MS)), ESCROW_DAYS);
   const near = PTK.steps.slice(Math.max(0, i - 2), i + 3);
   const table = PTK.inspectionTable.step === s.slug ? PTK.inspectionTable.rows : null;
+  const moRelated = MO.topics.filter((t) => t.ptkSteps.includes(s.slug)).slice(0, 3);
 
   return (
     <TrailPage>
@@ -144,6 +146,22 @@ export default function PtkStep() {
                 See the full path <Arrow />
               </Link>
             </div>
+            {moRelated.length > 0 && (
+              <div className="box">
+                <h3>Competing with other buyers?</h3>
+                <ul className="wy">
+                  {moRelated.map((t) => (
+                    <li key={t.slug}>
+                      <i>{moTopicNumber(t)}</i>
+                      <Link href={moTopicPath(t.slug)}>{t.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link className="more-link" style={{ marginTop: 12 }} href={MO_BASE}>
+                  Winning multiple offers <Arrow />
+                </Link>
+              </div>
+            )}
             <div className="box dark">
               <h3>Questions about this step?</h3>
               <p>I spent 15 years in construction. Send me the report and I'll tell you what matters.</p>
