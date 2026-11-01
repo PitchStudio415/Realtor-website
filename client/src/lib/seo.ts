@@ -10,7 +10,7 @@ import {
 } from "./content";
 import { cities, getCityBySlug } from "./cityData";
 import { getBuyerGuideBySlug } from "./buyerGuideData";
-import { CITIES, CITY_ORDER, DISCLOSURE_FAQ, type CitySlug } from "./trail";
+import { CITIES, CITY_ORDER, DISCLOSURE_FAQ, NO_AGENT_FAQ, type CitySlug } from "./trail";
 import { PTK } from "./pathToKeys";
 import { stepBySlug, docBySlug, PTK_BASE } from "./ptk";
 import { MO, MO_BASE, moTopicBySlug, moTopicNumber } from "./multipleOffers";
@@ -45,12 +45,17 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
   "/home-valuation": {
     title: "Free East Bay Home Valuation | Muzamil Khan Realtor",
     description:
-      "Get a real valuation for your El Cerrito or East Bay home — based on live market data and 15 years of construction experience, not an algorithm. Free, no obligation, 24-hour response.",
+      "Get a real valuation for your El Cerrito or East Bay home, based on live market data and 15 years of construction experience, not an algorithm. Free, no obligation, 24-hour response.",
   },
   "/selling-without-an-agent-el-cerrito": {
     title: "Selling a Home Without an Agent in El Cerrito (FSBO)",
     description:
       "Thinking of selling without an agent in El Cerrito? What FSBO really saves, what you take on, the disclosures you owe, and when it pays off.",
+  },
+  "/buying-without-an-agent-el-cerrito": {
+    title: "Buying a Home Without an Agent in El Cerrito",
+    description:
+      "Buying in El Cerrito without an agent? How it works step by step, what the listing agent can and can't do for you, local costs, and where help pays off.",
   },
   "/calculator": {
     title: "East Bay Home Affordability Calculator | Muzamil Khan",
@@ -75,7 +80,7 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
   "/seller-hub": {
     title: "Seller Education Hub: East Bay Home Selling Guides | Muzamil Khan",
     description:
-      "Everything East Bay sellers need: pricing strategy, disclosures, inspection prep, repairs vs credits, and evaluating offers — explained without jargon.",
+      "Everything East Bay sellers need: pricing strategy, disclosures, inspection prep, repairs vs credits, and evaluating offers, explained without jargon.",
   },
   "/neighborhoods": {
     title: 'East Bay Neighborhoods: Berkeley, Oakland, Albany & El Cerrito | Muzamil Khan',
@@ -288,6 +293,20 @@ export function getSeoForPath(path: string): PageSeo {
   }
 
   const staticMeta = STATIC_META[p];
+  if (staticMeta && p === "/buying-without-an-agent-el-cerrito") {
+    return {
+      ...base,
+      ...staticMeta,
+      jsonLd: [
+        faqJsonLd(NO_AGENT_FAQ.map((f) => ({ question: f.q, answer: f.a }))),
+        breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Buy", path: "/buy" },
+          { name: "Buying without an agent", path: p },
+        ]),
+      ],
+    };
+  }
   if (staticMeta) return { ...base, ...staticMeta };
 
   const blogMatch = p.match(/^\/blog\/([^/]+)$/);
@@ -408,6 +427,7 @@ export function listAllRoutes(): { path: string; lastmod?: string; priority: num
     { path: "/buy", priority: 0.9 },
     { path: "/sell", priority: 0.9 },
     { path: "/selling-without-an-agent-el-cerrito", priority: 0.8 },
+    { path: "/buying-without-an-agent-el-cerrito", priority: 0.8 },
     { path: "/home-valuation", priority: 0.9 },
     { path: "/contact", priority: 0.9 },
     { path: "/about", priority: 0.8 },

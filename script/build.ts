@@ -1,6 +1,6 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile, writeFile, mkdir } from "fs/promises";
+import { rm, readFile, writeFile, mkdir, readdir } from "fs/promises";
 import path from "path";
 import { pathToFileURL } from "url";
 
@@ -142,7 +142,12 @@ async function prerender() {
   // sitemap.xml from the same route list
   const { SITE_URL } = await import(entryUrl);
   const buildDate = new Date().toISOString().slice(0, 10);
-  const urls = routes
+  // Static one-pagers copied from client/public (the city buyer playbooks) are
+  // not React routes, so they never reach listAllRoutes; list them here.
+  const staticPages: RouteEntry[] = (await readdir(PUBLIC_DIR, { withFileTypes: true }))
+    .filter((e) => e.isDirectory() && e.name.endsWith("-buyer-playbook"))
+    .map((e) => ({ path: `/${e.name}`, priority: 0.6 }));
+  const urls = [...routes, ...staticPages]
     .filter((r) => !r.noSitemap)
     .map((r) => {
       const loc = `${SITE_URL}${r.path === "/" ? "" : r.path}`;

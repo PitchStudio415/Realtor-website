@@ -186,7 +186,7 @@ export default function CityPage() {
                   <p className="text-xs tracking-widest uppercase text-muted-foreground mb-3">Other Cities I Serve</p>
                   <div className="space-y-1">
                     {otherCities.map((c) => (
-                      <Link key={c.slug} href={`/cities/${c.slug}`}>
+                      <Link key={c.slug} href={c.slug === "el-cerrito" ? "/buying-in-el-cerrito" : `/cities/${c.slug}`}>
                         <div
                           className="flex items-center justify-between py-2 px-2 rounded-md hover:bg-muted/50 transition-colors cursor-pointer group"
                           data-testid={`link-city-${c.slug}`}

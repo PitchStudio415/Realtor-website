@@ -278,3 +278,11 @@ export const DISCLOSURE_FAQ = [
   { q: "How long does a buyer have to cancel after getting disclosures?", a: "If disclosures are delivered after the offer is accepted, the buyer has three days to cancel when they're handed over in person, or five days when they're mailed. I have disclosures ready before we list, so that window never comes up." },
   { q: "Is California a non-disclosure state?", a: "No. Sale prices become public record in California, and sellers must disclose known issues with the home." },
 ];
+
+export const NO_AGENT_FAQ = [
+  { q: "Can I buy a house in California without a real estate agent?", a: "Yes. No law requires a buyer to use an agent. You handle the offer, the deadlines, and the negotiation yourself, or hire a real estate attorney to draft or review the contract." },
+  { q: "Will the seller lower the price if I don't have an agent?", a: "Maybe. Buyer-agent fees are negotiated separately now, so there may be no fee for the seller to save. Any price change is the seller's call." },
+  { q: "Can the listing agent represent me too?", a: "Yes, if you and the seller both agree in writing. That's called dual agency. One agent then owes duties to both sides, which limits how hard they can push for either of you." },
+  { q: "Who writes the offer if I don't have an agent?", a: "You can, using the California Residential Purchase Agreement, or a real estate attorney can draft or review it for you." },
+  { q: "Do I still get disclosures without an agent?", a: "Yes. In most sales the seller owes you the same disclosures either way, including the Transfer Disclosure Statement and the Natural Hazard Disclosure. Read them before you write an offer." },
+];

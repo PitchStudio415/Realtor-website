@@ -26,6 +26,7 @@ import FirstTimeBuyerGuide from "@/pages/FirstTimeBuyerGuide";
 import Start from "@/pages/Start";
 import HomeValuation from "@/pages/HomeValuation";
 import SellWithoutAgent from "@/pages/SellWithoutAgent";
+import BuyWithoutAgent from "@/pages/BuyWithoutAgent";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
 import PathToKeys from "@/pages/PathToKeys";
 import PtkStep from "@/pages/PtkStep";
@@ -144,6 +145,7 @@ function Router() {
       <Route path="/buy/winning-multiple-offers/:slug" component={MoTopic} />
       <Route path="/sell" component={Sell} />
       <Route path="/selling-without-an-agent-el-cerrito" component={SellWithoutAgent} />
+      <Route path="/buying-without-an-agent-el-cerrito" component={BuyWithoutAgent} />
       <Route path="/home-valuation" component={HomeValuation} />
       <Route path="/calculator" component={Calculator} />
       <Route path="/first-time-home-buyer" component={FirstTimeBuyerGuide} />

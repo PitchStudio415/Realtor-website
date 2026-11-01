@@ -57,6 +57,7 @@ export function Footer() {
             <ul>
               <li><Link href="/buy/path-to-keys">Path to Keys</Link></li>
               <li><Link href="/buy/winning-multiple-offers">Winning multiple offers</Link></li>
+              <li><Link href="/buying-without-an-agent-el-cerrito">Buying without an agent</Link></li>
               <li><Link href="/selling-without-an-agent-el-cerrito">Selling without an agent</Link></li>
               <li><Link href="/first-time-home-buyer">First-time buyer guide</Link></li>
               <li><Link href="/home-valuation">What's my home worth?</Link></li>

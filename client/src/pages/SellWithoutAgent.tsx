@@ -199,6 +199,7 @@ export default function SellWithoutAgent() {
           <div className="mt-10 flex flex-wrap gap-3">
             <Link href="/sell"><Button variant="ghost">How I Help Sellers<ArrowRight className="w-4 h-4 ml-1" /></Button></Link>
             <Link href="/seller-hub/disclosures"><Button variant="ghost">Seller Disclosures in California<ArrowRight className="w-4 h-4 ml-1" /></Button></Link>
+            <Link href="/buying-without-an-agent-el-cerrito"><Button variant="ghost">Buying Without an Agent<ArrowRight className="w-4 h-4 ml-1" /></Button></Link>
           </div>
         </div>
       </section>

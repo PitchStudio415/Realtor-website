@@ -94,7 +94,7 @@ export default function HomeValuation() {
             <Card data-testid="card-valuation-thanks">
               <CardContent className="p-8 text-center">
                 <CheckCircle2 className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h2 className="text-2xl font-bold mb-3">Got it — I'm on it.</h2>
+                <h2 className="text-2xl font-bold mb-3">Got it, I'm on it.</h2>
                 <p className="text-muted-foreground">
                   I'll personally review {street} and send you a real valuation within
                   24 hours. If I have a question about the property, I'll reach out

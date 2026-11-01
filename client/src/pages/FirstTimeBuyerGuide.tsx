@@ -285,7 +285,7 @@ export default function FirstTimeBuyerGuide() {
                 <CardContent className="p-5">
                   <p className="text-xs tracking-widest uppercase text-muted-foreground mb-3">Keep Learning</p>
                   <div className="space-y-1">
-                    <Link href="/buyer-hub">
+                    <Link href="/buy">
                       <div className="flex items-center justify-between py-2 px-2 rounded-md hover:bg-muted/50 transition-colors cursor-pointer group">
                         <span className="text-sm font-medium">First-Time Buyer Hub</span>
                         <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors" />
@@ -333,7 +333,7 @@ export default function FirstTimeBuyerGuide() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
-            <Link href="/buyer-hub">
+            <Link href="/buy">
               <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 font-semibold px-6">
                 Browse the Buyer Hub
                 <ArrowRight className="w-4 h-4 ml-2" />

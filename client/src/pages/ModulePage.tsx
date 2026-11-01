@@ -15,16 +15,18 @@ interface Props {
 const HUB_META = {
   buyer: {
     path: "/buyer-hub",
+    hubHref: "/buy",
     label: "First-Time Buyer Hub",
-    crumb: "First-Time Buyer Hub",
+    crumb: "Buy",
     modules: buyerModules,
     ctaHref: "/contact?type=buyer",
     ctaText: "Book a buyer consult",
   },
   seller: {
     path: "/seller-hub",
+    hubHref: "/sell",
     label: "Seller Education Hub",
-    crumb: "Seller Education Hub",
+    crumb: "Sell",
     modules: sellerModules,
     ctaHref: "/contact?type=seller",
     ctaText: "Book a seller consult",
@@ -42,7 +44,7 @@ export default function ModulePage({ hub, module }: Props) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: meta.crumb, item: `${SITE_URL}${meta.path}` },
+      { "@type": "ListItem", position: 2, name: meta.crumb, item: `${SITE_URL}${meta.hubHref}` },
       { "@type": "ListItem", position: 3, name: module.title, item: `${SITE_URL}${meta.path}/${module.slug}` },
     ],
   };
@@ -56,7 +58,7 @@ export default function ModulePage({ hub, module }: Props) {
           <nav className="flex items-center gap-1.5 text-sm text-muted-foreground mb-4" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-primary">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link href={meta.path} className="hover:text-primary">{meta.crumb}</Link>
+            <Link href={meta.hubHref} className="hover:text-primary">{meta.crumb}</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-foreground">{module.title}</span>
           </nav>
@@ -75,7 +77,7 @@ export default function ModulePage({ hub, module }: Props) {
           />
 
           <div className="mt-10 flex items-center justify-between border-t pt-6">
-            <Link href={meta.path}>
+            <Link href={meta.hubHref}>
               <Button variant="ghost" size="sm">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 All {hub === "buyer" ? "buyer" : "seller"} guides

@@ -39,6 +39,7 @@ export default function Buy() {
           items={[
             { title: "Winning multiple offers", meta: "How to compete and win", href: "/buy/winning-multiple-offers" },
             { title: "First-time buyer guide", meta: "Start to finish", href: "/first-time-home-buyer" },
+            { title: "Buying without an agent", meta: "How it works on your own", href: "/buying-without-an-agent-el-cerrito" },
             { title: "Pre-approval", meta: "What lenders look for", href: "/buyer-hub/financing" },
             { title: "Offer basics", meta: "Price, contingencies, closing date", href: "/buyer-hub/offer-basics" },
             { title: "Closing costs", meta: "What to budget for", href: "/buyer-hub/closing-costs" },
