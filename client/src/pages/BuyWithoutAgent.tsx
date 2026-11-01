@@ -58,12 +58,12 @@ export default function BuyWithoutAgent() {
           </div>
           <div>
             <h3>
-              <span className="mk-s"><Marker shape="diamond" color="#c2461a" /></span>What they owe the seller
+              <span className="mk-s"><Marker shape="diamond" color="#c2461a" /></span>What they do for the seller
             </h3>
             <ul>
-              <li>Their job is the best price and terms for the seller</li>
-              <li>Advice on your price means representing you too</li>
-              <li>That's dual agency, which needs written consent from you and the seller</li>
+              <li>Work for the best price and terms for the seller</li>
+              <li>Negotiate on the seller's behalf</li>
+              <li>Help the seller compare your offer with the others</li>
             </ul>
           </div>
         </div>
@@ -90,18 +90,6 @@ export default function BuyWithoutAgent() {
         </ul>
       </Section>
 
-      <Section title="About buyer-agent fees">
-        <div className="prose" style={{ maxWidth: 760 }}>
-          <p>
-            Buyers who work with an agent now sign a written agreement that sets the agent's fee before touring. You can ask the seller to pay
-            some or all of it as part of your offer, and the seller decides.
-          </p>
-          <p>
-            Buying on your own means no buyer-agent fee. Whether the seller passes any savings to you is up to the seller.
-          </p>
-        </div>
-      </Section>
-
       <Section title="Common questions">
         <div className="faq">
           {NO_AGENT_FAQ.map((f) => (
@@ -112,7 +100,7 @@ export default function BuyWithoutAgent() {
           ))}
         </div>
         <p className="tblnote" style={{ marginTop: 28 }}>
-          General information, not legal advice. For your specific situation, talk with a real estate attorney.
+          General information only.
         </p>
       </Section>
 

@@ -55,7 +55,7 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
   "/buying-without-an-agent-el-cerrito": {
     title: "Buying a Home Without an Agent in El Cerrito",
     description:
-      "Buying in El Cerrito without an agent? How it works step by step, what the listing agent can and can't do for you, local costs, and where help pays off.",
+      "Buying in El Cerrito without an agent? How it works step by step, who the listing agent works for, local costs, and where help pays off.",
   },
   "/calculator": {
     title: "East Bay Home Affordability Calculator | Muzamil Khan",
@@ -252,7 +252,13 @@ export function getSeoForPath(path: string): PageSeo {
   if (ptkDocMatch) {
     const d = docBySlug(ptkDocMatch[1]);
     if (d) {
-      const title = `${d.name} (${d.abbr}) Explained | Path to Keys`;
+      // Question-style titles match how people search ("what is a TDS").
+      const small = new Set(["and", "to", "for", "of"]);
+      const tc = (w: string) => (small.has(w) ? w : w.split("-").map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join("-"));
+      const name = d.name.split(" ").map(tc).join(" ");
+      const plural = ["PREINS", "HOA", "ESC", "INSP", "LDOCS"].includes(d.abbr);
+      const question = `${plural ? "What Are" : "What Is the"} ${name} (${d.abbr})?`;
+      const title = question.length <= 60 ? question : `What Is the ${d.abbr}? California Buyer Guide`;
       return {
         ...base,
         title,

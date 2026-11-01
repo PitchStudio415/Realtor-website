@@ -25,6 +25,9 @@ function inline(text: string): string {
 
 export function renderMarkdown(md: string, opts: { dropH1?: boolean } = {}): string {
   const lines = md.replace(/\r\n/g, "\n").split("\n");
+  // Posts written with only ### sections would have no <h2> at all; promote
+  // them so every article has a proper heading outline under its <h1>.
+  const promote = !/^\s*##\s/m.test(md) && /^\s*###\s/m.test(md);
   const out: string[] = [];
   let listType: "ul" | "ol" | null = null;
   let para: string[] = [];
@@ -53,7 +56,7 @@ export function renderMarkdown(md: string, opts: { dropH1?: boolean } = {}): str
     if (h) {
       flushPara();
       closeList();
-      const level = h[1].length;
+      const level = promote && h[1].length === 3 ? 2 : h[1].length;
       if (level === 1) {
         if (!opts.dropH1) out.push(`<h1>${inline(h[2])}</h1>`);
       } else {

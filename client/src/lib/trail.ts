@@ -280,9 +280,9 @@ export const DISCLOSURE_FAQ = [
 ];
 
 export const NO_AGENT_FAQ = [
-  { q: "Can I buy a house in California without a real estate agent?", a: "Yes. No law requires a buyer to use an agent. You handle the offer, the deadlines, and the negotiation yourself, or hire a real estate attorney to draft or review the contract." },
-  { q: "Will the seller lower the price if I don't have an agent?", a: "Maybe. Buyer-agent fees are negotiated separately now, so there may be no fee for the seller to save. Any price change is the seller's call." },
-  { q: "Can the listing agent represent me too?", a: "Yes, if you and the seller both agree in writing. That's called dual agency. One agent then owes duties to both sides, which limits how hard they can push for either of you." },
+  { q: "Can I buy a home in El Cerrito without an agent?", a: "Yes. You run each step yourself: touring, reading the disclosures, writing the offer, and managing escrow through closing." },
   { q: "Who writes the offer if I don't have an agent?", a: "You can, using the California Residential Purchase Agreement, or a real estate attorney can draft or review it for you." },
-  { q: "Do I still get disclosures without an agent?", a: "Yes. In most sales the seller owes you the same disclosures either way, including the Transfer Disclosure Statement and the Natural Hazard Disclosure. Read them before you write an offer." },
+  { q: "How much is the deposit?", a: "About 3% of the price. You wire it to escrow once your offer is accepted." },
+  { q: "Do I need my own inspectors?", a: "Yes. Hire your own home and pest inspectors. You choose them, you pay them, and their reports work for you." },
+  { q: "How do I pick my offer price?", a: `Start from recent comparable sales, not the asking price. In El Cerrito, ${CITIES["el-cerrito"].overAsking} of homes sold over asking in the last 12 months.` },
 ];
