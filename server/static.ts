@@ -11,6 +11,16 @@ export function serveStatic(app: Express) {
     );
   }
 
+  // One canonical host: www and the extra domain attached to this deployment
+  // 301 to muzamilkhanrealtor.com so search engines index a single site.
+  const CANONICAL_HOST = "muzamilkhanrealtor.com";
+  const ALIAS_HOSTS = new Set(["www.muzamilkhanrealtor.com", "bayareahomelab.com", "www.bayareahomelab.com"]);
+  app.use((req, res, next) => {
+    const host = (req.headers.host || "").split(":")[0].toLowerCase();
+    if (ALIAS_HOSTS.has(host)) return res.redirect(301, `https://${CANONICAL_HOST}${req.originalUrl}`);
+    next();
+  });
+
   // 301 consolidated pages to their canonical equivalent before static serving.
   app.get(Object.keys(REDIRECTS), (req, res) => {
     const target = REDIRECTS[req.path];
