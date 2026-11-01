@@ -199,11 +199,11 @@ If you'd like, I'm always glad to show a relocating client around my own city, t
   {
     slug: "oakland-neighborhood-guide",
     title: "Oakland Neighborhood Guide: Where Your Money Goes, Pocket by Pocket, From the Flats to the Hills",
-    metaTitle: "Oakland Neighborhood Guide: Where Your Money Goes",
+    metaTitle: "Oakland Neighborhoods Guide: Where Your Money Goes",
     excerpt: "On paper, Oakland can mean a $600K starter or a $3M view home, all under one city name. Like Berkeley, it really moves as a dozen separate markets. Here's how the pockets break down, what to plan for, and how to rank what matters before you start.",
     category: "market-basics",
     publishedAt: "2026-06-26",
-    metaDescription: "A calm, local Oakland CA neighborhood guide: Rockridge, Temescal, Grand Lake, Montclair and the hills, the flats, current prices, the Oakland transfer tax, and a construction-trained agent's honest take. From Muzamil Khan, East Bay Realtor.",
+    metaDescription: "Oakland neighborhoods compared: Rockridge, Temescal, Grand Lake, Montclair and the hills, with current prices and the transfer tax, from a local Realtor.",
     content: `
 A lot of people tell me they want to buy in Oakland, and they say it like Oakland is one place with one price. It runs from an attainable starter home all the way up to multimillion-dollar view homes, all under the same city name. Oakland is even bigger and more varied than Berkeley, so the first thing I do with a client is slow the conversation down and map out where their money actually goes, pocket by pocket.
 
@@ -486,11 +486,11 @@ If you'd like a second opinion on a listing, or a read on a specific El Cerrito 
   {
     slug: "berkeley-neighborhood-guide",
     title: "Berkeley Neighborhood Guide: Where Your Money Actually Goes, From the Flats to the Hills",
-    metaTitle: "Berkeley Neighborhood Guide: Where Your Money Goes",
+    metaTitle: "Berkeley Neighborhoods Guide: Where Your Money Goes",
     excerpt: "Berkeley runs from an attainable entry point to four million dollar view homes, all under one city name. Here is how the neighborhoods really break down, what the older homes cost after the sale, and how to rank what matters before you start.",
     category: "market-basics",
     publishedAt: "2026-06-11",
-    metaDescription: "A calm, local Berkeley CA neighborhood guide: Elmwood, North Berkeley, the flats and the hills, current prices, and a construction-trained agent's take on what these older homes really cost. From Muzamil Khan, East Bay Realtor.",
+    metaDescription: "Berkeley neighborhoods compared: Elmwood, North Berkeley, the flats and the hills, current prices, and what older homes really cost, from a local Realtor.",
     content: `
 A lot of people tell me they want to buy in Berkeley, and they say it like Berkeley is one place with one price. It runs from an attainable entry point all the way up to four million dollar view homes, all under the same city name. So the first thing I do with a client is slow the conversation down and map out where their money actually goes.
 
@@ -899,11 +899,11 @@ M. Muzamil Khan | Rise Group Real Estate | DRE #02400805
   {
     slug: "west-contra-costa-county-market-outlook-2026",
     title: "2026 West Contra Costa County Market Outlook: City-by-City Breakdown",
-    metaTitle: "2026 West Contra Costa County Market Outlook",
+    metaTitle: "West Contra Costa Home Prices: 2026 Market Outlook",
     excerpt: "Current median home prices, year-over-year trends, and what to expect across El Cerrito, Richmond, Hercules, San Pablo, Pinole, El Sobrante, and Rodeo in 2026.",
     category: "market-basics",
     publishedAt: "2026-04-14",
-    metaDescription: "Current median home prices, year-over-year trends, and what to expect across El Cerrito, Richmond, Hercules, San Pablo, Pinole, El Sobrante, and Rodeo in 2026.",
+    metaDescription: "2026 median home prices and trends for El Cerrito, Richmond, Hercules, San Pablo, Pinole, El Sobrante and Rodeo, city by city, from a local Realtor.",
     content: `
 I track the West Contra Costa County housing market every single day. Here is where things actually stand in spring 2026, broken down by city, with real numbers and my take on what they mean for buyers and sellers.
 
@@ -1849,7 +1849,7 @@ I analyze 10-15 comparable sales, consider active competition, and factor in cur
   {
     slug: "disclosures",
     title: "Disclosures in California",
-    description: "What California sellers disclose: the TDS, SPQ, NHD and lead paint forms, what to include, and why full disclosure protects your sale.",
+    description: "What California sellers must disclose, the TDS, SPQ and NHD forms, and what happens if a seller doesn't disclose. Plain answers from a local Realtor.",
     hub: "seller",
     order: 2,
     content: `

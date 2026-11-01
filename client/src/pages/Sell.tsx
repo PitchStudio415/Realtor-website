@@ -75,7 +75,7 @@ export default function Sell() {
             { title: "Pricing strategy", meta: "Comps and market read", href: "/seller-hub/pricing" },
             { title: "Disclosures", meta: "What to share and when", href: "/seller-hub/disclosures" },
             { title: "Evaluating offers", meta: "Beyond the price", href: "/seller-hub/evaluating-offers" },
-            ...[post("repairs-vs-credits"), post("staging-worth-it")].filter((x): x is NonNullable<typeof x> => !!x),
+            ...[post("west-contra-costa-county-market-outlook-2026"), post("repairs-vs-credits"), post("staging-worth-it")].filter((x): x is NonNullable<typeof x> => !!x),
             { title: "Selling without an agent", meta: "An honest look", href: "/selling-without-an-agent-el-cerrito" },
           ]}
         />

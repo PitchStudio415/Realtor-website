@@ -216,6 +216,11 @@ export default function CityPage() {
               <FaqItem key={i} q={faq.q} a={faq.a} index={i} />
             ))}
           </div>
+          <p className="mt-8 text-base">
+            <Link href="/blog/west-contra-costa-county-market-outlook-2026" className="font-semibold underline underline-offset-4">
+              How {city.name} compares: my 2026 West Contra Costa market outlook
+            </Link>
+          </p>
         </div>
       </section>
 

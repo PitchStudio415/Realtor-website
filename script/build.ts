@@ -73,23 +73,17 @@ function applySeoToTemplate(template: string, seo: PageSeo, appHtml: string): st
   const title = escapeAttr(seo.title);
   const description = escapeAttr(seo.description);
 
+  // Replacements are functions on purpose: a string replacement treats "$1",
+  // "$&" etc. as special patterns, which mangled copy like "median $1.18M".
+  const setAttr = (value: string) => (_m: string, open: string, close: string) => `${open}${value}${close}`;
   let html = template
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
-    .replace(
-      /(<meta name="description" content=")[^"]*(")/,
-      `$1${description}$2`,
-    )
-    .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${title}$2`)
-    .replace(
-      /(<meta property="og:description" content=")[^"]*(")/,
-      `$1${description}$2`,
-    )
-    .replace(/(<meta property="og:type" content=")[^"]*(")/, `$1${seo.ogType}$2`)
-    .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${title}$2`)
-    .replace(
-      /(<meta name="twitter:description" content=")[^"]*(")/,
-      `$1${description}$2`,
-    );
+    .replace(/<title>[\s\S]*?<\/title>/, () => `<title>${title}</title>`)
+    .replace(/(<meta name="description" content=")[^"]*(")/, setAttr(description))
+    .replace(/(<meta property="og:title" content=")[^"]*(")/, setAttr(title))
+    .replace(/(<meta property="og:description" content=")[^"]*(")/, setAttr(description))
+    .replace(/(<meta property="og:type" content=")[^"]*(")/, setAttr(seo.ogType))
+    .replace(/(<meta name="twitter:title" content=")[^"]*(")/, setAttr(title))
+    .replace(/(<meta name="twitter:description" content=")[^"]*(")/, setAttr(description));
 
   const headExtras = [
     `<link rel="canonical" href="${escapeAttr(seo.canonical)}" />`,
@@ -99,11 +93,8 @@ function applySeoToTemplate(template: string, seo: PageSeo, appHtml: string): st
     .filter(Boolean)
     .join("\n    ");
 
-  html = html.replace("</head>", `    ${headExtras}\n  </head>`);
-  html = html.replace(
-    '<div id="root"></div>',
-    `<div id="root">${appHtml}</div>`,
-  );
+  html = html.replace("</head>", () => `    ${headExtras}\n  </head>`);
+  html = html.replace('<div id="root"></div>', () => `<div id="root">${appHtml}</div>`);
   return html;
 }
 

@@ -10,7 +10,7 @@ import {
 } from "./content";
 import { cities, getCityBySlug } from "./cityData";
 import { getBuyerGuideBySlug } from "./buyerGuideData";
-import { CITIES, CITY_ORDER, type CitySlug } from "./trail";
+import { CITIES, CITY_ORDER, DISCLOSURE_FAQ, type CitySlug } from "./trail";
 import { PTK } from "./pathToKeys";
 import { stepBySlug, docBySlug, PTK_BASE } from "./ptk";
 import { MO, MO_BASE, moTopicBySlug, moTopicNumber } from "./multipleOffers";
@@ -20,7 +20,7 @@ export const SITE_URL = "https://muzamilkhanrealtor.com";
 const SITE_NAME = "Muzamil Khan Real Estate";
 const DEFAULT_TITLE = "Muzamil Khan Real Estate | East Bay Realtor®";
 const DEFAULT_DESCRIPTION =
-  "Muzamil Khan Real Estate — serving El Cerrito, Albany, Berkeley, Kensington and the full East Bay. 15 years construction expertise. First-time buyers, movers, buyers & sellers. Free consultation.";
+  "East Bay Realtor for El Cerrito, Albany, Berkeley, Kensington and Oakland. 15 years in construction, real numbers on every home, and a free consultation.";
 
 export interface PageSeo {
   title: string;
@@ -48,9 +48,9 @@ const STATIC_META: Record<string, { title: string; description: string }> = {
       "Get a real valuation for your El Cerrito or East Bay home — based on live market data and 15 years of construction experience, not an algorithm. Free, no obligation, 24-hour response.",
   },
   "/selling-without-an-agent-el-cerrito": {
-    title: "Selling Your El Cerrito Home Without an Agent (FSBO)",
+    title: "Selling a Home Without an Agent in El Cerrito (FSBO)",
     description:
-      "Thinking of selling your El Cerrito home without an agent? An honest FSBO breakdown: what you save, what you take on, the California disclosures you owe, and when going it alone actually pays off.",
+      "Thinking of selling without an agent in El Cerrito? What FSBO really saves, what you take on, the disclosures you owe, and when it pays off.",
   },
   "/calculator": {
     title: "East Bay Home Affordability Calculator | Muzamil Khan",
@@ -272,7 +272,7 @@ export function getSeoForPath(path: string): PageSeo {
     if (st) {
       return {
         ...base,
-        title: `${st.title} When Buying a Home in California | Path to Keys`,
+        title: `${st.title} | Buying a Home in California`,
         description: `${st.summary} Step ${st.number} of ${PTK.steps.length} in buying an East Bay home.`,
         ogType: "article",
         jsonLd: [
@@ -336,7 +336,7 @@ export function getSeoForPath(path: string): PageSeo {
     if (mod) {
       return {
         ...base,
-        title: `${mod.title} | First-Time Buyer Hub | ${SITE_NAME}`,
+        title: `${mod.title} | Buyer Guide`,
         description: mod.description,
       };
     }
@@ -348,8 +348,9 @@ export function getSeoForPath(path: string): PageSeo {
     if (mod) {
       return {
         ...base,
-        title: `${mod.title} | Seller Education Hub | ${SITE_NAME}`,
+        title: mod.slug === "disclosures" ? "Seller Disclosures in California: What to Disclose" : `${mod.title} | Seller Guide`,
         description: mod.description,
+        jsonLd: mod.slug === "disclosures" ? [faqJsonLd(DISCLOSURE_FAQ.map((f) => ({ question: f.q, answer: f.a })))] : [],
       };
     }
   }

@@ -84,10 +84,10 @@ export const CITIES: Record<CitySlug, TrailCity> = {
       SEWER(true),
     ],
     playbookUrl: "/el-cerrito-buyer-playbook",
-    metaTitle: "Buying a Home in El Cerrito: Prices, Offers & Taxes | Muzamil Khan",
+    metaTitle: "Buying a Home in El Cerrito: Prices, Offers & Taxes",
     metaDescription:
       "Buying in El Cerrito: median $1.18M, 86% sold over asking. How listings move, what a winning offer looks like, transfer tax and sewer lateral rules, from a local Realtor.",
-    posts: ["living-in-el-cerrito-local-guide", "el-cerrito-buyer-window-2026", "el-cerrito-vs-richmond-vs-hercules-where-to-buy-2026"],
+    posts: ["living-in-el-cerrito-local-guide", "el-cerrito-buyer-window-2026", "el-cerrito-vs-richmond-vs-hercules-where-to-buy-2026", "west-contra-costa-county-market-outlook-2026"],
   },
   albany: {
     slug: "albany",
@@ -111,10 +111,10 @@ export const CITIES: Record<CitySlug, TrailCity> = {
       SEWER(true),
     ],
     playbookUrl: "/albany-buyer-playbook",
-    metaTitle: "Buying a Home in Albany, CA: Prices, Offers & Taxes | Muzamil Khan",
+    metaTitle: "Buying a Home in Albany, CA: Prices, Offers & Taxes",
     metaDescription:
       "Buying in Albany: median $1.40M, 73% sold over asking. How listings move, what a winning offer looks like, transfer tax and sewer lateral rules, from a local Realtor.",
-    posts: ["albany-neighborhood-guide"],
+    posts: ["albany-neighborhood-guide", "berkeley-neighborhood-guide"],
   },
   oakland: {
     slug: "oakland",
@@ -138,10 +138,10 @@ export const CITIES: Record<CitySlug, TrailCity> = {
       SEWER(false),
     ],
     playbookUrl: "/oakland-buyer-playbook",
-    metaTitle: "Buying a Home in Oakland: Rockridge, Temescal & the Hills | Muzamil Khan",
+    metaTitle: "Buying in Oakland: Rockridge, Temescal & the Hills",
     metaDescription:
       "Buying in Rockridge, Temescal or the Oakland Hills: median $1.50M, 86% sold over asking. How listings move, winning offers, transfer tax tiers and fire-zone insurance.",
-    posts: ["oakland-neighborhood-guide"],
+    posts: ["oakland-neighborhood-guide", "berkeley-neighborhood-guide"],
   },
   berkeley: {
     slug: "berkeley",
@@ -165,10 +165,10 @@ export const CITIES: Record<CitySlug, TrailCity> = {
       SEWER(false),
     ],
     playbookUrl: "/berkeley-buyer-playbook",
-    metaTitle: "Buying a Home in Berkeley: Prices, Offers & Taxes | Muzamil Khan",
+    metaTitle: "Buying a Home in Berkeley: Prices, Offers & Taxes",
     metaDescription:
       "Buying in Berkeley: median $1.64M, 84% sold over asking. How listings move, what a winning offer looks like, transfer tax, BESO and sewer lateral rules, from a local Realtor.",
-    posts: ["berkeley-neighborhood-guide", "el-cerrito-buyer-window-2026", "east-bay-market-update-spring-2026"],
+    posts: ["berkeley-neighborhood-guide", "oakland-neighborhood-guide", "el-cerrito-buyer-window-2026", "east-bay-market-update-spring-2026"],
   },
 };
 
@@ -268,4 +268,13 @@ export const SELLER_COMPARE = [
   { label: "Comparing offers", me: "Every offer side by side: price, terms, contingencies, and buyer strength.", them: "The highest price wins by default." },
   { label: "Buyer inspections", me: "I'm there for the buyer's inspections and answer repair requests with real numbers.", them: "Repair requests negotiated on rough estimates." },
   { label: "Reaching me", me: "I keep my client list small, so your calls and texts get answered.", them: "Busy rosters and slower callbacks." },
+];
+
+/** Seller disclosures FAQ: rendered on /seller-hub/disclosures and emitted as FAQPage schema. */
+export const DISCLOSURE_FAQ = [
+  { q: "What happens if a seller doesn't disclose in California?", a: "If disclosures arrive after an offer is accepted, the buyer gets a short window to cancel. After closing, a buyer who finds a problem the seller knew about can sue the seller for damages. Disclosing up front is the best protection." },
+  { q: "What does a California seller have to disclose?", a: "Anything you know about that affects the home's value or desirability: past repairs, known defects, insurance claims, permit status, HOA issues, neighborhood nuisances, and a death on the property in the last three years." },
+  { q: "If I sell as-is, do I still have to disclose?", a: "Yes. As-is means you won't make repairs. You still have to disclose what you know about the home." },
+  { q: "How long does a buyer have to cancel after getting disclosures?", a: "If disclosures are delivered after the offer is accepted, the buyer has three days to cancel when they're handed over in person, or five days when they're mailed. I have disclosures ready before we list, so that window never comes up." },
+  { q: "Is California a non-disclosure state?", a: "No. Sale prices become public record in California, and sellers must disclose known issues with the home." },
 ];

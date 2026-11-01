@@ -1,6 +1,7 @@
 import { DocDrawerProvider, DocLink } from "@/components/trail/DocDrawer";
 import { TrailPage, PageHero, Acts, BookButton, Crumb, Section, Ways, Rows, Marker, CloseBand } from "@/components/trail/Parts";
 import { sellerModules } from "@/lib/content";
+import { DISCLOSURE_FAQ } from "@/lib/trail";
 
 // /seller-hub/disclosures, rebuilt in the Trail Map style. SEO title and
 // description still come from the "disclosures" seller module in content.ts.
@@ -66,7 +67,7 @@ export default function SellerDisclosures() {
           </ul>
         </Section>
 
-        <Section title="Why it matters">
+        <Section title="What happens if a seller doesn't disclose?">
           <div className="pair">
             <div>
               <h3>
@@ -109,11 +110,25 @@ export default function SellerDisclosures() {
           </p>
         </Section>
 
+        <Section title="Common questions">
+          <div className="faq">
+            {DISCLOSURE_FAQ.map((f) => (
+              <details key={f.q}>
+                <summary>{f.q}</summary>
+                <div className="a">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </Section>
+
         <Section title="More seller guides">
           <Rows
-            items={sellerModules
-              .filter((m) => m.slug !== "disclosures" && m.slug !== "glossary")
-              .map((m) => ({ title: m.title, meta: m.description, href: `/seller-hub/${m.slug}` }))}
+            items={[
+              { title: "Selling a home without an agent in El Cerrito", meta: "An honest FSBO breakdown", href: "/selling-without-an-agent-el-cerrito" },
+              ...sellerModules
+                .filter((m) => m.slug !== "disclosures" && m.slug !== "glossary")
+                .map((m) => ({ title: m.title, meta: m.description, href: `/seller-hub/${m.slug}` })),
+            ]}
           />
         </Section>
 

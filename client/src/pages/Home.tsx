@@ -9,7 +9,7 @@ import {
   Ways,
   Stars,
   CloseBand,
-  PtkCallout, MoCallout, Compare, Arrow } from "@/components/trail/Parts";
+  PtkCallout, MoCallout, Compare, Rows, Arrow } from "@/components/trail/Parts";
 import { REVIEWS, START_HERE, BUYER_COMPARE } from "@/lib/trail";
 import { getBlogPostBySlug } from "@/lib/content";
 import { ptkPhaseCounts } from "@/lib/ptk";
@@ -89,6 +89,21 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="s">
+        <div className="w">
+          <h2>Most-read guides</h2>
+          <Rows
+            items={[
+              { title: "Selling a home without an agent in El Cerrito", meta: "An honest FSBO breakdown", href: "/selling-without-an-agent-el-cerrito" },
+              { title: "West Contra Costa home prices: 2026 outlook", meta: "City by city", href: "/blog/west-contra-costa-county-market-outlook-2026" },
+              { title: "Berkeley neighborhoods guide", meta: "From the flats to the hills", href: "/blog/berkeley-neighborhood-guide" },
+              { title: "Oakland neighborhoods guide", meta: "Pocket by pocket", href: "/blog/oakland-neighborhood-guide" },
+              { title: "Seller disclosures in California", meta: "What to disclose and why", href: "/seller-hub/disclosures" },
+            ]}
+          />
         </div>
       </section>
 
